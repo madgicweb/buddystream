@@ -1,4 +1,4 @@
-=== Buddystream ===
+=== BuddyStream ===
 Contributors: Blackphantom
 Tags: Buddypress,BuddyPress, Twitter, Facebook, Flickr, YouTube, Last.fm, Tweetstream, Facestream, Buddystream
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
@@ -11,7 +11,7 @@ http://www.opensource.org/licenses/gpl-license.php
 
 == Description ==
 
-Buddystream is a Buddypress social network intergration plugin.
+BuddyStream is a BuddyPress social network intergration plugin.
 Release soon!
 
 Check out the website for a demo!
@@ -37,6 +37,6 @@ Requirements.
 == ChangeLog ==
 
 = 1.0 =
-* Initial start of Buddystream
+* Initial start of BuddyStream
 
 
