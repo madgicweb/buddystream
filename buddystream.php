@@ -1,14 +1,14 @@
 <?php
 /*
 Plugin Name: BuddyStream
-Plugin URI:http://buddystream.net
+Plugin URI:
 Description: BuddyStream
-Version: 1.0
+Version: 1.0.1
 Author: Peter Hofman
-Author URI: http://buddystream.net
+Author URI: http://www.buddystream.net
 */
 
-// Copyright (c) 2010 BuddyStream.net. All rights reserved.
+// Copyright (c) 2010 Buddystream.net All rights reserved.
 //
 // Released under the GPL license
 // http://www.opensource.org/licenses/gpl-license.php
@@ -26,5 +26,22 @@ Author URI: http://buddystream.net
  * Only load code that needs BuddyPress
  * to run once BP is loaded and initialized.
  */
+function buddystream_init()
+{
+    require 'buddystreamFunctions.php';
+    zend_framework_init();
+}
 
-//plugin release in a few days
+function zend_framework_init()
+{
+	set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) );
+	zend_framework_register_autoload();
+}
+
+function zend_framework_register_autoload()
+{
+	require_once 'Zend/Loader/Autoloader.php';
+	$autoloader = Zend_Loader_Autoloader::getInstance();
+}
+
+add_action('bp_init', 'buddystream_init');

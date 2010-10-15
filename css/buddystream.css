@@ -1,0 +1,28 @@
+.bs_share_button
+{
+    background-image:url("../images/share_button.png");
+    width:97px;
+    height:20px;
+    font-size:11px;
+    float:left;
+    line-height:20px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.bs_share_button img{
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:2px;
+    float:left;
+}
+
+.bs_share_counter{
+    padding-left:5px;
+    padding-right:5px;
+    margin-top:10px;
+    float:left;
+    font-size:13px;
+    display:none;
+    height:20px;
+}

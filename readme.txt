@@ -1,42 +1,49 @@
-=== BuddyStream ===
+=== Buddystream ===
 Contributors: Blackphantom
-Tags: Buddypress,BuddyPress, Twitter, Facebook, Flickr, YouTube, Last.fm, Tweetstream, Facestream, Buddystream
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
-Requires at least: WP 3.0.1, BuddyPress 1.2.5.2
+Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
+Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
+Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.0.1, BuddyPress 1.2.5.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
 
 == Description ==
+BuddyStream is a BuddyPress plugin that will synchronize all of your favorite Social Networks to the BuddyPress activity stream.
 
-BuddyStream is a BuddyPress social network intergration plugin.
-Release soon!
+The plugin is easy to set-up, operate, and for your members to use.
+Each Social Network has its own admin panel where you can see which users are using the network, view cool statistics, and manage the advanced filtering settings.
 
-Check out the website for a demo!
-http://buddystream.net
+Networks that the plugin currently supports:
+- Twitter
+- Facebook
+- Flickr
+- Youtube
+- Last.fm
 
-== SPECIAL THANKS TO ==
-All the poeple who donated and translated the plugin!
+You may find FREE translations on: http://www.buddystream.net.
+For support and other feature request, please contact us on our website.
+
+The BuddyStream plugin has full localisation support.
+
+== SPECIAL THANKS ==
+A special "Thank You" to all the poeple who donated to the support of BuddyStream and to those that have translated the plugin!  We encourage any of you that find this plugin to be an inseparable part of your BuddyStream user experience to donate to the continued support of BuddyStream.  Find out more about donating to this amazing plugin here:
+http://buddystream.net/funding/
 
 == Installation ==
 1. Upload this plugin to your `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Setup the BuddyStream plugin in the admin.
+3. Setup the BuddyStream plugin in the admin sidebar.
 4. Done!
 
 Requirements.
 - PHP5
 - CURL
-- JSON
 
 == Screenshots ==
 
-
 == ChangeLog ==
 
-= 1.0 =
-* Initial start of BuddyStream
-
-
+= 1.0.1 =
+* Initial release of Buddystream
