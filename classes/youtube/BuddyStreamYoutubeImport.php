@@ -118,7 +118,7 @@ class BuddyStreamYoutubeImport {
                                         update_user_meta($user_meta->user_id, 'bs_youtube_counterdate', date('d-m-Y'));
                                     }
 
-                                    update_user_meta((int) $user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
+                                    update_user_meta($user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
                             }
                         }
                         }

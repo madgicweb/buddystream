@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -17,18 +17,16 @@
         </h2>
         <br /><br />
 
+        <div class="bs_info_box">
+         <?php echo __('For the Flickr intergration to work with BuddyStream you will need to get adn API key from Flickr.<br>
+         You may apply for a Flickr API key here:', 'buddystream_lang'); ?>
+         <a href="http://www.flickr.com/services/api/misc.api_keys.html" target="_new">http://www.flickr.com/services/api/misc.api_keys.html</a>
+         <?php echo __('(Choose Non-Commercial in most cases).', 'buddystream_lang'); ?></div>
+
       <form method="post" action="">
           <table class="form-table">
-            <tr>
-                <td colspan="2" scope="row">
-                     <?php echo __('For the Flickr intergration to work with BuddyStream you will need to get adn API key from Flickr.<br>
-                         You may apply for a Flickr API key here:', 'buddystream_lang'); ?>
-                         <a href="http://www.flickr.com/services/api/misc.api_keys.html" target="_new">http://www.flickr.com/services/api/misc.api_keys.html</a>
-                         <?php echo __('(Choose Non-Commercial in most cases).', 'buddystream_lang'); ?>
-                    <br />
-                </td>
-            </tr>
-            <tr valign="top">
+            
+            <tr valign="top" <?  if(get_site_option('bs_flickr_api_key')==""){ echo 'class="bs_error_box"';} ?>>
                 <th scope="row"><?php echo __('API key:', 'buddystream_lang');?></th>
                    <td>
                        <input type="text" name="bs_flickr_api_key" value="<?php echo get_site_option('bs_flickr_api_key'); ?>" size="50" />

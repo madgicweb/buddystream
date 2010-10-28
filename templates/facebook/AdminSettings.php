@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -30,32 +31,36 @@
         <h2 style="float: left; line-height: 5px; padding-left: 5px;">
             <?php echo __('Facebook API'); ?>
         </h2>
-        <br /><br />
+        <br /><br /><br/>
 
+        
+        <div class="bs_info_box">
+         <?php echo __('For the Facebook intergration to work with BuddyStream you will need to get an Application ID and Key from Facebook.<br> You may get one by adding the Facebook Developer application here:', 'buddystream_lang'); ?><br>
+         <a href="http://developers.facebook.com/setup/" target="_new" title="Facebook">http://developers.facebook.com/setup/</a>
+        </div>
+
+
+        
       <form method="post" action="">
           <table class="form-table">
-            <tr>
-                <td colspan="2" scope="row">
-                     <?php echo __('For the Facebook intergration to work with BuddyStream you will need to get an Application ID and Key from Facebook.<br> You may get one by adding the Facebook Developer application here:', 'buddystream_lang'); ?><br>
-                     <a href="http://developers.facebook.com/setup/" target="_new" title="Facebook">http://developers.facebook.com/setup/</a>
-                </td>
-            </tr>
-
            
-                   </
-            <tr valign="top">
+              <tr valign="top" <? if(get_site_option('facestream_application_id')==""){ echo 'class="bs_error_box"'; } ?>>
                 <th scope="row"><?php echo __('Application ID:', 'buddystream_lang');?></th>
                    <td>
                        <input type="text" name="facestream_application_id" value="<?php echo get_site_option('facestream_application_id'); ?>" size="50" />
                    </td>
               </tr>
-
-              <tr valign="top">
+           
+              <tr valign="top" <? if(get_site_option('facestream_application_secret')==""){ echo 'class="bs_error_box"'; } ?>>
                   <th scope="row"><?php echo __('Application secret:', 'buddystream_lang');?></th>
                     <td>
                         <input type="text" name="facestream_application_secret" value="<?php echo get_site_option('facestream_application_secret'); ?>" size="50" />
                     </td>
               </tr>
+
+
+              <? if(get_site_option('facestream_application_secret')!="" && get_site_option('facestream_application_id')!="") { ?>
+
 
             <tr valign="top">
                 <th scope="row"><h2><?php echo __('User options', 'buddystream_lang');?></h2></th>
@@ -126,6 +131,8 @@
                     <input type="text" name="facestream_user_settings_maximport" value="<?php echo get_site_option('facestream_user_settings_maximport'); ?>" size="5" />
                 </th>
             </tr>
+            <? } ?>
+
         </table>
        <p class="submit"><input type="submit" class="button-primary" value="<?php echo __('Save Changes') ?>" /></p>
     </form>

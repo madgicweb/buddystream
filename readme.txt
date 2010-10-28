@@ -4,7 +4,7 @@ Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystrea
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.0.1, BuddyPress 1.2.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -44,6 +44,10 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 1.0.2 =
+* Fixed Facebook importing.
+* Fixed url to Twitter application creation.
 
 = 1.0.1 =
 * Initial release of Buddystream

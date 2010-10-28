@@ -184,7 +184,7 @@ class BuddystreamFacebook
 
      public function setPostContent($content)
      {
-         $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+         $content = stripslashes($content);
          $content = str_replace("#facebook", "", $content);
          $content = strip_tags($content);
          $content =  $content.' '.$this->getShortLink();
@@ -215,6 +215,8 @@ class BuddystreamFacebook
 
      public function requestWall()
      {
+         try{
+
         $httpClient = new Zend_Http_Client();
         $httpClient->setUri("https://graph.facebook.com/me/feed");
         $httpClient->setParameterGet(
@@ -230,47 +232,54 @@ class BuddystreamFacebook
 
 
         if($wall->data){
-        foreach($wall->data as $item)
-             {
+            foreach($wall->data as $item) {
 
-            $item = (array) $item;
-                    
-                   //checkvar
-                   $filter1  = 1;
-                   $filter2  = 1;
+                $item = (array) $item;
 
-                   //not from same source
-                        if($item["type"] == "status"){
-                           if($this->getGoodFilters()){
-                               foreach(explode(",",$this->getGoodFilters()) as $filter){
-                                    if(preg_match("/".$filter."/i",strtolower($item["message"]))){
-                                        $filter1 = 1;
-                                    }else{
-                                        $filter1 = 0;
-                                    }
-                               }
-                            }
-                            //deny when having one of the badfilters in it
-                            if($this->getBadFilters() && $filter1==1){
-                                foreach(explode(",",$this->getBadFilters()) as $filter){
-                                    if(preg_match("/".$filter."/i",strtolower($item["message"]))){
-                                        $filter2 = 0;
+                       //checkvar
+                       $filter1  = 1;
+                       $filter2  = 1;
+
+                       //not from same source
+                            if($item["type"] == "status"){
+                               if($this->getGoodFilters()){
+                                   foreach(explode(",",$this->getGoodFilters()) as $filter){
+                                        if(preg_match("/".$filter."/i",strtolower($item["message"]))){
+                                            $filter1 = 1;
+                                        }else{
+                                            $filter1 = 0;
+                                        }
+                                   }
+                                }
+                                //deny when having one of the badfilters in it
+                                if($this->getBadFilters() && $filter1==1){
+                                    foreach(explode(",",$this->getBadFilters()) as $filter){
+                                        if(preg_match("/".$filter."/i",strtolower($item["message"]))){
+                                            $filter2 = 0;
+                                        }
                                     }
                                 }
                             }
+                       if(preg_match("/".$this->getSource()."/i",strtolower($item["attribution"]))){
+                           $filter2 = 0;
+                       }
+
+                        if($filter1== 1 && $filter2== 1){
+                            $items[] = $item;
                         }
-                   if(preg_match("/".$this->getSource()."/i",strtolower($item["attribution"]))){
-                       $filter2 = 0;
-                   }
-
-                    if($filter1== 1 && $filter2== 1){
-                        $items[] = $item;
-                    }
 
 
+            }
+
+            
+         }
+
+     }
+          catch (Exception $e)
+        {
+            $items = "";
         }
-
         return $items;
-     }
-     }
+    }
+
 }

@@ -1,6 +1,6 @@
 <?php
 
-define('BP_BUDDYSTREAM_VERSION', '1.0.1');
+define('BP_BUDDYSTREAM_VERSION', '1.0.2');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 ##############################################
@@ -13,75 +13,78 @@ function buddystream_setup_nav()
 {
     global $bp;
 
-    if (get_site_option("buddystream_twitter_power")) {
-        if (get_site_option("tweetstream_consumer_key")) {
+    if(!buddystream_check_requirements()){
+
+        if (get_site_option("buddystream_twitter_power")) {
+            if (get_site_option("tweetstream_consumer_key")) {
+                bp_core_new_subnav_item(
+                    array(
+                        'name' => __('Twitter', 'buddystream_lang'),
+                        'slug' => 'buddystream-twitter',
+                        'parent_url' => $bp->loggedin_user->domain . 'settings/',
+                        'parent_slug' => 'settings',
+                        'screen_function' => 'buddystream_twitter_user_settings',
+                        'position' => 10
+                        )
+                );
+            }
+        }
+
+        if (get_site_option("buddystream_facebook_power")) {
+            if (get_site_option("facestream_application_id")) {
+                bp_core_new_subnav_item(
+                    array(
+                        'name' => __('Facebook', 'buddystream_lang'),
+                        'slug' => 'buddystream-facebook',
+                        'parent_url' => $bp->loggedin_user->domain . 'settings/',
+                        'parent_slug' => 'settings',
+                        'screen_function' => 'buddystream_facebook_user_settings',
+                        'position' => 20
+                        )
+                );
+            }
+        }
+        if (get_site_option("buddystream_flickr_power")) {
+            if (get_site_option("bs_flickr_api_key")) {
+                bp_core_new_subnav_item(
+                    array(
+                        'name' => __('Flickr', 'buddystream_lang'),
+                        'slug' => 'buddystream-flickr',
+                        'parent_url' => $bp->loggedin_user->domain . 'settings/',
+                        'parent_slug' => 'settings',
+                        'screen_function' => 'buddystream_flickr_user_settings',
+                        'position' => 30
+                        )
+                );
+            }
+        }
+
+        if (get_site_option("buddystream_lastfm_power")) {
             bp_core_new_subnav_item(
                 array(
-                    'name' => __('Twitter', 'buddystream_lang'),
-                    'slug' => 'buddystream-twitter',
+                    'name' => __('Last.fm', 'buddystream_lang'),
+                    'slug' => 'buddystream-lastfm',
                     'parent_url' => $bp->loggedin_user->domain . 'settings/',
                     'parent_slug' => 'settings',
-                    'screen_function' => 'buddystream_twitter_user_settings',
+                    'screen_function' => 'buddystream_lastfm_user_settings',
                     'position' => 40
                     )
             );
         }
-    }
 
-    if (get_site_option("buddystream_facebook_power")) {
-        if (get_site_option("facestream_application_id")) {
+        if (get_site_option("buddystream_youtube_power")) {
             bp_core_new_subnav_item(
                 array(
-                    'name' => __('Facebook', 'buddystream_lang'),
-                    'slug' => 'buddystream-facebook',
+                    'name' => __('Youtube', 'buddystream_lang'),
+                    'slug' => 'buddystream-youtube',
                     'parent_url' => $bp->loggedin_user->domain . 'settings/',
                     'parent_slug' => 'settings',
-                    'screen_function' => 'buddystream_facebook_user_settings',
-                    'position' => 40
+                    'screen_function' => 'buddystream_youtube_user_settings',
+                    'position' => 50
                     )
             );
-        }
+         }
     }
-    if (get_site_option("buddystream_flickr_power")) {
-        if (get_site_option("bs_flickr_api_key")) {
-            bp_core_new_subnav_item(
-                array(
-                    'name' => __('Flickr', 'buddystream_lang'),
-                    'slug' => 'buddystream-flickr',
-                    'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                    'parent_slug' => 'settings',
-                    'screen_function' => 'buddystream_flickr_user_settings',
-                    'position' => 40
-                    )
-            );
-        }
-    }
-
-    if (get_site_option("buddystream_lastfm_power")) {
-        bp_core_new_subnav_item(
-            array(
-                'name' => __('Last.fm', 'buddystream_lang'),
-                'slug' => 'buddystream-lastfm',
-                'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                'parent_slug' => 'settings',
-                'screen_function' => 'buddystream_lastfm_user_settings',
-                'position' => 40
-                )
-        );
-    }
-
-    if (get_site_option("buddystream_youtube_power")) {
-        bp_core_new_subnav_item(
-            array(
-                'name' => __('Youtube', 'buddystream_lang'),
-                'slug' => 'buddystream-youtube',
-                'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                'parent_slug' => 'settings',
-                'screen_function' => 'buddystream_youtube_user_settings',
-                'position' => 40
-                )
-        );
-     }
 }
 
 buddystream_setup_nav();
@@ -95,13 +98,15 @@ buddystream_setup_nav();
 add_action('admin_menu', 'buddystream_admin');
 function buddystream_admin()
 {
-    if (is_admin()) {
+    if ( !is_super_admin() )
+		return false;
 
-          bp_core_add_admin_menu_page(
+        bp_core_add_admin_menu_page(
               array(
                   'menu_title' => __('BuddyStream', 'buddystream_lang'),
                   'page_title' => __('Info', 'buddystream_lang'),
                   'access_level' => 10,
+                  'position' => 100,
                   'file' => 'buddystream-admin',
                   'function' => 'buddystream_welcome',
                   'icon_url' => plugins_url(
@@ -110,63 +115,66 @@ function buddystream_admin()
                   )
                   )
           );
+     
+          if (!buddystream_check_requirements()) {
 
-          if (get_site_option("buddystream_twitter_power")) {
-              add_submenu_page(
-                  'buddystream-admin',
-                  __('Twitter', 'buddystream_lang'),
-                  __('Twitter', 'buddystream_lang'),
-                  'manage_options',
-                  'buddystream_twitter',
-                  'buddystream_twitter'
-              );
-          }
+              if (get_site_option("buddystream_twitter_power")) {
+                  add_submenu_page(
+                      'buddystream-admin',
+                      __('Twitter', 'buddystream_lang'),
+                      __('Twitter', 'buddystream_lang'),
+                      'manage_options',
+                      'buddystream_twitter',
+                      'buddystream_twitter'
+                  );
+              }
 
-          if (get_site_option("buddystream_facebook_power")) {
-              add_submenu_page(
-                  'buddystream-admin',
-                  __('Facebook', 'buddystream_lang'),
-                  __('Facebook', 'buddystream_lang'),
-                  'manage_options',
-                  'buddystream_facebook',
-                  'buddystream_facebook'
-              );
-          }
+              if (get_site_option("buddystream_facebook_power")) {
+                  add_submenu_page(
+                      'buddystream-admin',
+                      __('Facebook', 'buddystream_lang'),
+                      __('Facebook', 'buddystream_lang'),
+                      'manage_options',
+                      'buddystream_facebook',
+                      'buddystream_facebook'
+                  );
+              }
 
-          if (get_site_option("buddystream_flickr_power")) {
-              add_submenu_page(
-                  'buddystream-admin',
-                  __('Flickr', 'buddystream_lang'),
-                  __('Flickr', 'buddystream_lang'),
-                  'manage_options',
-                  'buddystream_flickr',
-                  'buddystream_flickr'
-              );
-          }
+              if (get_site_option("buddystream_flickr_power")) {
+                  add_submenu_page(
+                      'buddystream-admin',
+                      __('Flickr', 'buddystream_lang'),
+                      __('Flickr', 'buddystream_lang'),
+                      'manage_options',
+                      'buddystream_flickr',
+                      'buddystream_flickr'
+                  );
+              }
 
-          if (get_site_option("buddystream_lastfm_power")) {
-              add_submenu_page(
-                  'buddystream-admin',
-                  __('Last.fm', 'buddystream_lang'),
-                  __('Last.fm', 'buddystream_lang'),
-                  'manage_options',
-                  'buddystream_lastfm',
-                  'buddystream_lastfm'
-              );
-          }
+              if (get_site_option("buddystream_lastfm_power")) {
+                  add_submenu_page(
+                      'buddystream-admin',
+                      __('Last.fm', 'buddystream_lang'),
+                      __('Last.fm', 'buddystream_lang'),
+                      'manage_options',
+                      'buddystream_lastfm',
+                      'buddystream_lastfm'
+                  );
+              }
 
-          if (get_site_option("buddystream_youtube_power")) {
-              add_submenu_page(
-                  'buddystream-admin',
-                  __('Youtube', 'buddystream_lang'),
-                  __('Youtube', 'buddystream_lang'),
-                  'manage_options',
-                  'buddystream_youtube',
-                  'buddystream_youtube'
-              );
-          }
-    }
+              if (get_site_option("buddystream_youtube_power")) {
+                  add_submenu_page(
+                      'buddystream-admin',
+                      __('Youtube', 'buddystream_lang'),
+                      __('Youtube', 'buddystream_lang'),
+                      'manage_options',
+                      'buddystream_youtube',
+                      'buddystream_youtube'
+                  );
+              }
+        }
 }
+
 
 function buddystream_admin_add_settings_link( $links, $file ) {
 	if ( 'buddystream/buddystream.php' != $file ) {
@@ -188,7 +196,11 @@ add_filter( 'plugin_action_links', 'buddystream_admin_add_settings_link', 10, 2 
 
 function buddystream_welcome()
 {
-     include "templates/default/WelcomeScreen.php";
+     if ($_GET["settings"] == "") {
+        include "templates/default/Dashboard.php";
+     } else if ($_GET["settings"] == "global") {
+         include "templates/default/Global.php";
+     }
 }
 
 ##############################################
@@ -496,8 +508,7 @@ function buddystream_youtube_settings_screen_content()
 ##     SEND MESSAGE TO SOCIAL NETWORK       ##
 ##                                          ##
 ##############################################
-
-add_filter('bp_activity_content_before_save', 'buddystream_socialIt');
+add_action('bp_activity_content_before_save', 'buddystream_socialIt');
 function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
 {
     global $bp;
@@ -616,7 +627,6 @@ function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
         );
 
         $facebook->setShortLink($shortLink);
-
         $facebook->postUpdate();
     }
 
@@ -624,6 +634,14 @@ function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
     $return = str_replace("#facebook", "", $return);
 
     return $return;
+}
+
+add_action('bp_get_activity_latest_update','removetags', 9);
+function removetags($content)
+{
+    $content = str_replace('#facebook','',$content);
+    $content = str_replace('#twitter','',$content);
+    return $content;
 }
 
 add_filter ( 'group_forum_topic_title_before_save', 'tweetstream_topic' );
@@ -678,9 +696,8 @@ function oauthcheck()
 
       $consumer = $twitter->getConsumer();
 
-      @session_start();
       $token = $consumer->getAccessToken(
-          $_GET, unserialize($_SESSION['TWITTER_REQUEST_TOKEN'])
+          $_GET, unserialize($twitter->getTwitterToken())
       );
 
       update_usermeta(
@@ -705,8 +722,6 @@ function oauthcheck()
           $bp->loggedin_user->id,
           'tweetstream_synctoac', 1
       );
-
-      $_SESSION['TWITTER_REQUEST_TOKEN'] = null;
 
       //for other plugins
       do_action('buddystream_twitter_activated');
@@ -1031,7 +1046,6 @@ function buddystream_resolveShortUrl($url)
 add_action('wp_print_styles', 'buddystream_style');
 function buddystream_style()
 {
-
     wp_register_style(
        'buddystream_css',
        WP_PLUGIN_URL . '/buddystream/css/buddystream.css'
@@ -1092,19 +1106,11 @@ add_filter( 'bp_ajax_querystring', 'bs_filter_query', 999, 2 );
 function bs_filter_query( $qs, $object ) {
 
     global $bp;
-
-    //not the activity
-    if ( $object != 'activity' ) {
-		return $qs;
-    }
-
-    if(!$bp->current_action){
-        return $qs;
-    }else{
+    if (preg_match("/lastfm/i",$qs)) {
         return $qs."&show_hidden=true&scope=lastfm";
     }
-
-
+   
+    return $qs;
 }
 
 //delete item of social network (note delete but hide it!)
@@ -1129,6 +1135,31 @@ function buddystream_delete_activity($activity_id,$user_id)
            update_usermeta($user_id,'buddystream_blacklist_ids', $blacklist_ids);
     }
 }
+
+function buddystream_check_requirements() {
+    
+    $error = false;
+    
+    if (phpversion() < '5.2.12') {
+        $error .= "You got a older version of PHP installed (PHP ".phpversion()."), please upgrade to minimal version 5.2.12.<br>";
+    }
+
+    if (!extension_loaded("json")) {
+        $error .= "The plugin needs JSON to be installed.<br>";
+    }
+
+    if (!extension_loaded("curl")) {
+        $error .= "The plugin needs CURL to be installed.<br>";
+    }
+
+    return $error;
+}
+
+##############################################
+##                                          ##
+##             OTHER PLUGINS                ##
+##                                          ##
+##############################################
 
 
 //achievements plugin hooks

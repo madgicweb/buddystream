@@ -104,15 +104,22 @@ class BuddystreamTwitter
          $consumer = $this->getConsumer();
          $token = $consumer->getRequestToken();
 
-         $_SESSION['TWITTER_REQUEST_TOKEN'] = serialize($token);
-         @session_start();
-         $_SESSION['TWITTER_REQUEST_TOKEN'] = serialize($token);
+         $buddystreamSession = new Zend_Session_Namespace('buddystream');
+         $buddystreamSession->twittertoken = serialize($token);
+         $buddystreamSession->setExpirationSeconds(3600, 'twittertoken');
+         
          return $consumer->getRedirectUrl(null, $token);
+     }
+
+     public function getTwitterToken(){
+
+         $buddystreamSession = new Zend_Session_Namespace('buddystream');
+         return $buddystreamSession->twittertoken;
      }
 
      public function setPostContent($content)
      {
-         $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+         $content = stripslashes($content);
          $content = str_replace("#twitter", "", $content);
          $content = strip_tags($content);
 
@@ -238,6 +245,34 @@ class BuddystreamTwitter
         }
 
         return $tweets;
+     }
+
+
+
+     public function checkAuth()
+     {
+        try {
+         $access = new Zend_Oauth_Token_Access();
+         $access->setToken($this->getAccessToken())->setTokenSecret($this->getAccessTokenSecret());
+
+         $params = array(
+             'accessToken' => $access,
+             'consumerKey' => $this->getConsumerKey(),
+             'consumerSecret' => $this->getConsumerSecret()
+         );
+
+        $twitter = new Zend_Service_Twitter($params);
+
+        if($twitter->accountVerifyCredentials()->error){
+            return false;
+        }else{
+            return true;
+        }
+        
+
+     }  catch (Exception $e){
+
+     }
      }
 
 

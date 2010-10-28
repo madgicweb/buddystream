@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -42,11 +43,14 @@ if ($_GET['user_id']) {
       }
   }
 }
+?>
+<div class="bs_info_box">
+<?
 
 echo __('Below is a list of all users whom are using Twitter. You may reset there Twitter settings here. <br>
         <b>Note:</b> When you reset a user they need to re-authenticate with Twitter.
-        Tweets already imported WILL NOT be deleted!', 'buddystream_lang') . "<br/><br/>";
-?>
+        Tweets already imported WILL NOT be deleted!', 'buddystream_lang');
+?></div><br><br>
 <table class="widefat fixed" cellspacing="0">
 
   <thead>

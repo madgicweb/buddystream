@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -14,16 +14,15 @@
         <h2 style="float: left; line-height: 5px; padding-left: 5px;">
             <?php echo __('Last.fm API'); ?>
         </h2>
-        <br /><br />
+        <br /><br /><br />
+
+        <div class="bs_info_box">
+            <?php echo __('A Last.fm API key or connection is NOT required to get the user\'s song histories. '); ?>
+        </div>
 
       <form method="post" action="">
           <table class="form-table">
-            <tr>
-                <td colspan="2" scope="row">
-                     <?php echo __('A Last.fm API key or connection is NOT required to get the user\'s song histories. '); ?><br /><br />
-                </td>
-            </tr>
-
+           
             <tr valign="top">
                 <th scope="row"><h2><?php echo __('User options', 'buddystream_lang');?></h2></th>
                 <td></td>

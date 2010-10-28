@@ -18,7 +18,6 @@ class BuddyStreamLastfmImport {
 
             if ($user_metas) {
                 foreach ($user_metas as $user_meta) {
-
                     //max photos per day
                     if (get_site_option(
                             'bs_lastfm_user_settings_maximport'
@@ -31,7 +30,6 @@ class BuddyStreamLastfmImport {
                                 'bs_lastfm_user_settings_maximport'
                             )
                         ) {
-
                             $import = 1;
                         } else {
                             $import = 0;
@@ -50,8 +48,6 @@ class BuddyStreamLastfmImport {
                         $import = 1;
                     }
                     //end time check
-
-                    $import = 1;
 
                     if ($import == 1 && get_usermeta($user_meta->user_id, 'bs_lastfm_username') != "") {
 
@@ -106,11 +102,11 @@ class BuddyStreamLastfmImport {
                                  
                                     
                                     if (get_usermeta($user_meta->user_id, 'bs_lastfm_counterdate') != date('d-m-Y')) {
-                                        update_user_meta($user_meta->user_id, 'bs_lastfm_daycounter', 0);
+                                        update_user_meta($user_meta->user_id, 'bs_lastfm_daycounter', '0');
                                         update_user_meta($user_meta->user_id, 'bs_lastfm_counterdate', date('d-m-Y'));
                                     }
 
-                                    update_user_meta((int) $user_meta->user_id, 'bs_lastfm_daycounter', get_usermeta($user_meta->user_id, 'bs_lastfm_daycounter') + 1);
+                                    update_user_meta($user_meta->user_id, 'bs_lastfm_daycounter', get_usermeta($user_meta->user_id, 'bs_lastfm_daycounter') + 1);
                                 }
                         }
                             

@@ -68,7 +68,7 @@ class BuddyStreamFacebookImport {
 
                         //FACEBOOK
                         $facebook = new BuddystreamFacebook;
-                        $facebook->setApplicationKey(get_site_option("facestream_application_key"));
+                        $facebook->setApplicationKey(get_site_option("facestream_application_id"));
                         $facebook->setApplicationSecret(get_site_option("facestream_application_secret"));
                         $facebook->setAccessToken(get_usermeta($user_meta->user_id, 'facestream_session_key'));
                         $facebook->setSource($bp->root_domain);
@@ -192,7 +192,7 @@ class BuddyStreamFacebookImport {
                                         update_usermeta($user_meta->user_id, 'facestream_daycounter', 0);
                                         update_usermeta($user_meta->user_id, 'facestream_counterdate', date('d-m-Y'));
                                     }
-                                    update_usermeta((int) $user_meta->user_id, 'facestream_daycounter', get_usermeta($user_meta->user_id, 'facestream_daycounter') + 1);
+                                    update_usermeta($user_meta->user_id, 'facestream_daycounter', get_usermeta($user_meta->user_id, 'facestream_daycounter') + 1);
                                  }
                             }
                         }

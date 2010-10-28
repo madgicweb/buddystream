@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -12,21 +13,24 @@ if ($_POST) {
 <div class="wrap"><br/>
     <h2 style="float: left; line-height: 5px; padding-left: 5px;"><?php echo __('Filters (optional)');?></h2><br />
 
+
+    <br/><br/>
+
+    <div class="bs_info_box">
+    <?php echo
+    __('Using Twitter Filters will prevent overcrowded and "messy" activity streams. <br>
+        Example: You may have a network that focuses on soccer.  To keep things "clean" you will only want Tweets that pertain to soccer to be imported. By adding the word "soccer" to the Filter below, only Tweets with the word "soccer" will be imported and shown in the users Tweets on your site.
+        <br>
+        By using commas as a delimiter, you may set-up multiple filters (No Filter = All Tweets).
+        In addition, the "Explicit Words" filter, will block any Tweet that contains them regardless of the other filter.
+        ','buddystream_lang');
+
+    ?>
+    </div>
+
     <form method="post" action="">
         <table class="form-table">
-            <tr>
-                <td colspan="2"><br>
-                    <?php echo 
-                    __('Using Twitter Filters will prevent overcrowded and "messy" activity streams. <br>
-                        Example: You may have a network that focuses on soccer.  To keep things "clean" you will only want Tweets that pertain to soccer to be imported. By adding the word "soccer" to the Filter below, only Tweets with the word "soccer" will be imported and shown in the users Tweets on your site.
-                        <br>
-                        By using commas as a delimiter, you may set-up multiple filters (No Filter = All Tweets).
-                        In addition, the "Explicit Words" filter, will block any Tweet that contains them regardless of the other filter.
-                        ','buddystream_lang');
-
-                    ?>
-               </td>
-           </tr>
+           
             <tr valign="top">
                 <th scope="row"><?php echo __('Filters (comma seperated)', 'buddystream_lang');?></th>
                 <td>

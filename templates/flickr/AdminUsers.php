@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -23,11 +24,14 @@ if ($_GET['user_id']) {
       }
   }
 }
+?>
 
+<div class="bs_info_box">
+<?
 echo __('Below is a list of users whom are using Flickr. You may reset their Flickr settings here.<br>
     <b>Note:</b> When you reset a user, they will need to fill in their Flickr username again.<br>
     Any Flickr photos that have already been imported WILL NOT be deleted.', 'buddystream_lang');
-?>
+?></div>
 
 <br/><br/>
 <table class="widefat fixed" cellspacing="0">

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -23,11 +24,15 @@ if ($_GET['user_id']) {
       }
   }
 }
+?>
 
+<div class="bs_info_box">
+<?
 echo __('Below is a list of users whom are using Last.fm. You may reset their Last.fm settings here.<br>
     <b>Note:</b> When you reset a user, they will need to fill in their Last.fm username again.<br>
     Any Last.fm songs history that have already been imported WILL NOT be deleted.', 'buddystream_lang');
 ?>
+</div>
 <br>
 <br>
 <table class="widefat fixed" cellspacing="0">
@@ -74,7 +79,7 @@ echo __('Below is a list of users whom are using Last.fm. You may reset their La
                         </td>
                         
                         <td class='email column-email'>
-                            <a href='http://www.lastfm.com/" . $lastfm_profile . "' title='http://www.lastfm.com/" . $lastfm_profile . "' target='_blanc'>http://www.lastfm.com/" . $lastfm_profile . "</a>
+                            <a href='http://www.lastfm.com/user/" . $lastfm_profile . "' title='http://www.lastfm.com/user/" . $lastfm_profile . "' target='_blanc'>http://www.lastfm.com/user/" . $lastfm_profile . "</a>
                         </td>
 
                         <td class='posts column-posts num'>" . $imported_history . "</td>

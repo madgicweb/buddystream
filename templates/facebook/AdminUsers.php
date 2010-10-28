@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -32,11 +33,14 @@ if ($_GET['user_id']) {
       }
   }
 }
+?>
 
+<div class="bs_info_box">
+<?
 echo __('Below is a list of users whom are using Facebook. You may reset their Facebook settings here.<br>
 <b>Note:</b> When you reset a user, they will need to re-authenticate with Facebook.<br>
 Any Facebook items that have already been imported WILL NOT be deleted.', 'buddystream_lang');
-?>
+?></div>
 <br><br>
 <table class="widefat fixed" cellspacing="0">
 

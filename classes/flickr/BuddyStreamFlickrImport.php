@@ -105,7 +105,7 @@ class BuddyStreamFlickrImport {
                                         update_user_meta($user_meta->user_id, 'bs_flickr_counterdate', date('d-m-Y'));
                                     }
 
-                                    update_user_meta((int) $user_meta->user_id, 'bs_flickr_daycounter', get_usermeta($user_meta->user_id, 'bs_flickr_daycounter') + 1);
+                                    update_user_meta($user_meta->user_id, 'bs_flickr_daycounter', get_usermeta($user_meta->user_id, 'bs_flickr_daycounter') + 1);
                             }
                         }
                             

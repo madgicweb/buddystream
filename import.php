@@ -63,7 +63,7 @@ if (get_site_option("buddystream_youtube_power")) {
 $time_end_cron = microtime_float_import();
 $time_cron = $time_end_cron - $time_start_cron;
 
-update_site_option("buddystream_cron_stamp",date('d-m-Y H:i:s'));
+update_site_option("buddystream_cron_stamp",current_time('mysql'));
 update_site_option("buddystream_cron_runtime",$time_cron);
 
 echo "\n".$time_cron." seconds\n";

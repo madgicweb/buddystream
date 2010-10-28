@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -7,7 +8,7 @@
       update_site_option('tweetstream_consumer_secret', trim(strip_tags($_POST['tweetstream_consumer_secret'])));
       update_site_option('tweetstream_user_settings_syncbp', trim(strip_tags(strtolower($_POST['tweetstream_user_settings_syncbp']))));
       update_site_option('tweetstream_user_settings_maximport', trim(strip_tags(strtolower($_POST['tweetstream_user_settings_maximport']))));
-      update_site_option('bs_youtube_hide_sitewide', trim(strip_tags(strtolower($_POST['bs_youtube_hide_sitewide']))));
+      update_site_option('bs_twitter_hide_sitewide', trim(strip_tags(strtolower($_POST['bs_twitter_hide_sitewide']))));
 
       //backward compatable
       $user_metas_old = $wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->usermeta where meta_key='tweetstream_token';"));
@@ -23,38 +24,40 @@
         <h2 style="float: left; line-height: 5px; padding-left: 5px;">
             <?php echo __('Twitter API Settings'); ?>
         </h2>
-        <br />
+        <br /><br/><br/>
 
-      <form method="post" action="">
-          <table class="form-table">
-            <tr>
-                <td colspan="2" scope="row">
-                     <?php echo __('For BuddyStream to work you will need to get an API key from Twitter.<br /><br />
+        <div class="bs_info_box">
+         <?php echo __('For BuddyStream to work you will need to get an API key from Twitter.<br /><br />
                      To get a API key, follow these steps:', 'buddystream_lang');?>
                     <br>
                     <?php echo __('1. Go to', 'buddystream_lang');?>
-                    "<a href="http:www.twitter.com/apps" target="_blank">http:www.twitter.com/apps</a>"
+                    "<a href="http://www.twitter.com/apps/" target="_blank">http:www.twitter.com/apps</a>"
                      <?php echo __('and login with your Twitter account.<br />','buddystream_lang');?>
 
                      <?php echo __('2. Create a new app wich has read/write settings (important), type browser and a callback url to: ', 'buddystream_lang'); ?>
                      <b><?php echo $bp->root_domain; ?></b><br />
 
-                     <?php echo __('3. Fill in the consumer key and consumer secret below.', 'buddystream_lang'); ?><br />
-                </td>
-            </tr>
-            <tr valign="top">
+                     <?php echo __('3. Fill in the consumer key and consumer secret below.', 'buddystream_lang'); ?></div>
+
+      <form method="post" action="">
+          <table class="form-table">
+            
+            <tr valign="top" <? if(get_site_option('tweetstream_consumer_key')==""){ echo 'class="bs_error_box"'; }?>>
                 <th scope="row"><?php echo __('Consumer key:', 'buddystream_lang');?></th>
                    <td>
                        <input type="text" name="tweetstream_consumer_key" value="<?php echo get_site_option('tweetstream_consumer_key'); ?>" size="50" />
                    </td>
               </tr>
 
-              <tr valign="top">
+              <tr valign="top" <? if(get_site_option('tweetstream_consumer_secret')==""){ echo 'class="bs_error_box"'; }?>>
                   <th scope="row"><?php echo __('Consumer secret key:', 'buddystream_lang');?></th>
                     <td>
                         <input type="text" name="tweetstream_consumer_secret" value="<?php echo get_site_option('tweetstream_consumer_secret'); ?>" size="50" />
                     </td>
               </tr>
+
+
+              <? if(get_site_option('tweetstream_consumer_key') && get_site_option('tweetstream_consumer_secret')){ ?>
 
             <tr valign="top">
                 <th scope="row"><h2><?php echo __('User options', 'buddystream_lang');?></h2></th>
@@ -93,6 +96,9 @@
                     <input type="text" name="tweetstream_user_settings_maximport" value="<?php echo get_site_option('tweetstream_user_settings_maximport'); ?>" size="5" />
                 </th>
             </tr>
+
+            <? } ?>
+
         </table>
        <p class="submit"><input type="submit" class="button-primary" value="<?php echo __('Save Changes') ?>" /></p>
     </form>
