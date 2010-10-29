@@ -4,7 +4,7 @@ Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystrea
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.0.1, BuddyPress 1.2.6
-Stable tag: 1.0.2
+Stable tag: 1.0.2.1
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -45,9 +45,22 @@ Requirements.
 
 == ChangeLog ==
 
+= 1.0.2.1 =
+* Fixed session errors
+* Fixed double imports from last.fm
+
 = 1.0.2 =
 * Fixed Facebook importing.
 * Fixed url to Twitter application creation.
+* Last.FM, limit import Per/User Per/Day - not working as implied.
+* Url to Twitter app ceration wrong
+* Choosing hide tweets does NOT hide the Tweets in the activity stream
+* Apostrophes When Using 'To Twitter' Button
+* Twitter Auth problems
+* Member's Activity Stream for friends, groups, @mentions broken
+* Escaping of single/double quotes
+* Added tabs in admin
+* Added dashboard to BuddyStream with some cool pie charts
 
 = 1.0.1 =
 * Initial release of Buddystream

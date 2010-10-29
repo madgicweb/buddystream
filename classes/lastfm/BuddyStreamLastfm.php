@@ -20,6 +20,7 @@ class BuddystreamLastfm
             $lastfm = new Zend_Service_Audioscrobbler();
             $lastfm->setUser($this->getUsername());
             $songs = $lastfm->userGetRecentTracks();
+
         } catch (Exception $e)
         {
             $songs = "";

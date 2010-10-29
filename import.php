@@ -17,7 +17,7 @@ if (get_site_option('buddystream_server_cron')) {
 } else {
     $limit = 2;
 }
-
+  
 if (get_site_option("buddystream_twitter_power")) {
     if (get_site_option("tweetstream_consumer_key")) {
         include_once "classes/twitter/BuddyStreamTwitterImport.php";
@@ -58,7 +58,6 @@ if (get_site_option("buddystream_youtube_power")) {
     $youtubeImport->doImport($limit);
     echo "Youtube imported\n";
 }
-
 
 $time_end_cron = microtime_float_import();
 $time_cron = $time_end_cron - $time_start_cron;

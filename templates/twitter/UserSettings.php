@@ -56,8 +56,6 @@ if ($_POST) {
         By adding words to the "Bad Filter", Tweets containing those words will NOT be imported. <br>
         Note: Each site also has a "Global" list of filters and its settings will override these settings. ', 'buddystream_lang'); ?><br />
         
-       
-        
         <br><h5><?php echo __('Good Filter (separate words with commas)', 'buddystream_lang');?></h5>
         <input type="text" name="tweetstream_filtergood" value="<?php echo $tweetstream_filtergood;?>" size="50" />
         
@@ -69,8 +67,6 @@ if ($_POST) {
     		<input type="radio" name="tweetstream_achievements" id="tweetstream_achievements" value="1" <?php if($tweetstream_achievements==1){echo'checked';}?>> <?= __('Yes','buddsytream_lang');?><br>
     		<input type="radio" name="tweetstream_achievements" id="tweetstream_achievements" value="0" <?php if($tweetstream_achievements==0){echo'checked';}?>> <?= __('No','buddsytream_lang');?><br>
     	<?php } ?>
-
-
 
         <?php } ?>
 

@@ -1,6 +1,6 @@
 <?php
 
-define('BP_BUDDYSTREAM_VERSION', '1.0.2');
+define('BP_BUDDYSTREAM_VERSION', '1.0.2.1');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 ##############################################

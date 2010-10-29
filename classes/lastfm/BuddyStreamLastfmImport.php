@@ -18,11 +18,20 @@ class BuddyStreamLastfmImport {
 
             if ($user_metas) {
                 foreach ($user_metas as $user_meta) {
-                    //max photos per day
+
+                    $user_meta->user_id = 1;
+
+                    //daycounter date
+                    if (get_usermeta($user_meta->user_id, 'bs_lastfm_counterdate') != date('d-m-Y')) {
+                        update_user_meta($user_meta->user_id, 'bs_lastfm_daycounter', '0');
+                        update_user_meta($user_meta->user_id, 'bs_lastfm_counterdate', date('d-m-Y'));
+                    }
+
+                    //max songs per day
                     if (get_site_option(
                             'bs_lastfm_user_settings_maximport'
                         ) != '') {
-
+ 
                         if (get_usermeta(
                                 $user_meta->user_id,
                                 'bs_lastfm_daycounter'
@@ -33,12 +42,13 @@ class BuddyStreamLastfmImport {
                             $import = 1;
                         } else {
                             $import = 0;
+                            echo "max reached";
                         }
                     } else {
                         $import = 1;
                     }
 
-                    //timestamp must be older then 5 minutes!
+                   //timestamp must be older then 5 minutes!
                    if(!get_usermeta($user_meta->user_id, 'bs_lastfm_stamp')){
                        update_usermeta($user_meta->user_id, 'bs_lastfm_stamp',date('d-m-Y H:i:s'));
                    }
@@ -47,8 +57,8 @@ class BuddyStreamLastfmImport {
                     if ($tago > 300) {
                         $import = 1;
                     }
-                    //end time check
 
+                    //end time check
                     if ($import == 1 && get_usermeta($user_meta->user_id, 'bs_lastfm_username') != "") {
 
                         $lastfm = new BuddyStreamLastfm();
@@ -62,9 +72,48 @@ class BuddyStreamLastfmImport {
                                 $sid = str_replace(":","",$sid);
                                 $sid = str_replace(",","",$sid);
                                 $sid = strtoupper($sid);
+                                $sid = str_replace("JAN","01",$sid);
+                                $sid = str_replace("FEB","02",$sid);
+                                $sid = str_replace("MAR","03",$sid);
+                                $sid = str_replace("APR","04",$sid);
+                                $sid = str_replace("MAY","05",$sid);
+                                $sid = str_replace("JUN","06",$sid);
+                                $sid = str_replace("JUL","07",$sid);
+                                $sid = str_replace("AUG","08",$sid);
+                                $sid = str_replace("SEP","09",$sid);
+                                $sid = str_replace("OCT","10",$sid);
+                                $sid = str_replace("NOV","11",$sid);
+                                $sid = str_replace("DEC","12",$sid);
+                                
+                                //extra check 8 minutes in the past and future do not import song!
+                                $rangeStart = $sid-8;
+                                $rangeEnd   = $sid+8;
+                                $i          = $rangeStart;
+                                $exist      = 0;
 
-                                $activity_info = bp_activity_get(array('filter' => array('secondary_id' => $sid),'show_hidden' => true));
-                                if (!$activity_info['activities'][0]->id) {
+                                
+                                while ($i <= $rangeEnd) {
+                                    
+                                    $activity_info = bp_activity_get(array('filter' => array('secondary_id' => $i),'show_hidden' => true));
+                                    if($activity_info['activities'][0]->id){
+
+                                        $content = $activity_info['activities'][0]->content;
+                                        $content = strip_tags($content);
+                                        $content = strtolower($content);
+                                        $content = str_replace("(","",$content);
+                                        $content = str_replace(")","",$content);
+                                        $content = str_replace("-","",$content);
+
+                                        if (preg_match("/".$song->name."/i",$content)) {
+                                            $exist = 1;
+                                        }
+                                    }
+
+                                    $i++;
+                                }
+
+
+                                if ($exist == 0) {
 
                                     //create new activity instance
                                     $activity = new BP_Activity_Activity ();
@@ -100,21 +149,16 @@ class BuddyStreamLastfmImport {
                                         $activity->save();
                                     }
                                  
-                                    
-                                    if (get_usermeta($user_meta->user_id, 'bs_lastfm_counterdate') != date('d-m-Y')) {
-                                        update_user_meta($user_meta->user_id, 'bs_lastfm_daycounter', '0');
-                                        update_user_meta($user_meta->user_id, 'bs_lastfm_counterdate', date('d-m-Y'));
-                                    }
-
                                     update_user_meta($user_meta->user_id, 'bs_lastfm_daycounter', get_usermeta($user_meta->user_id, 'bs_lastfm_daycounter') + 1);
                                 }
                         }
                             
-                        update_user_meta($user_meta->user_id, 'bs_lastfm_stamp', date('d-m-Y H:i:s'));
+                                    update_user_meta($user_meta->user_id, 'bs_lastfm_stamp', date('d-m-Y H:i:s'));
 
 
                                 }
                             }
+
                         }
                     }
     }

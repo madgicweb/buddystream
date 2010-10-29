@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI:
 Description: BuddyStream
-Version: 1.0.2
+Version: 1.0.2.1
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -30,7 +30,13 @@ function buddystream_init()
 {
     require 'buddystreamFunctions.php';
     zend_framework_init();
-    Zend_Session::start();
+    
+    try {
+        Zend_Session::start();
+    } catch(Zend_Session_Exception $e) {
+        
+    }
+
 }
 
 function zend_framework_init()
