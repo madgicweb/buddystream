@@ -42,7 +42,6 @@ class BuddyStreamLastfmImport {
                             $import = 1;
                         } else {
                             $import = 0;
-                            echo "max reached";
                         }
                     } else {
                         $import = 1;
