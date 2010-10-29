@@ -19,8 +19,6 @@ class BuddyStreamLastfmImport {
             if ($user_metas) {
                 foreach ($user_metas as $user_meta) {
 
-                    $user_meta->user_id = 1;
-
                     //daycounter date
                     if (get_usermeta($user_meta->user_id, 'bs_lastfm_counterdate') != date('d-m-Y')) {
                         update_user_meta($user_meta->user_id, 'bs_lastfm_daycounter', '0');
@@ -57,6 +55,9 @@ class BuddyStreamLastfmImport {
                     if ($tago > 300) {
                         $import = 1;
                     }
+
+
+                    echo $user_meta->user_id."|".$import."<hr>";
 
                     //end time check
                     if ($import == 1 && get_usermeta($user_meta->user_id, 'bs_lastfm_username') != "") {
