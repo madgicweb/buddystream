@@ -53,7 +53,8 @@ class BuddyStreamLastfmImport {
                        update_usermeta($user_meta->user_id, 'bs_lastfm_stamp',date('d-m-Y H:i:s'));
                    }
 
-                    $tago = time() - strtotime(get_usermeta($user_meta->user_id, 'bs_lastfm_stamp'));
+                   $stamp = get_usermeta($user_meta->user_id, 'bs_lastfm_stamp')."";
+                   $tago = time() - @strtotime($stamp);
                     if ($tago > 300) {
                         $import = 1;
                     }
@@ -153,10 +154,8 @@ class BuddyStreamLastfmImport {
                                 }
                         }
                             
-                                    update_user_meta($user_meta->user_id, 'bs_lastfm_stamp', date('d-m-Y H:i:s'));
-
-
                                 }
+                                update_user_meta($user_meta->user_id, 'bs_lastfm_stamp', date('d-m-Y H:i:s'));
                             }
 
                         }
