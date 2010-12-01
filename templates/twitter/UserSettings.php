@@ -1,4 +1,56 @@
 <?php
+include_once WP_PLUGIN_DIR."/buddystream/classes/twitter/BuddystreamTwitter.php";
+
+if (isset($_GET['oauth_token'])) {
+
+      $twitter = new BuddystreamTwitter();
+
+      $twitter->setCallbackUrl(
+          $bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/buddystream-twitter'
+      );
+
+      $twitter->setConsumerKey(
+          get_site_option("tweetstream_consumer_key")
+      );
+
+      $twitter->setConsumerSecret(
+          get_site_option("tweetstream_consumer_secret")
+      );
+
+      $consumer = $twitter->getConsumer();
+
+      $token = $consumer->getAccessToken(
+          $_GET,$twitter->getTwitterToken()
+      );
+
+      update_usermeta(
+          $bp->loggedin_user->id,
+          'tweetstream_token',
+          $token->oauth_token
+      );
+
+      update_usermeta(
+          $bp->loggedin_user->id,
+          'tweetstream_tokensecret',
+          $token->oauth_token_secret
+      );
+
+      update_usermeta(
+          $bp->loggedin_user->id,
+          'tweetstream_mention',
+          $token->screen_name
+      );
+
+      update_usermeta(
+          $bp->loggedin_user->id,
+          'tweetstream_synctoac', 1
+      );
+
+      //for other plugins
+      do_action('buddystream_twitter_activated');
+
+  }
+
 if ($_POST) {
     update_usermeta($bp->loggedin_user->id, 'tweetstream_synctoac', $_POST['tweetstream_synctoac']);
     update_usermeta($bp->loggedin_user->id, 'tweetstream_filtermentions', $_POST['tweetstream_filtermentions']);
@@ -37,13 +89,13 @@ if ($_POST) {
            if ($tweetstream_synctoac == 1) {
                echo 'checked';
            }
-        ?>> <?= __('Yes','buddystream_lang'); ?>
+        ?>> <label for="yes"><?php echo __('Yes','buddystream_lang'); ?></label>
         <input type="radio" name="tweetstream_synctoac" id="tweetstream_synctoac" value="0"
            <?php
            if ($tweetstream_synctoac == 0) {
                echo 'checked';
            }
-        ?>> <?= __('No','buddystream_lang'); ?>
+        ?>> <label for="no"><?php echo __('No','buddystream_lang'); ?></label>
 
 
         <br>
@@ -52,9 +104,9 @@ if ($_POST) {
 
         <br><h5><?php echo __('Filters', 'buddystream_lang');?></h5>
         <?php echo __('By using filters, you may decide which Tweets will be imported or excluded.<br>
-        By adding words to the "Good Filter", only Tweets containing those words will be imported. <br>
-        By adding words to the "Bad Filter", Tweets containing those words will NOT be imported. <br>
-        Note: Each site also has a "Global" list of filters and its settings will override these settings. ', 'buddystream_lang'); ?><br />
+        <b>Note:</b> Each site also has a "Global" list of filters and its settings will override these settings. <br>
+        <b>Note:</b> Keywords listed in the "Good" Filter must be present in the update itself to be included in the site import. Likewise, keywords listed in the "Explicit Filter" will cause that particular update NOT to be imported.
+        ', 'buddystream_lang'); ?><br />
         
         <br><h5><?php echo __('Good Filter (separate words with commas)', 'buddystream_lang');?></h5>
         <input type="text" name="tweetstream_filtergood" value="<?php echo $tweetstream_filtergood;?>" size="50" />
@@ -64,8 +116,8 @@ if ($_POST) {
 
         <?php if(defined('ACHIEVEMENTS_IS_INSTALLED')){ ?>
             <br><h5><?php echo __( 'Send achievements unlock to my twitter'  , 'buddystream_lang' );?></h5>
-    		<input type="radio" name="tweetstream_achievements" id="tweetstream_achievements" value="1" <?php if($tweetstream_achievements==1){echo'checked';}?>> <?= __('Yes','buddsytream_lang');?><br>
-    		<input type="radio" name="tweetstream_achievements" id="tweetstream_achievements" value="0" <?php if($tweetstream_achievements==0){echo'checked';}?>> <?= __('No','buddsytream_lang');?><br>
+    		<input type="radio" name="tweetstream_achievements" id="tweetstream_achievements" value="1" <?php if($tweetstream_achievements==1){echo'checked';}?>> <?php echo __('Yes','buddsytream_lang');?><br>
+    		<input type="radio" name="tweetstream_achievements" id="tweetstream_achievements" value="0" <?php if($tweetstream_achievements==0){echo'checked';}?>> <?php echo __('No','buddsytream_lang');?><br>
     	<?php } ?>
 
         <?php } ?>
@@ -80,10 +132,8 @@ if ($_POST) {
          Before you can begin using Twitter with this site you must authorize on Twitter by clicking the link below.', 'buddystream_lang') . '<br><br>';
 
          //tweetstream twitterclass
-         include_once "classes/twitter/BuddystreamTwitter.php";
-
          $twitter = new BuddystreamTwitter;
-         $twitter->setCallbackUrl($bp->root_domain.'/?social=twitter');
+         $twitter->setCallbackUrl($bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/buddystream-twitter');
          $twitter->setConsumerKey(get_site_option("tweetstream_consumer_key"));
          $twitter->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
          echo '<a href="' . $twitter->getRedirectUrl() . '">' . __('Click here to start authorization', 'buddystream_lang') . '</a><br/><br/>';

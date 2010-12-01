@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -49,8 +49,8 @@ Any Facebook items that have already been imported WILL NOT be deleted.', 'buddy
           <th scope="col" id="cb" class="manage-column column-cb check-column" style=""></th>
           <th scope="col" id="username" class="manage-column column-username" style="">Username</th>
           <th scope="col" id="email" class="manage-column column-email" style="">E-mail</th>
-          <th scope="col" id="email" class="manage-column column-name" style=""><?= __('Facebook', 'buddystream_lang'); ?></th>
-          <th scope="col" id="role" class="manage-column column-role" style=""><?= __('Items imported', 'buddystream_lang'); ?></th>
+          <th scope="col" id="email" class="manage-column column-name" style=""><?php echo __('Facebook', 'buddystream_lang'); ?></th>
+          <th scope="col" id="role" class="manage-column column-role" style=""><?php echo __('Items imported', 'buddystream_lang'); ?></th>
       </tr>
   </thead>
 
@@ -59,8 +59,8 @@ Any Facebook items that have already been imported WILL NOT be deleted.', 'buddy
           <th scope="col" id="cb" class="manage-column column-cb check-column" style=""></th>
           <th scope="col" id="username" class="manage-column column-username" style="">Username</th>
           <th scope="col" id="email" class="manage-column column-email" style="">E-mail</th>
-          <th scope="col" id="email" class="manage-column column-name" style=""><?= __('Facebook', 'buddystream_lang'); ?></th>
-          <th scope="col" id="role" class="manage-column column-role" style=""><?= __('Items imported', 'buddystream_lang'); ?></th>
+          <th scope="col" id="email" class="manage-column column-name" style=""><?php echo __('Facebook', 'buddystream_lang'); ?></th>
+          <th scope="col" id="role" class="manage-column column-role" style=""><?php echo __('Items imported', 'buddystream_lang'); ?></th>
       </tr>
   </tfoot>
   <tbody id="users" class="list:user user-list">

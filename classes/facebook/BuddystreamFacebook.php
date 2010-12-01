@@ -256,10 +256,14 @@ class BuddystreamFacebook
                                     foreach(explode(",",$this->getBadFilters()) as $filter){
                                         if(preg_match("/".$filter."/i",strtolower($item["message"]))){
                                             $filter2 = 0;
+                                            
                                         }
                                     }
                                 }
                             }
+
+
+
                        if(preg_match("/".$this->getSource()."/i",strtolower($item["attribution"]))){
                            $filter2 = 0;
                        }

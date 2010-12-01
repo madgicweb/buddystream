@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -18,8 +18,9 @@ if ($_POST) {
     Using Facebook filters will prevent overcrowded and "messy" activity streams.<br>
     Example: You may have a network what focuses on soccer. <br>To keep things "clean" you will only want items that pertain to soccer to be imported.<br>
     By adding the word "soccer" to the filter below, only items with the word "soccer" will be imported and shown in the users activity stream.<br><br>
-    By using commas as a delimiter  you may set-up multiple filters (No filer = all Facebook items.)<br>
-    In addition, the "Explicit words" filter, will block any item that contains them regardless of the other filter.
+    By using commas as a delimiter  you may set-up multiple filters (No filter = all Facebook items.)<br>
+    In addition, the "Explicit words" filter, will block any item that contains them regardless of the other filter.<br>
+    <b>Note:</b> Keywords listed in the "Good" Filter must be present in the update itself to be included in the site import. Likewise, keywords listed in the "Explicit Filter" will cause that particular update NOT to be imported.
 ', 'facestream_lang');?></div><br>
 
     <form method="post" action="">

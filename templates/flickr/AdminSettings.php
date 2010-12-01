@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -41,8 +41,8 @@
             <tr valign="top">
             <th><?php echo __( 'Hide Flickr photos on the sidewide activity stream?', 'buddystream_lang' );?></th>
             <th>
-            <input type="radio" name="bs_flickr_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="1" <?php if(get_site_option('bs_flickr_hide_sitewide')==1){echo'checked';}?>> <?php echo __( 'Yes', 'buddystream_lang' );?>
-            <input type="radio" name="bs_flickr_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="0" <?php if(get_site_option('bs_flickr_hide_sitewide')==0){echo'checked';}?>> <?php echo __( 'No', 'buddystream_lang' );?>
+            <input type="radio" name="bs_flickr_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="1" <?php if(get_site_option('bs_flickr_hide_sitewide')==1){echo'checked';}?>> <label for="yes"><?php echo __( 'Yes', 'buddystream_lang' );?></label>
+            <input type="radio" name="bs_flickr_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="0" <?php if(get_site_option('bs_flickr_hide_sitewide')==0){echo'checked';}?>> <label for="no"><?php echo __( 'No', 'buddystream_lang' );?></label>
             </th>
 
 

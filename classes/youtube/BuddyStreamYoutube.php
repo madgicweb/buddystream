@@ -1,5 +1,6 @@
 <?php
 
+
 class BuddystreamYoutube
 {
     protected $_username;

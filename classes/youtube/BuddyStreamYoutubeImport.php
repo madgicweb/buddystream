@@ -1,9 +1,11 @@
 <?php
 class BuddyStreamYoutubeImport {
 
-    public function doImport($limit) {
+    public function doImport() {
 
         global $bp, $wpdb;
+
+        $time_start = microtime_float_import();
         include_once "classes/youtube/BuddyStreamYoutube.php";
 
             $user_metas = $wpdb->get_results(
@@ -11,12 +13,20 @@ class BuddyStreamYoutubeImport {
                         "SELECT user_id
                         FROM $wpdb->usermeta where
                         meta_key='bs_youtube_username'
-                        order by meta_value LIMIT ".$limit.";"
+                        order by meta_value;"
                     )
             );
 
             if ($user_metas) {
                 foreach ($user_metas as $user_meta) {
+                    
+                    $import = 1;
+
+                   //daycounter reset
+                    if (get_usermeta($user_meta->user_id, 'bs_youtube_counterdate') != date('d-m-Y')) {
+                        update_usermeta($user_meta->user_id, 'bs_youtube_daycounter', 1);
+                        update_usermeta($user_meta->user_id, 'bs_youtube_counterdate', date('d-m-Y'));
+                    }
 
                     //max photos per day
                     if (get_site_option(
@@ -39,17 +49,6 @@ class BuddyStreamYoutubeImport {
                         $import = 1;
                     }
 
-                   //timestamp must be older then 5 minutes!
-                   if(!get_usermeta($user_meta->user_id, 'bs_youtube_stamp')){
-                       update_usermeta($user_meta->user_id, 'bs_youtube_stamp',date('d-m-Y H:i:s'));
-                   }
-
-                    $tago = time() - strtotime(get_usermeta($user_meta->user_id, 'bs_youtube_stamp'));
-                    if ($tago > 300) {
-                        $import = 1;
-                    }
-                    //end time check
-
                     if ($import == 1 && get_usermeta($user_meta->user_id, 'bs_youtube_username') != "") {
 
                         $youtube = new BuddyStreamYoutube();
@@ -59,6 +58,16 @@ class BuddyStreamYoutubeImport {
 
                         if (is_object($videos)) {
                             foreach ($videos as $video) {
+
+                                //max items
+                                $max = 1;
+                                if (get_site_option('bs_youtube_user_settings_maximport') != '') {
+                                    if (get_usermeta($user_meta->user_id,'bs_youtube_daycounter') <= get_site_option('bs_youtube_user_settings_maximport')) {
+                                        $max = 0;
+                                    }
+                                }else{
+                                    $max = 0;
+                                }
 
                                 $activity_info = bp_activity_get(array('filter' => array('secondary_id' => $video->getVideoId()),'show_hidden' => true));
                                 if (!$activity_info['activities'][0]->id) {
@@ -72,7 +81,7 @@ class BuddyStreamYoutubeImport {
                                         $slug = BP_MEMBERS_SLUG. '/';
                                     }
 
-                                    $activity->action = '<a href="' . $bp->root_domain . '/' . $slug . bp_core_get_username($user_meta->user_id) . '/" title="' . bp_core_get_username($user_meta->user_id) . '">' . bp_core_get_user_displayname($user_meta->user_id) . '</a> <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc"><img src="' . WP_PLUGIN_URL . '/buddystream/images/youtube/icon-small.png"></a> ' . __('posted a', 'tweetstream_lang') . ' <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc">' . __('video', 'buddystream_lang') . '</a>:';
+                                    $activity->action = '<a href="' . $bp->root_domain . '/' . $slug . bp_core_get_username($user_meta->user_id) . '/" title="' . bp_core_get_username($user_meta->user_id) . '">' . bp_core_get_user_displayname($user_meta->user_id) . '</a> <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc"><img src="' . plugins_url() . '/buddystream/images/youtube/icon-small.png"></a> ' . __('posted a', 'tweetstream_lang') . ' <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc">' . __('video', 'buddystream_lang') . '</a>:';
 
 
                                     $videoThumbnails = $video->getVideoThumbnails();
@@ -109,16 +118,15 @@ class BuddyStreamYoutubeImport {
                                     }
 
                                     //check if item does not exist in the blacklist
-                                    if (!preg_match("/".$video->getVideoId()."/i", get_usermeta($user_meta->user_id, 'buddystream_blacklist_ids'))) {
+                                    if(get_usermeta($user_meta->user_id, 'buddystream_blacklist_ids')){
+                                        if (!preg_match("/".$video->getVideoId()."/i", get_usermeta($user_meta->user_id, 'buddystream_blacklist_ids'))) {
+                                            $activity->save();
+                                            update_usermeta($user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
+                                        }
+                                    }else{
                                         $activity->save();
+                                         update_usermeta($user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
                                     }
-
-                                    if (get_usermeta($user_meta->user_id, 'bs_youtube_counterdate') != date('d-m-Y')) {
-                                        update_user_meta($user_meta->user_id, 'bs_youtube_daycounter', 0);
-                                        update_user_meta($user_meta->user_id, 'bs_youtube_counterdate', date('d-m-Y'));
-                                    }
-
-                                    update_user_meta($user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
                             }
                         }
                         }
@@ -126,8 +134,18 @@ class BuddyStreamYoutubeImport {
                          if (is_object($videos2)) {
                             foreach ($videos2 as $video) {
 
+                                 //max items
+                                $max = 1;
+                                if (get_site_option('bs_youtube_user_settings_maximport') != '') {
+                                    if (get_usermeta($user_meta->user_id,'bs_youtube_daycounter') <= get_site_option('bs_youtube_user_settings_maximport')) {
+                                        $max = 0;
+                                    }
+                                }else{
+                                    $max = 0;
+                                }
+
                                 $activity_info = bp_activity_get(array('filter' => array('secondary_id' => $video->getVideoId())));
-                                if (!$activity_info['activities'][0]->id) {
+                                if (!$activity_info['activities'][0]->id && $max == 0) {
                                     //create new activity instance
                                     $activity = new BP_Activity_Activity ();
                                     $activity->user_id = $user_meta->user_id;
@@ -137,7 +155,7 @@ class BuddyStreamYoutubeImport {
                                     if (!defined('BP_ENABLE_ROOT_PROFILES')) {
                                         $slug = BP_MEMBERS_SLUG. '/';
                                     }
-                                    $activity->action = '<a href="' . $bp->root_domain . '/' . $slug . bp_core_get_username($user_meta->user_id) . '/" title="' . bp_core_get_username($user_meta->user_id) . '">' . bp_core_get_user_displayname($user_meta->user_id) . '</a> <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc"><img src="' . WP_PLUGIN_URL . '/buddystream/images/youtube/icon-small.png"></a> ' . __('posted a', 'tweetstream_lang') . ' <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc">' . __('video', 'buddystream_lang') . '</a>:';
+                                    $activity->action = '<a href="' . $bp->root_domain . '/' . $slug . bp_core_get_username($user_meta->user_id) . '/" title="' . bp_core_get_username($user_meta->user_id) . '">' . bp_core_get_user_displayname($user_meta->user_id) . '</a> <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc"><img src="' . plugins_url() . '/buddystream/images/youtube/icon-small.png"></a> ' . __('posted a', 'tweetstream_lang') . ' <a href="http://www.youtube.com/' .get_usermeta($user_meta->user_id, 'bs_youtube_username'). '" target="_blanc">' . __('video', 'buddystream_lang') . '</a>:';
 
 
                                     $videoThumbnails = $video->getVideoThumbnails();
@@ -173,22 +191,25 @@ class BuddyStreamYoutubeImport {
                                         $activity->hide_sitewide = 0;
                                     }
 
-                                    $activity->save();
-
-                                    if (get_usermeta($user_meta->user_id, 'bs_youtube_counterdate') != date('d-m-Y')) {
-                                        update_user_meta($user_meta->user_id, 'bs_youtube_daycounter', 0);
-                                        update_user_meta($user_meta->user_id, 'bs_youtube_counterdate', date('d-m-Y'));
-                                    }
-
-                                    update_user_meta((int) $user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
+                                     //check if item does not exist in the blacklist
+                                    if(get_usermeta($user_meta->user_id, 'buddystream_blacklist_ids')){
+                                        if (!preg_match("/".$tweet->id."/i", get_usermeta($user_meta->user_id, 'buddystream_blacklist_ids'))) {
+                                            $activity->save();
+                                            update_usermeta((int) $user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
+                                        }
+                                    }else{
+                                        $activity->save();
+                                        update_usermeta((int) $user_meta->user_id, 'bs_youtube_daycounter', get_usermeta($user_meta->user_id, 'bs_youtube_daycounter') + 1);
+                                    }                                    
                             }
                         }
                         }
-
-                        update_user_meta($user_meta->user_id, 'bs_youtube_stamp', date('d-m-Y H:i:s'));
 
                             }
                         }
                     }
+
+        $time_end = microtime_float_import();
+        return $time_end - $time_start;
     }
 }

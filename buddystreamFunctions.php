@@ -1,7 +1,19 @@
 <?php
 
-define('BP_BUDDYSTREAM_VERSION', '1.0.2.1');
+define('BP_BUDDYSTREAM_VERSION', '1.0.2.3');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
+
+##############################################
+##                                          ##
+##             UPGRADE STUFF                ##
+##                                          ##
+##############################################
+if(!get_option("bp_buddystream_upgrade")){
+    include "upgrade.php";
+    update_option("bp_buddystream_upgrade","1.0.2.3");
+}
+
+
 
 ##############################################
 ##                                          ##
@@ -13,7 +25,7 @@ function buddystream_setup_nav()
 {
     global $bp;
 
-    if(!buddystream_check_requirements()){
+    if(!buddystreamCheckRequirements()){
 
         if (get_site_option("buddystream_twitter_power")) {
             if (get_site_option("tweetstream_consumer_key")) {
@@ -21,10 +33,11 @@ function buddystream_setup_nav()
                     array(
                         'name' => __('Twitter', 'buddystream_lang'),
                         'slug' => 'buddystream-twitter',
-                        'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                        'parent_slug' => 'settings',
+                        'parent_url' => $bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/',
+                        'parent_slug' => BP_SETTINGS_SLUG,
                         'screen_function' => 'buddystream_twitter_user_settings',
-                        'position' => 10
+                        'position' => 10,
+                        'user_has_access' => bp_is_my_profile ()
                         )
                 );
             }
@@ -36,10 +49,11 @@ function buddystream_setup_nav()
                     array(
                         'name' => __('Facebook', 'buddystream_lang'),
                         'slug' => 'buddystream-facebook',
-                        'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                        'parent_slug' => 'settings',
+                        'parent_url' => $bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/',
+                        'parent_slug' => BP_SETTINGS_SLUG,
                         'screen_function' => 'buddystream_facebook_user_settings',
-                        'position' => 20
+                        'position' => 20,
+                        'user_has_access' => bp_is_my_profile ()
                         )
                 );
             }
@@ -50,10 +64,11 @@ function buddystream_setup_nav()
                     array(
                         'name' => __('Flickr', 'buddystream_lang'),
                         'slug' => 'buddystream-flickr',
-                        'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                        'parent_slug' => 'settings',
+                        'parent_url' => $bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/',
+                        'parent_slug' => BP_SETTINGS_SLUG,
                         'screen_function' => 'buddystream_flickr_user_settings',
-                        'position' => 30
+                        'position' => 30,
+                        'user_has_access' => bp_is_my_profile ()
                         )
                 );
             }
@@ -64,10 +79,11 @@ function buddystream_setup_nav()
                 array(
                     'name' => __('Last.fm', 'buddystream_lang'),
                     'slug' => 'buddystream-lastfm',
-                    'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                    'parent_slug' => 'settings',
+                    'parent_url' => $bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/',
+                    'parent_slug' => BP_SETTINGS_SLUG,
                     'screen_function' => 'buddystream_lastfm_user_settings',
-                    'position' => 40
+                    'position' => 40,
+                    'user_has_access' => bp_is_my_profile ()
                     )
             );
         }
@@ -77,10 +93,11 @@ function buddystream_setup_nav()
                 array(
                     'name' => __('Youtube', 'buddystream_lang'),
                     'slug' => 'buddystream-youtube',
-                    'parent_url' => $bp->loggedin_user->domain . 'settings/',
-                    'parent_slug' => 'settings',
+                    'parent_url' => $bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/',
+                    'parent_slug' => BP_SETTINGS_SLUG,
                     'screen_function' => 'buddystream_youtube_user_settings',
-                    'position' => 50
+                    'position' => 50,
+                    'user_has_access' => bp_is_my_profile ()
                     )
             );
          }
@@ -116,7 +133,7 @@ function buddystream_admin()
                   )
           );
      
-          if (!buddystream_check_requirements()) {
+          if (!buddystreamCheckRequirements()) {
 
               if (get_site_option("buddystream_twitter_power")) {
                   add_submenu_page(
@@ -180,7 +197,7 @@ function buddystream_admin_add_settings_link( $links, $file ) {
 	if ( 'buddystream/buddystream.php' != $file ) {
 		return $links;
     } else {
-        $settings_link = '<a href="' . admin_url( 'admin.php?page=buddystream-admin' ) . '">' . __( 'Settings', 'dpa' ) . '</a>';
+        $settings_link = '<a href="' . admin_url( 'admin.php?page=buddystream-admin' ) . '">' . __( 'Settings', 'buddystream_lang' ) . '</a>';
         array_unshift( $links, $settings_link );
     }
     
@@ -234,7 +251,7 @@ function buddystream_twitter_user_settings()
     global $bp;
 
     if ($bp->displayed_user->id != $bp->loggedin_user->id) {
-        header('location:' . $bp->root_domain);
+        header('location:' . get_site_url());
     }
 
     add_action(
@@ -296,7 +313,7 @@ function buddystream_facebook_user_settings()
     global $bp;
 
     if ($bp->displayed_user->id != $bp->loggedin_user->id) {
-        header('location:' . $bp->root_domain);
+        header('location:' . get_site_url());
     }
 
     add_action(
@@ -354,7 +371,7 @@ function buddystream_flickr_user_settings()
     global $bp;
 
     if ($bp->displayed_user->id != $bp->loggedin_user->id) {
-        header('location:' . $bp->root_domain);
+        header('location:' . get_site_url());
     }
 
     add_action(
@@ -412,7 +429,7 @@ function buddystream_lastfm_user_settings()
     global $bp;
 
     if ($bp->displayed_user->id != $bp->loggedin_user->id) {
-        header('location:' . $bp->root_domain);
+        header('location:' . get_site_url());
     }
 
     add_action(
@@ -471,7 +488,7 @@ function buddystream_youtube_user_settings()
     global $bp;
 
     if ($bp->displayed_user->id != $bp->loggedin_user->id) {
-        header('location:' . $bp->root_domain);
+        header('location:' . get_site_url());
     }
 
     add_action(
@@ -508,7 +525,7 @@ function buddystream_youtube_settings_screen_content()
 ##     SEND MESSAGE TO SOCIAL NETWORK       ##
 ##                                          ##
 ##############################################
-add_action('bp_activity_content_before_save', 'buddystream_socialIt');
+add_action('bp_activity_content_before_save', 'buddystream_socialIt',1);
 function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
 {
     global $bp;
@@ -603,7 +620,11 @@ function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
         $facebook = new BuddystreamFacebook();
 
         $facebook->setCallbackUrl(
-            $bp->root_domain.'/?social=facebook'
+            get_site_url().'/?social=facebook'
+        );
+        
+        $facebook->setApplicationKey(
+            get_site_option("facestream_application_id")
         );
 
         $facebook->setApplicationId(
@@ -662,129 +683,6 @@ function buddystream_filtertags_fp() {
     $content = str_replace("#twitter", "", $content);
     $content = str_replace("#facebook", "", $content);
 	return $content;
-}
-
-                    
-##############################################
-##                                          ##
-##          oauth back from network         ##
-##                                          ##
-##############################################
-
-add_action('wp', 'oauthcheck');
-function oauthcheck()
-{
-  global $bp;
-
-  if ($_GET['social'] == 'twitter') {
-      
-      include_once "classes/twitter/BuddystreamTwitter.php";
-
-      $twitter = new BuddystreamTwitter();
-
-      $twitter->setCallbackUrl(
-          $bp->root_domain.'/?social=twitter'
-      );
-      
-      $twitter->setConsumerKey(
-          get_site_option("tweetstream_consumer_key")
-      );
-
-      $twitter->setConsumerSecret(
-          get_site_option("tweetstream_consumer_secret")
-      );
-
-      $consumer = $twitter->getConsumer();
-
-      $token = $consumer->getAccessToken(
-          $_GET, unserialize($twitter->getTwitterToken())
-      );
-
-      update_usermeta(
-          $bp->loggedin_user->id,
-          'tweetstream_token',
-          $token->oauth_token
-      );
-
-      update_usermeta(
-          $bp->loggedin_user->id,
-          'tweetstream_tokensecret',
-          $token->oauth_token_secret
-      );
-
-      update_usermeta(
-          $bp->loggedin_user->id,
-          'tweetstream_mention',
-          $token->screen_name
-      );
-
-      update_usermeta(
-          $bp->loggedin_user->id,
-          'tweetstream_synctoac', 1
-      );
-
-      //for other plugins
-      do_action('buddystream_twitter_activated');
-
-      header(
-          'location:' .
-          $bp->loggedin_user->domain .
-          "settings/buddystream-twitter"
-      );
-  }
-
-  if ($_GET['social'] == 'facebook') {
-
-      include_once "classes/facebook/BuddystreamFacebook.php";
-
-      $facebook = new BuddystreamFacebook();
-
-      $facebook->setCallbackUrl(
-          $bp->root_domain.'/?social=facebook'
-      );
-
-      $facebook->setApplicationId(
-          get_site_option("facestream_application_id")
-      );
-
-      $facebook->setApplicationSecret(
-          get_site_option("facestream_application_secret")
-      );
-
-      $facebook->setCode(
-          $_GET['code']
-      );
-
-      $accessToken = $facebook->requestAccessToken();
-      $facebook->setAccessToken($accessToken);
-     
-      update_usermeta(
-          $bp->loggedin_user->id,
-          'facestream_session_key',
-          $accessToken
-      );
-
-      update_usermeta(
-          $bp->loggedin_user->id,
-          'facestream_user_id',
-          $facebook->requestUser()->id
-      );
-
-      update_usermeta(
-          $bp->loggedin_user->id,
-          'facestream_synctoac',
-          1
-      );
-
-
-      //for other plugins
-      do_action('buddystream_facebook_activated');
-
-      header(
-          'location:' . $bp->loggedin_user->domain .
-          "settings/buddystream-facebook"
-      );
-  }
 }
 
 ################################################
@@ -856,7 +754,7 @@ function buddystream_addSharing()
             if (get_usermeta($bp->loggedin_user->id, 'tweetstream_token')) {
                 echo'<div class="bs_share_button"
                         onclick="buddystream_addTag(\'#twitter\')">
-                        <img src="'.WP_PLUGIN_URL.'/buddystream/images/twitter/icon-small.png" title="'.__('to twitter', 'buddystream_lang').'"> '.__('to twitter', 'buddystream_lang').'
+                        <img src="'.plugins_url().'/buddystream/images/twitter/icon-small.png" title="'.__('to twitter', 'buddystream_lang').'"> '.__('to twitter', 'buddystream_lang').'
                      </div>';
             }
         }
@@ -868,7 +766,7 @@ function buddystream_addSharing()
             if (get_usermeta($bp->loggedin_user->id, 'facestream_session_key')) {
                 echo '<div class="bs_share_button"
                         onclick="buddystream_addTag(\'#facebook\')">
-                      <img src="'.WP_PLUGIN_URL.'/buddystream/images/facebook/icon-small.png" title="'.__('to facebook', 'buddystream_lang').'"> '.__('to facebook', 'buddystream_lang').'
+                      <img src="'.plugins_url().'/buddystream/images/facebook/icon-small.png" title="'.__('to facebook', 'buddystream_lang').'"> '.__('to facebook', 'buddystream_lang').'
                       </div>';
             }
         }
@@ -986,8 +884,7 @@ function buddystream_textdomain()
 ##             URL SHORTING                 ##
 ##                                          ##
 ##############################################
-
-add_action('wp', 'buddystream_resolveShortUrl');
+add_action('wp', 'buddystream_resolveShortUrl',1);
 function buddystream_getShortUrl($url)
 {
    global $bp;
@@ -1006,7 +903,7 @@ function buddystream_getShortUrl($url)
        $shortId = strrev($out);
 
        update_usermeta($bp->loggedin_user->id, 'buddystream_' . $shortId, $url);
-       $url = $bp->root_domain . '/' . $shortId;
+       $url = get_site_url() . '/' . $shortId;
 
        return $url;
    } else {
@@ -1014,7 +911,7 @@ function buddystream_getShortUrl($url)
    }
 }
 
-add_action('wp', 'buddystream_resolveShortUrl');
+add_action('wp', 'buddystream_resolveShortUrl',1);
 function buddystream_resolveShortUrl($url)
 {
    global $wpdb;
@@ -1048,57 +945,41 @@ function buddystream_style()
 {
     wp_register_style(
        'buddystream_css',
-       WP_PLUGIN_URL . '/buddystream/css/buddystream.css'
+       plugins_url() . '/buddystream/css/buddystream.css'
    );
    wp_enqueue_style('buddystream_css');
 
     wp_register_style(
        'buddystream_twitter_css',
-       WP_PLUGIN_URL . '/buddystream/css/twitter.css'
+       plugins_url() . '/buddystream/css/twitter.css'
    );
    wp_enqueue_style('buddystream_twitter_css');
 
    wp_register_style(
        'buddystream_facebook_css',
-       WP_PLUGIN_URL . '/buddystream/css/facebook.css'
+       plugins_url() . '/buddystream/css/facebook.css'
    );
    wp_enqueue_style('buddystream_facebook_css');
 
 
       wp_register_style(
        'buddystream_youtube_css',
-       WP_PLUGIN_URL . '/buddystream/css/youtube.css'
+       plugins_url() . '/buddystream/css/youtube.css'
    );
    wp_enqueue_style('buddystream_youtube_css');
 
    
    wp_register_style(
-       'buddystream_prettyphoto_css',
+       'prettyphoto_css',
        WP_PLUGIN_URL . '/buddystream/js/prettyphoto/css/prettyPhoto.css'
    );
-   wp_enqueue_style('buddystream_prettyphoto_css');
-   
-   wp_enqueue_script('buddystream', WP_PLUGIN_URL . '/buddystream/js/main.js');
+ 
+  wp_enqueue_style('prettyphoto_css');
+  wp_enqueue_style('buddystream_prettyphoto_css');
 
-   if (!get_site_option("buddystream_server_cron")) {
-       wp_enqueue_script('buddystream_import', WP_PLUGIN_URL . '/buddystream/js/import.js');
-   }
+  wp_enqueue_script('buddystream', plugins_url() . '/buddystream/js/main.js');
+  wp_enqueue_script('prettyphoto', plugins_url() . '/buddystream/js/prettyphoto/jquery.prettyPhoto.js');
 
-   wp_enqueue_script('buddystream_prettyphoto', WP_PLUGIN_URL . '/buddystream/js/prettyphoto/jquery.prettyPhoto.js');
-
-}
-
-##############################################
-##                                          ##
-##         IMPORT FROM NETWORKS             ##
-##                                          ##
-##############################################
-add_action('wp', 'buddystream_runCron');
-function buddystream_runCron()
-{
-    if ($_GET['buddystreamcron']=="run") {
-        include "import.php";
-    }
 }
 
 //filter to show last fm items on main activity, or user activity
@@ -1136,7 +1017,7 @@ function buddystream_delete_activity($activity_id,$user_id)
     }
 }
 
-function buddystream_check_requirements() {
+function buddystreamCheckRequirements() {
     
     $error = false;
     

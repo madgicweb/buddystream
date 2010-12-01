@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br>
 <?php
 include "AdminMenu.php";
@@ -58,20 +58,20 @@ $percentageTotalItems = 100 -($percentageTwitterItems+$percentageFacebookItems+$
 
                 <img src="
                      <?php
-                     echo 'http://chart.apis.google.com/chart?chs=350x200&cht=p&chd=t:'.$percentageTotal.','.$percentageTwitter.','.$percentageFacebook.','.$percentageFlickr.','.$percentageLastfm.','.$percentageYoutube.'&chp=2&chl=Members ('.$percentageTotal.'%)|Twitter ('.$percentageTwitter.'%)|Facebook ('.$percentageFacebook.'%)|Flickr ('.$percentageFlickr.'%)|Last.fm ('.$percentageLastfm.'%)|Youtube ('.$percentageYoutube.'%)&chtt=Intergration+statistics';?>" width="350" height="200" alt="<? echo  __('Intergration statistics','buddystream_lang');?> " />
+                     echo 'http://chart.apis.google.com/chart?chs=350x200&cht=p&chd=t:'.$percentageTotal.','.$percentageTwitter.','.$percentageFacebook.','.$percentageFlickr.','.$percentageLastfm.','.$percentageYoutube.'&chp=2&chl=Members ('.$percentageTotal.'%)|Twitter ('.$percentageTwitter.'%)|Facebook ('.$percentageFacebook.'%)|Flickr ('.$percentageFlickr.'%)|Last.fm ('.$percentageLastfm.'%)|Youtube ('.$percentageYoutube.'%)&chtt=Intergration+statistics';?>" width="350" height="200" alt="<?php echo  __('Intergration statistics','buddystream_lang');?> " />
                     
                     <img src="
                      <?php
-                     echo 'http://chart.apis.google.com/chart?chs=350x200&cht=p&chd=t:'.$percentageTotalItems.','.$percentageTwitterItems.','.$percentageFacebookItems.','.$percentageFlickrItems.','.$percentageLastfmItems.','.$percentageYoutubeItems.'&chp=2&chl=Items ('.$percentageTotalItems.'%)|Twitter ('.$percentageTwitterItems.'%)|Facebook ('.$percentageFacebookItems.'%)|Flickr ('.$percentageFlickrItems.'%)|Last.fm ('.$percentageLastfmItems.'%)|Youtube ('.$percentageYoutubeItems.'%)&chtt=Import+statistics';?>" width="350" height="200" alt="<? echo  __('Import statistics','buddystream_lang');?> "/>
+                     echo 'http://chart.apis.google.com/chart?chs=350x200&cht=p&chd=t:'.$percentageTotalItems.','.$percentageTwitterItems.','.$percentageFacebookItems.','.$percentageFlickrItems.','.$percentageLastfmItems.','.$percentageYoutubeItems.'&chp=2&chl=Items ('.$percentageTotalItems.'%)|Twitter ('.$percentageTwitterItems.'%)|Facebook ('.$percentageFacebookItems.'%)|Flickr ('.$percentageFlickrItems.'%)|Last.fm ('.$percentageLastfmItems.'%)|Youtube ('.$percentageYoutubeItems.'%)&chtt=Import+statistics';?>" width="350" height="200" alt="<?php echo  __('Import statistics','buddystream_lang');?> "/>
                     </div>
                 </div>
             </div>
 
              <div class="postbox " id="dashboard_right_now">
-                <div><h3 class="hndle"><span><? echo __('Support','buddystream_lang');?></span></h3>
+                <div><h3 class="hndle"><span><?php echo __('Support','buddystream_lang');?></span></h3>
                     <div class="inside" style="padding:10px;">
-                          <? echo __('Did you found a bug? Or do you have a feature request? <br> Please report it in our support system.','buddystream_lang'); ?><br><br>
-                            <a href="http://http://buddystream.net/support/"><? echo __('Click here to report a bug/feature request!','buddystream_lang');?></a>
+                          <?php echo __('Did you found a bug? Or do you have a feature request? <br> Please report it in our support system.','buddystream_lang'); ?><br><br>
+                            <a href="http://buddystream.net/support/"><?php echo __('Click here to report a bug/feature request!','buddystream_lang');?></a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ $percentageTotalItems = 100 -($percentageTwitterItems+$percentageFacebookItems+$
         <div class="meta-box-sortables ui-sortable" id="normal-sortables">
 
             <div class="postbox " id="dashboard_right_now">
-                <div><h3 class="hndle"><span><?= __('Latest news','buddystream_lang');?></span></h3>
+                <div><h3 class="hndle"><span><?php echo __('Latest news','buddystream_lang');?></span></h3>
                     <div class="inside" style="padding:10px;">
                         <?php
                             $feedItems = fetch_feed('http://buddystream.net/feed/');
@@ -99,17 +99,17 @@ $percentageTotalItems = 100 -($percentageTwitterItems+$percentageFacebookItems+$
             </div>
 
             <div class="postbox " id="dashboard_right_now">
-                <div><h3 class="hndle"><span><? echo __('Donate','buddystream_lang');?></span></h3>
+                <div><h3 class="hndle"><span><?php echo __('Donate','buddystream_lang');?></span></h3>
                     <div class="inside" style="padding:10px;">
-                        <? echo __('If you like this plugin and want to see it supported, continued, and extended please take a minute and consider donating a few dollars for our expenses (even juice or coffee!).  It only takes a couple minutes of your time!  Seriously, what is this plugin worth to you?  Think about it…','buddystream_lang'); ?><br><br>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z7RK6XPG9K8UQ" target="_blanc"><? echo __('Click here to donate!','buddystream_lang');?></a>
+                        <?php echo __('If you like this plugin and want to see it supported, continued, and extended please take a minute and consider donating a few dollars for our expenses (even juice or coffee!).  It only takes a couple minutes of your time!  Seriously, what is this plugin worth to you?  Think about it…','buddystream_lang'); ?><br><br>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z7RK6XPG9K8UQ" target="_blanc"><?php echo __('Click here to donate!','buddystream_lang');?></a>
                     </div>
                 </div>
             </div>
 
 
              <div class="postbox " id="dashboard_right_now">
-                <div><h3 class="hndle"><span><? echo __('Advertisement','buddystream_lang');?></span></h3>
+                <div><h3 class="hndle"><span><?php echo __('Advertisement','buddystream_lang');?></span></h3>
                     <div class="inside" style="padding:10px;">
                         <script type="text/javascript"><!--
                         google_ad_client = "pub-9463596301344154";

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -39,8 +39,8 @@ Any YouTube video history that has already been imported WILL NOT be deleted. ',
       <tr class="thead">
           <th scope="col" id="cb" class="manage-column column-cb check-column" style=""></th>
           <th scope="col" id="username" class="manage-column column-username" style="">Username</th>
-          <th scope="col" id="email" class="manage-column column-name" style=""><?= __('Youtube', 'buddystream_lang'); ?></th>
-          <th scope="col" id="role" class="manage-column column-role" style=""><?= __('Video history', 'buddystream_lang'); ?></th>
+          <th scope="col" id="email" class="manage-column column-name" style=""><?php echo __('Youtube', 'buddystream_lang'); ?></th>
+          <th scope="col" id="role" class="manage-column column-role" style=""><?php echo __('Video history', 'buddystream_lang'); ?></th>
       </tr>
   </thead>
 
@@ -48,8 +48,8 @@ Any YouTube video history that has already been imported WILL NOT be deleted. ',
       <tr class="thead">
           <th scope="col" id="cb" class="manage-column column-cb check-column" style=""></th>
           <th scope="col" id="username" class="manage-column column-username" style="">Username</th>
-          <th scope="col" id="email" class="manage-column column-name" style=""><?= __('Youtube', 'buddystream_lang'); ?></th>
-          <th scope="col" id="role" class="manage-column column-role" style=""><?= __('Video history imported', 'buddystream_lang'); ?></th>
+          <th scope="col" id="email" class="manage-column column-name" style=""><?php echo __('Youtube', 'buddystream_lang'); ?></th>
+          <th scope="col" id="role" class="manage-column column-role" style=""><?php echo __('Video history imported', 'buddystream_lang'); ?></th>
       </tr>
   </tfoot>
   <tbody id="users" class="list:user user-list">

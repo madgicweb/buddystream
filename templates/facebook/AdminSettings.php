@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -70,8 +70,8 @@
             <tr valign="top">
             <th><?php echo __( 'Hide Facebook items on the sidewide activity stream?', 'buddystream_lang' );?></th>
             <th>
-            <input type="radio" name="bs_facebook_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="1" <?php if(get_site_option('bs_facebook_hide_sitewide')==1){echo'checked';}?>> <?php echo __( 'Yes', 'buddystream_lang' );?>
-            <input type="radio" name="bs_facebook_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="0" <?php if(get_site_option('bs_facebook_hide_sitewide')==0){echo'checked';}?>> <?php echo __( 'No', 'buddystream_lang' );?>
+            <input type="radio" name="bs_facebook_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="1" <?php if(get_site_option('bs_facebook_hide_sitewide')==1){echo'checked';}?>> <label for="yes"><?php echo __( 'Yes', 'buddystream_lang' );?></label>
+            <input type="radio" name="bs_facebook_hide_sitewide" id="facestream_user_settings_syncupdatesbp" value="0" <?php if(get_site_option('bs_facebook_hide_sitewide')==0){echo'checked';}?>> <label for="no"><?php echo __( 'No', 'buddystream_lang' );?></label>
             </th>
 
 
@@ -96,32 +96,32 @@
                     <tr valign="top">
             <th><?php echo __( 'Allow users to sync updates to BuddyPress?', 'buddystream_lang' );?></th>
             <th>
-            <input type="radio" name="facestream_user_settings_syncupdatesbp" id="facestream_user_settings_syncupdatesbp" value="0" <?php if(get_site_option('facestream_user_settings_syncupdatesbp')==0){echo'checked';}?>> <?php echo __( 'Yes', 'buddystream_lang' );?>
-			<input type="radio" name="facestream_user_settings_syncupdatesbp" id="facestream_user_settings_syncupdatesbp" value="1" <?php if(get_site_option('facestream_user_settings_syncupdatesbp')==1){echo'checked';}?>> <?php echo __( 'No', 'buddystream_lang' );?>
+            <input type="radio" name="facestream_user_settings_syncupdatesbp" id="facestream_user_settings_syncupdatesbp" value="0" <?php if(get_site_option('facestream_user_settings_syncupdatesbp')==0){echo'checked';}?>> <label for="yes"><?php echo __( 'Yes', 'buddystream_lang' );?></label>
+			<input type="radio" name="facestream_user_settings_syncupdatesbp" id="facestream_user_settings_syncupdatesbp" value="1" <?php if(get_site_option('facestream_user_settings_syncupdatesbp')==1){echo'checked';}?>> <label for="no"><?php echo __( 'No', 'buddystream_lang' );?></label>
             </th>
         </tr>
 
         <tr valign="top">
             <th><?php echo __( 'Allow users to sync links to BuddyPress?', 'buddystream_lang' );?></th>
             <th>
-            <input type="radio" name="facestream_user_settings_synclinksbp" id="facestream_user_settings_synclinksbp" value="0" <?php if(get_site_option('facestream_user_settings_synclinksbp')==0){echo'checked';}?>> <?php echo __( 'Yes', 'buddystream_lang' );?>
-			<input type="radio" name="facestream_user_settings_synclinksbp" id="facestream_user_settings_synclinksbp" value="1" <?php if(get_site_option('facestream_user_settings_synclinksbp')==1){echo'checked';}?>> <?php echo __( 'No', 'buddystream_lang' );?>
+            <input type="radio" name="facestream_user_settings_synclinksbp" id="facestream_user_settings_synclinksbp" value="0" <?php if(get_site_option('facestream_user_settings_synclinksbp')==0){echo'checked';}?>> <label for="yes"><?php echo __( 'Yes', 'buddystream_lang' );?></label>
+			<input type="radio" name="facestream_user_settings_synclinksbp" id="facestream_user_settings_synclinksbp" value="1" <?php if(get_site_option('facestream_user_settings_synclinksbp')==1){echo'checked';}?>> <label for="no"><?php echo __( 'No', 'buddystream_lang' );?></label>
             </th>
         </tr>
 
         <tr valign="top">
             <th><?php echo __( 'Allow users to sync photos to BuddyPress?', 'buddystream_lang' );?></th>
             <th>
-            <input type="radio" name="facestream_user_settings_syncphotosbp" id="facestream_user_settings_syncphotosbp" value="0" <?php if(get_site_option('facestream_user_settings_syncphotosbp')==0){echo'checked';}?>> <?php echo __( 'Yes', 'buddystream_lang' );?>
-			<input type="radio" name="facestream_user_settings_syncphotosbp" id="facestream_user_settings_syncphotosbp" value="1" <?php if(get_site_option('facestream_user_settings_syncphotosbp')==1){echo'checked';}?>> <?php echo __( 'No', 'buddystream_lang' );?>
+            <input type="radio" name="facestream_user_settings_syncphotosbp" id="facestream_user_settings_syncphotosbp" value="0" <?php if(get_site_option('facestream_user_settings_syncphotosbp')==0){echo'checked';}?>> <label for="yes"><?php echo __( 'Yes', 'buddystream_lang' );?></label>
+			<input type="radio" name="facestream_user_settings_syncphotosbp" id="facestream_user_settings_syncphotosbp" value="1" <?php if(get_site_option('facestream_user_settings_syncphotosbp')==1){echo'checked';}?>> <label for="no"><?php echo __( 'No', 'buddystream_lang' );?></label>
             </th>
         </tr>
 
         <tr valign="top">
             <th><?php echo __( 'Allow users to sync videos to BuddyPress?', 'buddystream_lang' );?></th>
             <th>
-            <input type="radio" name="facestream_user_settings_syncvideosbp" id="facestream_user_settings_syncvideosbp" value="0" <?php if(get_site_option('facestream_user_settings_syncvideosbp')==0){echo'checked';}?>> <?php echo __( 'Yes', 'buddystream_lang' );?>
-			<input type="radio" name="facestream_user_settings_syncvideosbp" id="facestream_user_settings_syncvideosbp" value="1" <?php if(get_site_option('facestream_user_settings_syncvideosbp')==1){echo'checked';}?>> <?php echo __( 'No', 'buddystream_lang' );?>
+            <input type="radio" name="facestream_user_settings_syncvideosbp" id="facestream_user_settings_syncvideosbp" value="0" <?php if(get_site_option('facestream_user_settings_syncvideosbp')==0){echo'checked';}?>> <label for="yes"><?php echo __( 'Yes', 'buddystream_lang' );?></label>
+			<input type="radio" name="facestream_user_settings_syncvideosbp" id="facestream_user_settings_syncvideosbp" value="1" <?php if(get_site_option('facestream_user_settings_syncvideosbp')==1){echo'checked';}?>> <label for="no"><?php echo __( 'No', 'buddystream_lang' );?></label>
             </th>
         </tr>
 

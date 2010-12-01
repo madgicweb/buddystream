@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= WP_PLUGIN_URL . '/buddystream/css/buddystream.css';?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/css/buddystream.css';?>" type="text/css" />
 <br/>
 <?php include "AdminMenu.php"; ?>
 
@@ -22,7 +22,8 @@ if ($_POST) {
         Example: You may have a network that focuses on soccer.  To keep things "clean" you will only want Tweets that pertain to soccer to be imported. By adding the word "soccer" to the Filter below, only Tweets with the word "soccer" will be imported and shown in the users Tweets on your site.
         <br>
         By using commas as a delimiter, you may set-up multiple filters (No Filter = All Tweets).
-        In addition, the "Explicit Words" filter, will block any Tweet that contains them regardless of the other filter.
+        In addition, the "Explicit Words" filter, will block any Tweet that contains them regardless of the other filter.<br>
+        <b>Note:</b> Keywords listed in the "Good" Filter must be present in the update itself to be included in the site import. Likewise, keywords listed in the "Explicit Filter" will cause that particular update NOT to be imported.
         ','buddystream_lang');
 
     ?>

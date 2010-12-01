@@ -21,8 +21,7 @@ class BuddystreamLastfm
             $lastfm->setUser($this->getUsername());
             $songs = $lastfm->userGetRecentTracks();
 
-        } catch (Exception $e)
-        {
+        } catch (Exception $e){
             $songs = "";
         }
         return $songs;

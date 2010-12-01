@@ -101,20 +101,25 @@ class BuddystreamTwitter
       
      public function getRedirectUrl()
      {
+         global $bp;
+
          $consumer = $this->getConsumer();
          $token = $consumer->getRequestToken();
+         update_usermeta($bp->loggedin_user->id,"bs_twitter_oauth_token",$token->oauth_token);
+         update_usermeta($bp->loggedin_user->id,"bs_twitter_oauth_token_secret",$token->oauth_token_secret);
 
-         $buddystreamSession = new Zend_Session_Namespace('buddystream');
-         $buddystreamSession->twittertoken = serialize($token);
-         $buddystreamSession->setExpirationSeconds(3600, 'twittertoken');
-         
          return $consumer->getRedirectUrl(null, $token);
      }
 
+
      public function getTwitterToken(){
 
-         $buddystreamSession = new Zend_Session_Namespace('buddystream');
-         return $buddystreamSession->twittertoken;
+         global $bp;
+         $oauthTokenRequest = new Zend_Oauth_Token_Request();
+         $oauthTokenRequest->setToken(get_usermeta($bp->loggedin_user->id,"bs_twitter_oauth_token"));
+         $oauthTokenRequest->setTokenSecret(get_usermeta($bp->loggedin_user->id,"bs_twitter_oauth_token_secret"));
+
+         return $oauthTokenRequest;
      }
 
      public function setPostContent($content)
@@ -267,14 +272,9 @@ class BuddystreamTwitter
             return false;
         }else{
             return true;
-        }
-        
-
+        }  
      }  catch (Exception $e){
 
      }
      }
-
-
-
 }

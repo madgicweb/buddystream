@@ -4,7 +4,7 @@ Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystrea
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.0.1, BuddyPress 1.2.6
-Stable tag: 1.0.2.1
+Stable tag: 1.0.3
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -22,6 +22,12 @@ Networks that the plugin currently supports:
 - Youtube
 - Last.fm
 
+Requirements.
+- PHP 5.2.1+
+- CURL
+- JSON
+- CRONJOB access
+
 You may find FREE translations on: http://www.buddystream.net.
 For support and other feature request, please contact us on our website.
 
@@ -38,12 +44,30 @@ http://buddystream.net/funding/
 4. Done!
 
 Requirements.
-- PHP5
+- PHP 5.2.1+
 - CURL
+- JSON
+- CRONJOB access
 
 == Screenshots ==
 
 == ChangeLog ==
+
+= 1.0.3 =
+* Performance import by cronjob added!
+* Removed background import (only created heavy server load)
+* Fixed settings pages when defined a custom slug (BP_SETTINGS_SLUG)
+* Fixed twitter auth errors.
+* Fixed html errors (labels for radio buttons)
+* Security patch for non logged in users.
+* Replaced php short tags for full php tags.
+* Replaced some global variables for functions (faster)
+* Fixed white pages
+* Fixed support link in dashboard
+* Fixed session errrors
+* Fixed facebook importing for some installs
+* Added upgrade procedure
+
 
 = 1.0.2.1 =
 * Fixed session errors
