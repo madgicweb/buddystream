@@ -25,7 +25,7 @@
     <tbody id="users" class="list:user user-list">
     <?php
        $count_users = count($wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->users")));
-       $count_facestreamusers = count($wpdb->get_results($wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='facestream_session_key")));
+       $count_facestreamusers = count($wpdb->get_results($wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='facestream_session_key';")));
        $perc_facestreamusers = round(($count_facestreamusers / $count_users) * 100);
        $count_facebook = count($wpdb->get_results($wpdb->prepare("SELECT type FROM " . $bp->activity->table_name . " WHERE type='facebook';")));
        $count_activity = count($wpdb->get_results($wpdb->prepare("SELECT id FROM " . $bp->activity->table_name)));

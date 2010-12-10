@@ -157,7 +157,8 @@ if ($_POST) {
 
                           } else {
                               echo '<b>' . __('Permission', 'buddystream_lang') . '</b><br>' . __('You can setup facebook over here.', 'buddystream_lang') . '<br>
-			' . __('Before u can see al settings please authorize on facebook, to do so click on the link below.', 'buddystream_lang') . '<br><br>';
+                        ' . __('You may setup your BuddyStream Facebook integration here.
+                               Before you can begin using Facebook with this site, you must first authorize Facebook by using Facebook\'s Authentication Service.  Click the link below to begin this process:', 'buddystream_lang') . '<br><br>';
 
                               //facebook class
                               $facebook = new Buddystreamfacebook;

@@ -2,12 +2,7 @@
 /**
  * Import for BuddyStream
  */
-$scriptName = $_SERVER['SCRIPT_NAME'];
-$incPath = str_replace("/wp-content/plugins/buddystream/import.php","",$scriptName);
-
-if(!$incPath){
-    $incPath  = $_SERVER['DOCUMENT_ROOT'];
-}
+$incPath = str_replace("/wp-content/plugins/buddystream","",getcwd());
 
 ini_set('include_path', $incPath);
 include('wp-load.php');
