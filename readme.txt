@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.0.3, BuddyPress 1.2.6
+Tested up to: WP 3.0.4, BuddyPress 1.2.7
 Stable tag: 1.0.3.2
 
 == Released under the GPL license ==
