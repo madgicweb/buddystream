@@ -28,9 +28,11 @@ Requirements.
 - JSON
 - CRONJOB access
 
+!!! NOTE !!!
+From version 1.0.3.2 the cronjob has changed a bit to prevent file creation on the server.
+
 You may find FREE translations on: http://www.buddystream.net.
 For support and other feature request, please contact us on our website.
-
 The BuddyStream plugin has full localisation support.
 
 == SPECIAL THANKS ==
