@@ -2,6 +2,8 @@
 
 class BuddyStreamTwitterImport {
 
+   protected $_geoEnabled = true;
+ 
     public function doImport() {
 
         global $bp, $wpdb;
@@ -65,6 +67,16 @@ class BuddyStreamTwitterImport {
                         //auth check for user is false reset user else get tweets
                         $tweets = $twitter->getTweets();
                         
+                        //save geodata
+                        if($this->_geoEnabled == true){
+                            $geoData = $twitter->getGeoData();
+                            if(is_array($geoData)){
+                                foreach($geoData as $geo){
+                                    update_usermeta($user_meta->user_id, 'tweet_'.$geo["id"], str_replace(" ", ",", $geo["coordinates"]));
+                                }
+                            }
+                        }
+
                         if (is_array($tweets)) {
                             foreach ($tweets as $tweet) {
 
@@ -126,5 +138,4 @@ class BuddyStreamTwitterImport {
         return $time_end - $time_start;
 
     }
-
 }

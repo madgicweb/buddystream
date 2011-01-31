@@ -16,7 +16,7 @@
  * @package    Zend_Oauth
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Config.php 20232 2010-01-12 17:56:33Z matthew $
+ * @version    $Id: Config.php 23484 2010-12-10 03:57:59Z mjh_ca $
  */
 
 /** Zend_Oauth */
@@ -156,7 +156,7 @@ class Zend_Oauth_Config implements Zend_Oauth_Config_ConfigInterface
      */
     public function __construct($options = null)
     {
-        if (!is_null($options)) {
+        if ($options !== null) {
             if ($options instanceof Zend_Config) {
                 $options = $options->toArray();
             }
@@ -260,14 +260,14 @@ class Zend_Oauth_Config implements Zend_Oauth_Config_ConfigInterface
     /**
      * Get consumer secret
      *
-     * Returns RSA private key if set; otherwise, returns any previously set 
+     * Returns RSA private key if set; otherwise, returns any previously set
      * consumer secret.
      *
      * @return string
      */
     public function getConsumerSecret()
     {
-        if (!is_null($this->_rsaPrivateKey)) {
+        if ($this->_rsaPrivateKey !== null) {
             return $this->_rsaPrivateKey;
         }
         return $this->_consumerSecret;
@@ -451,7 +451,7 @@ class Zend_Oauth_Config implements Zend_Oauth_Config_ConfigInterface
     /**
      * Get request token URL
      *
-     * If no request token URL has been set, but a site URL has, returns the 
+     * If no request token URL has been set, but a site URL has, returns the
      * site URL with the string "/request_token" appended.
      *
      * @return string
@@ -486,7 +486,7 @@ class Zend_Oauth_Config implements Zend_Oauth_Config_ConfigInterface
     /**
      * Get access token URL
      *
-     * If no access token URL has been set, but a site URL has, returns the 
+     * If no access token URL has been set, but a site URL has, returns the
      * site URL with the string "/access_token" appended.
      *
      * @return string
@@ -543,7 +543,7 @@ class Zend_Oauth_Config implements Zend_Oauth_Config_ConfigInterface
     /**
      * Get authorization URL
      *
-     * If no authorization URL has been set, but a site URL has, returns the 
+     * If no authorization URL has been set, but a site URL has, returns the
      * site URL with the string "/authorize" appended.
      *
      * @return string
@@ -567,9 +567,9 @@ class Zend_Oauth_Config implements Zend_Oauth_Config_ConfigInterface
     {
         $method = strtoupper($method);
         if (!in_array($method, array(
-                Zend_Oauth::GET, 
-                Zend_Oauth::POST, 
-                Zend_Oauth::PUT, 
+                Zend_Oauth::GET,
+                Zend_Oauth::POST,
+                Zend_Oauth::PUT,
                 Zend_Oauth::DELETE,
             ))
         ) {

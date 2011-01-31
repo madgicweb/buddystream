@@ -262,8 +262,6 @@ class BuddystreamFacebook
                                 }
                             }
 
-
-
                        if(preg_match("/".$this->getSource()."/i",strtolower($item["attribution"]))){
                            $filter2 = 0;
                        }
@@ -271,11 +269,7 @@ class BuddystreamFacebook
                         if($filter1== 1 && $filter2== 1){
                             $items[] = $item;
                         }
-
-
             }
-
-            
          }
 
      }

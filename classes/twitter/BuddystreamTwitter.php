@@ -13,7 +13,8 @@ class BuddystreamTwitter
     protected $_source;
     protected $_badFilters;
     protected $_goodFilters;
-
+    protected $_geoData;
+    
       public function setCallbackUrl($callBackUrl)
       {
         $this->_callBackUrl = $callBackUrl;
@@ -191,6 +192,14 @@ class BuddystreamTwitter
          return $this->_goodFilters;
      }
 
+     public function setGeoData($geoData){
+         $this->_geoData = $geoData;
+     }
+
+     public function getGeoData(){
+         return $this->_geoData;
+     }
+
      public function getTweets()
      {
          try {
@@ -207,8 +216,35 @@ class BuddystreamTwitter
 
         //enought ratelimits left to get tweets
         if ($this->getRateLimit($twitter->account->rateLimitStatus())>0) {
-            foreach($twitter->status->userTimeline() as $tweet)
-                {
+
+            //geodata counter
+            $geoCounter = 0;
+
+            //get the tweets
+            $response = $twitter->status->userTimeline();
+            foreach($response as $tweet){
+
+                //workaround for the geodata
+                if($tweet->place->id){
+                    $geoCounter++;
+                }
+                 $xml = $tweet;
+                 foreach ($xml->getNamespaces(true) as $prefix => $ns) {
+                    $xml->registerXPathNamespace($prefix, $ns);
+                    $geo = $xml->xpath('//georss:point');
+                 }
+
+                 if($geo[$geoCounter] != ""){
+                     $geoData[] =  array(
+                            "id" => $tweet->id,
+                            "coordinates" => $geo[$geoCounter]
+                         );
+                     $geoCounter++;
+                  }
+                
+                  $geo = "";
+                  //workaround for the geodata
+                  
                     //checkvar
                     $filter1  = 1;
                     $filter2  = 1;
@@ -242,13 +278,14 @@ class BuddystreamTwitter
 
                    }
                 }
-        }
+            }
          }
           catch (Exception $e)
         {
             $tweets = "";
         }
 
+        $this->setGeoData($geoData);
         return $tweets;
      }
 

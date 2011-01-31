@@ -1,6 +1,6 @@
 <?php
 
-define('BP_BUDDYSTREAM_VERSION', '1.0.3.1');
+define('BP_BUDDYSTREAM_VERSION', '1.0.3.2');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 ##############################################
@@ -524,7 +524,7 @@ function buddystream_youtube_settings_screen_content()
 ##                                          ##
 ##############################################
 add_action('bp_activity_content_before_save', 'buddystream_socialIt',1);
-function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
+function buddystream_SocialIt($content,$shortLink = null,$user_id = null)
 {
     global $bp;
 
@@ -533,55 +533,43 @@ function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
         $user_id = $bp->loggedin_user->id;
     }
 
-    //new topic
+    //forum
     if ($bp->current_component == "groups" &&
-       $bp->current_action == "forum" &&
-       $bp->current_item !="" &&
-       $bp->action_variables[1] == "") {
+       $bp->current_action == "forum") {
 
-        $shortLink = bp_get_group_permalink($bp->groups->current_group) .
-                    'forum/topic/' .
-                     str_replace(
-                         " ",
-                         "-",
-                         strtolower(
-                             $_POST['topic_title']
-                         )
-                     ) . '/';
+        if($_POST['topic_title']){
+            $shortLink = bp_get_group_permalink($bp->groups->current_group) .
+                        'forum/topic/' .
+                         str_replace(
+                             " ",
+                             "-",
+                             strtolower(
+                                 $_POST['topic_title']
+                             )
+                         ) . '/';
 
-
-        $shortLink = buddystream_getShortUrl($shortLink);
-        $content = __('Just created a new topic:', 'buddystream_lang') .
-                    " " . $_POST['topic_title'];
-
-    //topic reply
-    } else if ($bp->current_component == "groups" &&
-            $bp->current_action == "forum" &&
-            $bp->action_variables[1] != "") {
-
+            $shortLink = buddystream_getShortUrl($shortLink);
+            $content = __('Just created a new topic:', 'buddystream_lang') .
+                        " " . $_POST['topic_title'];
+        }else{
             $shortLink = bp_get_group_permalink($bp->groups->current_group)
                         . 'forum/topic/' . $bp->action_variables[1] . '/';
-
             $shortLink = buddystream_getShortUrl($shortLink);
 
             $content = __('Just responded to:', 'buddystream_lang') .
                           " " . str_replace("-", " ", $bp->action_variables[1]);
 
-    //new group
-    } else if ($bp->current_component == "groups" &&
-            $bp->current_action == "create") {
+            if (preg_match("/#twitter/i", $_POST['reply_text'])) {
+                 $content .= "#twitter";
+            }
 
-            $shortLink = bp_get_group_permalink($bp->groups->current_group);
-            $shortLink = buddystream_getShortUrl($shortLink);
-            $content = __('Just created a new group:', 'buddystream_lang') .
-                          " " . $bp->groups->current_group->name;
+            if (preg_match("/#facebook/i", $_POST['reply_text'])) {
+                 $content .= "#facebook";
+            }
+        }
+       }
 
-    //post in
-    } else {
-        $content = $input;
-    }
-
-    if (preg_match("/#twitter/i", $input)) {
+    if (preg_match("/#twitter/i", $content)) {
 
         include_once "classes/twitter/BuddystreamTwitter.php";
         $twitter = new BuddystreamTwitter;
@@ -603,7 +591,6 @@ function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
         );
 
         $twitter->setShortLink($shortLink);
-        
         $twitter->setPostContent(
             str_replace("#facebook", "", $content)
         );
@@ -611,7 +598,7 @@ function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
         $twitter->postUpdate();
     }
     
-    if (preg_match("/#facebook/i", $input)) {
+    if (preg_match("/#facebook/i", $content)) {
 
         include_once "classes/facebook/BuddystreamFacebook.php";
         
@@ -649,7 +636,7 @@ function buddystream_SocialIt($input,$shortLink = null,$user_id = null)
         $facebook->postUpdate();
     }
 
-    $return = str_replace("#twitter", "", $input);
+    $return = str_replace("#twitter", "", $content);
     $return = str_replace("#facebook", "", $return);
 
     return $return;
@@ -893,7 +880,7 @@ function buddystream_getShortUrl($url)
        $base = strlen($index);
 
        for ($t = floor(log($input, $base)); $t >= 0; $t--) {
-           $bcp = bcpow($base, $t);
+           $bcp = pow($base, $t);
            $a = floor($input / $bcp) % $base;
            $out = $out . substr($index, $a, 1);
            $input = $input - ($a * $bcp);
@@ -1019,8 +1006,8 @@ function buddystreamCheckRequirements() {
     
     $error = false;
     
-    if (phpversion() < '5.2.12') {
-        $error .= "You got a older version of PHP installed (PHP ".phpversion()."), please upgrade to minimal version 5.2.12.<br>";
+    if (phpversion() < '5.2.11') {
+        $error .= "You got a older version of PHP installed (PHP ".phpversion()."), please upgrade to minimal version 5.2.11.<br>";
     }
 
     if (!extension_loaded("json")) {

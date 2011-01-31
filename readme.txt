@@ -4,7 +4,7 @@ Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystrea
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.0.3, BuddyPress 1.2.6
-Stable tag: 1.0.3.1
+Stable tag: 1.0.3.2
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -28,9 +28,11 @@ Requirements.
 - JSON
 - CRONJOB access
 
+!!! NOTE !!!
+From version 1.0.3.2 the cronjob has changed a bit to prevent file creation on the server.
+
 You may find FREE translations on: http://www.buddystream.net.
 For support and other feature request, please contact us on our website.
-
 The BuddyStream plugin has full localisation support.
 
 == SPECIAL THANKS ==
@@ -52,6 +54,13 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 1.0.3.2 =
+* Import issues on some installs sorted out.
+* Fixed issue that import was saving files on the server.
+* Updated the library to latest version.
+* Fixed bcpow() function error for older php versions.
+* Fixed posting forum topics and reply's to twitter and facebook.
 
 = 1.0.3.1 =
 * Fixed wp-load error for import

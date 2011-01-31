@@ -43,7 +43,7 @@ if ($error) {
 
 
 <h2><?php echo __('Cronjob command', 'buddystream_lang');?>:</h2><br/>
-<input type="text" name="cronurl" value="<?php echo "*/5 * * * * wget ".plugins_url()."/buddystream/import.php >/dev/null 2>&1";?>" size="150" />
+<input type="text" name="cronurl" value="<?php echo "*/5 * * * * wget ".plugins_url()."/buddystream/import.php -O /dev/null -q";?>" size="150" />
 
 <br><br>
 <b><?php echo __('Last cron run was on'); ?></b> <?php echo get_site_option("buddystream_cron_stamp");?>
