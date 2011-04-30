@@ -1,0 +1,12 @@
+/*
+ * Flickr extention stylesheet
+ */
+
+.flickr_container_image img{
+    max-height      : 80px;
+    float           : left;
+    padding-right   : 10px;
+    padding-bottom  : 10px;
+}
+
+
