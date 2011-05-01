@@ -54,7 +54,7 @@ $arraySwitches = array(
                    <td><input type="text" name="tweetstream_consumer_secret" value="<?php echo get_site_option('tweetstream_consumer_secret'); ?>" size="50" /></td>
               </tr>
 
-              <? if(get_site_option('tweetstream_consumer_key') && get_site_option('tweetstream_consumer_secret')){ ?>
+              <?php if(get_site_option('tweetstream_consumer_key') && get_site_option('tweetstream_consumer_secret')){ ?>
 
             <tr class="header">
                 <td colspan="2"><?php _e('User options','buddystream_twitter');?></td>
@@ -89,7 +89,7 @@ $arraySwitches = array(
                 <td><input class="switch icons" type="checkbox" name="buddystream_twitter_share_counter" id="buddystream_twitter_share_counter"/></td>
             </tr>
             
-            <? } ?>
+            <?php } ?>
 
         </table>
        <p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>
