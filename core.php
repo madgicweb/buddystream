@@ -577,6 +577,8 @@ function buddystreamCreateActivity($params){
 function buddystreamCheckLicense($licenseKey) {
     global $bp;
     
+    if($licenseKey){
+    
     $url   = "http://buddystream.net/cronservice/check.php?licensekey="
              .$licenseKey
              ."&domain=".str_replace("http://","",$bp->root_domain)
@@ -601,6 +603,9 @@ function buddystreamCheckLicense($licenseKey) {
         return $response;
         
     } else {
+        return false;
+    }
+    }else{
         return false;
     }
 }

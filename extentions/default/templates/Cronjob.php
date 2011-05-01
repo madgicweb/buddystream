@@ -8,7 +8,7 @@ if ($error) {
 }else{
 
     //check if the licensekey is still valid
-    if(!$_POST){
+    if(!$_POST && get_site_option('buddystream_license_key')){
         $response = buddystreamCheckLicense(get_site_option('buddystream_license_key'));
         
         //expired
