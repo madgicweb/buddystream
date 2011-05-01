@@ -44,12 +44,12 @@ $arraySwitches = array(
                 <td colspan="2"><?php _e('Twitter API','buddystream_twitter');?></td>
             </tr>
               
-            <tr<? if(get_site_option('tweetstream_consumer_key')==""){ echo 'class="buddystream_error_box"'; }?>>
+            <tr>
                 <td><?php _e('Consumer key:', 'buddystream_twitter');?></td>
                 <td><input type="text" name="tweetstream_consumer_key" value="<?php echo get_site_option('tweetstream_consumer_key'); ?>" size="50" /></td>
              </tr>
 
-              <tr<? if(get_site_option('tweetstream_consumer_secret')==""){ echo 'class="buddystream_error_box"'; }?> class="odd">
+              <tr class="odd">
                   <td><?php _e('Consumer secret key:', 'buddystream_twitter');?></td>
                    <td><input type="text" name="tweetstream_consumer_secret" value="<?php echo get_site_option('tweetstream_consumer_secret'); ?>" size="50" /></td>
               </tr>
