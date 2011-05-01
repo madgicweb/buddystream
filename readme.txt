@@ -1,4 +1,4 @@
-=== Buddystream ===
+=== BuddyStream ===
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
