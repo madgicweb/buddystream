@@ -1,5 +1,16 @@
 <?php
 
+if($_GET['reset'] == 'true'){
+    delete_user_meta($bp->loggedin_user->id,'tweetstream_token');
+    delete_user_meta($bp->loggedin_user->id,'tweetstream_tokensecret');
+    delete_user_meta($bp->loggedin_user->id,'tweetstream_mention');
+    delete_user_meta($bp->loggedin_user->id,'tweetstream_synctoac');
+    delete_user_meta($bp->loggedin_user->id, 'tweetstream_synctoac');
+    delete_user_meta($bp->loggedin_user->id, 'tweetstream_filtermentions');
+    delete_user_meta($bp->loggedin_user->id, 'tweetstream_filtergood');
+    delete_user_meta($bp->loggedin_user->id, 'tweetstream_filterbad');
+}
+
 if (isset($_GET['oauth_token'])) {
 
       $twitter = new BuddystreamTwitter();
@@ -93,7 +104,14 @@ if ($_POST) {
                  $twitter->setCallbackUrl($bp->loggedin_user->domain . BP_SETTINGS_SLUG.'/buddystream-twitter');
                  $twitter->setConsumerKey(get_site_option("tweetstream_consumer_key"));
                  $twitter->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
+                 
+                 $redirectUrl = $twitter->getRedirectUrl();
+                 if($redirectUrl){
+                 
                  echo '<a href="' . $twitter->getRedirectUrl() . '">' . __('Click here to start authorization', 'buddystream_twitter') . '</a><br/><br/>';
+                 }else{
+                     _e('There is a problem with the authentication service at this moment please come back in a while.','buddystream_twitter');
+                 }
              }else{
                _e('Twitter is offline currently please come back in a while.','buddystream_twitter');
              }

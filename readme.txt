@@ -1,10 +1,10 @@
-=== Buddystream ===
+=== BuddyStream ===
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.1, BuddyPress 1.2.8
-Stable tag: 2.0.1
+Tested up to: WP 3.1.2, BuddyPress 1.2.8
+Stable tag: 2.0.3
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -51,6 +51,15 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.0.3 =
+* Translations not loading when locale was set but language file did not exist. (now loading English translation)
+* Fixed options to hide items sitewide.
+* Fixed few html errors.
+* When Twitter keys are invalid or mis-configured don't show error but enter error in log with re-enter keys request.
+* Posting to group forums (with BuddyStream enabled) are working again.
+* Fixed Youtube import limit.
+* Added remove settings link of user setting pages.
 
 = 2.0.1 =
 * Fixed some php errors.

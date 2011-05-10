@@ -19,7 +19,7 @@
         update_site_option($switch, trim(strip_tags(strtolower($_POST[$switch]))));    
       }
       
-      echo '<div class="buddystream_info_box_green>' . __('Settings saved.', 'buddystream_flickr') . '</div>';
+      echo '<div class="buddystream_info_box_green">' . __('Settings saved.', 'buddystream_flickr') . '</div>';
    }
 ?>
 
@@ -46,7 +46,7 @@
 
             <tr>
                 <td><?php _e( 'Hide Flickr photos on the sidewide activity stream?', 'buddystream_flickr' );?></td>
-                <td><input class="switch icons" type="checkbox" name="bs_flickr_hide_sitewide"/></td>
+                <td><input class="switch icons" type="checkbox" name="bs_flickr_hide_sitewide" id="bs_flickr_hide_sitewide"/></td>
             </tr>
 
             <tr class="odd">

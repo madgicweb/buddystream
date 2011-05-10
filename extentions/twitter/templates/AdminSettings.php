@@ -62,7 +62,7 @@ $arraySwitches = array(
 
             <tr>
                 <td><?php _e( 'Hide tweets on the sidewide activity stream?', 'buddystream_twitter' );?></td>
-                <td><input class="switch icons" type="checkbox" name="facestream_user_settings_syncupdatesbp" id="facestream_user_settings_syncupdatesbp"/></td>
+                <td><input class="switch icons" type="checkbox" name="buddystream_twitter_hide_sitewide" id="buddystream_twitter_hide_sitewide"/></td>
             </tr>
 
             <tr valign="top" class="odd">

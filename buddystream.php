@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: BuddyStream
+Plugin Name: BuddyStream Premium
 Plugin URI:
-Description: BuddyStream
-Version: 2.0.1
+Description: BuddyStream Premium
+Version: 2.0.3
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -64,7 +64,11 @@ function buddystream_init_database(){
 
 function buddystream_load_translations() {
     
-    load_textdomain('buddystream_lang', WP_PLUGIN_DIR."/buddystream/languages/buddystream-".get_locale().".mo");
+    if (file_exists( WP_PLUGIN_DIR."/buddystream/languages/buddystream-".get_locale().".mo")) {
+        load_textdomain('buddystream_lang', WP_PLUGIN_DIR."/buddystream/languages/buddystream-".get_locale().".mo");
+    }else{
+        load_textdomain('buddystream_lang', WP_PLUGIN_DIR."/buddystream/languages/buddystream-en_US.mo");
+    }
     
     $handle = opendir(WP_PLUGIN_DIR . "/buddystream/extentions");
     if ($handle) {
@@ -72,6 +76,8 @@ function buddystream_load_translations() {
             if ($file != "." && $file != "..") {
                 if (file_exists(WP_PLUGIN_DIR."/buddystream/extentions/".$file."/languages/buddystream_".$file."-".get_locale().".mo")) {
                     load_textdomain('buddystream_'.$file, WP_PLUGIN_DIR."/buddystream/extentions/".$file."/languages/buddystream_".$file."-".get_locale().".mo");
+                }else{
+                    load_textdomain('buddystream_'.$file, WP_PLUGIN_DIR."/buddystream/extentions/".$file."/languages/buddystream_".$file."-en_US.mo");
                 }
             }
         }

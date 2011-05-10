@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.0.1');
+define('BP_BUDDYSTREAM_VERSION', '2.0.3');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -320,6 +320,7 @@ function buddystream_SocialIt($content, $shortLink = null)
             }
         }
     }
+    
     return $originalText; 
  }
 
@@ -336,7 +337,8 @@ function removetags($content)
 
 add_filter('group_forum_topic_title_before_save', 'tweetstream_topic');
 function tweetstream_topic() {
-    buddyStreamRemoveHashTags($_POST['topic_title']);
+    return buddyStreamRemoveHashTags($_POST['topic_title']);
+    
 }
 
 add_filter('group_forum_post_text_before_save', 'buddystream_filtertags_fp', 9);
@@ -345,6 +347,8 @@ function buddystream_filtertags_fp() {
 	if ($content == "") {
             $content = $_POST['post_text'];
         }
+        
+        return buddyStreamRemoveHashTags($content);
 }
  
 function buddyStreamRemoveHashTags($input){
@@ -409,9 +413,11 @@ function buddystream_getShortUrl($url)
    global $bp;
 
    if ($url) {
+       
+       $url   = str_replace("#", "",$url);
        $input = date('dmyhis');
-       $index ="abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-       $base = strlen($index);
+       $index = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       $base  = strlen($index);
 
        for ($t = floor(log($input, $base)); $t >= 0; $t--) {
            $bcp = pow($base, $t);
@@ -471,12 +477,12 @@ function buddystreamLog($message = "", $type="info"){
  *
  */
 
-wp_enqueue_script('buddystream', plugins_url() . '/buddystream/extentions/default/main.js');
 wp_register_script('prettyphoto', plugins_url() . '/buddystream/extentions/default/pretty/js/jquery.prettyPhoto.js', array('jquery'), '2.5.6');
 wp_enqueue_script('prettyphoto');
 wp_register_style('prettyphoto', plugins_url() . '/buddystream/extentions/default/pretty/css/prettyPhoto.css', false, '2.5.6', 'screen');
 wp_enqueue_style('prettyphoto');
-
+wp_register_script('buddystream', plugins_url() . '/buddystream/extentions/default/main.js');
+wp_enqueue_script('buddystream');
 
 /**
  * On delete activity item add it to the import blackplist
@@ -551,7 +557,7 @@ function buddystreamCreateActivity($params){
         }
 
         $activity->action .= '<a href="'.$bp->root_domain.'/'.$slug.'/'. bp_core_get_username($params['user_id']).'/" title="'.bp_core_get_username($params['user_id']).'">'.bp_core_get_user_displayname($params['user_id']).'</a>';
-        $activity->action .= '&nbsp;<img src="'.plugins_url().'/buddystream/extentions/'.$params['extention'].'/'.$config['icon'].'">'.__('posted a', 'buddystream_'.$extention['name'])."&nbsp;";
+        $activity->action .= '&nbsp;<img src="'.plugins_url().'/buddystream/extentions/'.$params['extention'].'/'.$config['icon'].'">&nbsp;'.__('posted a', 'buddystream_'.$extention['name'])."&nbsp;";
         $activity->action .= '<a href="'.$params['actionlink'].'" target="_blank" rel="external"> '.__($config['type'], 'buddystream_'.$extention['name']);
         $activity->action .= '</a>: ';
 

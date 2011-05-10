@@ -35,12 +35,12 @@
 
             <tr>
                 <td><?php _e( 'Hide YouTube videos on the sitewide activity stream?', 'buddystream_youtube' );?></td>
-                <td><input class="switch icons" type="checkbox" name="buddystream_youtube_hide_sitewide" id="buddystream_youtube_hide_sitewide"/></td>
+                <td><input class="switch icons" type="checkbox" name="bs_youtube_hide_sitewide" id="bs_youtube_hide_sitewide"/></td>
             </tr>
 
             <tr class="odd">
                 <td><?php _e('Maximum number of videos to import per user, per day (empty - unlimited):', 'buddystream_youtube'); ?></td>
-                <td><input type="text" name="buddystream_youtube_user_settings_maximport" value="<?php echo get_site_option('buddystream_youtube_user_settings_maximport'); ?>" size="5" /></td>
+                <td><input type="text" name="bs_youtube_user_settings_maximport" value="<?php echo get_site_option('bs_youtube_user_settings_maximport'); ?>" size="5" /></td>
             </tr>
             
         </table>

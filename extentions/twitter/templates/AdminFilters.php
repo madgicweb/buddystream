@@ -6,7 +6,7 @@ if ($_POST) {
    update_site_option('tweetstream_filter', trim(strip_tags(strtolower($_POST ['tweetstream_filter']))));
    update_site_option('tweetstream_filter_show', trim(strip_tags($_POST ['tweetstream_filter_show'])));
    update_site_option('tweetstream_filterexplicit', trim(strip_tags(strtolower($_POST ['tweetstream_filterexplicit']))));
-   echo '<div class="buddystream_info_box" style="margin-top:50px;">' . __('Filters saved.', 'buddystream_twitter') . '</div>';
+   echo '<div class="buddystream_info_box_green" style="margin-top:50px;">' . __('Filters saved.', 'buddystream_twitter') . '</div>';
 }
 ?>
 
