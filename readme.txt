@@ -3,8 +3,8 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.1.2, BuddyPress 1.2.8
-Stable tag: 2.0.3
+Tested up to: WP 3.1.3, BuddyPress 1.2.8
+Stable tag: 2.0.4
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -51,6 +51,13 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.0.4 =
+* Fixed rss feed.
+* Fixed Flickr settings page and import.
+* Fixed some texts on the setting pages.
+* Fixed import issues with double activity items and empty activity items.
+* Updated core
 
 = 2.0.3 =
 * Translations not loading when locale was set but language file did not exist. (now loading English translation)

@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.0.3');
+define('BP_BUDDYSTREAM_VERSION', '2.0.4');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -550,16 +550,16 @@ function buddystreamCreateActivity($params){
         
         if (!defined('BP_ENABLE_ROOT_PROFILES')) { $slug = BP_MEMBERS_SLUG; }
 
-        if (get_site_option('buddystream_'.$params['extention'].'_hide_sitewide')) {
+        if (get_site_option('buddystream_'.$params['extention'].'_hide_sitewide') == "on") {
             $activity->hide_sitewide = 1;
         } else {
             $activity->hide_sitewide = 0;
         }
 
         $activity->action .= '<a href="'.$bp->root_domain.'/'.$slug.'/'. bp_core_get_username($params['user_id']).'/" title="'.bp_core_get_username($params['user_id']).'">'.bp_core_get_user_displayname($params['user_id']).'</a>';
-        $activity->action .= '&nbsp;<img src="'.plugins_url().'/buddystream/extentions/'.$params['extention'].'/'.$config['icon'].'">&nbsp;'.__('posted a', 'buddystream_'.$extention['name'])."&nbsp;";
-        $activity->action .= '<a href="'.$params['actionlink'].'" target="_blank" rel="external"> '.__($config['type'], 'buddystream_'.$extention['name']);
-        $activity->action .= '</a>: ';
+        $activity->action .= '&nbsp;<img src="'.plugins_url().'/buddystream/extentions/'.$params['extention'].'/'.$config['icon'].'">&nbsp;'.__('posted&nbsp;a', 'buddystream_'.$extention['name'])."&nbsp;";
+        $activity->action .= '<a href="'.$params['actionlink'].'" target="_blank" rel="external">&nbsp;'.__($config['type'], 'buddystream_'.$extention['name']);
+        $activity->action .= '</a>:&nbsp;';
 
         //check if item does not exist in the blacklist
         if(get_user_meta($user_id, 'buddystream_blacklist_ids',2)){
