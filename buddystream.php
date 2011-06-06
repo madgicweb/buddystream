@@ -2,8 +2,8 @@
 /*
 Plugin Name: BuddyStream
 Plugin URI:
-Description: BuddyStream
-Version: 2.0.4
+Description: BuddyStream Lite
+Version: 2.0.5
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */

@@ -4,7 +4,7 @@ Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystrea
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.1.3, BuddyPress 1.2.8
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -51,6 +51,9 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.0.5 =
+* Updated core
 
 = 2.0.4 =
 * Fixed rss feed.
@@ -138,15 +141,3 @@ Requirements.
 
 = 1.0.1 =
 * Initial release of Buddystream
-
-
-
-
-//please remove me after dev
-delete FROM `bs_bp_activity` WHERE component='twitter';
-delete FROM `bs_bp_activity` WHERE component='facebook';
-delete FROM `bs_bp_activity` WHERE component='youtube';
-delete FROM `bs_bp_activity` WHERE component='flickr';
-delete FROM `bs_bp_activity` WHERE component='lastfm';
-delete FROM `bs_bp_activity` WHERE component='soundcloud';
-delete FROM `bs_bp_activity` WHERE component='rss';
