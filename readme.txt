@@ -1,6 +1,6 @@
 === BuddyStream ===
 Contributors: Blackphantom
-Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
+Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Youtube, Last.fm, Social, BuddyStream
 Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.1.3, BuddyPress 1.2.8
@@ -34,7 +34,7 @@ The BuddyStream plugin has full localisation support.
 
 == SPECIAL THANKS ==
 A special "Thank You" to all the poeple who donated to the support of BuddyStream and to those that have translated the plugin!  We encourage any of you that find this plugin to be an inseparable part of your BuddyStream user experience to donate to the continued support of BuddyStream.  Find out more about donating to this amazing plugin here:
-http://buddystream.net/funding/
+http://buddystream.net
 
 == Installation ==
 1. Upload this plugin to your `/wp-content/plugins/` directory.
