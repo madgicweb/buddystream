@@ -1,10 +1,9 @@
 === BuddyStream ===
 Contributors: Blackphantom
-Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Youtube, Last.fm, Social, BuddyStream
-Direct Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKBY4JM6WDSD2
+Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.1.3, BuddyPress 1.2.8
-Stable tag: 2.0.5
+Tested up to: WP 3.1.4, BuddyPress 1.2.8
+Stable tag: 2.1
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -20,21 +19,15 @@ Networks that the plugin currently supports:
 - Flickr
 - Youtube
 - Last.fm
+- Rss
 
 Requirements.
 - PHP 5.2.1+
 - CURL
 - JSON
-- CRONJOB access
 
 You may find FREE translations on: http://www.buddystream.net.
 For support and other feature request, please contact us on our website.
-
-The BuddyStream plugin has full localisation support.
-
-== SPECIAL THANKS ==
-A special "Thank You" to all the poeple who donated to the support of BuddyStream and to those that have translated the plugin!  We encourage any of you that find this plugin to be an inseparable part of your BuddyStream user experience to donate to the continued support of BuddyStream.  Find out more about donating to this amazing plugin here:
-http://buddystream.net
 
 == Installation ==
 1. Upload this plugin to your `/wp-content/plugins/` directory.
@@ -52,15 +45,25 @@ Requirements.
 
 == ChangeLog ==
 
-= 2.0.5 =
-* Updated core
+= 2.1 =
+* Fixed custom settings slug on user pages.
+* Fixed translations improved.
+* Fixed timeout on cronjob settings page (white page).
+* Updated the Dashboard page.
+* Added External links now open in a new window.
+* Added Flickr album on profile page.
+* Added Youtube album on profile page.
 
-= 2.0.4 =
+= 2.0.5 = 
 * Fixed rss feed.
 * Fixed Flickr settings page and import.
 * Fixed some texts on the setting pages.
 * Fixed import issues with double activity items and empty activity items.
-* Updated core
+* Fixed Facebook links import (linkshare).
+* Fixed default value of importing facebook for users. (now default on)
+
+= 2.0.4 = 
+* Fixed not importing Facebook items when stream is readonly for friends.
 
 = 2.0.3 =
 * Translations not loading when locale was set but language file did not exist. (now loading English translation)
@@ -68,12 +71,16 @@ Requirements.
 * Fixed few html errors.
 * When Twitter keys are invalid or mis-configured don't show error but enter error in log with re-enter keys request.
 * Posting to group forums (with BuddyStream enabled) are working again.
+
+= 2.0.2 =
 * Fixed Youtube import limit.
+* Fixed athorisation collision with Soundcloud and Facebook
 * Added remove settings link of user setting pages.
 
 = 2.0.1 =
 * Fixed some php errors.
 * Fixed Twitter auth. link
+* Added space after network icon
 
 = 2.0 =
 * Versions have now also butterfly names, version 2.0 is called Goliath (The Goliath Birdwing).
@@ -117,7 +124,7 @@ Requirements.
 * Replaced some global variables for functions (faster)
 * Fixed white pages
 * Fixed support link in dashboard
-* Fixed session errrors
+* Fixed session errors
 * Fixed facebook importing for some installs
 * Added upgrade procedure
 
@@ -140,4 +147,4 @@ Requirements.
 * Added dashboard to BuddyStream with some cool pie charts
 
 = 1.0.1 =
-* Initial release of Buddystream
+* Initial release of BuddyStream

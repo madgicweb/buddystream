@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: BuddyStream
+Plugin Name: BuddyStream Premium
 Plugin URI:
-Description: BuddyStream Lite
-Version: 2.0.5
+Description: BuddyStream Premium
+Version: 2.1
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
 
-// Copyright (c) 2011 Buddystream.net All rights reserved.
+// Copyright (c) 2010/2011 Buddystream.net All rights reserved.
 //
 // Released under the GPL license
 // http://www.opensource.org/licenses/gpl-license.php

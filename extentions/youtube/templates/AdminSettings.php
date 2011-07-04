@@ -7,7 +7,8 @@
 
 <?php
  $arraySwitches = array(
-        'bs_youtube_hide_sitewide'
+        'bs_youtube_hide_sitewide',
+        'buddystream_youtube_album'
     );
 
   if ($_POST) {
@@ -33,12 +34,17 @@
                 <td colspan="2"><?php _e('User options', 'buddystream_youtube');?></td>
             </tr>
 
-            <tr>
+             <tr>
+                <td><?php _e( 'Show YouTube album on user profile page?', 'buddystream_youtube' );?></td>
+                <td><input class="switch icons" type="checkbox" name="buddystream_youtube_album" id="buddystream_youtube_album"/></td>
+            </tr>
+            
+            <tr class="odd">
                 <td><?php _e( 'Hide YouTube videos on the sitewide activity stream?', 'buddystream_youtube' );?></td>
                 <td><input class="switch icons" type="checkbox" name="bs_youtube_hide_sitewide" id="bs_youtube_hide_sitewide"/></td>
             </tr>
 
-            <tr class="odd">
+            <tr>
                 <td><?php _e('Maximum number of videos to import per user, per day (empty - unlimited):', 'buddystream_youtube'); ?></td>
                 <td><input type="text" name="bs_youtube_user_settings_maximport" value="<?php echo get_site_option('bs_youtube_user_settings_maximport'); ?>" size="5" /></td>
             </tr>

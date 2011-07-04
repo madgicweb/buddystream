@@ -12,7 +12,7 @@ if ($_POST) {
     }
 ?>
 
-    <form id="settings_form" action="<?php echo  $bp->loggedin_user->domain; ?>settings/buddystream-youtube/" method="post">
+    <form id="settings_form" action="<?php echo  $bp->loggedin_user->domain.BP_SETTINGS_SLUG; ?>/buddystream-youtube/" method="post">
         <h3><?php echo __('Youtube Settings', 'buddystream_lang')?></h3>
         <?php echo __('Youtube username', 'buddystream_lang');?><br/>
         <input type="text" name="bs_youtube_username" value="<?php echo $bs_youtube_username; ?>" size="50" /><br/><br/>

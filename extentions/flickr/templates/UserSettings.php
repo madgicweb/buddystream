@@ -14,7 +14,7 @@ if ($_POST) {
 ?>
 
    <?php if(buddystreamCheckNetwork("http://www.facebook.com")) { ?>
-    <form id="settings_form" action="<?php echo  $bp->loggedin_user->domain; ?>settings/buddystream-flickr/" method="post">
+    <form id="settings_form" action="<?php echo  $bp->loggedin_user->domain . BP_SETTINGS_SLUG; ?>/buddystream-flickr/" method="post">
         <h3><?php _e('Flickr Settings', 'buddystream_flickr')?></h3>
         <?php _e('Flickr username', 'buddystream_flickr');?><br/>
         <input type="text" name="bs_flickr_username" value="<?php echo $bs_flickr_username; ?>" size="50" /><br/><br/>

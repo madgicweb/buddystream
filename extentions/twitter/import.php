@@ -106,6 +106,7 @@ class BuddyStreamTwitterImport{
                                     buddystreamCreateActivity(array(
                                          'user_id'       => $user_meta->user_id,
                                          'extention'     => 'twitter',
+                                         'type'          => 'tweet',
                                          'content'       => $tweet->text,
                                          'item_id'       => $tweet->id,
                                          'raw_date'      => gmdate('Y-m-d H:i:s', strtotime($tweet->created_at)),

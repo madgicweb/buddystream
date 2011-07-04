@@ -111,6 +111,7 @@ class BuddyStreamLastfmImport {
                                     buddystreamCreateActivity(array(
                                          'user_id'       => $user_meta->user_id,
                                          'extention'     => 'lastfm',
+                                         'type'          => 'song',
                                          'content'       => 'Just listened to: <a href="'.$song->url.'" target="_new">'.$song->artist." - ".$song->name. "</a>",
                                          'item_id'       => $sid,
                                          'raw_date'      => gmdate('Y-m-d H:i:s', strtotime($song->date)),

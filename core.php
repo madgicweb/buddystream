@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.0.5');
+define('BP_BUDDYSTREAM_VERSION', '2.2');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -71,7 +71,7 @@ function buddystreamPageLoader($extention){
  * Userpage loader for extentions
  */
 
-function buddystreamUserPageLoader($extention){
+function buddystreamUserPageLoader($extention, $page = 'settings'){
 
     global $bp;
 
@@ -81,12 +81,12 @@ function buddystreamUserPageLoader($extention){
 
     add_action(
         'bp_template_title',
-        'buddystream_'.$extention.'_settings_screen_title'
+        'buddystream_'.$extention.'_'.$page.'_screen_title'
     );
 
     add_action(
         'bp_template_content',
-        'buddystream_'.$extention.'_settings_screen_content'
+        'buddystream_'.$extention.'_'.$page.'_screen_content'
     );
 
     bp_core_load_template(
@@ -123,7 +123,7 @@ function buddystreamTabLoader($extention){
         }   
      }
      
-         $tabs.= '<a href="?page=buddystream_admin&settings=version2" class="tab_v2">V2</a>';
+         $tabs.= '<a href="?page=buddystream_admin&settings=version2" class="tab_v2">V2.1</a>';
          $tabs.= '<span class="tab_description"><span id="tab_description_content"></span></span>';
 
     $tabs .='</div>';
@@ -521,6 +521,7 @@ function buddystreamCreateActivity($params){
     //    buddystreamCreateActivity(array(
     //         'user_id'       => $user_meta->user_id,
     //         'extention'     => 'facebook',
+    //         'type'          => 'photo',
     //         'content'       => $content,
     //         'item_id'       => $item['id'],
     //         'raw_date'      => $item['created_time'],
@@ -558,7 +559,7 @@ function buddystreamCreateActivity($params){
 
         $activity->action .= '<a href="'.$bp->root_domain.'/'.$slug.'/'. bp_core_get_username($params['user_id']).'/" title="'.bp_core_get_username($params['user_id']).'">'.bp_core_get_user_displayname($params['user_id']).'</a>';
         $activity->action .= '&nbsp;<img src="'.plugins_url().'/buddystream/extentions/'.$params['extention'].'/'.$config['icon'].'">&nbsp;'.__('posted&nbsp;a', 'buddystream_'.$extention['name'])."&nbsp;";
-        $activity->action .= '<a href="'.$params['actionlink'].'" target="_blank" rel="external">&nbsp;'.__($config['type'], 'buddystream_'.$extention['name']);
+        $activity->action .= '<a href="'.$params['actionlink'].'" target="_new" rel="external">&nbsp;'.__($config['type'], 'buddystream_'.$extention['name']);
         $activity->action .= '</a>:&nbsp;';
 
         //check if item does not exist in the blacklist
@@ -597,7 +598,7 @@ function buddystreamCheckLicense($licenseKey) {
     curl_setopt($ch, CURLOPT_USERAGENT, $agent);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch,CURLOPT_VERBOSE,false);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 
     $response     = curl_exec($ch);
     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);

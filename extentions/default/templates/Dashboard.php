@@ -16,17 +16,24 @@
           
             <div class="postbox">
                 <div><h3 style="cursor:default;"><span><?php _e('Latest news','buddystream_lang');?></span></h3>
-                    <div class="inside" style="padding:10px;">
+                    <div class="inside">
+                        <ul class="buddystream_news">
                         <?php
+                        
+                            $class = "even";
+                        
                             $feedItems = fetch_feed('http://buddystream.net/feed/');
                             if( is_wp_error( $feedItems ) ) {
                                 echo $feedItems->get_error_message();
                             } else {
                                 foreach ($feedItems->get_items() as $feedItem) {
-                                    echo '<a href="'.$feedItem->get_permalink().'" title="'.$feedItem->get_title().'" target="_blanc">'.$feedItem->get_date('j-m-Y').' - '.$feedItem->get_title().'</a><br>';
+                                    echo '<li class="'.$class.'"><a href="'.$feedItem->get_permalink().'" title="'.$feedItem->get_title().'" target="_blanc">'.$feedItem->get_date('j-m-Y').' - '.$feedItem->get_title().'</a></li>';
+                                    
+                                    if($class == "even") { $class= "odd"; }else{ $class = "even"; }
                                 }
                             }
                         ?>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -35,15 +42,6 @@
                 <div><h3 style="cursor:default;"><?php _e('Support','buddystream_lang');?></h3>
                     <div class="inside" style="padding:10px;">
                         <?php _e('support description','buddystream_lang'); ?>          
-                    </div>
-                </div>
-            </div>
-            
-             <div class="postbox">
-                <div><h3 style="cursor:default;"><?php _e('Did you know?','buddystream_lang');?></h3>
-                    <div class="inside" style="padding:10px;">
-                        <?php //_e('goliath','buddystream_lang'); ?>         
-                        The Goliath Birdwing (Ornithoptera goliath) is the second-largest butterfly in the world. This brightly-colored butterfly is poisonous and has a wingspan up to 11 inches (28 cm) wide. It has black, yellow and green wings and a yellow and black body. This butterfly in found in tropical forests in Indonesia. Family Papilionidae.
                     </div>
                 </div>
             </div>
@@ -60,21 +58,19 @@
                     </div>
                 </div>
             </div>
-
+            
+            
              <div class="postbox">
-                <div><h3 style="cursor:default;"><span><?php echo __('Advertisement','buddystream_lang');?></span></h3>
+                <div><h3 style="cursor:default;"><?php _e('Did you know?','buddystream_lang');?></h3>
                     <div class="inside" style="padding:10px;">
-                        <script type="text/javascript"><!--
-                        google_ad_client = "pub-9463596301344154";
-                        /* 234x60, gemaakt 28-10-10 */
-                        google_ad_slot = "5541908398";
-                        google_ad_width = 234;
-                        google_ad_height = 60;
-                        //-->
-                        </script>
-                        <script type="text/javascript"
-                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                        </script>
+                        The Purple Emperor is a magnificent and elusive insect that is actively sought out by the many subjects of "His Majesty", as the male butterfly is affectionately known.<br/>
+                        This butterfly spends most of its time in the woodland canopy where it feeds on aphid honeydew, with the occasional close encounter when it comes down to feed on sap runs or, in the case of the male, animal droppings, carrion or moist ground that provide much-needed salts and minerals. <br/>
+                        Those that make pilgrimages to see this spectacular creature will often try and lure the males down from the canopy using all manner of temptations - including banana skins and shrimp paste.<br/>
+                        <br/>
+                        The male butterfly is one of the most beautiful of all of the butterflies found in the British Isles.<br/>
+                        From certain angles it appears to have black wings intersected with white bands.<br/>
+                        However, when the wings are at a certain angle to the sun, the most beautiful purple sheen is displayed, a result of light being refracted from the structures of the wing scales. The female, on the other hand, is a deep brown and does not possess the purple sheen found in the male.<br/>
+                        This is one of the most-widely studied and written about butterflies in the British Isles.
                     </div>
                 </div>
             </div>

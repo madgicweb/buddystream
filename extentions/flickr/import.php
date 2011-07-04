@@ -104,6 +104,7 @@ class BuddyStreamFlickrImport {
                                      buddystreamCreateActivity(array(
                                          'user_id'       => $user_meta->user_id,
                                          'extention'     => 'flickr',
+                                         'type'          => 'photo',
                                          'content'       => $content,
                                          'item_id'       => $photo->id,
                                          'raw_date'      => gmdate('Y-m-d H:i:s', $photo->dateupload),

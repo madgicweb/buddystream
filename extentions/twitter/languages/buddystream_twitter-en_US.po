@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-04-26 21:43+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Peter <peter@webclusive.com>\n"
+"Last-Translator: Peter Hofman <blackphantom25@gmail.com>\n"
 "Language-Team: BuddyStream\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr "Twitter API server offline at the moment."
 
 #: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/core.php:12
 msgid "to twitter"
-msgstr "to twitter"
+msgstr "to Twitter"
 
 #: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/core.php:15
 msgid "You\\'ve reached the max. amount of characters for a Tweet.  The Message will appear truncated on Twitter."

@@ -26,14 +26,17 @@ function buddystreamTwitterSharing(){
 add_filter( 'bp_get_activity_content','BuddystreamTwitterImages',5 );
 add_filter( 'bp_get_activity_content_body','BuddystreamTwitterImages',5 );
 
+
+
 function BuddystreamTwitterImages($text) {
  
+    if(bp_get_activity_type() == 'twitter'){
+        $text = preg_replace('#http://twitpic.com/([a-z0-9_]+)#i', '<a href="http://twitpic.com/\\1" target="_blank" rel="external"><img width="60" src="http://twitpic.com/show/mini/\\1" /></a>', $text);
+        $text = preg_replace('#http://yfrog.com/([a-z0-9_]+)#i', '<a href="http://yfrog.com/\\1" target="_blank" rel="external"><img width="60" src="http://yfrog.com/\\1.th.jpg" /></a>', $text);
+        $text = preg_replace('#http://yfrog.us/([a-z0-9_]+)#i', '<a href="http://yfrog.us/\\1" target="_blank" rel="external"><img width="60" src="http://yfrog.us/\\1:frame" /></a>', $text);
+    }
     
-  $text = preg_replace('#http://twitpic.com/([a-z0-9_]+)#i', '<a href="http://twitpic.com/\\1" target="_blank" rel="external"><img width="60" src="http://twitpic.com/show/mini/\\1" /></a>', $text);
-  $text = preg_replace('#http://yfrog.com/([a-z0-9_]+)#i', '<a href="http://yfrog.com/\\1" target="_blank" rel="external"><img width="60" src="http://yfrog.com/\\1.th.jpg" /></a>', $text);
-  $text = preg_replace('#http://yfrog.us/([a-z0-9_]+)#i', '<a href="http://yfrog.us/\\1" target="_blank" rel="external"><img width="60" src="http://yfrog.us/\\1:frame" /></a>', $text);
-  
-  return $text."<br>".$images;
+  return $text;
 }
 
 
@@ -87,19 +90,24 @@ wp_enqueue_style('buddystreamtwitter', plugins_url() . '/buddystream/extentions/
  *
  */
 
-function buddystream_twitter()
-{
+
+function buddystream_twitter(){
     buddystreamPageLoader('twitter');
 }
 
+
+/**
+ * User settings
+ */
+
 function buddystream_twitter_user_settings()
 {
-    buddystreamUserPageLoader('twitter');
+   buddystreamUserPageLoader('twitter','settings');
 }
 
 function buddystream_twitter_settings_screen_title()
 {
-    __('Twitter', 'tweetstream_lang');
+    __('Twitter', 'buddystream_twitter');
 }
 
 function buddystream_twitter_settings_screen_content()
@@ -107,5 +115,4 @@ function buddystream_twitter_settings_screen_content()
     global $bp;
     include "templates/UserSettings.php";
 }
-
 ?>

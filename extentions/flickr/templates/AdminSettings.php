@@ -8,7 +8,8 @@
 <?php
 
     $arraySwitches = array(
-        'bs_flickr_hide_sitewide'
+        'bs_flickr_hide_sitewide',
+        'bs_flickr_album'
     );
 
   if ($_POST) {
@@ -43,13 +44,18 @@
             <tr class="header">
                 <td colspan="2"><?php _e('User options', 'buddystream_flickr');?></td>
             </tr>
+            
+             <tr>
+                <td><?php _e( 'Show  Flickr album on user profile page?', 'buddystream_flickr' );?></td>
+                <td><input class="switch icons" type="checkbox" name="bs_flickr_album" id="bs_flickr_album"/></td>
+            </tr>
 
-            <tr>
+            <tr class="odd">
                 <td><?php _e( 'Hide Flickr photos on the sidewide activity stream?', 'buddystream_flickr' );?></td>
                 <td><input class="switch icons" type="checkbox" name="bs_flickr_hide_sitewide" id="bs_flickr_hide_sitewide"/></td>
             </tr>
 
-            <tr class="odd">
+            <tr>
                 <td><?php _e('Maximum number of photos imported per user, per day (empty = unlimited):', 'buddystream_flickr'); ?></td>
                 <td><input type="text" name="bs_flickr_user_settings_maximport" value="<?php echo get_site_option('bs_flickr_user_settings_maximport'); ?>" size="5" /></td>
             </tr>

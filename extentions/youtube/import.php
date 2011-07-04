@@ -119,6 +119,7 @@ class BuddyStreamYoutubeImport {
                                      buddystreamCreateActivity(array(
                                          'user_id'       => $user_meta->user_id,
                                          'extention'     => 'youtube',
+                                         'type'          => 'video',
                                          'content'       => $content,
                                          'item_id'       => $video->getVideoId(),
                                          'raw_date'      => date("Y-m-d H:i:s", $ts),

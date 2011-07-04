@@ -45,12 +45,12 @@
 
 .buddystream_info_box_dashboard{
     padding                 : 10px !important;
-    border                  : 1px solid #13760a !important;
-    background-color        : #e4f8a4 !important;
-    color                   : #37352c;
+    border                  : 1px solid #8600c9 !important;
+    background-color        : #8600c9 !important;
+    color                   : #ffffff;
     font-size               : 14px;
     font-weight             : bold;
-    text-shadow             : 1px 1px 3px #ffffff;
+    text-shadow             : 1px 1px 3px #37352c;
     line-height             : 160%;
     margin-right            : 20px;
     margin-bottom           : 20px;
@@ -58,18 +58,21 @@
     -webkit-border-radius   : 5px;
     -moz-border-radius      : 5px;
     border-radius           : 5px;
-    background-image        : -webkit-gradient(
-                              linear,
-                              left bottom,
-                              left top,
-                              color-stop(0.29, rgb(203,235,87)),
-                              color-stop(0.65, rgb(228,248,164))
-                              );
-    background-image        : -moz-linear-gradient(
-                              center bottom,
-                              rgb(203,235,87) 29%,
-                              rgb(228,248,164) 65%
-                              );
+    
+   background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.37, rgb(140,0,255)),
+    color-stop(0.69, rgb(183,50,250))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(140,0,255) 37%,
+    rgb(183,50,250) 69%
+);
+    
+  
 }
 
 .buddystream_Adminmenu{
@@ -110,19 +113,19 @@
     font-weight             : bold;
     font-size               : 13px;
     background-color        : #13760a !important;
-    color                   : #e4f8a4;
-    background-image        : -webkit-gradient(
-                              linear,
-                              left bottom,
-                              left top,
-                              color-stop(0.29, rgb(19,118,10)),
-                              color-stop(0.65, rgb(25,179,11))
-                              );
-    background-image        : -moz-linear-gradient(
-                              center bottom,
-                              rgb(19,118,10) 29%,
-                              rgb(25,179,11) 65%
-                              );
+    color                   : #ffffff;
+    background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.37, rgb(140,0,255)),
+    color-stop(0.69, rgb(183,50,250))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(140,0,255) 37%,
+    rgb(183,50,250) 69%
+);
 }
 
 .buddystream_Adminmenu .tab_description{
@@ -225,3 +228,16 @@
     color                   : #ff0000;
     font-weight             : bold;
 }
+
+.buddystream_news li{
+    padding:5px;
+}
+
+.buddystream_news .odd{
+    background-color: #EAF2FA;
+}
+
+.buddystream_news .even{
+    
+}
+
