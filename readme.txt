@@ -2,7 +2,7 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.1.4, BuddyPress 1.2.8
+Tested up to: WP 3.2, BuddyPress 1.2.9
 Stable tag: 2.1
 
 == Released under the GPL license ==
