@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1');
+define('BP_BUDDYSTREAM_VERSION', '2.1.1');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -75,7 +75,7 @@ function buddystreamUserPageLoader($extention, $page = 'settings'){
 
     global $bp;
 
-     if ($bp->displayed_user->id != $bp->loggedin_user->id) {
+     if ($bp->displayed_user->id != $bp->loggedin_user->id && $page != "album") {
             header('location:' . get_site_url());
      }
 
@@ -178,22 +178,16 @@ function buddystreamAdmin() {
     /**
      * Load the BuddyStream menu into the admin
      */
-
-    bp_core_add_admin_menu_page(
-          array(
-              'menu_title' => __('BuddyStream', 'buddystream'),
-              'page_title' => __('Info', 'buddystream'),
-              'access_level' => 10,
-              'position' => 100,
-              'file' => 'buddystream_admin',
-              'function' => 'buddystream_welcome',
-              'icon_url' => plugins_url(
-                  'images/buddystream_icon.png',
-                  __FILE__
-              )
-          )
-      );
-
+    
+    add_menu_page(
+        __('Info', 'buddystream'), 
+        __('BuddyStream', 'buddystream'), 
+        'manage_options',
+        'buddystream_admin', 
+        'buddystream_welcome',
+        plugins_url('images/buddystream_icon.png', __FILE__)
+     );
+    
 
     /**
      * Load the extentions into the BuddyStream admin menu.
@@ -472,6 +466,25 @@ function buddystreamLog($message = "", $type="info"){
         $wpdb->insert($wpdb->prefix."buddystream_log", array('message' => $message , 'type' => $type));
     }
 }
+
+
+/**
+ * Add a social friend to the BuddyStream table
+ */
+
+function buddystreamAddFriend($data = null){
+    
+    if(is_array($data)){
+       global $wpdb;
+       
+       $friend =  $wpdb->get_row("SELECT id FROM ".$wpdb->prefix."buddystream_friends WHERE social_id='".$data['social_id']."' AND type='".$data['type']."'");    
+       if(is_null($friend)){
+           $wpdb->insert($wpdb->prefix."buddystream_friends", $data);
+       }
+    }
+}
+
+
 /**
  * Add BuddyStream core stylesheets and javascripts
  *
@@ -538,39 +551,48 @@ function buddystreamCreateActivity($params){
         foreach(buddystreamGetExtentions() as $extention){
             if($extention['hashtag']){
                 $originalText = str_replace($extention['hashtag'],"",$originalText);
+                $originalText = str_replace("&nbps;"," ",$originalText);
             }
         }
         
-        $activity = new BP_Activity_Activity();
-        $activity->user_id           = $params['user_id'];
-        $activity->component         = $params['extention'];
-        $activity->type              = $params['extention'];
-        $activity->content           = '<div class="buddystream_activity_container">'.$originalText.'</div>';
-        $activity->secondary_item_id = $params['item_id'];
-        $activity->date_recorded     = $params['raw_date'];
+        //do we already have this content if so do not import this item
+        if(!bp_activity_check_exists_by_content($originalText)){
         
-        if (!defined('BP_ENABLE_ROOT_PROFILES')) { $slug = BP_MEMBERS_SLUG; }
+            $activity = new BP_Activity_Activity();
+            remove_filter('bp_activity_action_before_save', 'bp_activity_filter_kses', 1);
+            
+            $activity->user_id           = $params['user_id'];
+            $activity->component         = $params['extention'];
+            $activity->type              = $params['extention'];
+            $activity->content           = '<div class="buddystream_activity_container">'.$originalText.'</div>';
+            $activity->secondary_item_id = $params['item_id'];
+            $activity->date_recorded     = $params['raw_date'];
 
-        if (get_site_option('buddystream_'.$params['extention'].'_hide_sitewide') == "on") {
-            $activity->hide_sitewide = 1;
-        } else {
-            $activity->hide_sitewide = 0;
-        }
+            if (!defined('BP_ENABLE_ROOT_PROFILES')) { $slug = BP_MEMBERS_SLUG; }
 
-        $activity->action .= '<a href="'.$bp->root_domain.'/'.$slug.'/'. bp_core_get_username($params['user_id']).'/" title="'.bp_core_get_username($params['user_id']).'">'.bp_core_get_user_displayname($params['user_id']).'</a>';
-        $activity->action .= '&nbsp;<img src="'.plugins_url().'/buddystream/extentions/'.$params['extention'].'/'.$config['icon'].'">&nbsp;'.__('posted&nbsp;a', 'buddystream_'.$extention['name'])."&nbsp;";
-        $activity->action .= '<a href="'.$params['actionlink'].'" target="_new" rel="external">&nbsp;'.__($config['type'], 'buddystream_'.$extention['name']);
-        $activity->action .= '</a>:&nbsp;';
+            if (get_site_option('buddystream_'.$params['extention'].'_hide_sitewide') == "on") {
+                $activity->hide_sitewide = 1;
+            } else {
+                $activity->hide_sitewide = 0;
+            }
 
-        //check if item does not exist in the blacklist
-        if(get_user_meta($user_id, 'buddystream_blacklist_ids',2)){
-            if (!preg_match("/".$params['item_id']."/i", get_user_meta($params['user_id'], 'buddystream_blacklist_ids',1))) {
+            $activity->action .= '<a href="'.$bp->root_domain.'/'.$slug.'/'. bp_core_get_username($params['user_id']).'/" title="'.bp_core_get_username($params['user_id']).'">'.bp_core_get_user_displayname($params['user_id']).'</a>';
+            $activity->action .= '<img src="'.plugins_url().'/buddystream/extentions/'.$params['extention'].'/'.$config['icon'].'"> '.__('posted&nbsp;a', 'buddystream_'.$extention['name'])." ";
+            $activity->action .= '<a href="'.$params['actionlink'].'" target="_blank" rel="external"> '.__($config['type'], 'buddystream_'.$extention['name']);
+            $activity->action .= '</a>: ';
+
+            remove_filter('bp_activity_action_before_save', 'bp_activity_filter_kses', 1);
+            
+            //check if item does not exist in the blacklist
+            if(get_user_meta($params['user_id'], 'buddystream_blacklist_ids',2)){
+                if (!preg_match("/".$params['item_id']."/i", get_user_meta($params['user_id'], 'buddystream_blacklist_ids',1))) {
+                    $activity->save();
+                    update_user_meta($params['user_id'], $params['extention'].'_daycounter', get_user_meta($params['user_id'], $params['extention'].'_daycounter',1) + 1);
+                }
+            }else{
                 $activity->save();
                 update_user_meta($params['user_id'], $params['extention'].'_daycounter', get_user_meta($params['user_id'], $params['extention'].'_daycounter',1) + 1);
             }
-        }else{
-            $activity->save();
-            update_user_meta($params['user_id'], $params['extention'].'_daycounter', get_user_meta($params['user_id'], $params['extention'].'_daycounter',1) + 1);
         }
     }
 }
@@ -631,8 +653,8 @@ function buddystreamCheckNetwork($url) {
     curl_setopt($ch, CURLOPT_URL,$url );
     curl_setopt($ch, CURLOPT_USERAGENT, $agent);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch,CURLOPT_VERBOSE,false);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_VERBOSE,false);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 
     $page     = curl_exec($ch);
     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);

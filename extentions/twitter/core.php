@@ -67,11 +67,14 @@ function BuddystreamTweetButton() {
  */
 
 function buddystreamTwitterPostUpdate($content = "", $shortLink = "", $user_id = 0) {
+    
+    global $bp;
     $twitter = new BuddystreamTwitter;
     $twitter->setConsumerKey(get_site_option("tweetstream_consumer_key"));
     $twitter->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
     $twitter->setAccessToken(get_user_meta($user_id, 'tweetstream_token',1));
     $twitter->setAccessTokenSecret(get_user_meta($user_id, 'tweetstream_tokensecret',1));
+    $twitter->setCallbackUrl($bp->root_domain);
     $twitter->setShortLink($shortLink);
     $twitter->setPostContent($content);
     $twitter->postUpdate();

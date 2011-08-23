@@ -14,10 +14,21 @@ class BuddystreamTwitter {
     protected $_username;
     protected $_accessToken;
     protected $_accessTokenSecret;
-    protected $_source;
     protected $_badFilters;
     protected $_goodFilters;
+    protected $_source;
     protected $_geoData;
+    
+    
+     public function setSource($source)
+     {
+         $this->_source = $source;
+     }
+
+     public function getSource()
+     {
+         return $this->_source;
+     }
     
       public function setCallbackUrl($callBackUrl)
       {
@@ -90,18 +101,47 @@ class BuddystreamTwitter {
          return $this->_shortLink;
      }
 
+     public function setGeoData($geoData){
+         $this->_geoData = $geoData;
+     }
+
+     public function getGeoData(){
+         return $this->_geoData;
+     }
+     
       public function getConsumer()
       {
          $consumer = new Zend_Oauth_Consumer(
              array(
-               'callbackUrl' => $this->getCallbackUrl(),
-               'siteUrl' => 'http://twitter.com/oauth',
-               'consumerKey' => $this->getConsumerKey(),
-               'consumerSecret' => $this->getConsumerSecret()
+                 'version' => '1.0',
+                 'callbackUrl' => $this->getCallbackUrl(),
+                 'requestTokenUrl' => 'http://api.twitter.com/oauth/request_token',
+                 'userAuthorizationUrl' => 'https://api.twitter.com/oauth/authorize',
+                 'accessTokenUrl' => 'http://api.twitter.com/oauth/access_token',
+                 'consumerKey' => $this->getConsumerKey(),
+                 'consumerSecret' => $this->getConsumerSecret()
              )
          );
 
          return $consumer;
+      }
+      
+      
+      public function getClient(){
+          $options = array('version' => '1.0',
+		'localUrl' => $this->getCallbackUrl(),
+		'callbackUrl' => $this->getCallbackUrl(),
+		'requestTokenUrl' => 'http://api.twitter.com/oauth/request_token',
+		'userAuthorisationUrl' => 'https://api.twitter.com/oauth/authorizee',
+		'accessTokenUrl' => 'http://api.twitter.com/oauth/access_token',
+		'consumerKey' => $this->getConsumerKey(),
+		'consumerSecret' => $this->getConsumerSecret());
+         
+               $access = new Zend_Oauth_Token_Access();
+               $access->setToken($this->getAccessToken());
+               $access->setTokenSecret($this->getAccessTokenSecret());
+               
+               return $access->getHttpClient($options);
       }
       
      public function getRedirectUrl()
@@ -111,6 +151,7 @@ class BuddystreamTwitter {
          try {
              $consumer = $this->getConsumer();
              $token = $consumer->getRequestToken();
+             
              update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token",$token->oauth_token);
              update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token_secret",$token->oauth_token_secret);
 
@@ -131,7 +172,8 @@ class BuddystreamTwitter {
 
          return $oauthTokenRequest;
      }
-
+     
+    
      public function setPostContent($content)
      {
          $content = stripslashes($content);
@@ -148,43 +190,16 @@ class BuddystreamTwitter {
 
          $this->_postContent = $content;
      }
-
+     
      public function postUpdate()
      {
-         $access = new Zend_Oauth_Token_Access();
-         $access->setToken($this->getAccessToken())->setTokenSecret($this->getAccessTokenSecret());
-
-         $params = array(
-             'accessToken' => $access,
-             'consumerKey' => $this->getConsumerKey(),
-             'consumerSecret' => $this->getConsumerSecret()
-         );
-
-        $twitter = new Zend_Service_Twitter($params);
-        $repsonse = $twitter->statusUpdate($this->_postContent);
+         $client = $this->getClient();
+         $client->setUri('http://api.twitter.com/1/statuses/update.json');         
+         $client->setMethod(Zend_Http_Client::POST);
+         $client->setParameterPost('status', $this->_postContent);
+         $response = $client->request();
      }
-
-
-     public function getRateLimit($twitterLimit)
-     {
-        foreach($twitterLimit as $key => $value)
-        {
-            if ($key=="remaining-hits") {
-                return $value;
-            }
-        }
-     }
-
-     public function setSource($source)
-     {
-         $this->_source = $source;
-     }
-
-     public function getSource()
-     {
-         return $this->_source;
-     }
-
+     
      public function setBadFilters($badfilters){
         $this->_badFilters = $badfilters;
      }
@@ -201,130 +216,72 @@ class BuddystreamTwitter {
          return $this->_goodFilters;
      }
 
-     public function setGeoData($geoData){
-         $this->_geoData = $geoData;
-     }
-
-     public function getGeoData(){
-         return $this->_geoData;
-     }
-
      public function getTweets()
      {
-         if($this->checkAuth()){
+         $client = $this->getClient();
+         $client->setUri('http://api.twitter.com/1/statuses/user_timeline.xml');  
+         $client->setMethod(Zend_Http_Client::GET); 
+         $request = $client->request();
+         $response = $request->getBody();
+         $response = simplexml_load_string($response);
          
-             try {
-             $access = new Zend_Oauth_Token_Access();
-             $access->setToken($this->getAccessToken())->setTokenSecret($this->getAccessTokenSecret());
+         foreach($response as $tweet){
 
-             $params = array(
-                 'accessToken' => $access,
-                 'consumerKey' => $this->getConsumerKey(),
-                 'consumerSecret' => $this->getConsumerSecret()
-             );
-
-            $twitter = new Zend_Service_Twitter($params);
-
-            //enought ratelimits left to get tweets
-            if ($this->getRateLimit($twitter->account->rateLimitStatus())>0) {
-
-                //geodata counter
-                $geoCounter = 0;
-
-                //get the tweets
-                $response = $twitter->status->userTimeline();
-                foreach($response as $tweet){
-
-                    if($_geoEnabled){
-                        if($tweet->place->id){
-                            $geoCounter++;
-                        }
-                         $xml = $tweet;
-                         foreach ($xml->getNamespaces(true) as $prefix => $ns) {
-                            $xml->registerXPathNamespace($prefix, $ns);
-                            $geo = $xml->xpath('//georss:point');
-                         }
-
-                         if($geo[$geoCounter] != ""){
-                             $geoData[] =  array(
-                                    "id" => $tweet->id,
-                                    "coordinates" => $geo[$geoCounter]
-                                 );
-                             $geoCounter++;
-                          }
-
-                          $geo = "";
-                      }
-
-                        //checkvar
-                        $filter1  = 1;
-                        $filter2  = 1;
-
-                        //not from same source
-                       if(!strpos($tweet->source,$this->getSource())){
-
-                         //only allow if filter is in it
-                           if($this->getGoodFilters()){
-                               foreach(explode(",",$this->getGoodFilters()) as $filter){
-                                    if(preg_match("/".$filter."/i",strtolower($tweet->text))){
-                                        $filter1 = 1;
-                                    }else{
-                                        $filter1 = 0;
-                                    }
-                                }
-                           }
-
-                        //deny when having one of the badfilters in it
-                           if($this->getBadFilters() && $filter1 == 1){
-                                foreach(explode(",",$this->getBadFilters()) as $filter){
-                                    if(preg_match("/".$filter."/i",strtolower($tweet->text))){
-                                        $filter2 = 0;
-                                    }
-                                }
-                           }
-
-                        if($filter1== 1 && $filter2== 1){
-                            $tweets[] = $tweet;
-                        }
-
-                       }
-                    }
+            if($_geoEnabled){
+                if($tweet->place->id){
+                    $geoCounter++;
                 }
-             }
-              catch (Exception $e)
-            {
-                $tweets = "";
-            }
+                 $xml = $tweet;
+                 foreach ($xml->getNamespaces(true) as $prefix => $ns) {
+                    $xml->registerXPathNamespace($prefix, $ns);
+                    $geo = $xml->xpath('//georss:point');
+                 }
 
+                 if($geo[$geoCounter] != ""){
+                     $geoData[] =  array(
+                            "id" => $tweet->id,
+                            "coordinates" => $geo[$geoCounter]
+                         );
+                     $geoCounter++;
+                  }
+
+                  $geo = "";
+              }
+
+                //checkvar
+                $filter1  = 1;
+                $filter2  = 1;
+
+                //not from same source
+               if(!strpos($tweet->source,$this->getSource())){
+
+                 //only allow if filter is in it
+                   if($this->getGoodFilters()){
+                       foreach(explode(",",$this->getGoodFilters()) as $filter){
+                            if(preg_match("/".$filter."/i",strtolower($tweet->text))){
+                                $filter1 = 1;
+                            }else{
+                                $filter1 = 0;
+                            }
+                        }
+                   }
+
+                //deny when having one of the badfilters in it
+                   if($this->getBadFilters() && $filter1 == 1){
+                        foreach(explode(",",$this->getBadFilters()) as $filter){
+                            if(preg_match("/".$filter."/i",strtolower($tweet->text))){
+                                $filter2 = 0;
+                            }
+                        }
+                   }
+
+                if($filter1== 1 && $filter2== 1){
+                    $tweets[] = $tweet;
+                }
+               }
+            }
+                
             $this->setGeoData($geoData);
             return $tweets;
-        }
-     }
-
-
-
-     public function checkAuth()
-     {
-        try {
-         $access = new Zend_Oauth_Token_Access();
-         $access->setToken($this->getAccessToken())->setTokenSecret($this->getAccessTokenSecret());
-
-         $params = array(
-             'accessToken' => $access,
-             'consumerKey' => $this->getConsumerKey(),
-             'consumerSecret' => $this->getConsumerSecret()
-         );
-
-        $twitter = new Zend_Service_Twitter($params);
-
-        if($twitter->accountVerifyCredentials()->error){
-            buddystreamLog("Twitter credentials for user ".$this->getUsername()." failed.","error");
-            return false;
-        }else{
-            return true;
-        }  
-     }  catch (Exception $e){
-
-     }
-     }
+        }       
 }

@@ -7,13 +7,6 @@
 
 <?php include "AdminMenu.php"; ?>
 
-<?php
-$error = buddystreamCheckRequirements();
-if ($error) {
-    echo '<br><br><div class="buddystream_error_box"><strong>Wait on! There is something wrong!</strong><br/><br/>'.$error.'</div>';
-}else{
-?>
-
 <form id="settings_form" action="" method="post">
 
 <?php
@@ -76,5 +69,3 @@ foreach (buddystreamGetExtentions() as $extention) {
 <p class="submit">
     <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 </p>
-
-<?php } ?>

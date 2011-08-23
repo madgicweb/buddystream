@@ -2,8 +2,8 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.2, BuddyPress 1.2.9
-Stable tag: 2.1
+Tested up to: WP 3.2.1, BuddyPress 1.5
+Stable tag: 2.1.1
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -44,6 +44,19 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.1.1 =
+* Fixed css issues
+* Added extra check in core for importing items
+* Added more error tracking for twitter
+* Fixed the blank cronjob page.
+* Fixed bad ecoding errors on rss feed created by the imports.
+* Fixed max import filter for Flickr
+* Fixed user-rights problem for showing albums other then your own.
+* Fixed deleted activity item is imported again
+* Fixed compatibility for BuddyPress 1.5
+* Fixed network timeout check
+* Updated Twitter oAuth code, no longer using Zend_Twitter_Service
 
 = 2.1 =
 * Fixed custom settings slug on user pages.

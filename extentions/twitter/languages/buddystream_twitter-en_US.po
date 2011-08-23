@@ -159,7 +159,7 @@ msgstr "Settings saved."
 
 #: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:37
 msgid "twitter settings description"
-msgstr "For BuddyStream to work you will need to get an API key from Twitter.<br><br>To get a API key, follow these steps:<br>1. Go to  <a href=\"http://www.twitter.com/apps/\" target=\"_blank\">http://www.twitter.com/apps</a> and login with your Twitter account.<br>2. Create a new app wich has read/write settings (important), type browser and a callback url to: <b>#ROOTDOMAIN</b><br>3. Fill in the consumer key and consumer secret below."
+msgstr "For BuddyStream to work you will need to get an API key from Twitter.<br><br>To get a API key, follow these steps:<br>1. Go to  <a href=\"http://dev.twitter.com/apps/new\" target=\"_blank\">http://dev.twitter.com/apps/new</a> and login with your Twitter account.<br>2. Create a new app wich has read/write settings (important), type browser and a callback url to: <b>#ROOTDOMAIN</b><br>3. Fill in the consumer key and consumer secret below."
 
 #: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:44
 msgid "Twitter API"

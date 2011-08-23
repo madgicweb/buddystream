@@ -8,6 +8,7 @@ function BuddystreamTwitterImportStart(){
     if(buddystreamCheckNetwork("http://twitter.com")) {
         $importer = new BuddyStreamTwitterImport();
         $importer->doImport();
+        
      }else{
         buddystreamLog(__("Twitter API server offline at the moment.","buddystream_twitter"),"error");
     }  
@@ -70,9 +71,9 @@ class BuddyStreamTwitterImport{
                         $twitter->setAccessTokenSecret(get_user_meta($user_meta->user_id, 'tweetstream_tokensecret', 1));
                         $twitter->setUsername(get_userdata($user_meta->user_id)->user_login);
                         $twitter->setSource($bp->root_domain);
+                        $twitter->setCallbackUrl($bp->root_domain);
                         $twitter->setGoodFilters(get_site_option('tweetstream_filter') . get_user_meta($user_meta->user_id, 'tweetstream_filtergood', 1));
                         $twitter->setBadFilters(get_site_option('tweetstream_filterexplicit') . get_user_meta($user_meta->user_id, 'tweettream_filterbad', 1));
-
                         $tweets = $twitter->getTweets();
                        
                         if (is_array($tweets)) {
@@ -89,7 +90,7 @@ class BuddyStreamTwitterImport{
                             
                             //go through tweets
                             foreach ($tweets as $tweet) {
-
+                                
                                 //max items
                                 $max = 1;
                                 if (get_site_option('tweetstream_user_settings_maximport') != '') {

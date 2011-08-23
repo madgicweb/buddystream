@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: BuddyStream
-Plugin URI: http://www.buddystream.net
-Description: BuddyStream
-Version: 2.1
+Plugin Name: BuddyStream Premium
+Plugin URI:
+Description: BuddyStream Premium
+Version: 2.1.1
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -36,29 +36,67 @@ function buddystream_init()
     buddystream_init_database();
     
     //now initialize the core
-    require 'core.php';
+    require_once('core.php');
+    
+    //initialize the upgrade procedure if needed
+    buddystream_init_update();
+    
+    //now initialize the zend framework
     buddystream_zend_framework_init();
+}
 
-    try {
-        Zend_Session::start();
-    } catch(Zend_Session_Exception $e) {
-        @session_start();
-    }
 
+function buddystream_init_update(){
+   
+    if(get_site_option("buddystream_installed_version") != "2.1.1"){
+        
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+        
+        $buddystreamSql = 'UPDATE '.$wpdb->base_prefix.'bp_activity SET action = REPLACE(action,"&nbsp;"," ")
+        WHERE component="twitter"
+        OR component="facebook"
+        OR component="youtube"
+        OR component="googlebuzz"
+        OR component="flickr"
+        OR component="rss"
+        OR component="lastfm"
+        OR component="linkedin"';
+
+        dbDelta($buddystreamSql);
+        
+        $buddystreamSql = 'UPDATE '.$wpdb->base_prefix.'bp_activity SET content = REPLACE(content,"&nbsp;"," ")
+        WHERE component="twitter"
+        OR component="facebook"
+        OR component="youtube"
+        OR component="googlebuzz"
+        OR component="flickr"
+        OR component="rss"
+        OR component="lastfm"
+        OR component="linkedin"';
+        
+        dbDelta($buddystreamSql);
+        unset($buddystreamSql);
+        
+        update_site_option("buddystream_installed_version", "2.1.1");
+   }
+    
+    
 }
 
 function buddystream_init_database(){
     
-    global $wpdb;
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     
-    $wpdb->query("CREATE TABLE IF NOT EXISTS ".$wpdb->base_prefix."buddystream_log (
-  `id` int(11) NOT NULL auto_increment,
-  `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `type` text NOT NULL,
-  `message` text NOT NULL,
-  PRIMARY KEY  (`id`)
-);"
-    );
+    $buddystreamSql = "CREATE TABLE IF NOT EXISTS ".$wpdb->base_prefix."buddystream_log (
+      `id` int(11) NOT NULL auto_increment,
+      `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+      `type` text NOT NULL,
+      `message` text NOT NULL,
+      PRIMARY KEY  (`id`)
+    );";
+    
+    dbDelta($buddystreamSql);
+    unset($buddystreamSql);
     
 }
 

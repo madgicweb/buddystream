@@ -38,25 +38,15 @@ class BuddyStreamFlickrImport {
 
                     $import = 1;
 
-                    //max import reset
-                    if (get_user_meta($user_meta->user_id, 'bs_flickr_counterdate',1) != date('d-m-Y')) {
+                   //daycounter reset
+                    if (get_user_meta($user_meta->user_id, 'bs_flickr_counterdate', 1) != date('d-m-Y')) {
                         update_user_meta($user_meta->user_id, 'bs_flickr_daycounter', 1);
                         update_user_meta($user_meta->user_id, 'bs_flickr_counterdate', date('d-m-Y'));
                     }
 
-                    //max photos per day
-                    if (get_site_option(
-                            'bs_flickr_user_settings_maximport'
-                        ) != '') {
-
-                        if (get_user_meta(
-                                $user_meta->user_id,
-                                'bs_flickr_daycounter',1
-                            ) <= get_site_option(
-                                'bs_flickr_user_settings_maximport'
-                            )
-                        ) {
-
+                    //max tweets per day
+                    if (get_site_option('bs_flickr_user_settings_maximport') != '') {
+                        if (get_user_meta($user_meta->user_id, 'bs_flickr_daycounter',1) <= get_site_option('bs_flickr_user_settings_maximport')) {
                             $import = 1;
                         } else {
                             $import = 0;
@@ -64,7 +54,7 @@ class BuddyStreamFlickrImport {
                     } else {
                         $import = 1;
                     }
-
+                   
                     if ($import == 1 && get_user_meta($user_meta->user_id, 'bs_flickr_username',1) != "") {
 
                         $flickr = new BuddyStreamFlickr();

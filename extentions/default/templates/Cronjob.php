@@ -2,10 +2,6 @@
 <?php include "AdminMenu.php"; ?>
 
 <?php
-$error = buddystreamCheckRequirements();
-if ($error) {
-    echo '<br><br><div class="buddystream_error_box"><strong>Wait on! There is something wrong!</strong><br/><br/>'.$error.'</div>';
-}else{
 
     //check if the licensekey is still valid
     if(!$_POST && get_site_option('buddystream_license_key')){
@@ -96,5 +92,3 @@ if ($error) {
         </table>
        <p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>
     </form>
-
-<?php } ?>
