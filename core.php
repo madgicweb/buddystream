@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.1');
+define('BP_BUDDYSTREAM_VERSION', '2.1.2');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -123,7 +123,7 @@ function buddystreamTabLoader($extention){
         }   
      }
      
-         $tabs.= '<a href="?page=buddystream_admin&settings=version2" class="tab_v2">V2.1</a>';
+         $tabs.= '<a href="?page=buddystream_admin&settings=version2" class="tab_v2">V2.1.2</a>';
          $tabs.= '<span class="tab_description"><span id="tab_description_content"></span></span>';
 
     $tabs .='</div>';
@@ -271,14 +271,14 @@ function buddystream_SocialIt($content, $shortLink = null)
     if ($bp->current_component == "groups" && $bp->current_action == "forum") {
 
         if($_POST['topic_title']){
+            
+            $cleanTitle = trim(buddyStreamRemoveHashTags($_POST['topic_title']));
             $shortLink = bp_get_group_permalink($bp->groups->current_group) .
                         'forum/topic/' .
                          str_replace(
                              " ",
                              "-",
-                             strtolower(
-                                 $_POST['topic_title']
-                             )
+                             strtolower($cleanTitle)
                          ) . '/';
 
             $shortLink = buddystream_getShortUrl($shortLink);
@@ -603,10 +603,10 @@ function buddystreamCreateActivity($params){
  * 
  */
 
-function buddystreamCheckLicense($licenseKey) {
+function buddystreamCheckLicense($licenseKey = null) {
     global $bp;
     
-    if($licenseKey){
+    if($licenseKey != null){
     
     $url   = "http://buddystream.net/cronservice/check.php?licensekey="
              .$licenseKey
@@ -619,7 +619,7 @@ function buddystreamCheckLicense($licenseKey) {
     curl_setopt($ch, CURLOPT_URL,$url );
     curl_setopt($ch, CURLOPT_USERAGENT, $agent);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch,CURLOPT_VERBOSE,false);
+    curl_setopt($ch, CURLOPT_VERBOSE,false);
     curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 
     $response     = curl_exec($ch);

@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -14,12 +14,11 @@ BuddyStream is a BuddyPress plugin that will synchronize all of your favorite So
 The plugin is easy to set-up, operate, and for your members to use.
 Each Social Network has its own admin panel where you can see which users are using the network, view cool statistics, and manage the advanced filtering settings.
 
-Networks that the plugin currently supports:
+Networks that the FREE plugin currently supports:
 - Twitter
 - Flickr
 - Youtube
 - Last.fm
-- Rss
 
 Requirements.
 - PHP 5.2.1+
@@ -45,6 +44,11 @@ Requirements.
 
 == ChangeLog ==
 
+= 2.1.2 =
+* Fixed db_version() error on clean install.
+* Fixed incorrect shortlink on forum topics
+* Fixed blanc cronjob settings page, due incorrect php starting tag.
+
 = 2.1.1 =
 * Fixed css issues
 * Added extra check in core for importing items
@@ -55,17 +59,28 @@ Requirements.
 * Fixed user-rights problem for showing albums other then your own.
 * Fixed deleted activity item is imported again
 * Fixed compatibility for BuddyPress 1.5
-* Fixed network timeout check
+* Fixed network timeout check (Flickr import failure)
 * Updated Twitter oAuth code, no longer using Zend_Twitter_Service
+
 
 = 2.1 =
 * Fixed custom settings slug on user pages.
+* Fixed missing endtag for Facebook like button.
+* Fixed fullsize images for Facebook photos and links.
+* Fixed double images on Facebook items.
 * Fixed translations improved.
+* Fixed Soundcloud authorization improved.
 * Fixed timeout on cronjob settings page (white page).
+
+* Updated Soundcloud library.
 * Updated the Dashboard page.
+
 * Added External links now open in a new window.
 * Added Flickr album on profile page.
 * Added Youtube album on profile page.
+* Added Facebook album on profile page.
+* Added Soundcloud album on profile page.
+* Added Linkedin synchronization.
 
 = 2.0.5 = 
 * Fixed rss feed.

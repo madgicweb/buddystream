@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: BuddyStream Premium
+Plugin Name: BuddyStream
 Plugin URI:
-Description: BuddyStream Premium
-Version: 2.1.1
+Description: BuddyStream
+Version: 2.1.2
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -48,7 +48,9 @@ function buddystream_init()
 
 function buddystream_init_update(){
    
-    if(get_site_option("buddystream_installed_version") != "2.1.1"){
+    if(get_site_option("buddystream_installed_version") != "2.1.2"){
+        
+        global $wpdb;
         
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         
@@ -60,11 +62,9 @@ function buddystream_init_update(){
         OR component="flickr"
         OR component="rss"
         OR component="lastfm"
-        OR component="linkedin"';
-
-        dbDelta($buddystreamSql);
+        OR component="linkedin";
         
-        $buddystreamSql = 'UPDATE '.$wpdb->base_prefix.'bp_activity SET content = REPLACE(content,"&nbsp;"," ")
+        UPDATE '.$wpdb->base_prefix.'bp_activity SET content = REPLACE(content,"&nbsp;"," ")
         WHERE component="twitter"
         OR component="facebook"
         OR component="youtube"
@@ -72,12 +72,10 @@ function buddystream_init_update(){
         OR component="flickr"
         OR component="rss"
         OR component="lastfm"
-        OR component="linkedin"';
-        
+        OR component="linkedin";';
+
         dbDelta($buddystreamSql);
-        unset($buddystreamSql);
-        
-        update_site_option("buddystream_installed_version", "2.1.1");
+        update_site_option("buddystream_installed_version", "2.1.2");
    }
     
     

@@ -1,5 +1,7 @@
 <?php
 
+global $bp;
+
 if($_GET['reset'] == 'true'){
     delete_user_meta($bp->loggedin_user->id,'tweetstream_token');
     delete_user_meta($bp->loggedin_user->id,'tweetstream_tokensecret');
@@ -89,7 +91,7 @@ if ($_POST) {
 
         <?php } ?>
 
-        <br/><input type="submit" value="<?php echo __('Save settings', 'buddystream_twitter'); ?>">
+        <br/><input type="submit" value="<?php echo __('Save settings', 'buddystream_twitter'); ?>" />
         </form>
         
         <?php
