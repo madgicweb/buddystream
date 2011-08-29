@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Lastfm\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-26 20:55+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter <peter@webclusive.com>\n"
+"Language-Team: BuddyStream\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: english\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm\n"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/import.php:12
+msgid "Last.fm API server offline at the moment."
+msgstr "Last.fm API server offline at the moment."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/core.php:36
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminUsers.php:38
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminUsers.php:12
+msgid "\"User integration has been reset. Note: User will have to reconnect their integration if desired.\""
+msgstr "\"User integration has been reset. Note: User will have to reconnect their integration if desired.\""
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminUsers.php:17
+msgid "Are you sure ?"
+msgstr "Are you sure ?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminUsers.php:26
+msgid "lastfm users description"
+msgstr "Below is a list of users whom are using Last.fm.<br> You may reset their Last.fm settings here. <br><b>Note:</b> When you reset a user, they will need to re-authenticate with Last.fm. Any Last.fm items that have already been imported <b>WILL NOT</b> be deleted. "
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminUsers.php:37
+msgid "Username"
+msgstr "Username"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminUsers.php:39
+msgid "Song history"
+msgstr "Song history"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminUsers.php:40
+msgid "Reset user"
+msgstr "Reset user"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/UserSettings.php:5
+msgid "Settings saved"
+msgstr "Settings saved"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/UserSettings.php:16
+msgid "Last.fm Settings"
+msgstr "Last.fm Settings"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/UserSettings.php:17
+msgid "Last.fm username"
+msgstr "Last.fm username"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/UserSettings.php:19
+msgid "Save settings"
+msgstr "Save settings"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminSettings.php:21
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminSettings.php:26
+msgid "lastfm settings description"
+msgstr "A Last.fm API Key or connection is NOT required to get the users song histories. "
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminSettings.php:33
+msgid "User options"
+msgstr "User options"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminSettings.php:37
+msgid "Hide Last.fm song history from appearing in the sidewide activity stream?"
+msgstr "Hide Last.fm song history from appearing in the sidewide activity stream?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminSettings.php:41
+msgid "Maximum amount of songs to import per user, per day (empty = unlimited):"
+msgstr "Maximum amount of songs to import per user, per day (empty = unlimited):"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminSettings.php:45
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:5
+msgid "lastfm statitics description"
+msgstr "Below you see a table with some nice to know statistics, i may help you to monitor you members social interaction."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:11
+msgid "Statistics"
+msgstr "Statistics"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:29
+msgid "Amount of users:"
+msgstr "Amount of users:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:33
+msgid "Amount of user using Last.fm integration:"
+msgstr "Amount of user using Last.fm integration:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:37
+msgid "Percentage of users using Last.fm integration:"
+msgstr "Percentage of users using Last.fm integration:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:41
+msgid "Amount of activity updates:"
+msgstr "Amount of activity updates:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:45
+msgid "Amount of Last.fm songs history:"
+msgstr "Amount of Last.fm songs history:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:49
+msgid "Percentage of Last.fm songs history:"
+msgstr "Percentage of Last.fm songs history:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:53
+msgid "Average number of Last.fm history imported per day:"
+msgstr "Average number of Last.fm history imported per day:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:57
+msgid "Average number of Last.fm history imported per week:"
+msgstr "Average number of Last.fm history imported per week:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:61
+msgid "Average number of Last.fm history imported per month:"
+msgstr "Average number of Last.fm history imported per month:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/lastfm/templates/AdminStatitics.php:65
+msgid "Average number of Last.fm history imported per year:"
+msgstr "Average number of Last.fm history imported per year:"
+
