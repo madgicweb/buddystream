@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.2');
+define('BP_BUDDYSTREAM_VERSION', '2.1.3');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -123,7 +123,7 @@ function buddystreamTabLoader($extention){
         }   
      }
      
-         $tabs.= '<a href="?page=buddystream_admin&settings=version2" class="tab_v2">V2.1.2</a>';
+         $tabs.= '<a href="?page=buddystream_admin&settings=version2" class="tab_v2">V'.BP_BUDDYSTREAM_VERSION.'</a>';
          $tabs.= '<span class="tab_description"><span id="tab_description_content"></span></span>';
 
     $tabs .='</div>';
@@ -172,7 +172,7 @@ add_action('network_admin_menu', 'buddystreamAdmin');
 function buddystreamAdmin() {
 
     if (!is_super_admin()) {
-		return false;
+	return false;
     }
 
     /**
@@ -197,6 +197,7 @@ function buddystreamAdmin() {
 
         foreach(buddystreamGetExtentions() as $extention){
             if (get_site_option("buddystream_".$extention['name']."_power")) {
+                
                 add_submenu_page(
                 'buddystream_admin',
                 __(ucfirst($extention['name']), 'buddystream_'.$extention['name']),
@@ -205,6 +206,7 @@ function buddystreamAdmin() {
                 'buddystream_'.$extention['name'],
                 'buddystream_'.$extention['name']
                 );
+                
             }
         }
     }
@@ -303,6 +305,39 @@ function buddystream_SocialIt($content, $shortLink = null)
        */
       
        $cleanContent = buddyStreamRemoveHashTags($content);
+       $cleanContent = str_replace('&amp;','&',$cleanContent);
+       
+       //Activity Plus Stuff
+       
+       //find a link of Activity Plus, if found convert for nice social context
+        $link = buddyStreamExtractString($cleanContent, '[bpfb_link', '[/bpfb_link]');
+        if($link){
+            $arrLink = explode(" ",trim($link));
+            $newLink = str_replace("url=", "", $arrLink[0]);
+            $newLink = str_replace("'", "", $newLink);
+            $newLink = str_replace("[", "", $newLink);
+            $newLink = str_replace("]", "", $newLink);
+            
+            $cleanContent = str_replace($link,"",$cleanContent);
+            $cleanContent = str_replace("[bpfb_link","",$cleanContent);
+            $cleanContent = str_replace("[/bpfb_link]","",$cleanContent);
+            $cleanContent .= " ".$newLink;
+        }
+        
+        //find a image of Activity Plus, if found convert for nice social context
+        $image = buddyStreamExtractString($cleanContent, '[bpfb_images]', '[/bpfb_images]');
+        if($image){
+            $wpUpload = wp_upload_dir();
+            $uploadUrl = $wpUpload['baseurl'];
+            $newImage = $uploadUrl.'/bpfb/'.trim($image);
+            
+            $cleanContent =  str_replace($image,"",$cleanContent);
+            $cleanContent =  str_replace("[bpfb_images]","",$cleanContent);
+            $cleanContent =  str_replace("[/bpfb_images]","",$cleanContent);
+            $cleanContent .= " ".$newImage;   
+        }
+        
+       
        foreach(buddystreamGetExtentions() as $extention){
         if($extention['hashtag']){
             if (get_site_option("buddystream_".$extention['name']."_power")) {
@@ -317,6 +352,17 @@ function buddystream_SocialIt($content, $shortLink = null)
     
     return $originalText; 
  }
+ 
+function buddyStreamExtractString($str, $start, $end){
+    $str_low = strtolower($str);
+    $pos_start = strpos($str_low, $start);
+    $pos_end = strpos($str_low, $end, ($pos_start + strlen($start)));
+    if ( ($pos_start !== false) && ($pos_end !== false) ){
+        $pos1 = $pos_start + strlen($start);
+        $pos2 = $pos_end - $pos1;
+        return substr($str, $pos1, $pos2);
+    }
+}
 
 
 /**
@@ -443,9 +489,11 @@ function buddystream_resolveShortUrl($url)
                 WHERE meta_key='buddystream_" .$short_id ."'"
            );
 
-           $url = $usermeta->meta_value;
-           if ($url) {
-               header('location:' . $url);
+           if($usermeta != NULL){
+               $url = $usermeta->meta_value;
+               if ($url) {
+                   header('location:' . $url);
+               }
            }
        }
    }
@@ -597,7 +645,6 @@ function buddystreamCreateActivity($params){
     }
 }
 
-
 /**
  * Get response from the BuddyStream License Server
  * 
@@ -605,40 +652,34 @@ function buddystreamCreateActivity($params){
 
 function buddystreamCheckLicense($licenseKey = null) {
     global $bp;
-    
+    require_once (ABSPATH . WPINC . '/class-feed.php');
     if($licenseKey != null){
     
-    $url   = "http://buddystream.net/cronservice/check.php?licensekey="
+        $url   = "http://buddystream.net/cronservice/check.php?licensekey="
              .$licenseKey
              ."&domain=".str_replace("http://","",$bp->root_domain)
+             ."&output=rss"
              ."&validate=".md5(date('Ymd'));
     
-    $agent = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)";
-    $ch    = curl_init();
+        $feed = new SimplePie();
+        $feed->set_feed_url($url);
+	$feed->set_cache_class('WP_Feed_Cache');
+	$feed->set_file_class('WP_SimplePie_File');
+	$feed->set_cache_duration(apply_filters('wp_feed_cache_transient_lifetime', 0, $url));
+	$feed->init();
+	$feed->handle_content_type();
+    
+        $responseItems = fetch_feed($url);
+        $responseItems->set_cache_duration(0);
+        foreach ($feed->get_items() as $responseItem) {
+            $response = $responseItem->get_description();
+        }
 
-    curl_setopt($ch, CURLOPT_URL,$url );
-    curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_VERBOSE,false);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-
-    $response     = curl_exec($ch);
-    $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-
-    if($httpcode>=200 && $httpcode<300){
-        
-        $response = json_decode($response);
-        return $response;
-        
-    } else {
-        return false;
-    }
+        return json_decode($response);   
     }else{
         return false;
     }
 }
-
 
 /**
  * Check if a network is up and running (used by import)
@@ -720,19 +761,18 @@ if (defined('ACHIEVEMENTS_IS_INSTALLED')) {
  * Upgrading
  */
 
-if(!get_site_option("bp_buddystream_upgrade")){
-    include "upgrade.php";
-    update_site_option("bp_buddystream_upgrade","1.0.2.3");
-}
-
 //convert all old tweets to twitter types
 if(get_site_option("buddystream_upgrade") != "2.0"){
-    global $bp,$wpdb;
     
-    $wpdb->query("UPDATE ".$bp->activity->table_name." SET type='twitter', component='twitter' where type='tweet';");
-    $wpdb->query("UPDATE ".$bp->activity->table_name." SET type='flickr', component='flickr' where type='tweet';");
-    $wpdb->query("UPDATE ".$bp->activity->table_name." SET type='twitter', component='twitter' where type='tweet';");
-    $wpdb->query("UPDATE ".$bp->activity->table_name." SET type='lastfm', component='lastfm' where type='tweet';");
-    $wpdb->query("UPDATE ".$bp->activity->table_name." SET type='youtube', component='youtube' where type='tweet';");
+    global $wpdb;
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+     
+    $buddystreamSql = "UPDATE ".$bp->activity->table_name." SET type='twitter', component='twitter' where type='tweet';
+    UPDATE ".$bp->activity->table_name." SET type='flickr', component='flickr' where type='tweet';
+    UPDATE ".$bp->activity->table_name." SET type='twitter', component='twitter' where type='tweet';
+    UPDATE ".$bp->activity->table_name." SET type='lastfm', component='lastfm' where type='tweet';
+    UPDATE ".$bp->activity->table_name." SET type='youtube', component='youtube' where type='tweet';";
+    
+    dbDelta($buddystreamSql);
     update_site_option("buddystream_upgrade","2.0");    
 }

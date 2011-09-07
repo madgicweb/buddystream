@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -14,7 +14,7 @@ BuddyStream is a BuddyPress plugin that will synchronize all of your favorite So
 The plugin is easy to set-up, operate, and for your members to use.
 Each Social Network has its own admin panel where you can see which users are using the network, view cool statistics, and manage the advanced filtering settings.
 
-Networks that the FREE plugin currently supports:
+Networks that the plugin currently supports:
 - Twitter
 - Flickr
 - Youtube
@@ -43,6 +43,16 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+= 2.1.3 = 
+* Changed the way how we check the license key, now uses WordPress core functionality.
+* Fixed some undefined variables on the admin menu.
+* Fixed Load javascript after page is ready loading on Powercentral.
+* Fixed db_version() for older upgrades.
+* Removed upgrade.php (no longer needed).
+* Fixed undefined message on Soundcloud.
+* Fixed blog creation failure on multisite.
+* Added Small integration of Activity Plus links and images.
+* Fixed Facebook global filter.
 
 = 2.1.2 =
 * Fixed db_version() error on clean install.

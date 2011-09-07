@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI:
 Description: BuddyStream
-Version: 2.1.2
+Version: 2.1.3
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -83,18 +83,24 @@ function buddystream_init_update(){
 
 function buddystream_init_database(){
     
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    
-    $buddystreamSql = "CREATE TABLE IF NOT EXISTS ".$wpdb->base_prefix."buddystream_log (
-      `id` int(11) NOT NULL auto_increment,
-      `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-      `type` text NOT NULL,
-      `message` text NOT NULL,
-      PRIMARY KEY  (`id`)
-    );";
-    
-    dbDelta($buddystreamSql);
-    unset($buddystreamSql);
+   if(!get_site_option("buddystream_installed_version")){
+
+        global $wpdb;
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+
+        $buddystreamSql = "CREATE TABLE IF NOT EXISTS ".$wpdb->base_prefix."buddystream_log (
+          `id` int(11) NOT NULL auto_increment,
+          `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+          `type` text NOT NULL,
+          `message` text NOT NULL,
+          PRIMARY KEY  (`id`)
+        );";
+
+        dbDelta($buddystreamSql);
+        unset($buddystreamSql);
+
+        update_site_option("buddystream_installed_version","1");
+    }
     
 }
 

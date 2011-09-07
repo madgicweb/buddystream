@@ -21,14 +21,12 @@
                         <?php
                         
                             $class = "even";
-                        
                             $feedItems = fetch_feed('http://buddystream.net/feed/');
                             if( is_wp_error( $feedItems ) ) {
-                                echo $feedItems->get_error_message();
+                                echo "No newsitems found.";
                             } else {
                                 foreach ($feedItems->get_items() as $feedItem) {
                                     echo '<li class="'.$class.'"><a href="'.$feedItem->get_permalink().'" title="'.$feedItem->get_title().'" target="_blanc">'.$feedItem->get_date('j-m-Y').' - '.$feedItem->get_title().'</a></li>';
-                                    
                                     if($class == "even") { $class= "odd"; }else{ $class = "even"; }
                                 }
                             }

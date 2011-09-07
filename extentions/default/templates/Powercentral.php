@@ -1,8 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/extentions/default/style.css';?>" type="text/css" />
 <link rel="stylesheet" href="<?php echo plugins_url() . '/buddystream/extentions/default/slickswitch.css';?>" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="<?php echo plugins_url();?>/buddystream/extentions/default/jquery.slickswitch.js" type="text/javascript"></script>
 
 <?php include "AdminMenu.php"; ?>
@@ -42,26 +39,17 @@
             }
             ?>
             </div>
-        <script type="text/javascript">
-            $(".switch").slickswitch();
-       </script>
+        
     </div>
     
  <?php
 //flip switches
+ $runscript = "";
 foreach (buddystreamGetExtentions() as $extention) {
      if(get_site_option('buddystream_'.$extention['name'].'_power')){
-        echo'
-        <script>
-            $("#buddystream_'.$extention['name'].'").slickswitch("toggleOn"); 
-        </script>
-        ';
+         $runscript .= 'jQuery("#buddystream_'.$extention['name'].'").slickswitch("toggleOn");';
      }else{
-        echo'
-        <script>
-            $("#buddystream_'.$extention['name'].'").slickswitch("toggleOff"); 
-        </script>
-        ';
+         $runscript .= 'jQuery("#buddystream_'.$extention['name'].'").slickswitch("toggleOff");';
      }
 }
 ?>
@@ -69,3 +57,10 @@ foreach (buddystreamGetExtentions() as $extention) {
 <p class="submit">
     <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 </p>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery(".switch").slickswitch();
+        <?php echo $runscript;?>
+    });
+</script>

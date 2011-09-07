@@ -22,9 +22,9 @@ if (isset($_GET['oauth_token'])) {
 
       $consumer = $twitter->getConsumer();
       $token    = $consumer->getAccessToken($_GET, $twitter->getTwitterToken());
-
-      update_user_meta($bp->loggedin_user->id,'tweetstream_token', $token->oauth_token);
-      update_user_meta($bp->loggedin_user->id,'tweetstream_tokensecret', $token->oauth_token_secret);
+      
+      update_user_meta($bp->loggedin_user->id,'tweetstream_token',''.$token->oauth_token.'');
+      update_user_meta($bp->loggedin_user->id,'tweetstream_tokensecret',''.$token->oauth_token_secret.'');
       update_user_meta($bp->loggedin_user->id,'tweetstream_mention', $token->screen_name);
       update_user_meta($bp->loggedin_user->id,'tweetstream_synctoac', 1);
 

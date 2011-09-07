@@ -15,8 +15,8 @@ $arraySwitches = array(
 );
 
   if ($_POST) {
-      update_site_option('tweetstream_consumer_key', trim(strip_tags($_POST['tweetstream_consumer_key'])));
-      update_site_option('tweetstream_consumer_secret', trim(strip_tags($_POST['tweetstream_consumer_secret'])));
+      update_site_option('tweetstream_consumer_key', trim($_POST['tweetstream_consumer_key']));
+      update_site_option('tweetstream_consumer_secret', trim($_POST['tweetstream_consumer_secret']));
       update_site_option('tweetstream_user_settings_maximport', trim(strip_tags(strtolower($_POST['tweetstream_user_settings_maximport']))));
       
       foreach($arraySwitches as $switch){

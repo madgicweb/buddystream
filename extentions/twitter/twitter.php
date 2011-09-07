@@ -122,7 +122,7 @@ class BuddystreamTwitter {
                  'consumerSecret' => $this->getConsumerSecret()
              )
          );
-
+         
          return $consumer;
       }
       
@@ -150,12 +150,13 @@ class BuddystreamTwitter {
 
          try {
              $consumer = $this->getConsumer();
-             $token = $consumer->getRequestToken();
+             $token    = $consumer->getRequestToken();
              
-             update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token",$token->oauth_token);
-             update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token_secret",$token->oauth_token_secret);
+             update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token",trim($token->oauth_token));
+             update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token_secret",trim($token->oauth_token_secret));
 
              return $consumer->getRedirectUrl(null, $token);
+             
           }  catch (Exception $e){
               buddystreamLog('Twitter configuration error, try to re-enter the API keys.','error');
               return false;
