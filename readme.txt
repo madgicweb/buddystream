@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -43,6 +43,9 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+= 2.1.4 = 
+* Fixed strpos error
+
 = 2.1.3 = 
 * Changed the way how we check the license key, now uses WordPress core functionality.
 * Fixed some undefined variables on the admin menu.
@@ -51,8 +54,7 @@ Requirements.
 * Removed upgrade.php (no longer needed).
 * Fixed undefined message on Soundcloud.
 * Fixed blog creation failure on multisite.
-* Added Small integration of Activity Plus links and images.
-* Fixed Facebook global filter.
+* Small integration of Activity Plus links and images.
 
 = 2.1.2 =
 * Fixed db_version() error on clean install.

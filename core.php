@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.3');
+define('BP_BUDDYSTREAM_VERSION', '2.1.4');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -354,14 +354,20 @@ function buddystream_SocialIt($content, $shortLink = null)
  }
  
 function buddyStreamExtractString($str, $start, $end){
-    $str_low = strtolower($str);
-    $pos_start = strpos($str_low, $start);
-    $pos_end = strpos($str_low, $end, ($pos_start + strlen($start)));
-    if ( ($pos_start !== false) && ($pos_end !== false) ){
-        $pos1 = $pos_start + strlen($start);
-        $pos2 = $pos_end - $pos1;
-        return substr($str, $pos1, $pos2);
-    }
+     
+        $str_low = strtolower($str);
+        $pos_start = strpos($str_low, $start);
+        
+        if($pos_start != false){
+            $pos_end = strpos($str_low, $end, ($pos_start + strlen($start)));
+            if ( ($pos_start !== false) && ($pos_end !== false) ){
+                $pos1 = $pos_start + strlen($start);
+                $pos2 = $pos_end - $pos1;
+                return substr($str, $pos1, $pos2);
+            }
+        }else{
+            return false;
+        }
 }
 
 
