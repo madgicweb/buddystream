@@ -1,0 +1,31 @@
+/*
+ * Flickr extention stylesheet
+ */
+
+.flickr_container_image img{
+    max-height      : 80px;
+    float           : left;
+    padding-right   : 10px;
+    padding-bottom  : 10px;
+}
+
+.buddystream_flickr_album{
+    position        : relative;
+}
+
+.buddystream_flickr_album img{
+    float           : left;
+    margin-right    : 10px;
+    margin-bottom   : 10px;
+    border          : 1px solid #cecece;
+    max-height      : 57px;
+}
+
+.buddystream_flickr_album_navigation{
+    position        : relative;
+    float           : left;
+    width           : 100%;
+    height          : 20px;
+    margin-bottom   : 10px;
+    margin-top      : 10px;
+}
