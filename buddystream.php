@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI:
 Description: BuddyStream
-Version: 2.1.4
+Version: 2.1.5
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -136,4 +136,4 @@ function buddystream_zend_framework_register_autoload() {
 	$autoloader = Zend_Loader_Autoloader::getInstance();
 }
 
-add_action('bp_init', 'buddystream_init');
+add_action('bp_include', 'buddystream_init');

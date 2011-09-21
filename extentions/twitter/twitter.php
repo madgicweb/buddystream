@@ -158,7 +158,7 @@ class BuddystreamTwitter {
              return $consumer->getRedirectUrl(null, $token);
              
           }  catch (Exception $e){
-              buddystreamLog('Twitter configuration error, try to re-enter the API keys.','error');
+              buddystreamLog('Twitter configuration error, try to re-enter the API keys, also make sure your twitter application has read/write permissions and is set to a web application!','error');
               return false;
           }
      }

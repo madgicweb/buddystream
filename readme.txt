@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5
-Stable tag: 2.1.4
+Stable tag: 2.1.5
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -43,6 +43,11 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+= 2.1.5 = 
+* Changed networks checks now working with WordPress core.
+* Better error message in the error log for Twitter.
+* Added fix for BuddyPress 1.5 so it works again.
+
 = 2.1.4 = 
 * Fixed strpos error
 
