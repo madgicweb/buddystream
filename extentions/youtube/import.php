@@ -113,9 +113,6 @@ class BuddyStreamYoutubeImport {
                                     //pre convert date
                                     $ts = strtotime($video->getUpdated());
                                     
-                                    echo date("Y-m-d H:i:s", $ts)."<br>";
-                                    
-                                    
                                      buddystreamCreateActivity(array(
                                          'user_id'       => $user_meta->user_id,
                                          'extention'     => 'youtube',

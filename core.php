@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.5');
+define('BP_BUDDYSTREAM_VERSION', '2.1.6');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -586,7 +586,7 @@ function buddystream_delete_activity($activity_id,$user_id)
 
 function buddystreamCreateActivity($params){
     
-    global $bp;
+    global $bp, $wpdb;
     
     //    buddystreamCreateActivity(array(
     //         'user_id'       => $user_meta->user_id,
@@ -608,12 +608,16 @@ function buddystreamCreateActivity($params){
         foreach(buddystreamGetExtentions() as $extention){
             if($extention['hashtag']){
                 $originalText = str_replace($extention['hashtag'],"",$originalText);
-                $originalText = str_replace("&nbps;"," ",$originalText);
+                $originalText = str_replace("&nbsp;"," ",$originalText);
+                $originalText = trim($originalText);
             }
         }
         
+        //check if the secondary_id already exists
+        $secondary = $wpdb->get_row($wpdb->prepare("SELECT secondary_item_id FROM {$bp->activity->table_name} WHERE secondary_item_id='".$params['item_id']."'"));
+        
         //do we already have this content if so do not import this item
-        if(!bp_activity_check_exists_by_content($originalText)){
+        if($secondary == null){
         
             $activity = new BP_Activity_Activity();
             remove_filter('bp_activity_action_before_save', 'bp_activity_filter_kses', 1);
@@ -624,7 +628,7 @@ function buddystreamCreateActivity($params){
             $activity->content           = '<div class="buddystream_activity_container">'.$originalText.'</div>';
             $activity->secondary_item_id = $params['item_id'];
             $activity->date_recorded     = $params['raw_date'];
-
+            
             if (!defined('BP_ENABLE_ROOT_PROFILES')) { $slug = BP_MEMBERS_SLUG; }
 
             if (get_site_option('buddystream_'.$params['extention'].'_hide_sitewide') == "on") {

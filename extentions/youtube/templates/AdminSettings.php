@@ -7,7 +7,7 @@
 
 <?php
  $arraySwitches = array(
-        'bs_youtube_hide_sitewide',
+        'buddystream_youtube_hide_sitewide',
         'buddystream_youtube_album'
     );
 
@@ -41,7 +41,7 @@
             
             <tr class="odd">
                 <td><?php _e( 'Hide YouTube videos on the sitewide activity stream?', 'buddystream_youtube' );?></td>
-                <td><input class="switch icons" type="checkbox" name="bs_youtube_hide_sitewide" id="bs_youtube_hide_sitewide"/></td>
+                <td><input class="switch icons" type="checkbox" name="buddystream_youtube_hide_sitewide" id="buddystream_youtube_hide_sitewide"/></td>
             </tr>
 
             <tr>

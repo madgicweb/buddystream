@@ -8,7 +8,7 @@
 <?php
 
     $arraySwitches = array(
-        'bs_flickr_hide_sitewide',
+        'buddystream_flickr_hide_sitewide',
         'bs_flickr_album'
     );
 
@@ -52,7 +52,7 @@
 
             <tr class="odd">
                 <td><?php _e( 'Hide Flickr photos on the sidewide activity stream?', 'buddystream_flickr' );?></td>
-                <td><input class="switch icons" type="checkbox" name="bs_flickr_hide_sitewide" id="bs_flickr_hide_sitewide"/></td>
+                <td><input class="switch icons" type="checkbox" name="buddystream_flickr_hide_sitewide" id="buddystream_flickr_hide_sitewide"/></td>
             </tr>
 
             <tr>
