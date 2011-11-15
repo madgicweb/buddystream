@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: BuddyStream
-Plugin URI: http://www.buddystream.net
-Description: BuddyStream
-Version: 2.1.6
+Plugin Name: BuddyStream Premium
+Plugin URI:
+Description: BuddyStream Premium
+Version: 2.1.7
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -36,6 +36,7 @@ function buddystream_init()
     buddystream_init_database();
     
     //now initialize the core
+    include_once('lib/buddyStreamOAuth.php');
     require_once('core.php');
     
     //initialize the upgrade procedure if needed

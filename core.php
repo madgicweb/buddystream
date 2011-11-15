@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.6');
+define('BP_BUDDYSTREAM_VERSION', '2.1.7');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -287,7 +287,8 @@ function buddystream_SocialIt($content, $shortLink = null)
                          ) . '/';
 
             $shortLink = buddystream_getShortUrl($shortLink);
-            $content   = __('Just created a new topic:', 'buddystream') ." " . $_POST['topic_title'];
+            $content   = __('Just created a new topic:', 'buddystream') ." " . $_POST['topic_title']." - " .$_POST['topic_text']." ";
+            
         }else{
             $shortLink = bp_get_group_permalink($bp->groups->current_group). 'forum/topic/' . $bp->action_variables[1] . '/';
             $shortLink = buddystream_getShortUrl($shortLink);

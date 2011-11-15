@@ -1,25 +1,25 @@
 <?php
 /**
  * Twitter class
+ *
  */
 
 class BuddystreamTwitter {
-
+    
     protected $_geoEnabled = false;
-    protected $_callBackUrl;
-    protected $_consumerKey;
-    protected $_consumerSecret;
     protected $_postContent;
     protected $_shortLink;
     protected $_username;
-    protected $_accessToken;
-    protected $_accessTokenSecret;
     protected $_badFilters;
     protected $_goodFilters;
     protected $_source;
     protected $_geoData;
     
-    
+    /*
+     * Setter and getter for source
+     * 
+     */
+   
      public function setSource($source)
      {
          $this->_source = $source;
@@ -30,36 +30,11 @@ class BuddystreamTwitter {
          return $this->_source;
      }
     
-      public function setCallbackUrl($callBackUrl)
-      {
-        $this->_callBackUrl = $callBackUrl;
-      }
-
-      public function getCallbackUrl()
-      {
-        return $this->_callBackUrl;
-      }
-
-      public function setConsumerKey($consumerKey)
-      {
-        $this->_consumerKey = $consumerKey;
-      }
-
-      public function getConsumerKey()
-      {
-        return $this->_consumerKey;
-      }
-
-      public function setConsumerSecret($consumerSecret)
-      {
-        $this->_consumerSecret = $consumerSecret;
-      }
-
-      public function getConsumerSecret()
-      {
-        return $this->_consumerSecret;
-      }
-
+     /*
+      * Setter and getter for username
+      * 
+      */
+     
      public function setUsername($username)
      {
          $this->_username = $username;
@@ -70,26 +45,11 @@ class BuddystreamTwitter {
      {
          return $this->_username;
      }
-
-     public function setAccessToken($accessToken)
-     {
-        $this->_accessToken = $accessToken;
-     }
-
-     public function getAccessToken()
-     {
-         return $this->_accessToken;
-     }
-
-     public function setAccessTokenSecret($accessTokenSecret)
-     {
-        $this->_accessTokenSecret = $accessTokenSecret;
-     }
-
-     public function getAccessTokenSecret()
-     {
-         return $this->_accessTokenSecret;
-     }
+     
+     /*
+      * Setter and getter for shortlinking.
+      * 
+      */
 
      public function setShortLink($shortLink)
      {
@@ -100,6 +60,11 @@ class BuddystreamTwitter {
      {
          return $this->_shortLink;
      }
+     
+     /*
+      * Setter and getter for geoData (not used for now)
+      * 
+      */
 
      public function setGeoData($geoData){
          $this->_geoData = $geoData;
@@ -109,72 +74,12 @@ class BuddystreamTwitter {
          return $this->_geoData;
      }
      
-      public function getConsumer()
-      {
-         $consumer = new Zend_Oauth_Consumer(
-             array(
-                 'version' => '1.0',
-                 'callbackUrl' => $this->getCallbackUrl(),
-                 'requestTokenUrl' => 'http://api.twitter.com/oauth/request_token',
-                 'userAuthorizationUrl' => 'https://api.twitter.com/oauth/authorize',
-                 'accessTokenUrl' => 'http://api.twitter.com/oauth/access_token',
-                 'consumerKey' => $this->getConsumerKey(),
-                 'consumerSecret' => $this->getConsumerSecret()
-             )
-         );
-         
-         return $consumer;
-      }
-      
-      
-      public function getClient(){
-          $options = array('version' => '1.0',
-		'localUrl' => $this->getCallbackUrl(),
-		'callbackUrl' => $this->getCallbackUrl(),
-		'requestTokenUrl' => 'http://api.twitter.com/oauth/request_token',
-		'userAuthorisationUrl' => 'https://api.twitter.com/oauth/authorizee',
-		'accessTokenUrl' => 'http://api.twitter.com/oauth/access_token',
-		'consumerKey' => $this->getConsumerKey(),
-		'consumerSecret' => $this->getConsumerSecret());
-         
-               $access = new Zend_Oauth_Token_Access();
-               $access->setToken($this->getAccessToken());
-               $access->setTokenSecret($this->getAccessTokenSecret());
-               
-               return $access->getHttpClient($options);
-      }
-      
-     public function getRedirectUrl()
-     {
-         global $bp;
-
-         try {
-             $consumer = $this->getConsumer();
-             $token    = $consumer->getRequestToken();
-             
-             update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token",trim($token->oauth_token));
-             update_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token_secret",trim($token->oauth_token_secret));
-
-             return $consumer->getRedirectUrl(null, $token);
-             
-          }  catch (Exception $e){
-              buddystreamLog('Twitter configuration error, try to re-enter the API keys, also make sure your twitter application has read/write permissions and is set to a web application!','error');
-              return false;
-          }
-     }
-
-
-     public function getTwitterToken(){
-
-         global $bp;
-         $oauthTokenRequest = new Zend_Oauth_Token_Request();
-         $oauthTokenRequest->setToken(get_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token",1));
-         $oauthTokenRequest->setTokenSecret(get_user_meta($bp->loggedin_user->id,"bs_twitter_oauth_token_secret",1));
-
-         return $oauthTokenRequest;
-     }
      
-    
+     /*
+      * Setter and getter for post content (never more due 140 char restriction Twitter)
+      * 
+      */
+     
      public function setPostContent($content)
      {
          $content = stripslashes($content);
@@ -192,14 +97,15 @@ class BuddystreamTwitter {
          $this->_postContent = $content;
      }
      
-     public function postUpdate()
-     {
-         $client = $this->getClient();
-         $client->setUri('http://api.twitter.com/1/statuses/update.json');         
-         $client->setMethod(Zend_Http_Client::POST);
-         $client->setParameterPost('status', $this->_postContent);
-         $response = $client->request();
+     public function getPostContent(){
+         return $this->_postContent;
      }
+     
+     
+     /*
+      * Setter and getter for bad filters
+      * 
+      */
      
      public function setBadFilters($badfilters){
         $this->_badFilters = $badfilters;
@@ -209,6 +115,12 @@ class BuddystreamTwitter {
          return $this->_badFilters;
      }
 
+     
+     /*
+      * Setter and getter for good filters
+      * 
+      */
+     
      public function setGoodFilters($goodfilters){
          $this->_goodFilters = $goodfilters;
      }
@@ -217,16 +129,15 @@ class BuddystreamTwitter {
          return $this->_goodFilters;
      }
 
-     public function getTweets()
+     
+     /*
+      * Filter out unwanted tweets
+      * 
+      */
+     public function filterTweets($items)
      {
-         $client = $this->getClient();
-         $client->setUri('http://api.twitter.com/1/statuses/user_timeline.xml');  
-         $client->setMethod(Zend_Http_Client::GET); 
-         $request = $client->request();
-         $response = $request->getBody();
-         $response = simplexml_load_string($response);
-         
-         foreach($response as $tweet){
+         $items = simplexml_load_string($items);
+         foreach($items as $tweet){
 
             if($_geoEnabled){
                 if($tweet->place->id){

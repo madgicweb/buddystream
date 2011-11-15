@@ -61,20 +61,28 @@ class BuddyStreamTwitterImport{
                         $import = 1;
                     }
                     
+                    $import =1;
+                    $user_meta->user_id=1;
+                    
                     if ($import == 1  && get_user_meta($user_meta->user_id, 'tweetstream_synctoac', 1) == "1") {
                         
-                        //TWITTER
+                        //Handle the OAuth requests
+                        $buddystreamOAuth = new BuddyStreamOAuth();
+                        $buddystreamOAuth->setCallbackUrl($bp->root_domain);
+                        $buddystreamOAuth->setConsumerKey(get_site_option("tweetstream_consumer_key"));
+                        $buddystreamOAuth->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
+                        $buddystreamOAuth->setAccessToken(get_user_meta($user_meta->user_id,'tweetstream_token', 1));
+                        $buddystreamOAuth->setAccessTokenSecret(get_user_meta($user_meta->user_id,'tweetstream_tokensecret', 1));
+                        
+                        $items = $buddystreamOAuth->oAuthRequest('http://api.twitter.com/1/statuses/user_timeline.xml');
+                        
+                        //Handle the Twitter filtering
                         $twitter = new BuddystreamTwitter();
-                        $twitter->setConsumerKey(get_site_option("tweetstream_consumer_key"));
-                        $twitter->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
-                        $twitter->setAccessToken(get_user_meta($user_meta->user_id, 'tweetstream_token', 1));
-                        $twitter->setAccessTokenSecret(get_user_meta($user_meta->user_id, 'tweetstream_tokensecret', 1));
                         $twitter->setUsername(get_userdata($user_meta->user_id)->user_login);
                         $twitter->setSource($bp->root_domain);
-                        $twitter->setCallbackUrl($bp->root_domain);
                         $twitter->setGoodFilters(get_site_option('tweetstream_filter') . get_user_meta($user_meta->user_id, 'tweetstream_filtergood', 1));
                         $twitter->setBadFilters(get_site_option('tweetstream_filterexplicit') . get_user_meta($user_meta->user_id, 'tweettream_filterbad', 1));
-                        $tweets = $twitter->getTweets();
+                        $tweets = $twitter->filterTweets($items);
                        
                         if (is_array($tweets)) {
                             
@@ -119,6 +127,7 @@ class BuddyStreamTwitterImport{
                                 }
                             }
                         }
+                        die;
                     }
                 }
             }

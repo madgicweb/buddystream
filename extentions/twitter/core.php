@@ -26,8 +26,6 @@ function buddystreamTwitterSharing(){
 add_filter( 'bp_get_activity_content','BuddystreamTwitterImages',5 );
 add_filter( 'bp_get_activity_content_body','BuddystreamTwitterImages',5 );
 
-
-
 function BuddystreamTwitterImages($text) {
  
     if(bp_get_activity_type() == 'twitter'){
@@ -69,15 +67,25 @@ function BuddystreamTweetButton() {
 function buddystreamTwitterPostUpdate($content = "", $shortLink = "", $user_id = 0) {
     
     global $bp;
+    
+    //handle custom twitter data
     $twitter = new BuddystreamTwitter;
-    $twitter->setConsumerKey(get_site_option("tweetstream_consumer_key"));
-    $twitter->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
-    $twitter->setAccessToken(get_user_meta($user_id, 'tweetstream_token',1));
-    $twitter->setAccessTokenSecret(get_user_meta($user_id, 'tweetstream_tokensecret',1));
-    $twitter->setCallbackUrl($bp->root_domain);
     $twitter->setShortLink($shortLink);
     $twitter->setPostContent($content);
-    $twitter->postUpdate();
+        
+    //handle oauth calls
+    $buddystreamOAuth = new BuddyStreamOAuth();
+    $buddystreamOAuth->setRequestTokenUrl('http://api.twitter.com/oauth/request_token');
+    $buddystreamOAuth->setAccessTokenUrl('http://api.twitter.com/oauth/access_token');
+    $buddystreamOAuth->setAuthorizeUrl('https://api.twitter.com/oauth/authorize');
+    $buddystreamOAuth->setCallbackUrl($bp->root_domain);
+    $buddystreamOAuth->setConsumerKey(get_site_option("tweetstream_consumer_key"));
+    $buddystreamOAuth->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
+    $buddystreamOAuth->setAccessToken(get_user_meta($bp->loggedin_user->id,'tweetstream_token', 1));
+    $buddystreamOAuth->setAccessTokenSecret(get_user_meta($bp->loggedin_user->id,'tweetstream_tokensecret', 1));
+    $buddystreamOAuth->setRequestType('POST');
+    $buddystreamOAuth->setPostData(array('status' => $twitter->getPostContent()));
+    $buddystreamOAuth->oAuthRequest('https://api.twitter.com/1/statuses/update.json');
 }
 
 /**
@@ -86,18 +94,15 @@ function buddystreamTwitterPostUpdate($content = "", $shortLink = "", $user_id =
 wp_enqueue_script('buddystreamtwitter', plugins_url() . '/buddystream/extentions/twitter/main.js');
 wp_enqueue_style('buddystreamtwitter', plugins_url() . '/buddystream/extentions/twitter/style.css');
 
-
 /**
  * 
  * Page loader functions 
  *
  */
 
-
 function buddystream_twitter(){
     buddystreamPageLoader('twitter');
 }
-
 
 /**
  * User settings

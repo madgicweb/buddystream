@@ -1,9 +1,9 @@
-=== BuddyStream ===
+=== BuddyStream Premium ===
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5.1
-Stable tag: 2.1.6
+Stable tag: 2.1.7
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -19,6 +19,10 @@ Networks that the plugin currently supports:
 - Flickr
 - Youtube
 - Last.fm
+- Facebook
+- Rss
+- Soundcloud
+- LinkedIn
 
 Requirements.
 - PHP 5.2.1+
@@ -43,6 +47,12 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.1.7 = 
+* Added own OAuth library.
+* Ported Twitter to the new OAuth library.
+* Removed Google Buzz (no longer supported by google)
+* Now forum posts are posted complete on Facebook.
 
 = 2.1.6 =
 * Fixed double Tweets.
