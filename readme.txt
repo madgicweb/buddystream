@@ -1,4 +1,4 @@
-=== BuddyStream Premium ===
+=== BuddyStream ===
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3

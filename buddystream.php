@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: BuddyStream Premium
+Plugin Name: BuddyStream
 Plugin URI:
-Description: BuddyStream Premium
+Description: BuddyStream
 Version: 2.1.7
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
