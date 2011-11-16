@@ -1,0 +1,168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Flickr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-04 14:29+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman <blackphantom25@gmail.com>\n"
+"Language-Team: BuddyStream\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr\n"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/core.php:31
+msgid "Flickr album"
+msgstr "Flickr album"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/core.php:52
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/core.php:72
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminUsers.php:29
+msgid "Flickr"
+msgstr "Flickr"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/import.php:12
+msgid "Flickr API server offline at the moment."
+msgstr "Flickr API server offline at the moment."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/UserAlbum.php:1
+msgid "Flickr Album"
+msgstr "Flickr Album"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/UserAlbum.php:21
+msgid "User has no photo's (yet)"
+msgstr "Flickr API server offline at the moment."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:23
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:28
+msgid "flickr settings description"
+msgstr "For the Flickr intergration to work with BuddyStream you will need to get a API key from Flickr.<br>You may apply for a Flickr API key here:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:36
+msgid "Flickr API"
+msgstr "Flickr API"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:40
+msgid "API key:"
+msgstr "API key:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:45
+msgid "User options"
+msgstr "User options"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:49
+msgid "Show  Flickr album on user profile page?"
+msgstr "Show  Flickr album on user profile page?"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:54
+msgid "Hide Flickr photos on the sidewide activity stream?"
+msgstr "Hide Flickr photos on the sidewide activity stream?"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:59
+msgid "Maximum number of photos imported per user, per day (empty = unlimited):"
+msgstr "Maximum number of photos imported per user, per day (empty = unlimited):"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminSettings.php:64
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:5
+msgid "flickr statitics description"
+msgstr "Below you see a table with some nice to know statistics, i may help you to monitor you members social interaction."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:10
+msgid "Statistics"
+msgstr "Statistics"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:27
+msgid "Amount of users:"
+msgstr "Amount of users:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:31
+msgid "Amount of user using Flickr integration:"
+msgstr "Amount of user using Flickr integration:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:35
+msgid "Percentage of users using Flickr integration:"
+msgstr "Percentage of users using Flickr integration:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:39
+msgid "Amount of activity updates:"
+msgstr "Amount of activity updates:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:43
+msgid "Amount of Flickr photos:"
+msgstr "Amount of Flickr photos:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:47
+msgid "Percentage of Flickr photos:"
+msgstr "Percentage of Flickr photos:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:51
+msgid "Average number of Flickr photos imported per day:"
+msgstr "Average number of Flickr photos imported per day:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:55
+msgid "Average number of Flickr photos imported per week:"
+msgstr "Average number of Flickr photos imported per week:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:59
+msgid "Average number of Flickr photos imported per month:"
+msgstr "Average number of Flickr photos imported per month:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminStatitics.php:63
+msgid "Average number of Flickr photos imported per year:"
+msgstr "Average number of Flickr photos imported per year:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/UserSettings.php:5
+msgid "Settings saved"
+msgstr "Settings saved"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/UserSettings.php:18
+msgid "Flickr Settings"
+msgstr "Flickr Settings"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/UserSettings.php:19
+msgid "Flickr username"
+msgstr "Flickr username"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/UserSettings.php:21
+msgid "Save settings"
+msgstr "Save settings"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/UserSettings.php:25
+msgid "Flickr is currently offline please come back in a while."
+msgstr "Flickr is currently offline please come back in a while."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminUsers.php:10
+msgid "\"User integration has been reset. Note: User will have to reconnect their integration if desired.\""
+msgstr "\"User integration has been reset. Note: User will have to reconnect their integration if desired.\""
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminUsers.php:15
+msgid "Are you sure ?"
+msgstr "Are you sure ?"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminUsers.php:23
+msgid "flickr users description"
+msgstr "Below is a list of users whom are using Flickr. You may reset their Flickr settings here.<br><b>Note:</b> When you reset a user, they will need to fill in their Flickr username again. Any Flickr photos that have already been imported <b>WILL NOT</b> be deleted."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminUsers.php:30
+msgid "Photos imported"
+msgstr "Photos imported"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/extentions/flickr/templates/AdminUsers.php:31
+msgid "Reset user"
+msgstr "Reset user"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "No"
+#~ msgstr "No"
