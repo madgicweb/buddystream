@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.7');
+define('BP_BUDDYSTREAM_VERSION', '2.1.7.1');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -757,25 +757,4 @@ if (defined('ACHIEVEMENTS_IS_INSTALLED')) {
         $shortLink = buddystream_getShortUrl(dpa_get_achievement_slug_permalink());
         buddystream_SocialIt($content,$shortLink,$user_id);
     }
-}
-
-
-/*
- * Upgrading
- */
-
-//convert all old tweets to twitter types
-if(get_site_option("buddystream_upgrade") != "2.0"){
-    
-    global $wpdb;
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-     
-    $buddystreamSql = "UPDATE ".$bp->activity->table_name." SET type='twitter', component='twitter' where type='tweet';
-    UPDATE ".$bp->activity->table_name." SET type='flickr', component='flickr' where type='tweet';
-    UPDATE ".$bp->activity->table_name." SET type='twitter', component='twitter' where type='tweet';
-    UPDATE ".$bp->activity->table_name." SET type='lastfm', component='lastfm' where type='tweet';
-    UPDATE ".$bp->activity->table_name." SET type='youtube', component='youtube' where type='tweet';";
-    
-    dbDelta($buddystreamSql);
-    update_site_option("buddystream_upgrade","2.0");    
 }
