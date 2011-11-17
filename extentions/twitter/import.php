@@ -60,10 +60,7 @@ class BuddyStreamTwitterImport{
                     } else {
                         $import = 1;
                     }
-                    
-                    $import =1;
-                    $user_meta->user_id=1;
-                    
+                                        
                     if ($import == 1  && get_user_meta($user_meta->user_id, 'tweetstream_synctoac', 1) == "1") {
                         
                         //Handle the OAuth requests
@@ -127,7 +124,6 @@ class BuddyStreamTwitterImport{
                                 }
                             }
                         }
-                        die;
                     }
                 }
             }

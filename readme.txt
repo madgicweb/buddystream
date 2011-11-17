@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Buddystream
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5.1
-Stable tag: 2.1.7.1
+Stable tag: 2.1.7.2
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -43,6 +43,9 @@ Requirements.
 == Screenshots ==
 
 == ChangeLog ==
+= 2.1.7.2 =
+* Fixed Twitter importing issues.
+* Removed some left behind debugging code.
 
 = 2.1.7.1 =
 * Fixed white screen on new and upgrading install.
