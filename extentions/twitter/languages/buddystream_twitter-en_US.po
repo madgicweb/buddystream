@@ -1,0 +1,251 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Twitter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-26 21:43+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman <blackphantom25@gmail.com>\n"
+"Language-Team: BuddyStream\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: english\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter\n"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/import.php:12
+msgid "Twitter API server offline at the moment."
+msgstr "Twitter API server offline at the moment."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/core.php:12
+msgid "to twitter"
+msgstr "to Twitter"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/core.php:15
+msgid "You\\'ve reached the max. amount of characters for a Tweet.  The Message will appear truncated on Twitter."
+msgstr "You\\'ve reached the max. amount of characters for a Tweet.  The Message will appear truncated on Twitter."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/core.php:102
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:50
+msgid "Twitter"
+msgstr "Twitter"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminFilters.php:9
+msgid "Filters saved."
+msgstr "Filters saved."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminFilters.php:14
+msgid "twitter filters description"
+msgstr "Using Twitter Filters will prevent overcrowded and \"messy\" activity streams. <br>Example: You may have a network that focuses on soccer.  To keep things \"clean\" you will only want Tweets that pertain to soccer to be imported. By adding the word \"soccer\" to the Filter below, only Tweets with the word \"soccer\" will be imported and shown in the users Tweets on your site.<br><br>By using commas as a delimiter, you may set-up multiple filters (No Filter = All Tweets).In addition, the \"Explicit Words\" filter, will block any Tweet that contains them regardless of the other filter.<br><b>Note:</b> Keywords listed in the \"Good\" Filter must be present in the update itself to be included in the site import. Likewise, keywords listed in the \"Explicit Filter\" will cause that particular update NOT to be imported."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminFilters.php:21
+msgid "Twitter filters (optional)"
+msgstr "Twitter filters (optional)"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminFilters.php:25
+msgid "Filters (comma seperated)"
+msgstr "Filters (comma seperated)"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminFilters.php:30
+msgid "Explicit words (comma seperated)"
+msgstr "Explicit words (comma seperated)"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminFilters.php:34
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:95
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:30
+msgid "\"User integration has been reset. Note: User will have to reconnect their integration if desired.\""
+msgstr "\"User integration has been reset. Note: User will have to reconnect their integration if desired.\""
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:35
+msgid "Are you sure ?"
+msgstr "Are you sure ?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:43
+msgid "twitter users description"
+msgstr "Below is a list of all users whom are using Twitter. You may reset there Twitter settings here. <br><b>Note:</b> When you reset a user they need to re-authenticate with Twitter.Tweets already imported <b>WILL NOT</b> be deleted!"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:48
+msgid "Username"
+msgstr "Username"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:49
+msgid "Email"
+msgstr "Email"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:51
+msgid "Tweets imported"
+msgstr "Tweets imported"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminUsers.php:52
+msgid "Reset user"
+msgstr "Reset user"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:33
+msgid "Settings saved"
+msgstr "Settings saved"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:48
+msgid "Twitter Settings"
+msgstr "Twitter Settings"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:53
+msgid "Synchronize Tweets to my activity stream?"
+msgstr "Synchronize Tweets to my activity stream?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:55
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:75
+msgid "Yes"
+msgstr "Yes"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:58
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:76
+msgid "No"
+msgstr "No"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:64
+msgid "Filters"
+msgstr "Filters"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:65
+msgid "user settings"
+msgstr ""
+"By using filters, you may decide which Tweets will be imported or excluded.<br/>\n"
+"        <b>Note:</b> Each site also has a \"Global\" list of filters and its settings will override these settings. <br/>\n"
+"        <b>Note:</b> Keywords listed in the \"Good\" Filter must be present in the update itself to be included in the site import. Likewise, keywords listed in the \"Explicit Filter\" will cause that particular update NOT to be imported.\n"
+"        "
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:67
+msgid "Good Filter (separate words with commas)"
+msgstr "Good Filter (separate words with commas)"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:70
+msgid "Bad Filter (separate words with commas)"
+msgstr "Bad Filter (separate words with commas)"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:74
+msgid "Send achievements unlock to my twitter"
+msgstr "Send achievements unlock to my twitter"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:81
+msgid "Save settings"
+msgstr "Save settings"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:87
+msgid ""
+"Twitter setup</h3>\n"
+"                 You may setup you twitter intergration over here.<br/>\n"
+"                 Before you can begin using Twitter with this site you must authorize on Twitter by clicking the link below."
+msgstr ""
+"Twitter setup</h3>\n"
+"                 You may setup you twitter intergration over here.<br/>\n"
+"                 Before you can begin using Twitter with this site you must authorize on Twitter by clicking the link below."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:96
+msgid "Click here to start authorization"
+msgstr "Click here to start authorization"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/UserSettings.php:98
+msgid "Twitter is offline currently please come back in a while."
+msgstr "Twitter is offline currently please come back in a while."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:32
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:37
+msgid "twitter settings description"
+msgstr "For BuddyStream to work you will need to get an API key from Twitter.<br><br>To get a API key, follow these steps:<br>1. Go to  <a href=\"http://dev.twitter.com/apps/new\" target=\"_blank\">http://dev.twitter.com/apps/new</a> and login with your Twitter account.<br>2. Create a new app wich has read/write settings (important), type browser and a callback url to: <b>#ROOTDOMAIN</b><br>3. Fill in the consumer key and consumer secret below."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:44
+msgid "Twitter API"
+msgstr "Twitter API"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:48
+msgid "Consumer key:"
+msgstr "Consumer key:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:53
+msgid "Consumer secret key:"
+msgstr "Consumer secret key:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:60
+msgid "User options"
+msgstr "User options"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:64
+msgid "Hide tweets on the sidewide activity stream?"
+msgstr "Hide tweets on the sidewide activity stream?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:69
+msgid "Allow users to sync Twitter to you website?"
+msgstr "Allow users to sync Twitter to you website?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:74
+msgid "Maximum Tweets to be imported per user, per day (empty = unlimited tweets import):"
+msgstr "Maximum Tweets to be imported per user, per day (empty = unlimited tweets import):"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:79
+msgid "Extra options"
+msgstr "Extra options"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:83
+msgid "Show Twitter share button?"
+msgstr "Show Twitter share button?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminSettings.php:88
+msgid "Show counter?"
+msgstr "Show counter?"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:4
+msgid "twitter statitics description"
+msgstr "Below you see a table with some nice to know statistics, i may help you to monitor you members social interaction."
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:8
+msgid "Statistics"
+msgstr "Statistics"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:26
+msgid "Amount of users:"
+msgstr "Amount of users:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:30
+msgid "Amount of user Twitter intergration:"
+msgstr "Amount of user Twitter intergration:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:34
+msgid "Percentage of users Twitter using intergration:"
+msgstr "Percentage of users Twitter using intergration:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:38
+msgid "Amount of activity updates:"
+msgstr "Amount of activity updates:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:42
+msgid "Amount of tweets updates:"
+msgstr "Amount of tweets updates:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:46
+msgid "Percentage of tweets in activity updates:"
+msgstr "Percentage of tweets in activity updates:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:50
+msgid "Average tweets import per day:"
+msgstr "Average tweets import per day:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:54
+msgid "Average tweets import per week:"
+msgstr "Average tweets import per week:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:58
+msgid "Average tweets import per month:"
+msgstr "Average tweets import per month:"
+
+#: /home/peter/NetBeansProjects/Buddystream/wp-content/plugins/buddystream/extentions/twitter/templates/AdminStatitics.php:62
+msgid "Average tweets import per year:"
+msgstr "Average tweets import per year:"
+

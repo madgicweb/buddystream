@@ -1,0 +1,127 @@
+.bs_share_button
+{
+    background-image:url("../images/share_button.png");
+    width:97px;
+    height:20px;
+    font-size:11px;
+    float:left;
+    line-height:20px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.bs_share_button img{
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:2px;
+    float:left;
+}
+
+.bs_share_counter{
+    padding-left:5px;
+    padding-right:5px;
+    margin-top:10px;
+    float:left;
+    font-size:13px;
+    display:none;
+    height:20px;
+}
+
+.bs_error_box{
+    padding:10px;
+    border:2px solid red;
+    background-color: #f0d3d3;
+    color:#red;
+}
+
+.bs_info_box{
+    padding:10px !important;
+    border:1px solid #00b8e6 !important;
+    background-color: #EAF2FA !important;
+    color:#000000;
+    font-size:13px;
+    margin-right:20px;
+    margin-bottom:20px;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+}
+
+.bs_info_box_green {
+    padding:10px !important;
+    border:1px solid #008C0B !important;
+    background-color: #CDFCC2 !important;
+    color:#008C0B;
+    font-size:13px;
+    font-weight:bold;
+    margin-right:20px;
+    margin-bottom:20px;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.buddystreamAdminmenu{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height:34px;
+    border-bottom:5px solid #666666;
+    
+}
+
+.buddystreamAdminmenu a{
+    padding:8px;
+    margin-right:5px;
+    background-color:#D9D9D9;
+    height:35px !important;
+    line-height:35px;
+    color:#156cff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.buddystreamAdminmenu .activetab{
+    padding:8px;
+    background-color:#666666;
+    height:35px !important;
+    line-height:35px;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.inside{
+    line-height:160%;
+}
+
+.inside a{
+    text-decoration:none;
+}
+
+.buddystream_powercentral{
+    position:absolute;
+    padding-top:20px;
+}
+
+.buddystream_powerbox{
+    background-color:#ffffff;
+    border:3px solid #cecece;
+    float:left;
+    height:50px;
+    width:150px;
+    padding:15px;
+    margin-right:15px;
+    margin-bottom:15px;
+}
+
+.buddystream_powerbox_inner{
+    float:left;
+    padding-right:10px;
+}
+
+

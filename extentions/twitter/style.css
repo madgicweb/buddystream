@@ -1,0 +1,59 @@
+/*
+Twitter extention stylesheet
+*/
+
+.twitter_share_button
+{
+    float                   : left;
+    background-color        : #515151;
+    width                   : 97px;
+    height                  : 20px;
+    font-size               : 12px;
+    line-height             : 20px;
+    font-weight             : bold;
+    color                   : #ffffff;
+    cursor                  : pointer;
+    padding                 : 3px;
+    margin-top              : 10px;
+    margin-right            : 10px;
+    text-shadow             : 0px 0px 0px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+    
+}
+
+.twitter_share_button img{
+    padding-left            : 5px;
+    padding-right           : 5px;
+    padding-top             : 2px;
+    float                   : left;
+}
+
+.twitter_share_counter{
+    height                  :25px;
+    line-height             :25px;
+    padding-left            : 5px;
+    padding-right           : 5px;
+    float                   : left;
+    font-size               : 13px;
+    display                 : none;
+    margin-top              : 10px;
+    margin-right            : 10px;
+    background-color        : #515151;
+    font-weight             : bold;
+    color                   : #ffffff;
+    text-shadow             : 0px 0px 0px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;  
+}
+
+.twitter_share_counter_red{
+    background-color        :red;
+}
+
+.twitter_share_container{
+    display                 :inline-block;
+    padding-right           :5px;
+}

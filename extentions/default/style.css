@@ -1,0 +1,241 @@
+/*
+ * Default extension stylesheet
+ */
+
+.buddystream_error_box{
+    padding                 : 10px !important;
+    border                  : 1px solid red !important;
+    background-color        : #f0d3d3 !important;
+    color                   : red;
+    font-size               : 13px;
+    margin-right            : 20px;
+    margin-bottom           : 20px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+}
+
+.buddystream_info_box{
+    padding                 : 10px !important;
+    border                  : 1px solid #00b8e6 !important;
+    background-color        : #EAF2FA !important;
+    color                   : #000000;
+    font-size               : 13px;
+    margin-right            : 20px;
+    margin-bottom           : 20px; 
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+    cursor                  : help;
+}
+
+.buddystream_info_box_green {
+    padding                 : 10px !important;
+    border                  : 1px solid #008C0B !important;
+    background-color        : #CDFCC2 !important;
+    color                   : #008C0B;
+    font-size               : 13px;
+    font-weight             : bold;
+    margin-right            : 20px;
+    margin-bottom           : 20px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+}
+
+.buddystream_info_box_dashboard{
+    padding                 : 10px !important;
+    border                  : 1px solid #8600c9 !important;
+    background-color        : #8600c9 !important;
+    color                   : #ffffff;
+    font-size               : 14px;
+    font-weight             : bold;
+    text-shadow             : 1px 1px 3px #37352c;
+    line-height             : 160%;
+    margin-right            : 20px;
+    margin-bottom           : 20px;
+    min-height              : 90px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+    
+   background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.37, rgb(140,0,255)),
+    color-stop(0.69, rgb(183,50,250))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(140,0,255) 37%,
+    rgb(183,50,250) 69%
+);
+    
+  
+}
+
+.buddystream_Adminmenu{
+    margin-top              : 15px;
+    margin-bottom           : 15px;
+    height                  : 34px;
+    border-bottom           : 5px solid #666666;
+}
+
+.buddystream_Adminmenu a{
+    padding                 : 8px;
+    margin-right            : 5px;
+    background-color        : #D9D9D9;
+    height                  : 35px !important;
+    line-height             : 35px;
+    color                   : #156cff;
+    text-decoration         : none;
+    font-weight             : bold;
+    font-size               : 13px;
+}
+
+.buddystream_Adminmenu .activetab{
+    padding                 : 8px;
+    background-color        : #666666;
+    height                  : 35px !important;
+    line-height             : 35px;
+    color                   : #ffffff;
+    text-decoration         : none;
+    font-weight             : bold;
+    font-size               : 13px;
+}
+
+.buddystream_Adminmenu .tab_v2{
+    padding                 : 8px;
+    margin-right            : 5px;
+    height                  : 35px !important;
+    line-height             : 35px;
+    font-weight             : bold;
+    font-size               : 13px;
+    background-color        : #13760a !important;
+    color                   : #ffffff;
+    background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.37, rgb(140,0,255)),
+    color-stop(0.69, rgb(183,50,250))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(140,0,255) 37%,
+    rgb(183,50,250) 69%
+);
+}
+
+.buddystream_Adminmenu .tab_description{
+    background-image        : url('../images/buddystream.png');
+    background-repeat       : no-repeat;
+    background-position     : 10px 15px;
+    margin-left             : 20px;
+    font-size               : 9pt;
+    font-weight             : bold;
+}
+
+.inside{
+    line-height             : 160%;
+}
+
+.inside a{
+    text-decoration         : none;
+}
+
+.buddystream_powercentral{
+    position                : absolute;
+    padding-top             : 20px;
+}
+
+.buddystream_powerbox{
+    background-color        : #ffffff;
+    border                  : 3px solid #cecece;
+    float                   : left;
+    height                  : 50px;
+    width                   : 150px;
+    padding                 : 15px;
+    margin-right            : 15px;
+    margin-bottom           : 15px;
+}
+
+.buddystream_powerbox_inner{
+    float                   : left;
+    padding-right           : 10px;
+}
+
+.buddystream_table{
+    background-color        : #ffffff;
+    width                   : 99%;
+    border                  : 1px solid #cecece;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+}
+
+.buddystream_table td{
+    padding                 : 8px;
+}
+
+.buddystream_table td:last{
+    padding                 : 5px;
+    border                  : 1px solid red;
+}
+
+.buddystream_table a {
+    text-decoration         : none;
+    color                   : #000000;
+}
+
+.buddystream_table td div{
+    float                   : left;
+}
+
+.buddystream_table h2{
+    font-size               : 13px;
+}
+
+.buddystream_table .header{
+    background-color        : #666666;
+    color                   : #ffffff;
+    font-weight             : bold;
+    padding                 : 0px;
+    margin                  : 0px;  
+    background-image        : -webkit-gradient(
+                              linear,
+                              left bottom,
+                              left top,
+                              color-stop(0.25, rgb(102,102,102)),
+                              color-stop(0.63, rgb(143,143,143))
+                              );
+    background-image        : -moz-linear-gradient(
+                              center bottom,
+                              rgb(102,102,102) 25%,
+                              rgb(143,143,143) 63%
+                              );
+    text-shadow             : 0px 1px 0px #000000;
+}
+
+.buddystream_table .odd{
+    background-color        : #e9e9e9;
+}
+
+.buddystream_log_error{
+    color                   : #ff0000;
+    font-weight             : bold;
+}
+
+.buddystream_news li{
+    padding:5px;
+}
+
+.buddystream_news .odd{
+    background-color: #EAF2FA;
+}
+
+.buddystream_news .even{
+    
+}
+
