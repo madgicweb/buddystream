@@ -4,7 +4,7 @@
  * Including the OAuth class
  */
 
-include_once('OAuth.php');
+include_once('buddyStreamOauthClass.php');
 
 /**
  * BuddyStreamOAuth
@@ -260,7 +260,7 @@ class BuddyStreamOAuth{
             $callbackUrl = $this->getCallbackUrl();
         }
         
-      $consumer = new OAuthConsumer($consumerKey,$consumerSecret,$callbackUrl);
+      $consumer = new BuddyStreamOAuthConsumer($consumerKey,$consumerSecret,$callbackUrl);
       return $consumer;
     }
     
@@ -273,8 +273,8 @@ class BuddyStreamOAuth{
     public function requestToken(){
           
          $consumer = $this->getConsumer();
-         $req = OAuthRequest::from_consumer_and_token($consumer, NULL, "GET", $this->getRequestTokenUrl());
-         $req->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, NULL);
+         $req = BuddyStreamOAuthRequest::from_consumer_and_token($consumer, NULL, "GET", $this->getRequestTokenUrl());
+         $req->sign_request(new BuddyStreamOAuthSignatureMethod_HMAC_SHA1(), $consumer, NULL);
          $req_url = $req->to_url();
          $output = $this->executeRequest($req_url);
          
@@ -299,8 +299,8 @@ class BuddyStreamOAuth{
          $consumer = $this->getConsumer();
          $token = $this->getConsumer($this->getRequestToken(), $this->getRequestTokenSecret(), $this->getCallbackUrl());
          
-         $req = OAuthRequest::from_consumer_and_token($consumer, $token, "GET", $this->getAccessTokenUrl());
-         $req->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, $token);
+         $req = BuddyStreamOAuthRequest::from_consumer_and_token($consumer, $token, "GET", $this->getAccessTokenUrl());
+         $req->sign_request(new BuddyStreamOAuthSignatureMethod_HMAC_SHA1(), $consumer, $token);
          $req_url = $req->to_url();
          $output = $this->executeRequest($req_url);
         
@@ -325,12 +325,12 @@ class BuddyStreamOAuth{
          
          if($this->getRequestType() == 'GET'){
          
-            $req = OAuthRequest::from_consumer_and_token($consumer, $accessToken, $this->getRequestType(), $url);
+            $req = BuddyStreamOAuthRequest::from_consumer_and_token($consumer, $accessToken, $this->getRequestType(), $url);
          }else{
-             $req = OAuthRequest::from_consumer_and_token($consumer, $accessToken, $this->getRequestType(), $url, $this->getPostData());
+             $req = BuddyStreamOAuthRequest::from_consumer_and_token($consumer, $accessToken, $this->getRequestType(), $url, $this->getPostData());
          }
          
-         $req->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, $accessToken);
+         $req->sign_request(new BuddyStreamOAuthSignatureMethod_HMAC_SHA1(), $consumer, $accessToken);
        
          if($this->getRequestType() == 'GET'){
              return $this->executeRequest($req->to_url());

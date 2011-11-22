@@ -4,8 +4,8 @@
  */
 
 
-set_time_limit (0);
-ini_set( 'max_execution_time', 900 );
+@set_time_limit (0);
+@ini_set( 'max_execution_time', 900 );
 
 
 $incPath = str_replace("/wp-content/plugins/buddystream","",getcwd());
