@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.7.3');
+define('BP_BUDDYSTREAM_VERSION', '2.1.7.4');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
@@ -701,14 +701,7 @@ function buddystreamCheckLicense($licenseKey = null) {
  */
 
 function buddystreamCheckNetwork($url) {
-    $request = new WP_Http;
-    $result = $request->request($url);
-
-    if($result['response']['code'] == 200){
-        return true;
-    } else {
-        return false;
-    }
+    return true;
 }
 
 /**
