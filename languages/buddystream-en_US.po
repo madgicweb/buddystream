@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Core\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-04 14:48+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman <blackphantom25@gmail.com>\n"
+"Language-Team: BuddyStream\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans\n"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:184
+msgid "BuddyStream"
+msgstr "BuddyStream"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:185
+msgid "Info"
+msgstr "Info"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:227
+msgid "Settings"
+msgstr "Settings"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:291
+msgid "Just created a new topic:"
+msgstr "Just created a new topic:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:295
+msgid "Just responded to:"
+msgstr "Just responded to:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:375
+msgid "Show "
+msgstr "Show "
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:561
+msgid "posted&nbsp;a"
+msgstr "Settings"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:681
+msgid "I just unlocked the"
+msgstr "I just unlocked the"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/core.php:681
+msgid "achievement!"
+msgstr "achievement!"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Powercentral.php:21
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Powercentral.php:25
+msgid "powercentral description"
+msgstr "Welcome to the BuddyStream Powercentral.<br>Over here you can control witch extentions (networks) are enabled or disabled.<br>Don't forget to save when you changed the switches."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Powercentral.php:77
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Cronjob.php:97
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Cronjob.php:57
+msgid "Cronservice sucessfully configured."
+msgstr "Cronservice sucessfully configured."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Cronjob.php:70
+msgid "cronjob description"
+msgstr "You need to use the cronjob on your server.<br/>    Create a cron on your server that runs every 10 minutes.<br/>    You may copy the generated cronjob information to your server from BuddyStream.<br/>    <br/>    If you don't have access to add a cron of aren't allowed to by you hosting provider , we also can run the cron for a small price.<br/>    When you already have bought a license for the cron service or for the premium version just enter your license key below and everything is set to go. "
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Cronjob.php:78
+msgid "Own cron"
+msgstr "Own cron"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Cronjob.php:82
+msgid "Cron command:"
+msgstr "Cron command:"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Cronjob.php:88
+msgid "BuddyStream Cron Service"
+msgstr "BuddyStream Cron Service"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Cronjob.php:92
+msgid "License key"
+msgstr "License key"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Dashboard.php:7
+msgid "dashboard description"
+msgstr "Welcome to the BuddyStream Emperor Dashboard.<br> Over here you can see some quick stats, read the latest BuddyStream news and more."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Dashboard.php:18
+msgid "Latest news"
+msgstr "Latest news"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Dashboard.php:42
+msgid "Support"
+msgstr "Support"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Dashboard.php:44
+msgid "support description"
+msgstr "Did you found a bug? Or do you have a feature request? <br> Please report it in our support system.<a href=\"http://buddystream.net/support/\">Click here to report a bug/feature request!</a>"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Dashboard.php:55
+msgid "Donate"
+msgstr "Donate"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Dashboard.php:57
+msgid "donate description"
+msgstr "If you like this plugin and want to see it supported, continued, and extended please take a minute and consider donating a few dollars for our expenses (even juice or coffee!).  It only takes a couple minutes of your time!  Seriously, what is this plugin worth to you?  Think about it…"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Dashboard.php:64
+msgid "Did you know?"
+msgstr "Did you know?"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:7
+msgid "version2 description"
+msgstr "Emperor is here!<br>All new and improved with even more social integration then before."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:13
+msgid "More freedom with BuddyStream version 2"
+msgstr "More freedom with BuddyStream version 2"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:18
+msgid "freedom description"
+msgstr "We created more options, better flows and interfaces to give you and your users more freedom."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:29
+msgid "Extend it with ease"
+msgstr "Extend it with ease"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:34
+msgid "extend description"
+msgstr "With the new BuddyStream core creating new extension is much more fun!<br>Now more developers can help out and bring BuddyStream to a higher level.<br>Want to help out? Don't hesitate to contact us."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:45
+msgid "Faster, more stable and a cleaner interface."
+msgstr "Faster, more stable and a cleaner interface."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:50
+msgid "faster stable cleaner description"
+msgstr "We cleaned our code to perform better then before, all known previous known bugs are solved and with a completely new core we can keep it stable.<br>With the improved interface where the pages not only look cleaner, but also got a better flow."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:62
+msgid "Go premium and get more networks an the best support there is."
+msgstr "Go premium and get more networks an the best support there is."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Version2.php:67
+msgid "go premium description"
+msgstr "If you go premium you get even more! Besides Twitter, Youtube, Last.fm and Flickr you also get: Facebook, Soundcloud and Rss integration!<br>But that is not all! You also get the best support, free cron service and all updates."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Log.php:5
+msgid "buddystream log description"
+msgstr "Below is the system log of BuddyStream, if something goes wrong you can see the errors over here.<br>Also when one of the networks is done importing you can see it over here."
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Log.php:9
+msgid "Date"
+msgstr "Date"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/Log.php:10
+msgid "Message"
+msgstr "Message"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/AdminMenu.php:2
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/AdminMenu.php:3
+msgid "Powercentral"
+msgstr "Powercentral"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/AdminMenu.php:4
+msgid "Cronjob settings"
+msgstr "Cronjob settings"
+
+#: /home/peter/NetBeansProjects/buddystream/wp-content/plugins/buddystream/coretrans/default/templates/AdminMenu.php:5
+msgid "Logs "
+msgstr "Logs "
+
+#~ msgid "Filters"
+#~ msgstr "Filters"
+
+#~ msgid "Users"
+#~ msgstr "Users"
+
+#~ msgid "Statitics"
+#~ msgstr "Statitics"
+
+#~ msgid "Advertisement"
+#~ msgstr "Advertisement"
