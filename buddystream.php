@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI:
 Description: BuddyStream
-Version: 2.1.7.5
+Version: 2.1.7.6
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
