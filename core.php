@@ -6,7 +6,7 @@
  *  
  */
 
-define('BP_BUDDYSTREAM_VERSION', '2.1.7.4');
+define('BP_BUDDYSTREAM_VERSION', '2.1.7.5');
 define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
 
 /**
