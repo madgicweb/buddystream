@@ -1,0 +1,365 @@
+/*
+ * Default extension stylesheet
+ */
+
+.buddystream_error_box{
+    padding                 : 10px !important;
+    border                  : 1px solid red !important;
+    background-color        : #f0d3d3 !important;
+    color                   : red;
+    font-size               : 13px;
+    margin-right            : 20px;
+    margin-bottom           : 20px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+}
+
+.buddystream_info_box{
+    padding                 : 10px !important;
+    border                  : 1px solid #00b8e6 !important;
+    background-color        : #EAF2FA !important;
+    color                   : #21759b;
+    font-size               : 13px;
+    margin-right            : 20px;
+    margin-bottom           : 20px; 
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+    cursor                  : help;
+    line-height             : 160% !important;
+    
+    background-image: linear-gradient(bottom, #D5E7FA 30%, #EAF2FA 65%);
+    background-image: -o-linear-gradient(bottom, #D5E7FA 30%, #EAF2FA 65%);
+    background-image: -moz-linear-gradient(bottom, #D5E7FA 30%, #EAF2FA 65%);
+    background-image: -webkit-linear-gradient(bottom, #D5E7FA 30%, #EAF2FA 65%);
+    background-image: -ms-linear-gradient(bottom, #D5E7FA 30%, #EAF2FA 65%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.3, #D5E7FA),
+            color-stop(0.65, #EAF2FA)
+    );
+
+}
+
+.buddystream_info_box_green {
+    padding                 : 10px !important;
+    color                   : #008C0B;
+    font-size               : 13px;
+    font-weight             : normal;
+    margin-right            : 20px;
+    margin-bottom           : 20px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+    
+    border: 1px solid #80cf70;
+    background-image: linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -o-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -moz-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -webkit-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -ms-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.3, #93F57F),
+            color-stop(0.65, #C1F9B5)
+);
+}
+
+.buddystream_info_box_dashboard{
+    padding                 : 10px !important;
+    border                  : 1px solid #dfdfdf;
+    font-family             : "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+    font-size               : 18px;
+    font-weight             : normal;
+    line-height             : 1.2;
+    
+    margin-right            : 20px;
+    margin-bottom           : 20px;
+    min-height              : 90px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+    
+    background-image: linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -o-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -moz-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -webkit-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -ms-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.34, #EDEDED),
+            color-stop(0.84, #F8F8F8)
+    );
+
+}
+
+.buddystream_Adminmenu{
+    margin-top              : 15px;
+    margin-bottom           : 15px;
+    height                  : 33px;
+    border-bottom           : 5px solid #666666;
+}
+
+.buddystream_Adminmenu a{
+    padding                 : 8px;
+    margin-right            : 5px;
+    background-color        : #D9D9D9;
+    color                   : #21759b;
+    text-decoration         : none;
+    font-weight             : bold;
+    font-size               : 13px;
+    
+    background-image: linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -o-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -moz-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -webkit-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+    background-image: -ms-linear-gradient(bottom, #EDEDED 34%, #F8F8F8 84%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.34, #EDEDED),
+            color-stop(0.84, #F8F8F8)
+    );
+
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+    
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+    cursor: pointer;
+  
+    
+}
+
+.buddystream_Adminmenu .a:hover{
+    padding                 : 8px;
+    background-color        : #7f7f7f !important;
+    height                  : 35px !important;
+    line-height             : 35px;
+    color                   : #ffffff !important;
+    text-decoration         : none;
+    font-weight             : bold;
+    font-size               : 13px;
+    
+    background-image: linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -o-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -moz-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -webkit-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -ms-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.3, #6E6E6E),
+            color-stop(0.65, #7F7F7F)
+    );   
+}
+
+.buddystream_Adminmenu .activetab{
+    padding                 : 8px;
+    background-color        : #7f7f7f;
+    height                  : 35px !important;
+    line-height             : 35px;
+    color                   : #ffffff;
+    text-decoration         : none;
+    font-weight             : bold;
+    font-size               : 13px;
+    
+    background-image: linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -o-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -moz-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -webkit-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+    background-image: -ms-linear-gradient(bottom, #6E6E6E 30%, #7F7F7F 65%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.3, #6E6E6E),
+            color-stop(0.65, #7F7F7F)
+    );
+    
+}
+
+
+.buddystream_Adminmenu .tab_v2{
+    padding                 : 8px;
+    margin-right            : 5px;
+    height                  : 35px !important;
+    line-height             : 35px;
+    font-weight             : bold;
+    font-size               : 13px;
+    background-color        : #13760a !important;
+    color                   : #ffffff;
+    background-image: linear-gradient(bottom, #FE8C00 32%, #FEA900 66%);
+    background-image: -o-linear-gradient(bottom, #FE8C00 32%, #FEA900 66%);
+    background-image: -moz-linear-gradient(bottom, #FE8C00 32%, #FEA900 66%);
+    background-image: -webkit-linear-gradient(bottom, #FE8C00 32%, #FEA900 66%);
+    background-image: -ms-linear-gradient(bottom, #FE8C00 32%, #FEA900 66%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.32, #FE8C00),
+            color-stop(0.66, #FEA900)
+    );
+}
+
+.buddystream_Adminmenu .tab_tour, .buddystream_Adminmenu .tab_manual{
+    padding                 : 8px;
+    margin-right            : 5px;
+    height                  : 35px !important;
+    line-height             : 35px;
+    font-weight             : bold;
+    font-size               : 13px;
+    background-color        : #13760a !important;
+    color                   : #ffffff;
+    background-image: linear-gradient(bottom, #75AAD2 32%, #8BC0E8 66%);
+    background-image: -o-linear-gradient(bottom, #75AAD2 32%, #8BC0E8 66%);
+    background-image: -moz-linear-gradient(bottom, #75AAD2 32%, #8BC0E8 66%);
+    background-image: -webkit-linear-gradient(bottom, #75AAD2 32%, #8BC0E8 66%);
+    background-image: -ms-linear-gradient(bottom, #75AAD2 32%, #8BC0E8 66%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.32, #75AAD2),
+            color-stop(0.66, #8BC0E8)
+    );
+
+
+}
+
+
+.buddystream_Adminmenu .tab_description{
+    background-image        : url('../images/buddystream.png');
+    background-repeat       : no-repeat;
+    background-position     : 10px 15px;
+    margin-left             : 20px;
+    font-size               : 9pt;
+    font-weight             : bold;
+}
+
+.inside{
+    line-height             : 160%;
+}
+
+.inside a{
+    text-decoration         : none;
+}
+
+.buddystream_powercentral{
+    position                : absolute;
+    padding-top             : 20px;
+}
+
+.buddystream_powerbox{
+    background-color        : #ffffff;
+    border                  : 3px solid #cecece;
+    float                   : left;
+    height                  : 50px;
+    width                   : 150px;
+    padding                 : 15px;
+    margin-right            : 15px;
+    margin-bottom           : 15px;
+}
+
+.buddystream_powerbox_inner{
+    float                   : left;
+    padding-right           : 10px;
+}
+
+.buddystream_table{
+    background-color        : #ffffff;
+    width                   : 99%;
+    border                  : 1px solid #cecece;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+}
+
+.buddystream_table td{
+    padding                 : 8px;
+}
+
+.buddystream_table td:last{
+    padding                 : 5px;
+    border                  : 1px solid red;
+}
+
+.buddystream_table a {
+    text-decoration         : none;
+    color                   : #000000;
+}
+
+.buddystream_table td div{
+    float                   : left;
+}
+
+.buddystream_table h2{
+    font-size               : 13px;
+}
+
+.buddystream_table .header{
+    background-color        : #666666;
+    color                   : #ffffff;
+    font-weight             : bold;
+    padding                 : 0px;
+    margin                  : 0px;  
+    background-image        : -webkit-gradient(
+                              linear,
+                              left bottom,
+                              left top,
+                              color-stop(0.25, rgb(102,102,102)),
+                              color-stop(0.63, rgb(143,143,143))
+                              );
+    background-image        : -moz-linear-gradient(
+                              center bottom,
+                              rgb(102,102,102) 25%,
+                              rgb(143,143,143) 63%
+                              );
+    text-shadow             : 0px 1px 0px #000000;
+}
+
+.buddystream_table .odd{
+    background-color        : #e9e9e9;
+}
+
+.buddystream_log_error{
+    color                   : #ff0000;
+    font-weight             : bold;
+}
+
+.buddystream_news li{
+    padding:5px;
+}
+
+.buddystream_news .odd{
+    background-color: #EAF2FA;
+}
+
+.buddystream_news .even{
+    
+}
+
