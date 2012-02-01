@@ -68,7 +68,7 @@ class BuddyStreamFilters{
         if($limit){
             if(strlen($content . ' ' . $shortLink) > $limit){
                 $maxChar = $limit-strlen($shortLink);
-                $content = substr($content, 0, $maxChar).'...' . $shortLink();
+                $content = substr($content, 0, $maxChar).'...' . $shortLink;
             }else{
                 $content =  $content . ' ' . $shortLink;
             }
