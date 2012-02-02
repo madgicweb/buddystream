@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI:
 Description: BuddyStream
-Version: 2.5
+Version: 2.5.01
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -29,7 +29,7 @@ Author URI: http://www.buddystream.net
 function buddystream_init()
 {
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '2.5');
+    define('BP_BUDDYSTREAM_VERSION', '2.5.01');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     
     //first load translations
