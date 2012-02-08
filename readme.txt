@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5.1
-Stable tag: 2.5.01
+Stable tag: 2.5.02
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -39,6 +39,17 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.5.02 =
+* Added general setting page to turn on/off some features.
+* Added extra check to make sure a activity item is not empty.
+* Improved ShareBox loading and showing.
+
+* Fixed Twitter usernames in backend.
+* Fixed Facebook importing items from friends.
+* Fixed Vimeo, Twitter, Facebook import
+* Fixed filters
+* Fixed loading of the ShareBox
 
 = 2.5.01 =
 * Fixed double declared class in certain cases.

@@ -3,12 +3,12 @@
 Plugin Name: BuddyStream
 Plugin URI:
 Description: BuddyStream
-Version: 2.5.01
+Version: 2.5.02
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
 
-// Copyright (c) 2010/2012 Buddystream.net All rights reserved.
+// Copyright (c) 2010/2011 Buddystream.net All rights reserved.
 //
 // Released under the GPL license
 // http://www.opensource.org/licenses/gpl-license.php
@@ -29,7 +29,7 @@ Author URI: http://www.buddystream.net
 function buddystream_init()
 {
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '2.5.01');
+    define('BP_BUDDYSTREAM_VERSION', '2.5.02');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     
     //first load translations
@@ -37,6 +37,9 @@ function buddystream_init()
 
     //initialize the database if needed
     buddyStreamInitDatabase();
+    
+    //initialize settings if needed
+    buddyStreamInitSettings();
     
     //now initialize the core
     include_once('lib/BuddyStreamCurl.php');
@@ -49,6 +52,25 @@ function buddystream_init()
     include_once('lib/BuddyStreamCore.php');
 }
 
+function buddyStreamInitSettings(){
+    
+    if(!get_site_option('buddystream_init_settings') != 'BP_BUDDYSTREAM_VERSION'){
+        
+        if(!get_site_option('buddystream_sharebox')){
+            update_site_option('buddystream_sharebox', 'on');
+        }
+        
+        if(!get_site_option('buddystream_social_albums')){
+            update_site_option('buddystream_social_albums', 'on');
+        }
+
+        if(!get_site_option('buddystream_group_sharing')){
+            update_site_option('buddystream_group_sharing', 'on');
+        }
+        
+        update_site_option('buddystream_init_settings', BP_BUDDYSTREAM_VERSION);
+    }
+}
 
 function buddyStreamInitDatabase(){
     
@@ -84,7 +106,7 @@ function buddyStreamLoadTranslations() {
     $handle = opendir(WP_PLUGIN_DIR . "/buddystream/extentions");
     if ($handle) {
         while (false !== ($file = readdir($handle))) {
-            if ($file != "." && $file != "..") {
+            if ($file != "." && $file != ".." && $file != ".DS_Store") {
                 if (file_exists(WP_PLUGIN_DIR."/buddystream/extentions/".$file."/languages/buddystream_".$file."-".get_locale().".mo")) {
                     load_textdomain('buddystream_'.$file, WP_PLUGIN_DIR."/buddystream/extentions/".$file."/languages/buddystream_".$file."-".get_locale().".mo");
                 }else{
