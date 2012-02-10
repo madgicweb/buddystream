@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5.1
-Stable tag: 2.5.02
+Stable tag: 2.5.03
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -39,6 +39,12 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.5.03 =
+* Fixed loading issue with .DS_Store file.
+* Fixed version tab error.
+* Fixed Facebook imports.
+* Fixed Twitter username cut-off in items (fix, works only for new items).
 
 = 2.5.02 =
 * Added general setting page to turn on/off some features.
