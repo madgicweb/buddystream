@@ -2,8 +2,8 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.2.1, BuddyPress 1.5.1
-Stable tag: 2.5.03
+Tested up to: WP 3.2.1, BuddyPress 1.5.4
+Stable tag: 2.5.04
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -39,6 +39,13 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.5.04 =
+* Fixed LinkedIn import due change LinkedIn API.
+* Fixed Google+ import.
+* Fixed general settings page nog saving
+* Added turn all on/off buttons on general settings page.
+* Added feature to move social albums under profile navigation instead of top-level.
 
 = 2.5.03 =
 * Fixed loading issue with .DS_Store file.

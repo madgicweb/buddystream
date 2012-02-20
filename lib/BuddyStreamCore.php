@@ -18,7 +18,7 @@ wp_enqueue_script('buddystream-colorbox');
 wp_register_style('buddystream-colorbox', plugins_url() . '/buddystream/extentions/default/colorbox/colorbox.css', false, '1.3.18', 'screen');
 wp_enqueue_style('buddystream-colorbox');
 
-wp_register_style('buddystream-default', plugins_url() . '/buddystream/extentions/default/style.css', false, '2.5', 'screen');
+wp_register_style('buddystream-default', plugins_url() . '/buddystream/extentions/default/style.css', false, '2.5.04', 'screen');
 wp_enqueue_style('buddystream-default');
 
 wp_register_script('buddystream', plugins_url() . '/buddystream/extentions/default/main.js');
@@ -51,7 +51,6 @@ function buddystreamCreateActivity($params){
         foreach(BuddyStreamExtentions::getExtentionsConfigs() as $extention){
             if(isset($extention['hashtag'])){
                 $originalText = str_replace($extention['hashtag'],"",$originalText);
-                $originalText = str_replace("&nbsp;"," ",$originalText);
                 $originalText = trim($originalText);
             }
         }
@@ -62,14 +61,18 @@ function buddystreamCreateActivity($params){
         //do we already have this content if so do not import this item
         if($secondary == null){
         
+            //set the content 
+            $content = "";
+            $content = '<div class="buddystream_activity_container '.$params['extention'].'">'.$originalText.'</div>';
+            
             $activity = new BP_Activity_Activity();
-            if(!$activity->check_exists_by_content($originalText)){
+            if(!$activity->check_exists_by_content($content) && !$activity->check_exists_by_content($originalText)){
                 remove_filter('bp_activity_action_before_save', 'bp_activity_filter_kses', 1);
 
                 $activity->user_id           = $params['user_id'];
                 $activity->component         = $params['extention'];
                 $activity->type              = $params['extention'];
-                $activity->content           = '<div class="buddystream_activity_container '.$params['extention'].'">'.$originalText.'</div>';
+                $activity->content           = $content;
                 $activity->secondary_item_id = $params['item_id'];
                 $activity->date_recorded     = $params['raw_date'];
 

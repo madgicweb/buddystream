@@ -77,23 +77,20 @@ function buddystreamAdmin() {
     /**
      * Load the extentions into the BuddyStream admin menu.
      */
+    foreach(BuddyStreamExtentions::getExtentionsConfigs() as $extention){
+        if (get_site_option("buddystream_".$extention['name']."_power")) {
 
-    
+            add_submenu_page(
+            'buddystream_admin',
+            __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
+            __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
+            'manage_options',
+            'buddystream_'.$extention['name'],
+            'buddystream_'.$extention['name']
+            );
 
-        foreach(BuddyStreamExtentions::getExtentionsConfigs() as $extention){
-            if (get_site_option("buddystream_".$extention['name']."_power")) {
-                
-                add_submenu_page(
-                'buddystream_admin',
-                __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
-                __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
-                'manage_options',
-                'buddystream_'.$extention['name'],
-                'buddystream_'.$extention['name']
-                );
-                
-            }
         }
+    }
     
 }
 
@@ -104,14 +101,32 @@ function buddystreamAdmin() {
 function buddystream_profile_navigation(){
     
      global $bp;
-      bp_core_new_nav_item( 
+     
+     if(get_site_option('buddystream_social_albums_profile_navigation') == "on"){
+        bp_core_new_subnav_item( 
             array(
                 'name' => __( 'Social albums', 'buddystream_lang' ),
                 'slug' => 'social-album',
-                'position' => 80,
-                'screen_function' => 'buddystream_default_album'
-            )
-      );    
+                'parent_url' => $bp->displayed_user->domain . $bp->profile->slug . '/', 
+                'parent_slug' => $bp->profile->slug, 
+                'screen_function' => 'buddystream_default_album',
+                'position' => 80 
+                ) 
+        );
+     }else{
+        bp_core_new_nav_item( 
+                array(
+                    'name' => __( 'Social albums', 'buddystream_lang' ),
+                    'slug' => 'social-album',
+                    'position' => 80,
+                    'screen_function' => 'buddystream_default_album'
+                )
+        );   
+     }
+      
+      
+      
+      
 }
 
 buddystream_profile_navigation();
