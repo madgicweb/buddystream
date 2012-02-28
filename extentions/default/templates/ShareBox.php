@@ -1,5 +1,5 @@
 
-<div class="buddystream_sharebox">
+<div class="buddystream_sharebox_box">
 <h3>ShareBox</h3>
 <br/>
 

@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5.4
-Stable tag: 2.5.04
+Stable tag: 2.5.05
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -35,10 +35,15 @@ For support and other feature request, please contact us on our website.
 3. Setup the BuddyStream plugin in the admin sidebar.
 4. Done!
 
-
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.5.05 = 
+* Added Facebook pages select on user settings (user can now choose which pages to sync.)
+* Added Facebook albums select on user settings (user can now choose which albums to sync.)
+* Added check so non-public items won't be imported anymore. (privacy)
+* Fixed Social albums not hidding when albums feature is turned off.
 
 = 2.5.04 =
 * Fixed LinkedIn import due change LinkedIn API.

@@ -8,7 +8,7 @@
 
 <?php
     global $bp;
-    if($_POST){ 
+    if($_POST['submit']){ 
         
         //reset the importer queue
         update_site_option("buddystream_importers_queue", "");
@@ -74,10 +74,11 @@ foreach (BuddyStreamExtentions::getExtentionsConfigs() as $extention) {
 ?>
 
 <div style="float:left; clear:both;">
-    <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+    <input type="submit" name="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
     <input type="button" onclick="buddystreamTurnAllOn()" class="button-primary" value="<?php _e('Turn all on','buddystream_lang') ?>" />
     <input type="button" onclick="buddystreamTurnAllOff()" class="button-primary" value="<?php _e('Turn all off','buddystream_lang') ?>" />
 </div>
+    
 <script type="text/javascript">
     jQuery(document).ready(function() {
         jQuery(".switch").slickswitch();

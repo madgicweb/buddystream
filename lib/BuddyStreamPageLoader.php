@@ -101,32 +101,30 @@ function buddystreamAdmin() {
 function buddystream_profile_navigation(){
     
      global $bp;
-     
-     if(get_site_option('buddystream_social_albums_profile_navigation') == "on"){
-        bp_core_new_subnav_item( 
-            array(
-                'name' => __( 'Social albums', 'buddystream_lang' ),
-                'slug' => 'social-album',
-                'parent_url' => $bp->displayed_user->domain . $bp->profile->slug . '/', 
-                'parent_slug' => $bp->profile->slug, 
-                'screen_function' => 'buddystream_default_album',
-                'position' => 80 
-                ) 
-        );
-     }else{
-        bp_core_new_nav_item( 
+     if(get_site_option('buddystream_social_albums') == "on"){
+         
+        if(get_site_option('buddystream_social_albums_profile_navigation') == "on"){
+            bp_core_new_subnav_item( 
                 array(
                     'name' => __( 'Social albums', 'buddystream_lang' ),
                     'slug' => 'social-album',
-                    'position' => 80,
-                    'screen_function' => 'buddystream_default_album'
-                )
-        );   
+                    'parent_url' => $bp->displayed_user->domain . $bp->profile->slug . '/', 
+                    'parent_slug' => $bp->profile->slug, 
+                    'screen_function' => 'buddystream_default_album',
+                    'position' => 80 
+                    ) 
+            );
+        }else{
+            bp_core_new_nav_item( 
+                    array(
+                        'name' => __( 'Social albums', 'buddystream_lang' ),
+                        'slug' => 'social-album',
+                        'position' => 80,
+                        'screen_function' => 'buddystream_default_album'
+                    )
+            );   
+        }
      }
-      
-      
-      
-      
 }
 
 buddystream_profile_navigation();

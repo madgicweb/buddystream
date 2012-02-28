@@ -18,7 +18,7 @@ wp_enqueue_script('buddystream-colorbox');
 wp_register_style('buddystream-colorbox', plugins_url() . '/buddystream/extentions/default/colorbox/colorbox.css', false, '1.3.18', 'screen');
 wp_enqueue_style('buddystream-colorbox');
 
-wp_register_style('buddystream-default', plugins_url() . '/buddystream/extentions/default/style.css', false, '2.5.04', 'screen');
+wp_register_style('buddystream-default', plugins_url() . '/buddystream/extentions/default/style.css', false, '2.5.05', 'screen');
 wp_enqueue_style('buddystream-default');
 
 wp_register_script('buddystream', plugins_url() . '/buddystream/extentions/default/main.js');
