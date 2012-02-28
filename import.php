@@ -22,7 +22,7 @@ $handle = opendir(WP_PLUGIN_DIR . "/buddystream/extentions");
 //loop extentions so we can add active extentions to the import loop
 if ($handle) {
     while (false !== ($file = readdir($handle))) {
-        if ($file != "." && $file != "..") {
+        if ($file != "." && $file != ".." && $file != ".DS_Store") {
             if (file_exists(WP_PLUGIN_DIR."/buddystream/extentions/".$file."/import.php")) {
                 if (get_site_option("buddystream_".$file."_power")) {
                         $extentions[] = $file;
