@@ -93,12 +93,12 @@ class BuddyStreamFilters{
         }
 
         $content = strip_tags($content);
-        foreach(explode(",", $filters) as $filtervalue){
-            if($filtervalue){
-                $filtervalue = trim($filtervalue);
-                $filtervalue = str_replace('/','',$filtervalue);
+        foreach(explode(",", $filters) as $filterValue){
+            if($filterValue){
+                $filterValue = trim($filterValue);
+                $filterValue = str_replace('/','',$filterValue);
                 
-                if(preg_match('/'.$filtervalue.'/', $content) == 0)
+                if(preg_match('/'.$filterValue.'/', $content) == 0)
                 {
                     return false;
                 }

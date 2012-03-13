@@ -66,7 +66,8 @@ function buddystreamCreateActivity($params){
             $content = '<div class="buddystream_activity_container '.$params['extention'].'">'.$originalText.'</div>';
             
             $activity = new BP_Activity_Activity();
-            if(!$activity->check_exists_by_content($content) && !$activity->check_exists_by_content($originalText)){
+            if( ! buddyStreamCheckExistingContent($originalText)){
+                
                 remove_filter('bp_activity_action_before_save', 'bp_activity_filter_kses', 1);
 
                 $activity->user_id           = $params['user_id'];
@@ -109,6 +110,16 @@ function buddystreamCreateActivity($params){
         }
     }
 }
+
+function buddyStreamCheckExistingContent($content){
+    global $wpdb, $bp;
+    
+    $content = strip_tags($content);
+    $content = trim($content);
+    
+    return $wpdb->get_var("SELECT content FROM {$bp->activity->table_name} WHERE content LIKE '%".$content."%'");
+}
+    
 
 /*
  * On delete activity item add it to the import blackplist

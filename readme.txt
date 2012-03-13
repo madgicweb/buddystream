@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.1, BuddyPress 1.5.4
-Stable tag: 2.5.06
+Stable tag: 2.5.07
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -38,6 +38,11 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.5.07 =
+* Fixed Facebook video imports.
+* Added core functionality to check existing content.
+* Removed since => till filter so all items get imported from Facebook.
 
 = 2.5.06 =
 * Fixed imports not working due configuration error.
