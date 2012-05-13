@@ -1,0 +1,257 @@
+/*
+ * Default extension stylesheet
+ */
+
+ .buddystream_album_navigation_links{
+     height:40px;
+ }
+ 
+ .buddystream_album_navigation_links ul{
+     list-style-type        : none;
+     margin                 : auto;
+ }
+ 
+ .buddystream_album_navigation_links li{
+     display                : inline-block;
+     float                  : left;   
+     height                 : 36px;
+ }
+ 
+ .buddystream_album_navigation_links li a{
+    padding                 : 7px;
+    background-color        : #333;
+    color                   : #ffffff;
+    margin-right            : 10px;
+    -webkit-border-radius   : 4px;
+    -moz-border-radius      : 4px;
+    border-radius           : 4px;
+ }
+ 
+ .buddystream_message{
+     padding                 : 10px !important;
+    color                   : #008C0B;
+    font-size               : 13px;
+    font-weight             : normal;
+    margin-right            : 20px;
+    margin-bottom           : 20px;
+    -webkit-border-radius   : 5px;
+    -moz-border-radius      : 5px;
+    border-radius           : 5px;
+    
+    border: 1px solid #80cf70;
+    background-image: linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -o-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -moz-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -webkit-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+    background-image: -ms-linear-gradient(bottom, #93F57F 30%, #C1F9B5 65%);
+
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.3, #93F57F),
+            color-stop(0.65, #C1F9B5)
+);
+
+ }
+ 
+ 
+ .buddystream_sharebox_box{
+     width: 450px;
+     height: 300px;
+ }
+ 
+ 
+ .buddystream_activity_container img{
+    margin-right      : 10px;
+    margin-bottom     : 10px;
+    border            : 1px solid #cecece;
+    float             : left;
+    display           : inline-block;
+    max-height        : 80px;
+ }
+ 
+ 
+.buddystream_authorize_button, .buddystream_authorize_button:hover{
+
+    background-color: #8C9CBF;
+    background-image: linear-gradient(bottom, #8C9CBF 30%, #3D5691 65%);
+    background-image: -o-linear-gradient(bottom, #8C9CBF 30%, #3D5691 65%);
+    background-image: -moz-linear-gradient(bottom, #8C9CBF 30%, #3D5691 65%);
+    background-image: -webkit-linear-gradient(bottom, #8C9CBF 30%, #3D5691 65%);
+    background-image: -ms-linear-gradient(bottom, #8C9CBF 30%, #3D5691 65%);
+    background-image: -moz-linear-gradient(center top , #8C9CBF, #3D5691);
+    
+    border: 1px solid #cecece;
+   
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+   
+    color: #FFFFFF;
+    font: bold 14px sans-serif;
+   
+    padding: 10px;
+    text-align: center; 
+    text-shadow:0px !important;
+}
+
+a.buddystream_authorize_button{
+    color: #ffffff !important;
+}
+
+
+.buddystream_reset_button, .buddystream_reset_button:hover{
+    
+    background-color: #EE432E !important;
+    
+    background-image: linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
+    background-image: -o-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
+    background-image: -moz-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
+    background-image: -webkit-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
+    background-image: -ms-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
+    background-image: -moz-linear-gradient(center top , #EE432E, #C63929) !important;
+    
+    border: 1px solid #cecece !important;
+   
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+   
+    color: #FFFFFF !important;
+    font: bold 14px sans-serif !important;
+   
+    padding: 10px !important;
+    text-align: center !important; 
+    text-shadow:0px !important;
+}
+
+.buddystream_save_button{
+    background: #7FBF4D !important;
+    background-color: #7FBF4D !important;
+}
+
+.buddystream_save_button, .buddystream_save_button:hover{
+    
+    background-color: #7FBF4D !important;
+    
+    background-image: linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
+    background-image: -o-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
+    background-image: -moz-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
+    background-image: -webkit-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
+    background-image: -ms-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
+    background-image: -moz-linear-gradient(center top , #7FBF4D, #63A62F) !important;
+    
+    border: 1px solid #cecece !important;
+   
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+   
+    color: #FFFFFF !important;
+    font: bold 14px sans-serif !important;
+   
+    padding: 10px !important;
+    text-align: center !important; 
+    
+  text-shadow: 0px 0px 0px!important;
+}
+
+
+
+/* ========= */
+/* ! Icons   */
+/* ========= */
+
+
+.admin_icon{
+    display:block;
+    height: 18px;
+    width:18px;
+    float:left;
+    margin-top:-3px;
+    margin-left:-3px;
+    margin-right:3px;
+}
+
+ .buddystream_sharebutton{
+    display:block;
+    height: 18px;
+    width:18px;
+    float:left;   
+    text-indent: -1000px;
+}
+
+.twitter .activity-header p,
+.youtube .activity-header p,
+.vimeo .activity-header p,
+.facebook .activity-header p,
+.rss .activity-header p,
+.googleplus .activity-header p,
+.flickr .activity-header p,
+.soundcloud .activity-header p,
+.lastfm .activity-header p,
+.linkedin .activity-header p {
+padding-left: 23px;
+}
+
+.twitter .activity-header p, .admin_icon.twitter , .buddystream_sharebutton.twitter{
+background: url("../../images/icon_sprite.png") no-repeat scroll 0 3px transparent;
+}
+
+.youtube .activity-header p, .admin_icon.youtube {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0 -37px transparent;
+}
+
+.vimeo .activity-header p, .admin_icon.vimeo {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0 -77px transparent;
+}
+
+.facebook .activity-header p,
+.admin_icon.facebook ,
+.buddystream_sharebutton.facebook{
+background: url("../../images/icon_sprite.png") no-repeat scroll 0px -117px transparent;
+}
+
+.rss .activity-header p, .admin_icon.rss {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0px -157px transparent;
+}
+
+.googleplus .activity-header p, .admin_icon.googleplus {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0px -197px transparent;
+}
+
+.flickr .activity-header p, .admin_icon.flickr {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0 -237px transparent;
+}
+
+.soundcloud .activity-header p, .admin_icon.soundcloud {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0 -277px transparent;
+}
+
+.lastfm .activity-header p, .admin_icon.lastfm {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0 -317px transparent;
+}
+
+.linkedin .activity-header p, .admin_icon.linkedin, .buddystream_sharebutton.linkedin  {
+background: url("../../images/icon_sprite.png") no-repeat scroll 0 -357px transparent;
+}
+
+#whats-new-post-in-box{
+    float:right !important;
+    padding-right:10px;
+}
+
+form#whats-new-form #whats-new-options select{
+    max-width:100px !important;
+}
+
+/* widget */
+
+.buddystream_widget{
+
+}
+
+.buddystream_widget_icons{
+    padding:5px;
+}
