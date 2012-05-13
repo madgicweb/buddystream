@@ -21,7 +21,7 @@ Author URI: http://www.buddystream.net
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
-
+ 
 /*
  * Only load code that needs BuddyPress
  * to run once BP is loaded and initialized.
