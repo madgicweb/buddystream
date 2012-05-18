@@ -7,13 +7,13 @@
 class BuddyStreamFilters{
 
     /**
-    * Check if the user has reached the daylimit
-    * 
-    * @param string $extension
-    * @param int $userId
-    * @param int $maxItems
-    * @return boolean 
-    */
+     * Check if the user has reached the day limit
+     *
+     * @param string $extension
+     * @param int $userId
+     * @internal param int $maxItems
+     * @return boolean
+     */
     
     public function limitReached($extension, $userId){
 
@@ -37,7 +37,7 @@ class BuddyStreamFilters{
 
 
     /**
-    * Update the user daylimit for extension by one
+    * Update the user day limit for extension by one
     * 
     * @param string $extension
     * @param int $userId 
@@ -52,12 +52,13 @@ class BuddyStreamFilters{
 
 
     /**
-    * Create a well formated content to post to a network
-    * 
-    * @param string $content
-    * @param init $limit
-    * @return string 
-    */
+     * Create a well formatted content to post to a network
+     *
+     * @param string $content
+     * @param string $shortLink
+     * @param init $limit
+     * @return string
+     */
     
     public function filterPostContent($content, $shortLink = "", $limit = null){
 
@@ -77,71 +78,54 @@ class BuddyStreamFilters{
             return $content;
         }
 
-        
-    /**
-    * Find filters in a string
-    * 
-    * @param string $content
-    * @param string $filters (comma, seperated)
-    * @return boolean 
-    */  
-        
-    function filterPass($content, $filters = null){
 
-        if(!$filters){
-            return true;
+    /**
+     * Find filter in content
+     *
+     * @param $content
+     * @param null $filters
+     * @param bool $returnOnFirst
+     * @param bool $findAll
+     * @param bool $returnDefault
+     * @return bool
+     */
+    function searchFilter($content, $filters = null, $returnOnFirst = false, $findAll = false, $returnDefault = false){
+
+        if( ! $filters){
+            return $returnDefault;
         }
 
         $content = strip_tags($content);
+
         foreach(explode(",", $filters) as $filterValue){
             if($filterValue){
                 $filterValue = trim($filterValue);
                 $filterValue = str_replace('/','',$filterValue);
-                
-                if(preg_match('/'.$filterValue.'/', $content) == 0)
+
+                if(preg_match('/'.$filterValue.'/', $content) > 0)
                 {
-                    return false;
+                   if($returnOnFirst){
+                      return true;
+                   }
+
+                   if($findAll){
+                        $returnValue = true;
+                   }
+
+                }else{
+                    if($findAll){
+                        $returnValue = false;
+                    }
                 }
             }
         }
 
-        return true;
-    }     
-    
-    /**
-    * Find filters in a string
-    * 
-    * @param string $content
-    * @param string $filters (comma, seperated)
-    * @return boolean 
-    */  
-    
-    public function filterFail($content, $filters = null){
-
-        if(!$filters){
-            return false;
-        }
-
-        $content = strip_tags($content);
-        foreach(explode(",", $filters) as $filtervalue){
-            if($filtervalue){
-
-                $filtervalue = trim($filtervalue);
-                $filtervalue = str_replace('/','',$filtervalue);
-                
-                if(preg_match('/'.$filtervalue.'/', $content) > 0)
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }     
+        return $returnValue;
+    }
 
 
    /**
-    * Remove all hashtags from input
+    * Remove all hash tags from input
     * @param string $input
     * @return string $input
     */
@@ -159,12 +143,15 @@ class BuddyStreamFilters{
         }
         return $input;
     }
-    
-    
+
+
     /**
      * Extract a string
+     * @param $str
+     * @param $start
+     * @param $end
+     * @return bool|string
      */
-   
     public function extractString($str, $start, $end){
 
         $str_low = strtolower($str);
