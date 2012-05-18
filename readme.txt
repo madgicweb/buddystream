@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.2, BuddyPress 1.5.5
-Stable tag: 2.5.10
+Stable tag: 2.5.11
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -38,6 +38,10 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.5.11 =
+* Fixed php opening tags.
+* Fixed error when user does not have Facebook pages.
 
 = 2.5.10 =
 * Added general option to turn off all css including of BuddyStream (for complete own css styling)

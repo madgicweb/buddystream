@@ -51,7 +51,7 @@ class BuddyStream_Connect_Widget extends WP_Widget
                   cols="28"><?php echo $instance['widget_description'] ?></textarea>
     </p>
 
-    <?
+    <?php
     }
 
     function update($new_instance, $old_instance)
