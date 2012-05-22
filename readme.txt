@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.2.2, BuddyPress 1.5.5
-Stable tag: 2.5.11
+Stable tag: 2.5.12
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -38,6 +38,13 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.5.12 =
+* Removed update check so plugin wont be downgraded.
+* Extended cron with network parameter so multiple crons are possible (add network=THENETWORK) to the cronjob url.
+* Prepared core for accepting extensions with parents (to extend other extensions).
+* Added check to see if extension exists.
+* By default import also items that are rated "friend only" can be turned of in the settings.
 
 = 2.5.11 =
 * Fixed php opening tags.

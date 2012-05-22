@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: BuddyStream
-Plugin URI:
+Plugin URI: http://www.buddystream.net
 Description: BuddyStream
-Version: 2.5.11
+Version: 2.5.12
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -21,7 +21,7 @@ Author URI: http://www.buddystream.net
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
- 
+
 /*
  * Only load code that needs BuddyPress
  * to run once BP is loaded and initialized.
@@ -30,9 +30,9 @@ function buddystream_init()
 {
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '2.5.11');
+    define('BP_BUDDYSTREAM_VERSION', '2.5.12');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
-    
+
     //first load translations
     buddyStreamLoadTranslations();
 
@@ -71,6 +71,12 @@ function buddyStreamInitSettings(){
         
         update_site_option('buddystream_init_settings', BP_BUDDYSTREAM_VERSION);
     }
+
+    if( ! get_site_option('buddystream_2512')) {
+        update_site_option('buddystream_facebook_privacy_setting', 'on');
+        update_site_option('buddystream_2512', '1');
+    }
+
 }
 
 function buddyStreamInitDatabase(){

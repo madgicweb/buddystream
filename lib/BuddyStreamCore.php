@@ -469,3 +469,33 @@ function buddystream_filtertags_fp() {
     return BuddyStreamFilters::removeHashTags($content);
 }
 
+if(defined(BP_BUDDYSTREAM_IS_PREMIUM)){
+    add_filter('site_transient_update_plugins', 'buddystream_remove_update_nag');
+}
+
+function buddystream_remove_update_nag($value) {
+    if($value){
+        unset($value->response[ plugin_basename(__FILE__) ]);
+        return $value;
+    }
+}
+
+function buddystreamFilterOutPrivate( $a, $activities ) {
+
+    foreach ( $activities->activities as $key => $activity ) {
+        if ( $activity->type =='private') {
+            unset( $activities->activities[$key] );
+
+            $activities->activity_count = $activities->activity_count-1;
+            $activities->total_activity_count = $activities->total_activity_count-1;
+            $activities->pag_num = $activities->pag_num -1;
+        }
+    }
+
+    $activities_new = array_values( $activities->activities );
+    $activities->activities = $activities_new;
+
+    return $activities;
+}
+
+add_action('bp_has_activities','buddystreamFilterOutPrivate', 10, 2 );

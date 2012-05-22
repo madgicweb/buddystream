@@ -57,7 +57,7 @@ add_action('network_admin_menu', 'buddystreamAdmin');
 function buddystreamAdmin() {
 
     if (!is_super_admin()) {
-	return false;
+	    return false;
     }
 
     /**
@@ -80,15 +80,18 @@ function buddystreamAdmin() {
     foreach(BuddyStreamExtentions::getExtentionsConfigs() as $extention){
         if (get_site_option("buddystream_".$extention['name']."_power")) {
 
-            add_submenu_page(
-            'buddystream_admin',
-            __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
-            __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
-            'manage_options',
-            'buddystream_'.$extention['name'],
-            'buddystream_'.$extention['name']
-            );
+            if( ! $extention['parent'] ){
 
+                add_submenu_page(
+                    'buddystream_admin',
+                    __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
+                    __(ucfirst($extention['displayname']), 'buddystream_'.$extention['name']),
+                    'manage_options',
+                    'buddystream_'.$extention['name'],
+                    'buddystream_'.$extention['name']
+                );
+
+            }
         }
     }
     

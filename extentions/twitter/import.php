@@ -68,6 +68,15 @@ class BuddyStreamTwitterImport{
                                     $badFilters = get_site_option('tweetstream_filterexplicit') . get_user_meta($user_meta->user_id, 'tweetstream_filterbad', 1);
                                     $badFilter = BuddyStreamFilters::searchFilter($tweet->text, $badFilters, true);
 
+                                    //no filters set so just import everything
+                                    if(! get_site_option('tweetstream_filter') && ! get_user_meta($user_meta->user_id, 'tweetstream_filtergood', 1)){
+                                        $goodFilter = true;
+                                    }
+
+                                    if(! get_site_option('tweetstream_filterexplicit') && ! get_user_meta($user_meta->user_id, 'tweetstream_filterbad', 1)){
+                                        $badFilter = false;
+                                    }
+
                                     //check if source filter passes
                                     $sourceFilter = BuddyStreamFilters::searchFilter($bp->root_domain, $tweet->source, true);
 

@@ -22,6 +22,43 @@ class BuddyStreamExtentions{
             }
         }
     }
+
+    /**
+     * Check if extension exists
+     * @param $name
+     * @return bool
+     */
+    function extensionExist($name){
+        if (file_exists(WP_PLUGIN_DIR."/buddystream/extentions/" . strtolower($name) . "/core.php")) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Get all extension with parent
+     * @param $name
+     * @return array
+     */
+    function getExtensionsWithParent($name){
+
+        $extensions = array();
+
+        $configs = BuddyStreamExtentions::getExtentionsConfigs();
+
+        foreach($configs as $config){
+           if($config['parent']){
+               if($config['parent'] == $name){
+                   if(get_site_option("buddystream_".$config['name']."_power")){
+                       $extensions[] = $config;
+                   }
+               }
+           }
+        }
+
+        return $extensions;
+    }
     
 
     /**
@@ -55,10 +92,14 @@ class BuddyStreamExtentions{
 
         $config = parse_ini_file(WP_PLUGIN_DIR."/buddystream/extentions/".$extention."/config.ini");
 
-        if(!isset($_GET["settings"])){
+        if( ! isset($_GET["settings"])){
             $page = ucfirst($config['defaultpage']);
         }else{
             $page = ucfirst($_GET["settings"]);
+        }
+
+        if( $_GET['child'] ){
+            $extention = $_GET['child'];
         }
 
         include WP_PLUGIN_DIR."/buddystream/extentions/".$extention."/templates/Admin".$page.".php";
@@ -98,17 +139,18 @@ class BuddyStreamExtentions{
     * Tabs loader for extentions
     */
 
-    function tabLoader($extention){
-        
-        
+    function tabLoader($extention, $parent = false){
+
+
         $tabs = '';
         $tabs .= '<div class="buddystream_Adminmenu">';
         if (file_exists(WP_PLUGIN_DIR."/buddystream/extentions/".$extention."/config.ini")) {
 
             $config = parse_ini_file(WP_PLUGIN_DIR."/buddystream/extentions/".$extention."/config.ini");
-            $arrTabs = explode(",", $config['pages']);
 
+            $arrTabs = explode(",", $config['pages']);
             foreach($arrTabs as $tab){
+
                 $tab = trim($tab);
                 $class = "";
 
@@ -119,8 +161,31 @@ class BuddyStreamExtentions{
                         $class = 'class="activetab"';
                     }
                 }
+
                 $tabs.= '<a href="?page=buddystream_'.$extention.'&settings='.$tab.'" '.$class.'>'.__(ucfirst($tab),'buddystream_lang').'</a>';
-            }     
+            }
+
+
+            //also find any other extension that has this extension as parent
+            $childeren = BuddyStreamExtentions::getExtensionsWithParent($extention);
+
+            foreach($childeren as $child ){
+
+                $arrTabs = explode(",", $child['pages']);
+                foreach($arrTabs as $tab){
+
+                    $tab = trim($tab);
+                    $class = "";
+
+                    if(isset($_GET['settings']) && $_GET['settings'] == $tab){
+                        $class = 'class="activetab"';
+                    }
+
+                    $tabs.= '<a href="?page=buddystream_'.$extention.'&settings='.$tab.'&child='.$child['name'].'" '.$class.'>'.__(ucfirst($tab),'buddystream_lang').'</a>';
+                }
+
+            }
+
         }
            
         $tabs.= '<a href="http://buddystream.net/manuals/'.$config['name'].'" target="_blanc" class="tab_manual">'.__(ucfirst('Setup manual'),'buddystream_lang').'</a>';

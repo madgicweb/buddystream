@@ -16,7 +16,7 @@ if (isset($_GET['uniqueKey'])) {
 }
 
 //since BuddyStream 2.5.08
-if (!get_site_option('buddystream_fix_2508')) {
+if ( ! get_site_option('buddystream_fix_2508')) {
 
     //get all activity items from BuddyStream and user id in front of secondary_item_id
     global $bp, $wpdb;
@@ -41,46 +41,57 @@ if (!get_site_option('buddystream_fix_2508')) {
     update_site_option('buddystream_fix_2508', 1);
 }
 
+//if network set skip auto loading network import and run the set network
+if( $_GET['network'] ){
+    $importer = $_GET['network'];
+}
 
-//directory of extentions
-$handle = opendir(WP_PLUGIN_DIR . "/buddystream/extentions");
+if( ! $_GET['network'] ){
 
-//loop extentions so we can add active extentions to the import loop
-if ($handle) {
-    while (false !== ($file = readdir($handle))) {
-        if ($file != "." && $file != ".." && $file != ".DS_Store") {
-            if (file_exists(WP_PLUGIN_DIR . "/buddystream/extentions/" . $file . "/import.php")) {
-                if (get_site_option("buddystream_" . $file . "_power")) {
-                    $extentions[] = $file;
+    //directory of extentions
+    $handle = opendir(WP_PLUGIN_DIR . "/buddystream/extentions");
+
+    //loop extentions so we can add active extentions to the import loop
+    if ($handle) {
+        while (false !== ($file = readdir($handle))) {
+            if ($file != "." && $file != ".." && $file != ".DS_Store") {
+                if (file_exists(WP_PLUGIN_DIR . "/buddystream/extentions/" . $file . "/import.php")) {
+                    if (get_site_option("buddystream_" . $file . "_power")) {
+                        $extentions[] = $file;
+                    }
                 }
             }
         }
     }
+
+    //save importers to database
+    update_site_option("buddystream_importers", implode(",", $extentions));
+
+    //check if there is a import queue, if empty reset
+    if (get_site_option("buddystream_importers_queue") == "") {
+        update_site_option("buddystream_importers_queue", implode(",", $extentions));
+    }
+
+    //start the import (one per time)
+    $importers = get_site_option("buddystream_importers_queue");
+    $importers = explode(",", $importers);
+    $importer = current($importers);
+
+    //remove importer form queue before starting real import
+    unset($importers[0]);
+    update_site_option("buddystream_importers_queue", implode(",", $importers));
 }
 
-//save importers to database
-update_site_option("buddystream_importers", implode(",", $extentions));
-
-//check if there is a import queue, if empty reset
-if (get_site_option("buddystream_importers_queue") == "") {
-    update_site_option("buddystream_importers_queue", implode(",", $extentions));
-}
-
-//start the import (one per time)
-$importers = get_site_option("buddystream_importers_queue");
-$importers = explode(",", $importers);
-$importer = current($importers);
-
-//remove importer form queue before starting real import
-unset($importers[0]);
-update_site_option("buddystream_importers_queue", implode(",", $importers));
 
 //start the importer for real 
 if (file_exists(WP_PLUGIN_DIR . "/buddystream/extentions/" . $importer . "/import.php")) {
     if (get_site_option("buddystream_" . $importer . "_power")) {
 
         include_once(WP_PLUGIN_DIR . "/buddystream/extentions/" . $importer . "/import.php");
+
         if (function_exists("Buddystream" . ucfirst($importer) . "ImportStart")) {
+
+
             $numberOfItems = call_user_func("Buddystream" . ucfirst($importer) . "ImportStart");
 
             //create return array

@@ -37,24 +37,36 @@
             foreach (BuddyStreamExtentions::getExtentionsConfigs() as $extention) {
 
                 if(is_array($extention)){
-                    
-                    //define vars
-                    define('buddystream_'.$extention['name'].'_power', "");
-                    
-                    if($_POST){
-                        delete_site_option('buddystream_'.$extention['name'].'_power');
-                        update_site_option('buddystream_'.$extention['name'].'_power', trim($_POST['buddystream_'.$extention['name'].'_power']));
+
+                    //does it need a parent if so does parent exists
+                    $loadExtension = true;
+
+
+                    if( $extention['parent'] ){
+                        if( ! BuddyStreamExtentions::extensionExist($extention['parent'])){
+                            $loadExtension = false;
+                        }
                     }
 
-                    echo '
-                       <div class="postbox" style="float:left; width:200px; margin-right:20px;">
-                            <div><h3 style="cursor:default; font-family:arial; font-size:13px; font-weight:bold;"><span class="admin_icon '.$extention['name'].'"></span> '.__(ucfirst($extention['displayname']), 'buddystream').'</h3>
-                                <div class="inside" style="padding:10px;">
-                                    <input id="buddystream_'.$extention['name'].'" class="switch icons" type="checkbox" name="buddystream_'.$extention['name'].'_power" />
+                    if( $loadExtension ){
+                        //define vars
+                        define('buddystream_'.$extention['name'].'_power', "");
+
+                        if($_POST){
+                            delete_site_option('buddystream_'.$extention['name'].'_power');
+                            update_site_option('buddystream_'.$extention['name'].'_power', trim($_POST['buddystream_'.$extention['name'].'_power']));
+                        }
+
+                        echo '
+                           <div class="postbox" style="float:left; width:200px; margin-right:20px;">
+                                <div><h3 style="cursor:default; font-family:arial; font-size:13px; font-weight:bold;"><span class="admin_icon '.$extention['name'].'"></span> '.__(ucfirst($extention['displayname']), 'buddystream').'</h3>
+                                    <div class="inside" style="padding:10px;">
+                                        <input id="buddystream_'.$extention['name'].'" class="switch icons" type="checkbox" name="buddystream_'.$extention['name'].'_power" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ';
+                        ';
+                    }
                 }
             }
             ?>
