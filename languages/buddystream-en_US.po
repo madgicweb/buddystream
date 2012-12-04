@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-08 09:48+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman\n"
+"Language-Team: BuddyStream <support@buddystream.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Poedit-Language: English\n"
+"X-Poedit-KeywordsList: __;_e;_\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib\n"
+"X-Poedit-SearchPath-1: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default\n"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:85
+msgid "posted&nbsp;a"
+msgstr "Settings"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:145
+msgid "is not yet configured."
+msgstr "is not yet configured."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:172
+msgid "There is a new version of BuddyStream available login and download it on the BuddyStream website."
+msgstr "There is a new version of BuddyStream available login and download it on the BuddyStream website."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:173
+msgid "Currently installed:"
+msgstr "Currently installed:"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:173
+msgid "Available: "
+msgstr "Available: "
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:267
+msgid "Just created a new topic:"
+msgstr "Just created a new topic:"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:272
+msgid "Just responded to:"
+msgstr "Just responded to:"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamCore.php:418
+msgid "Show "
+msgstr "Show "
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:16
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:40
+msgid "Social networks"
+msgstr "Social networks"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:68
+msgid "Info"
+msgstr "Info"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:69
+msgid "BuddyStream"
+msgstr "BuddyStream"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:109
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:125
+msgid "Social albums"
+msgstr "Social albums"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:147
+msgid "Facebook"
+msgstr "Facebook"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamPageLoader.php:250
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Dashboard.php:54
+msgid "Quick stats (activity items)"
+msgstr "Quick stats (activity items)"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamSupport.php:11
+msgid "I just unlocked the"
+msgstr "I just unlocked the"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamSupport.php:11
+msgid "achievement!"
+msgstr "achievement!"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/lib/BuddyStreamSupport.php:158
+msgid "Close"
+msgstr "Close"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/AdminMenu.php:2
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/AdminMenu.php:3
+msgid "Powercentral"
+msgstr "Powercentral"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/AdminMenu.php:4
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/General.php:31
+msgid "General settings"
+msgstr "General settings"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/AdminMenu.php:5
+msgid "Cronjob settings"
+msgstr "Cronjob settings"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/AdminMenu.php:6
+msgid "Logs "
+msgstr "Logs "
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Cronjob.php:57
+msgid "Cronservice sucessfully configured."
+msgstr "Cronservice sucessfully configured."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Cronjob.php:72
+msgid "cronjob description"
+msgstr "You need to use the cronjob on your server.<br/>    Create a cron on your server that runs every 10 minutes.<br/>    You may copy the generated cronjob information to your server from BuddyStream.<br/>    <br/>    If you don't have access to add a cron of aren't allowed to by you hosting provider , we also can run the cron for a small price.<br/>    When you already have bought a license for the cron service or for the premium version just enter your license key below and everything is set to go. "
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Cronjob.php:80
+msgid "Own cron"
+msgstr "Own cron"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Cronjob.php:84
+msgid "Cron command:"
+msgstr "Cron command:"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Cronjob.php:90
+msgid "BuddyStream Cron Service"
+msgstr "BuddyStream Cron Service"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Cronjob.php:94
+msgid "License key"
+msgstr "License key"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Cronjob.php:99
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/General.php:50
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Powercentral.php:77
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Dashboard.php:8
+msgid "dashboard description"
+msgstr "Welcome to the BuddyStream Apollo Dashboard.<br> Over here you can see some quick stats, read the latest BuddyStream news and more."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Dashboard.php:19
+msgid "Latest news"
+msgstr "Latest news"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Dashboard.php:41
+msgid "Support"
+msgstr "Support"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Dashboard.php:43
+msgid "support description"
+msgstr "Did you found a bug? Or do you have a feature request? <br> Please report it in our support system.<br/><br/><a href=\"http://buddystream.net/support/\">Click here to go to our support site.</a>"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/General.php:19
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Powercentral.php:25
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/General.php:24
+msgid "general settings description"
+msgstr "These are the general settings of BuddyStream."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/General.php:35
+msgid "Enable social abums feature."
+msgstr "Enable social abums feature."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/General.php:40
+msgid "Enable sharing on groups and forums."
+msgstr "Enable sharing on groups and forums."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/General.php:45
+msgid "Enable ShareBox feature."
+msgstr "Enable ShareBox feature."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Log.php:5
+msgid "buddystream log description"
+msgstr "Below is the system log of BuddyStream, if something goes wrong you can see the errors over here.<br>Also when one of the networks is done importing you can see it over here."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Log.php:9
+msgid "Date"
+msgstr "Date"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Log.php:10
+msgid "Message"
+msgstr "Message"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Powercentral.php:30
+msgid "powercentral description"
+msgstr "Welcome to the BuddyStream Powercentral.<br>Over here you can control witch extentions (networks) are enabled or disabled.<br>Don't forget to save when you changed the switches."
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Powercentral.php:78
+msgid "Turn all on"
+msgstr "Turn all on"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Powercentral.php:79
+msgid "Turn all off"
+msgstr "Turn all off"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/SocialAlbum.php:3
+msgid "albums"
+msgstr "albums"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/SocialAlbum.php:5
+msgid "Social Albums"
+msgstr "Social Albums"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/SocialAlbum.php:76
+msgid "Nothing found (yet)"
+msgstr "Nothing found (yet)"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Stats.php:6
+msgid "Imported items vs user generated items current year"
+msgstr "Imported items vs user generated items current year"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/Stats.php:107
+msgid "Imported items vs user generated items last year"
+msgstr "Imported items vs user generated items last year"
+
+#: /Users/blackphantom25/projects/buddystream.net/wp-content/plugins/buddystream/extentions/default/templates/UserSettings.php:4
+msgid "Social networks setup description"
+msgstr "Hi there! Over here you can sync up all your favorite social networks.<br>Just click the network you would synchronize and with in a few clicks you are ready to rock!"
+
+#~ msgid "Sharebox"
+#~ msgstr "Sharebox"
+
+#~ msgid "Did you know?"
+#~ msgstr "Did you know?"
+
+#~ msgid "Settings"
+#~ msgstr "Settings"
+
+#~ msgid "Donate"
+#~ msgstr "Donate"
+
+#~ msgid "More freedom with BuddyStream version 2"
+#~ msgstr "More freedom with BuddyStream version 2"
+
+#~ msgid "freedom description"
+#~ msgstr ""
+#~ "We created more options, better flows and interfaces to give you and your "
+#~ "users more freedom."
+
+#~ msgid "Extend it with ease"
+#~ msgstr "Extend it with ease"
+
+#~ msgid "extend description"
+#~ msgstr ""
+#~ "With the new BuddyStream core creating new extension is much more fun!"
+#~ "<br>Now more developers can help out and bring BuddyStream to a higher "
+#~ "level.<br>Want to help out? Don't hesitate to contact us."
+
+#~ msgid "Faster, more stable and a cleaner interface."
+#~ msgstr "Faster, more stable and a cleaner interface."
+
+#~ msgid "faster stable cleaner description"
+#~ msgstr ""
+#~ "We cleaned our code to perform better then before, all known previous "
+#~ "known bugs are solved and with a completely new core we can keep it "
+#~ "stable.<br>With the improved interface where the pages not only look "
+#~ "cleaner, but also got a better flow."
+
+#~ msgid "Go premium and get more networks an the best support there is."
+#~ msgstr "Go premium and get more networks an the best support there is."
+
+#~ msgid "go premium description"
+#~ msgstr ""
+#~ "If you go premium you get even more! Besides Twitter, Youtube, Last.fm "
+#~ "and Flickr you also get: Facebook, Soundcloud and Rss integration!<br>But "
+#~ "that is not all! You also get the best support, free cron service and all "
+#~ "updates."
+
+#~ msgid "Filters"
+#~ msgstr "Filters"
+
+#~ msgid "Users"
+#~ msgstr "Users"
+
+#~ msgid "Statitics"
+#~ msgstr "Statitics"
+
+#~ msgid "Advertisement"
+#~ msgstr "Advertisement"
