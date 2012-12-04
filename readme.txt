@@ -2,8 +2,8 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.4.1, BuddyPress 1.6.1
-Stable tag: 2.6.2
+Tested up to: WP 3.4.2, BuddyPress 1.6.1
+Stable tag: 2.6.3
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -38,6 +38,9 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 2.6.3 =
+* Fixed vulnerability in the ShareBox
 
 = 2.6.2 =
 * Improved check for sending out to networks (now no longer conflicts with plugins like activity hashtags)

@@ -4,15 +4,15 @@
 <br/>
 
 <blockquote>
-    <h4><i>"<?php echo $_GET['content']; ?>"</i></h4>
+    <h4><i>"<?php echo esc_attr($_GET['content']); ?>"</i></h4>
 </blockquote>
 <br/>
 
 <?php
 
-$content   = $_GET['content'];
-$link      = $_GET['link'];
-$arrShares = explode(',', $_GET['shares']);
+$content   = esc_attr($_GET['content']);
+$link      = esc_attr($_GET['link']);
+$arrShares = explode(',', esc_attr($_GET['shares']));
 
 foreach($arrShares as $share){
 
@@ -26,7 +26,7 @@ foreach($arrShares as $share){
     }
 
     if($share == 'linkedin'){
-        echo '<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-url="'.$link.'"></script> ';
+        echo '<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-url="'.urlencode($link).'"></script> ';
     }
 
     if($share == 'googleplus'){

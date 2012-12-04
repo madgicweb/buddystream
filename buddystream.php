@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI: http://www.buddystream.net
 Description: BuddyStream
-Version: 2.6.2
+Version: 2.6.3
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -31,7 +31,7 @@ function buddystream_init()
     global $bp;
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '2.6.2');
+    define('BP_BUDDYSTREAM_VERSION', '2.6.3');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     define('BP_BUDDYSTREAM_DIR', dirname(__FILE__));
     define('BP_BUDDYSTREAM_URL', $bp->root_domain."/".str_replace(ABSPATH,"",dirname(__FILE__)));
