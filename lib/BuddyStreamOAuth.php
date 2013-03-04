@@ -365,6 +365,7 @@ class BuddyStreamOAuth{
         $req = BuddyStreamOAuthRequest::from_consumer_and_token($consumer, $accessToken, $this->getRequestType(), $url, $parameters);
         $req->sign_request(new BuddyStreamOAuthSignatureMethod_HMAC_SHA1(), $consumer, $accessToken);
 
+
         if($this->getRequestType() == 'GET'){
             return $this->executeRequest($req->to_url());
         }else{

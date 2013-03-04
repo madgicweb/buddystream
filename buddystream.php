@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI: http://www.buddystream.net
 Description: BuddyStream
-Version: 3.0
+Version: 3.0.1
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -31,7 +31,7 @@ function buddystream_init()
     global $bp;
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '3.0');
+    define('BP_BUDDYSTREAM_VERSION', '3.0.1');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     define('BP_BUDDYSTREAM_DIR', dirname(__FILE__));
     define('BP_BUDDYSTREAM_URL', $bp->root_domain."/".str_replace(ABSPATH,"",dirname(__FILE__)));
@@ -45,9 +45,6 @@ function buddystream_init()
 
     //initialize settings if needed
     buddyStreamInitSettings();
-
-    //add widget
-    add_action('widgets_init', 'buddystream_connect_widget');
 
     //now initialize the core
     include_once('lib/BuddyStreamCurl.php');
@@ -93,12 +90,10 @@ function buddyStreamInitSync(){
                 }
             }
         }
-
         update_site_option("buddystream_30", "true");
 
     }
 }
-
 
 
 /**
@@ -209,8 +204,8 @@ add_action('bp_init', 'buddystream_init', 4);
 /**
  * Add the BuddyStream Connect Widget
  */
-
+add_action('widgets_init', 'buddystream_connect_widget');
 function buddystream_connect_widget() {
-    include_once(BP_BUDDYSTREAM_DIR.'/lib/BuddyStreamWidgets.php');
+    include_once('lib/BuddyStreamWidgets.php');
     register_widget('BuddyStream_Connect_Widget');
 }

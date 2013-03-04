@@ -228,7 +228,7 @@ function buddystreamCheckLicense($licenseKey = null) {
  */
 add_action('wp_head', 'buddystreamWriteHashtagsToHeader');
 function buddystreamWriteHashtagsToHeader(){
-    echo "<script> var buddystreamNetworks = '#twitter,#facebook,#facebookpage,#linkedin,#foursquare,#location;' </script>";
+    echo "<script> var buddystreamNetworks = '#twitter,#facebook,#facebookpage,#linkedin,#foursquare,#location,#tumblr;' </script>";
 
 }
 
