@@ -381,9 +381,6 @@ function buddystreamAddSharing()
 
     echo '<div class="buddystream_hoverbox"></div>';
 
-
-    if($bp->loggedin_user->id == 1){
-
         echo'<span class="buddystream_share_button mylocation" id="' . __('Add my location', 'buddystream_location') . '"></span>';
 
         echo "<script>var buddystream_url = '" . BP_BUDDYSTREAM_URL . "';</script>";
@@ -394,9 +391,6 @@ function buddystreamAddSharing()
                 <div class="buddystream_location_button use">'.__('Use this location','buddystream').'</div>
                 <div class="buddystream_location_button cancel">'.__('Cancel','buddystream').'</div>
               </div>';
-
-    }
-
 }
 
 function BuddystreamShareButton() {

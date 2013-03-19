@@ -75,8 +75,22 @@ class BuddyStreamFilters{
             }
         }
 
-            return $content;
-        }
+        //strip out acivity plus tags
+        $content = str_replace("[bpfb_link]", "" , $content);
+        $content = str_replace("[/bpfb_link]", "" , $content);
+        $content = str_replace("[bpfb_video]", "" , $content);
+        $content = str_replace("[/bpfb_video]", "" , $content);
+        $content = str_replace("[/bpfb_images]", "" , $content);
+        $content = str_replace("[bpfb_images]", "" , $content);
+        $content = str_replace("[BPFB_LINK]", "" , $content);
+        $content = str_replace("[/BPFB_LINK]", "" , $content);
+        $content = str_replace("[BPFB_VIDEO]", "" , $content);
+        $content = str_replace("[/BPFB_VIDEO]", "" , $content);
+        $content = str_replace("[/BPFB_IMAGES]", "" , $content);
+        $content = str_replace("[BPFB_IMAGES]", "" , $content);
+
+        return $content;
+    }
 
 
     /**
