@@ -5,16 +5,6 @@
 
 function BuddystreamTwitterImportStart()
 {
-
-    if (!get_site_option('tweetstream_user_settings_syncbp')) {
-
-        //add record to the log
-        $buddyStreamLog = new BuddyStreamLog();
-        $buddyStreamLog->log("Twitter import disabled.");
-
-        return false;
-    }
-
     $importer = new BuddyStreamTwitterImport();
     return $importer->doImport();
 }

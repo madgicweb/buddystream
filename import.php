@@ -56,17 +56,26 @@ if( ! $_GET['network'] ){
     //save importers to database
     update_site_option("buddystream_importers", implode(",", $extensions));
 
+    //check if imports are turned on
+    $importQueue = array();
+    foreach($extensions as $extension){
+
+        if(get_site_option("buddystream_".$extension."_import")){
+            $importQueue[] = $extension;
+        }
+    }
+
     //check if there is a import queue, if empty reset
     if (get_site_option("buddystream_importers_queue") == "") {
-        update_site_option("buddystream_importers_queue", implode(",", $extensions));
+        update_site_option("buddystream_importers_queue", implode(",", $importQueue));
     }
 
     //start the import (one per time)
     $importers = get_site_option("buddystream_importers_queue");
     $importers = explode(",", $importers);
-    $importer = current($importers);
+    $importer  = current($importers);
 
-    //remove importer form queue before starting real import
+    //remove importer from queue before starting real import
     unset($importers[0]);
     update_site_option("buddystream_importers_queue", implode(",", $importers));
 }
