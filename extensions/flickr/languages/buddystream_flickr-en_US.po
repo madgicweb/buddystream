@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Flickr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-28 23:53+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman <info@buddystream.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: /Users/peterhofman/projects/buddystream.net/wp-"
+"content/plugins/buddystream-dev/extensions/flickr\n"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:36
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:41
+msgid "flickr settings description"
+msgstr ""
+"For the Flickr intergration to work with BuddyStream you will need to get a "
+"API key from Flickr.<br>You may apply for a Flickr API key here:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:56
+msgid "Flickr API"
+msgstr "Flickr API"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:62
+msgid "API key:"
+msgstr "API key:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:74
+msgid "User options"
+msgstr "User options"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:82
+msgid "Show  Flickr album on user profile page?"
+msgstr "Show  Flickr album on user profile page?"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:88
+msgid ""
+"Maximum number of photos imported per user, per day (empty = unlimited):"
+msgstr ""
+"Maximum number of photos imported per user, per day (empty = unlimited):"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminSettings.php:97
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:33
+msgid "Statistics"
+msgstr "Statistics"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:51
+msgid "Amount of users:"
+msgstr "Amount of users:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:55
+msgid "Amount of user using Flickr integration:"
+msgstr "Amount of user using Flickr integration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:59
+msgid "Percentage of users using Flickr integration:"
+msgstr "Percentage of users using Flickr integration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:63
+msgid "Amount of activity updates:"
+msgstr "Amount of activity updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:67
+msgid "Amount of Flickr photos:"
+msgstr "Amount of Flickr photos:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:71
+msgid "Percentage of Flickr photos:"
+msgstr "Percentage of Flickr photos:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:75
+msgid "Average number of Flickr photos imported per day:"
+msgstr "Average number of Flickr photos imported per day:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:79
+msgid "Average number of Flickr photos imported per week:"
+msgstr "Average number of Flickr photos imported per week:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:83
+msgid "Average number of Flickr photos imported per month:"
+msgstr "Average number of Flickr photos imported per month:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/AdminStatitics.php:87
+msgid "Average number of Flickr photos imported per year:"
+msgstr "Average number of Flickr photos imported per year:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/UserSettings.php:9
+msgid "Settings saved"
+msgstr "Settings saved"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/UserSettings.php:22
+msgid "Flickr Settings"
+msgstr "Flickr Settings"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/UserSettings.php:32
+msgid "Flickr username"
+msgstr "Flickr username"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/UserSettings.php:44
+msgid "Save settings"
+msgstr "Save settings"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/flickr/templates/UserSettings.php:48
+msgid "Remove Flickr synchronization."
+msgstr "Remove Flickr synchronization."
+
+#~ msgid "Flickr album"
+#~ msgstr "Flickr album"
+
+#~ msgid "Flickr"
+#~ msgstr "Flickr"
+
+#~ msgid "Flickr API server offline at the moment."
+#~ msgstr "Flickr API server offline at the moment."
+
+#~ msgid "Flickr Album"
+#~ msgstr "Flickr Album"
+
+#~ msgid "User has no photo's (yet)"
+#~ msgstr "Flickr API server offline at the moment."
+
+#~ msgid "Hide Flickr photos on the sidewide activity stream?"
+#~ msgstr "Hide Flickr photos on the sidewide activity stream?"
+
+#~ msgid "flickr statitics description"
+#~ msgstr ""
+#~ "Below you see a table with some nice to know statistics, i may help you "
+#~ "to monitor you members social interaction."
+
+#~ msgid "Flickr is currently offline please come back in a while."
+#~ msgstr "Flickr is currently offline please come back in a while."
+
+#~ msgid ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+#~ msgstr ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+
+#~ msgid "Are you sure ?"
+#~ msgstr "Are you sure ?"
+
+#~ msgid "flickr users description"
+#~ msgstr ""
+#~ "Below is a list of users whom are using Flickr. You may reset their "
+#~ "Flickr settings here.<br><b>Note:</b> When you reset a user, they will "
+#~ "need to fill in their Flickr username again. Any Flickr photos that have "
+#~ "already been imported <b>WILL NOT</b> be deleted."
+
+#~ msgid "Photos imported"
+#~ msgstr "Photos imported"
+
+#~ msgid "Reset user"
+#~ msgstr "Reset user"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "No"
+#~ msgstr "No"
