@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: BuddyStream
+Plugin Name: BuddyStream Premium
 Plugin URI: http://www.buddystream.net
-Description: BuddyStream
-Version: 3.0.3
+Description: BuddyStream Premium
+Version: 3.0.4
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -31,7 +31,7 @@ function buddystream_init()
     global $bp;
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '3.0.3');
+    define('BP_BUDDYSTREAM_VERSION', '3.0.4');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     define('BP_BUDDYSTREAM_DIR', dirname(__FILE__));
     define('BP_BUDDYSTREAM_URL', $bp->root_domain."/".str_replace(ABSPATH,"",dirname(__FILE__)));
@@ -139,8 +139,17 @@ function buddyStreamInitDatabase(){
           PRIMARY KEY  (`id`)
         );";
 
-        dbDelta($buddystreamSql);
+        @dbDelta($buddystreamSql);
         unset($buddystreamSql);
+
+       $buddystreamSql = "CREATE TABLE IF NOT EXISTS " . $wpdb->base_prefix . "buddystream_imports (
+          `id` int(11) NOT NULL auto_increment,
+          `item_id` varchar(255) NOT NULL,
+          PRIMARY KEY  (`id`)
+        );";
+
+       @dbDelta($buddystreamSql);
+       unset($buddystreamSql);
 
         update_site_option("buddystream_installed_version", "1");
     }
@@ -156,7 +165,7 @@ function buddyStreamInitDatabase(){
           PRIMARY KEY  (`id`)
         );";
 
-        dbDelta($buddystreamSql);
+        @dbDelta($buddystreamSql);
         unset($buddystreamSql);
 
        //now get all activity items with a secondary id adn add it to them buddystream imports table
@@ -167,7 +176,7 @@ function buddyStreamInitDatabase(){
            $item_id = str_replace($item->user_id."_", "", $item->secondary_item_id);
            $item_id = $item->user_id."-".$item_id."-".$item->component;
 
-           $wpdb->query($wpdb->prepare("INSERT INTO ".$wpdb->base_prefix."buddystream_imports set item_id='".$item_id."'"));
+           $wpdb->query("INSERT INTO ".$wpdb->base_prefix."buddystream_imports set item_id='".$item_id."'");
        }
 
         update_site_option('buddystream_26', '1');

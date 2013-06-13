@@ -35,11 +35,11 @@
 
 
             <?php
-            $count_users = count($wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->users")));
-            $count_tweetstreamusers = count($wpdb->get_results($wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='tweetstream_token';")));
+            $count_users = count($wpdb->get_results("SELECT * FROM $wpdb->users"));
+            $count_tweetstreamusers = count($wpdb->get_results("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='tweetstream_token';"));
             $perc_tweetstreamusers = round(($count_tweetstreamusers / $count_users) * 100);
-            $count_tweets = count($wpdb->get_results($wpdb->prepare("SELECT type FROM " . $bp->activity->table_name . " WHERE type='twitter';")));
-            $count_activity = count($wpdb->get_results($wpdb->prepare("SELECT id FROM " . $bp->activity->table_name)));
+            $count_tweets = count($wpdb->get_results("SELECT type FROM " . $bp->activity->table_name . " WHERE type='twitter';"));
+            $count_activity = count($wpdb->get_results("SELECT id FROM " . $bp->activity->table_name));
             $perc_tweetupdates = round(($count_tweets / $count_activity * 100));
             $average_tweets_day = round($count_tweets / 24);
             $average_tweets_week = $average_tweets_day * 7;

@@ -32,7 +32,7 @@ class BuddyStreamTwitterImport
             if (get_site_option('tweetstream_user_settings_syncbp') == 0) {
 
                 $user_metas = $wpdb->get_results(
-                    $wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='tweetstream_token'")
+                    "SELECT user_id FROM $wpdb->usermeta WHERE meta_key='tweetstream_token'"
                 );
 
                 if ($user_metas) {
@@ -41,7 +41,7 @@ class BuddyStreamTwitterImport
                         //check for
                         $limitReached = $buddyStreamFilters->limitReached('twitter', $user_meta->user_id);
 
-                        if (!$limitReached && get_user_meta($user_meta->user_id, 'tweetstream_synctoac', 1)) {
+                        if (!$limitReached && get_user_meta($user_meta->user_id, 'tweetstream_synctoac', 1) && ! get_user_meta($user_meta->user_id, 'buddystream_linkedin_reauth', 1)) {
 
                             //Handle the OAuth requests
                             $buddyStreamOAuth = new BuddyStreamOAuth();
@@ -51,8 +51,12 @@ class BuddyStreamTwitterImport
                             $buddyStreamOAuth->setAccessToken(get_user_meta($user_meta->user_id, 'tweetstream_token', 1));
                             $buddyStreamOAuth->setAccessTokenSecret(get_user_meta($user_meta->user_id, 'tweetstream_tokensecret', 1));
 
-                            $items = $buddyStreamOAuth->oAuthRequest('http://api.twitter.com/1/statuses/user_timeline.xml');
-                            $items = @simplexml_load_string($items);
+                            $items = $buddyStreamOAuth->oAuthRequest('http://api.twitter.com/1.1/statuses/user_timeline.json');
+                            $items = json_decode($items);
+
+                            if($items->error){
+                                update_user_meta($user_meta->user_id,"buddystream_twitter_reauth", true);
+                            }
 
                             if ($items && !$items->error) {
 

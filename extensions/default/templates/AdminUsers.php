@@ -66,7 +66,7 @@
                 foreach ($users as $user_meta) {
 
                     //get userdata
-                    $user_data = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".$wpdb->users." WHERE id=".$user_meta->user_id.";"));
+                    $user_data = $wpdb->get_results("SELECT * FROM ".$wpdb->users." WHERE id=".$user_meta->user_id.";");
                     $user_data = $user_data[0];
 
                     //count imported items

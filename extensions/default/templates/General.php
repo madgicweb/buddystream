@@ -87,7 +87,7 @@ if ($_POST['submit']) {
 </div>
 
 
-<?
+<?php
 //flip switches
 $runscript = "";
 foreach ($arraySwitches as $switch) {

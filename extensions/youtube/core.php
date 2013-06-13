@@ -37,7 +37,7 @@ function buddystream_youtube()
 function buddystreamYoutubeUsers(){
 
     global $wpdb;
-    return $wpdb->get_results($wpdb->prepare("SELECT user_id FROM " . $wpdb->usermeta . " WHERE meta_key='bs_youtube_username';"));
+    return $wpdb->get_results("SELECT user_id FROM " . $wpdb->usermeta . " WHERE meta_key='bs_youtube_username';");
 }
 
 
@@ -49,7 +49,7 @@ function buddystreamYoutubeUsers(){
 function buddystreamYoutubeCountItems($user_id){
 
     global $wpdb,$bp;
-    return count($wpdb->get_results($wpdb->prepare("SELECT * FROM " . $bp->activity->table_name . " WHERE user_id=".$user_id." AND type='youtube';")));
+    return count($wpdb->get_results("SELECT * FROM " . $bp->activity->table_name . " WHERE user_id=".$user_id." AND type='youtube';"));
 }
 
 

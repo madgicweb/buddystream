@@ -8,7 +8,13 @@ function buddystreamTwitterSharing()
     global $bp;
     if (get_site_option("tweetstream_consumer_key")  && get_site_option("buddystream_twitter_export")) {
         if (get_user_meta($bp->loggedin_user->id, 'tweetstream_token', 1)) {
-            echo'<span class="buddystream_share_button twitter" onclick="twitter_addTag()" id="' . __('Also post this to my Twitter account.', 'buddystream_twitter') . '"></span>';
+
+
+            if(get_user_meta($bp->loggedin_user->id, 'buddystream_linkedin_reauth', 1)){
+                echo '<a href="' . $bp->loggedin_user->domain . BP_SETTINGS_SLUG . '/buddystream-networks/?network=twitter"><span class="buddystream_share_button twitter" id="' . __('You need to re-authenticate on Facebook.', 'buddystream_twitter') . '"></span></a>';
+            }else{
+                echo'<span class="buddystream_share_button twitter" onclick="twitter_addTag()" id="' . __('Also post this to my Twitter account.', 'buddystream_twitter') . '"></span>';
+            }
 
             $max_message = __("You\'ve reached the max. amount of characters for a Tweet.  The Message will appear truncated on Twitter.", "buddystream_twitter");
             echo '<div class="twitter_share_counterbox" style="display:none;">
@@ -106,7 +112,7 @@ function buddystream_twitter()
 function buddystreamTwitterUsers(){
 
     global $wpdb;
-    return $wpdb->get_results($wpdb->prepare("SELECT user_id FROM " . $wpdb->usermeta . " WHERE meta_key='tweetstream_token';"));
+    return $wpdb->get_results("SELECT user_id FROM " . $wpdb->usermeta . " WHERE meta_key='tweetstream_token';");
 }
 
 
@@ -118,7 +124,7 @@ function buddystreamTwitterUsers(){
 function buddystreamTwitterCountItems($user_id){
 
     global $wpdb,$bp;
-    return count($wpdb->get_results($wpdb->prepare("SELECT * FROM " . $bp->activity->table_name . " WHERE user_id=".$user_id." AND type='twitter';")));
+    return count($wpdb->get_results("SELECT * FROM " . $bp->activity->table_name . " WHERE user_id=".$user_id." AND type='twitter';"));
 }
 
 

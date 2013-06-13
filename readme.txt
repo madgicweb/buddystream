@@ -2,8 +2,8 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.5.1, BuddyPress 1.6.4
-Stable tag: 3.0.3
+Tested up to: WP 3.5.1, BuddyPress 1.7.2
+Stable tag: 3.0.4
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -39,6 +39,13 @@ For support and other feature request, please contact us on our website.
 == Screenshots ==
 
 == ChangeLog ==
+
+= 3.0.4 =
+* Upgraded twitter API to new 1.1
+* Fixed malformed tokens
+* Fixed php short tag replacements
+* Re-authetication added for expired accounts
+* Cleaned-up query's
 
 = 3.0.3 =
 * Fixed Twitter import
