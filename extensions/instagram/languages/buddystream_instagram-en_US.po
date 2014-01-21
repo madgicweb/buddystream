@@ -1,0 +1,296 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Instagram\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-20 22:40+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman <info@buddystream.net>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SearchPath-0: /Users/peterhofman/projects/buddystream.net/wp-"
+"content/plugins/buddystream-premium/extensions/instagram\n"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:32
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:38
+msgid "instagram settings description"
+msgstr ""
+"For BuddyStream to work you will need to get an Client id and a Client "
+"secret from Instagram.<br><br>1. Go to  <a href=\"http://instagram.com/"
+"developer/register/\" target=\"_blank\">http://instagram.com/developer/"
+"register/#</a> and login with your Foursaquare account.<br>2. Fill in the "
+"form and set the  <strong>\"Redirect url\"</strong> to: <b>#ROOTDOMAIN/?"
+"network=instagram</b><br>3. Save the app and copy the <strong>\"Client id\" "
+"</strong>and <strong>\"Client secret\"</strong> into the fields below.<br> "
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:52
+msgid "Instagram API"
+msgstr "Instagram API"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:58
+msgid "Client key:"
+msgstr "Client key:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:64
+msgid "Client secret:"
+msgstr "Client secret:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:76
+msgid "User options"
+msgstr "User options"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:83
+msgid ""
+"Maximum Instagram images to be imported per user, per day (empty = unlimited "
+"tweets import):"
+msgstr ""
+"Maximum Instagram media to be imported per user, per day (empty = unlimited "
+"tweets import):"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:95
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:22
+msgid "instagram statitics description"
+msgstr "Instagram statitics description"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:29
+msgid "Statistics"
+msgstr "Statistics"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:50
+msgid "Amount of users:"
+msgstr "Amount of users:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:54
+msgid "Amount of user Instagram intergration:"
+msgstr "Amount of user Instagram intergration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:58
+msgid "Percentage of users using intergration:"
+msgstr "Percentage of users using intergration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:62
+msgid "Amount of activity updates:"
+msgstr "Amount of activity updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:66
+msgid "Amount of items updates:"
+msgstr "Amount of items updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:70
+msgid "Percentage of items in activity updates:"
+msgstr "Percentage of items in activity updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:74
+msgid "Average items import per day:"
+msgstr "Average items import per day:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:78
+msgid "Average items import per week:"
+msgstr "Average items import per week:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:82
+msgid "Average items import per month:"
+msgstr "Average items import per month:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:86
+msgid "Average items import per year:"
+msgstr "Average items import per year:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:20
+msgid "Settings saved"
+msgstr "Settings saved"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:31
+msgid "Instagram Settings"
+msgstr "Instagram Settings"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:39
+msgid "There are no settings available.</br></br>"
+msgstr "There are no settings available.</br></br>"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:46
+msgid "Synchronize Instagram to my activity stream?"
+msgstr "Synchronize Instagram to my activity stream?"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:56
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:81
+msgid "Yes"
+msgstr "Yes"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:62
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:85
+msgid "No"
+msgstr "No"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:72
+msgid "Send achievements unlock to my instagram"
+msgstr "Send achievements unlock to my Instagram"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:96
+msgid "Save settings"
+msgstr "Save settings"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:100
+msgid "Remove Instagram synchronization."
+msgstr "Remove Instagram synchronization."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:107
+msgid ""
+"Instagram setup</h3>\n"
+"                 You may setup you Instagram intergration over here.<br/>\n"
+"                 Before you can begin using Instagram with this site you "
+"must authorize on Instagram by clicking the link below."
+msgstr ""
+"Instagram setup</h3>\n"
+"                 You may setup you Instagram integration over here.<br/>\n"
+"                 Before you can begin using Instagram with this site you "
+"must authorise on Instagram by clicking the link below."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:115
+msgid "Click here to start authorization"
+msgstr "Click here to start authorization"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:117
+msgid ""
+"There is a problem with the authentication service at this moment please "
+"come back in a while."
+msgstr ""
+"There is a problem with the authentication service at this moment please "
+"come back in a while."
+
+#~ msgid "Also checkin on Foursquare."
+#~ msgstr "Also checkin on Foursquare."
+
+#~ msgid "Foursquare API"
+#~ msgstr "Foursquare API"
+
+#~ msgid "Map options (optional)"
+#~ msgstr "Map options (optional)"
+
+#~ msgid "Map zoom"
+#~ msgstr "Map zoom"
+
+#~ msgid "Map width"
+#~ msgstr "Map width"
+
+#~ msgid "Map height"
+#~ msgstr "Map height"
+
+#~ msgid "Twitter API server offline at the moment."
+#~ msgstr "Twitter API server offline at the moment."
+
+#~ msgid "to twitter"
+#~ msgstr "to Twitter"
+
+#~ msgid ""
+#~ "You\\'ve reached the max. amount of characters for a Tweet.  The Message "
+#~ "will appear truncated on Twitter."
+#~ msgstr ""
+#~ "You\\'ve reached the max. amount of characters for a Tweet.  The Message "
+#~ "will appear truncated on Twitter."
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Filters saved."
+#~ msgstr "Filters saved."
+
+#~ msgid "twitter filters description"
+#~ msgstr ""
+#~ "Using Twitter Filters will prevent overcrowded and \"messy\" activity "
+#~ "streams. <br>Example: You may have a network that focuses on soccer.  To "
+#~ "keep things \"clean\" you will only want Tweets that pertain to soccer to "
+#~ "be imported. By adding the word \"soccer\" to the Filter below, only "
+#~ "Tweets with the word \"soccer\" will be imported and shown in the users "
+#~ "Tweets on your site.<br><br>By using commas as a delimiter, you may set-"
+#~ "up multiple filters (No Filter = All Tweets).In addition, the \"Explicit "
+#~ "Words\" filter, will block any Tweet that contains them regardless of the "
+#~ "other filter.<br><b>Note:</b> Keywords listed in the \"Good\" Filter must "
+#~ "be present in the update itself to be included in the site import. "
+#~ "Likewise, keywords listed in the \"Explicit Filter\" will cause that "
+#~ "particular update NOT to be imported."
+
+#~ msgid "Twitter filters (optional)"
+#~ msgstr "Twitter filters (optional)"
+
+#~ msgid "Filters (comma seperated)"
+#~ msgstr "Filters (comma seperated)"
+
+#~ msgid "Explicit words (comma seperated)"
+#~ msgstr "Explicit words (comma seperated)"
+
+#~ msgid ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+#~ msgstr ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+
+#~ msgid "Are you sure ?"
+#~ msgstr "Are you sure ?"
+
+#~ msgid "twitter users description"
+#~ msgstr ""
+#~ "Below is a list of all users whom are using Twitter. You may reset there "
+#~ "Twitter settings here. <br><b>Note:</b> When you reset a user they need "
+#~ "to re-authenticate with Twitter.Tweets already imported <b>WILL NOT</b> "
+#~ "be deleted!"
+
+#~ msgid "Username"
+#~ msgstr "Username"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Tweets imported"
+#~ msgstr "Tweets imported"
+
+#~ msgid "Reset user"
+#~ msgstr "Reset user"
+
+#~ msgid "Twitter Settings"
+#~ msgstr "Twitter Settings"
+
+#~ msgid "Filters"
+#~ msgstr "Filters"
+
+#~ msgid "Good Filter (separate words with commas)"
+#~ msgstr "Good Filter (separate words with commas)"
+
+#~ msgid "Bad Filter (separate words with commas)"
+#~ msgstr "Bad Filter (separate words with commas)"
+
+#~ msgid "Twitter API"
+#~ msgstr "Twitter API"
+
+#~ msgid "Consumer key:"
+#~ msgstr "Consumer key:"
+
+#~ msgid "Consumer secret key:"
+#~ msgstr "Consumer secret:"
+
+#~ msgid "Hide tweets on the sidewide activity stream?"
+#~ msgstr "Hide tweets on the sidewide activity stream?"
+
+#~ msgid "Allow users to sync Twitter to you website?"
+#~ msgstr "Allow users to sync Twitter to you website?"
+
+#~ msgid "Extra options"
+#~ msgstr "Extra options"
+
+#~ msgid "Show Twitter share button?"
+#~ msgstr "Show Twitter share button?"
+
+#~ msgid "Show counter?"
+#~ msgstr "Show counter?"

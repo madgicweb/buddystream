@@ -17,7 +17,7 @@ function buddystream_flickr()
 function buddystreamFlickrUsers(){
 
     global $wpdb;
-    return $wpdb->get_results($wpdb->prepare("SELECT user_id FROM " . $wpdb->usermeta . " WHERE meta_key='bs_flickr_username';"));
+    return $wpdb->get_results("SELECT user_id FROM " . $wpdb->usermeta . " WHERE meta_key='bs_flickr_username';");
 }
 
 /**
@@ -38,7 +38,7 @@ function buddystreamFlickrImportOn($user_id){
 function buddystreamFlickrCountItems($user_id){
 
     global $wpdb,$bp;
-    return count($wpdb->get_results($wpdb->prepare("SELECT * FROM " . $bp->activity->table_name . " WHERE user_id=".$user_id." AND type='flickr';")));
+    return count($wpdb->get_results("SELECT * FROM " . $bp->activity->table_name . " WHERE user_id=".$user_id." AND type='flickr';"));
 }
 
 

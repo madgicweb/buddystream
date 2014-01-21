@@ -15,6 +15,8 @@ if ($_GET['reset'] == 'true') {
 
 if (isset($_GET['oauth_token'])) {
 
+
+
     $buddystreamOAuth = new BuddyStreamOAuth();
     $buddystreamOAuth->setAccessTokenUrl('https://api.twitter.com/oauth/access_token');
     $buddystreamOAuth->setCallbackUrl($bp->loggedin_user->domain . BP_SETTINGS_SLUG . '/buddystream-networks/?network=twitter');
@@ -43,7 +45,6 @@ if (isset($_GET['oauth_token'])) {
     update_user_meta($bp->loggedin_user->id, 'tweetstream_tokensecret', '' .  $tokenSecretArray[1] . '');
     update_user_meta($bp->loggedin_user->id, 'tweetstream_synctoac', 1);
     delete_user_meta($bp->loggedin_user->id, "buddystream_twitter_reauth", true);
-
     //for other plugins
     do_action('buddystream_twitter_activated');
 
@@ -66,7 +67,7 @@ $tweetstream_filtermentions = get_user_meta($bp->loggedin_user->id, 'tweetstream
 //achievements plugin
 $tweetstream_achievements = get_user_meta($bp->loggedin_user->id, 'tweetstream_achievements', 1);
 
-if (get_user_meta($bp->loggedin_user->id, 'tweetstream_token', 1) && ! get_user_meta($bp->loggedin_user->id, 'buddystream_facebook_reauth', 1)) {
+if (get_user_meta($bp->loggedin_user->id, 'tweetstream_token', 1) && ! get_user_meta($bp->loggedin_user->id, 'buddystream_twitter_reauth', 1)) {
     echo '<form id="settings_form" action="' . $bp->loggedin_user->domain . 'settings/buddystream-networks/?network=twitter" method="post">
         <h3>' . __('Twitter Settings', 'buddystream_twitter') . '</h3>';
     ?>

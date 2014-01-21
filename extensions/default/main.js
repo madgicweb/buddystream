@@ -1,10 +1,10 @@
 jQuery(document).ready(function (jQuery) {
 
     jQuery('.activity').ajaxStop(function () {
-        setTimeout("buddystreamLoadColorBox();", 1500);
+        setTimeout("buddystreamLoadBuddyBox();", 1500);
     });
 
-    buddystreamLoadColorBox();
+    buddystreamLoadBuddyBox();
 
     jQuery(".buddystream_share_button.mylocation").click(function() {
         navigator.geolocation.getCurrentPosition(buddystreamUseLocation);
@@ -77,10 +77,13 @@ function buddystreamSetLocationCookie(value)
     document.cookie= "buddystream_location="+value+"; expires="+exdate +"; path=/";
 }
 
-function buddystreamLoadColorBox() {
-    jQuery(".bs_lightbox").colorbox();
-    jQuery(".bs_lightbox[href*='http://www.youtube.com/embed/']").colorbox({ iframe: true, innerWidth: 625, innerHeight: 444 });
-    jQuery(".bs_lightbox[href*='http://player.vimeo.com/']").colorbox({ iframe: true, innerWidth: 625, innerHeight: 444 });
+function buddystreamLoadBuddyBox() {
+
+
+    jQuery(".bs_lightbox").buddybox();
+    jQuery(".bs_lightbox[href*='http://www.youtube.com/embed/']").buddybox({ iframe: true, innerWidth: 625, innerHeight: 444 });
+    jQuery(".bs_lightbox[href*='http://player.vimeo.com/']").buddybox({ iframe: true, innerWidth: 625, innerHeight: 444 });
+
 }
 
 /*

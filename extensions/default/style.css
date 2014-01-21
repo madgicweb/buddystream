@@ -83,6 +83,7 @@ div.buddystream_album .buddystream_album_thumb{
 .googleplus .activity-inner img,
 .linkedin .activity-inner img,
 .vimeo .activity-inner img,
+.instagram .activity-inner img,
 .youtube .activity-inner img {
     float: left !important;
     margin-right: 10px;
@@ -253,6 +254,7 @@ a.buddystream_authorize_button {
 .lastfm .activity-header p,
 .linkedin .activity-header p,
 .foursquare .activity-header p,
+.instagram .activity-header p,
 .tumblr .activity-header p {
     padding-left: 23px;
 }
@@ -311,6 +313,10 @@ a.buddystream_authorize_button {
 
 .foursquare .activity-header p, .admin_icon.foursquare, .buddystream_sharebutton.foursquare, .buddystream_navigation_links ul li a.foursquare {
     background: url("../../images/icon_sprite.png") no-repeat scroll 0 -461px transparent;
+}
+
+.instagram .activity-header p, .admin_icon.instagram, .buddystream_sharebutton.instagram, .buddystream_navigation_links ul li a.instagram {
+    background: url("../../images/icon_sprite.png") no-repeat scroll 0 -500px transparent;
 }
 
 /*

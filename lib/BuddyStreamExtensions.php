@@ -48,7 +48,7 @@ class BuddyStreamExtensions{
         $configs = $this->getExtensionsConfigs();
 
         foreach($configs as $config){
-           if($config['parent']){
+           if(isset($config['parent'])){
                if($config['parent'] == $name){
                    $extensions[] = $config;
                }
@@ -80,13 +80,15 @@ class BuddyStreamExtensions{
 
         return $config;
     }
-    
+
 
     /**
-        * Page loader for extensions
-        */
-
+     * Page loader
+     * @param $extension
+     */
     function pageLoader($extension){
+
+        $extension = strtolower($extension);
 
         $config = parse_ini_file(BP_BUDDYSTREAM_DIR."/extensions/".$extension."/config.ini");
 
@@ -96,7 +98,7 @@ class BuddyStreamExtensions{
             $page = ucfirst($_GET["settings"]);
         }
 
-        if( $_GET['child'] ){
+        if(isset($_GET['child']) ){
             $extension = $_GET['child'];
         }
 
@@ -133,10 +135,13 @@ class BuddyStreamExtensions{
         );
     }
 
-    /**
-    * Tabs loader for extensions
-    */
 
+    /**
+     * Tab loader
+     * @param $extension
+     * @param bool $parent
+     * @return string
+     */
     function tabLoader($extension, $parent = false){
 
 

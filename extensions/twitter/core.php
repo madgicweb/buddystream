@@ -88,7 +88,6 @@ function buddystreamTwitterPostUpdate($content = "", $shortLink = "", $user_id =
     $response = json_decode($response);
 
     buddyStreamAddToImportLog($bp->loggedin_user->id, $response->id_str, 'twitter');
-
 }
 
 /**

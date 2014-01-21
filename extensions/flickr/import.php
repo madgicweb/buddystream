@@ -26,14 +26,10 @@ class BuddyStreamFlickrImport
 
         $itemCounter = 0;
 
-        $user_metas = $wpdb->get_results(
-            $wpdb->prepare(
-                "SELECT user_id
+        $user_metas = $wpdb->get_results("SELECT user_id
                         FROM $wpdb->usermeta WHERE
                         meta_key='bs_flickr_username'
-                        ORDER BY meta_value;"
-            )
-        );
+                        ORDER BY meta_value;");
 
         if ($user_metas) {
             foreach ($user_metas as $user_meta) {
@@ -90,6 +86,10 @@ class BuddyStreamFlickrImport
                                 }
 
                             }
+                        }
+                    }else{
+                        if($items->err){
+                            delete_user_meta($user_meta->user_id, 'bs_flickr_username');
                         }
                     }
                 }

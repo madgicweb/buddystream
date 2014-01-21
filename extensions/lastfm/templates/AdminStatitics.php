@@ -37,11 +37,11 @@
             </thead>
 
             <?php
-            $count_users = count($wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->users")));
-            $count_lastfm_users = count($wpdb->get_results($wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='bs_lastfm_username';")));
+            $count_users = count($wpdb->get_results("SELECT * FROM $wpdb->users"));
+            $count_lastfm_users = count($wpdb->get_results("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='bs_lastfm_username';"));
             $perc_lastfm_users = round(($count_lastfm_users / $count_users) * 100);
-            $count_history = count($wpdb->get_results($wpdb->prepare("SELECT type FROM " . $bp->activity->table_name . " WHERE type='lastfm';")));
-            $count_activity = count($wpdb->get_results($wpdb->prepare("SELECT id FROM " . $bp->activity->table_name)));
+            $count_history = count($wpdb->get_results("SELECT type FROM " . $bp->activity->table_name . " WHERE type='lastfm';"));
+            $count_activity = count($wpdb->get_results("SELECT id FROM " . $bp->activity->table_name));
             $perc_lastfmupdates = round(($count_history / $count_activity * 100));
             $average_history_day = round($count_history / 24);
             $average_history_week = $average_history_day * 7;

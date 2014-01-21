@@ -438,6 +438,8 @@ class BuddyStreamOAuth{
         curl_setopt($ci, CURLOPT_HTTPHEADER, $header);
         $response = curl_exec($ci);
         curl_close($ci);
+
+        return $response;
     }
 
 }

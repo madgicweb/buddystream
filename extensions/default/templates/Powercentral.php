@@ -143,7 +143,7 @@ foreach ($buddyStreamExtensions->getExtensionsConfigs() as $extension) {
          ?>
     }
 
-    function buddystreamTurnAllOff() {
+    function buddystreamTurnAllOff  () {
         <?php
             foreach ($buddyStreamExtensions->getExtensionsConfigs() as $extension) {
                 echo 'jQuery("#buddystream_'.$extension['name'].'").slickswitch("toggleOff");';

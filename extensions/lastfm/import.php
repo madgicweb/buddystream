@@ -27,12 +27,10 @@ class BuddyStreamLastfmImport
         $itemCounter = 0;
 
         $user_metas = $wpdb->get_results(
-            $wpdb->prepare(
                 "SELECT user_id
                         FROM $wpdb->usermeta WHERE
                         meta_key='bs_lastfm_username'
                         ORDER BY meta_value;"
-            )
         );
 
         if ($user_metas) {

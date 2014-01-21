@@ -30,11 +30,11 @@
             </tr>
             </thead>
             <?php
-            $count_users = count($wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->users")));
-            $count_flickr_users = count($wpdb->get_results($wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='bs_flickr_username';")));
+            $count_users = count($wpdb->get_results("SELECT * FROM $wpdb->users"));
+            $count_flickr_users = count($wpdb->get_results("SELECT user_id FROM $wpdb->usermeta WHERE meta_key='bs_flickr_username';"));
             $perc_flickr_users = round(($count_flickr_users / $count_users) * 100);
-            $count_photos = count($wpdb->get_results($wpdb->prepare("SELECT type FROM " . $bp->activity->table_name . " WHERE type='flickr';")));
-            $count_activity = count($wpdb->get_results($wpdb->prepare("SELECT id FROM " . $bp->activity->table_name)));
+            $count_photos = count($wpdb->get_results("SELECT type FROM " . $bp->activity->table_name . " WHERE type='flickr';"));
+            $count_activity = count($wpdb->get_results("SELECT id FROM " . $bp->activity->table_name));
             $perc_flickrupdates = round(($count_photos / $count_activity * 100));
             $average_photos_day = round($count_photos / 24);
             $average_photos_week = $average_photos_day * 7;

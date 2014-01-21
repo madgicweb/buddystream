@@ -1,25 +1,34 @@
-=== BuddyStream===
+=== BuddyStream ===
 Contributors: Blackphantom
-Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr
+Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.5.1, BuddyPress 1.7.2
-Stable tag: 3.0.4
+Tested up to: WP 3.8 BuddyPress 1.9.1
+Stable tag: 3.1
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
 
 == Description ==
+
+!IMPORTANT!
+    We are in a massive update progress, users with problems will get a message from us soon.
+    Free versions of the premium version will be send out soon.
+    Having problems mail me at: blackphantom25@gmail.com
+!IMPORTANT
+
 BuddyStream is a BuddyPress plugin that will synchronize all of your favorite Social Networks to the BuddyPress activity stream.
 
-The plugin is easy to set-up, operate, and for your members to use.
+The plugin setup can be hard but tried to keep it easy, operate, and for your members to use.
 Each Social Network has its own admin panel where you can see which users are using the network, view cool statistics, and manage the advanced filtering settings.
 
 Networks that the plugin currently supports:
+
 - Twitter
 - Flickr
 - Youtube
 - Last.fm
-- Location !NEW!
+- Location
+- !NEW! Instagram !NEW!
 
 Requirements.
 - PHP 5.2.1+
@@ -27,8 +36,7 @@ Requirements.
 - JSON
 - CRONJOB access
 
-You may find FREE translations on: http://www.buddystream.net.
-For support and other feature request, please contact us on our website.
+For support and other feature request, please contact me: blackphantom25@gmail.com
 
 == Installation ==
 1. Upload this plugin to your `/wp-content/plugins/` directory.
@@ -40,9 +48,17 @@ For support and other feature request, please contact us on our website.
 
 == ChangeLog ==
 
+= 3.1 =
+* replaced colorbox with own version
+* added Instagram import
+* fixed Twitter imports due SSL change
+* error and notices fixed
+* updated comparability with wordpress and buddypress
+
 = 3.0.4 =
 * Upgraded twitter API to new 1.1
-* Fixed malformed tokens
+* Error logging for Facebook
+* Fixed malformed tokens for Facebook
 * Fixed php short tag replacements
 * Re-authetication added for expired accounts
 * Cleaned-up query's
@@ -50,7 +66,6 @@ For support and other feature request, please contact us on our website.
 = 3.0.3 =
 * Fixed Twitter import
 * Fixed import queue
-* Added missing files
 
 = 3.0.2 =
 * Fixed foreach and statistics pages errors.
@@ -59,11 +74,15 @@ For support and other feature request, please contact us on our website.
 
 = 3.0.1 =
 * Fixed widget
+* Fixed foreach error on Foursquare admin page
+* Fixed foreach error on Tumblr admin page
 
 = 3.0 =
 * Added manual link per extension
 * Added option for disabling the colorbox inclusion.
-* Added Location (with map)
+* Added Thumblr extension.
+* Added Foursquare extension.
+* Added Location (with map) works with Foursquare and Twitter.
 * Added sync central (turn on/off importing/exporting per extension)
 
 * Removed user filters.
@@ -73,7 +92,7 @@ For support and other feature request, please contact us on our website.
 
 * Updated new icons
 * Updated Twitter API request to use 1.1
-* Updated redesign admin interface and user setting pages.
+* Updated redesign admin interface adn user setting pages.
 * Updated all language files
 
 * Fixed imports for windows servers.

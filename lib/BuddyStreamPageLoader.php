@@ -80,7 +80,7 @@ function buddystreamAdmin() {
     foreach($buddyStreamExtensions->getExtensionsConfigs() as $extension){
         if (get_site_option("buddystream_".$extension['name']."_power")) {
 
-            if( ! $extension['parent'] ){
+            if( ! isset($extension['parent']) ){
 
                 add_submenu_page(
                     'buddystream_admin',

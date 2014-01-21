@@ -51,7 +51,7 @@ class BuddyStreamTwitterImport
                             $buddyStreamOAuth->setAccessToken(get_user_meta($user_meta->user_id, 'tweetstream_token', 1));
                             $buddyStreamOAuth->setAccessTokenSecret(get_user_meta($user_meta->user_id, 'tweetstream_tokensecret', 1));
 
-                            $items = $buddyStreamOAuth->oAuthRequest('http://api.twitter.com/1.1/statuses/user_timeline.json');
+                            $items = $buddyStreamOAuth->oAuthRequest('https://api.twitter.com/1.1/statuses/user_timeline.json');
                             $items = json_decode($items);
 
                             if($items->error){

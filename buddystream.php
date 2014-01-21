@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: BuddyStream Premium
+Plugin Name: BuddyStream
 Plugin URI: http://www.buddystream.net
-Description: BuddyStream Premium
-Version: 3.0.4
+Description: BuddyStream
+Version: 3.1
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -31,7 +31,7 @@ function buddystream_init()
     global $bp;
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '3.0.4');
+    define('BP_BUDDYSTREAM_VERSION', '3.1');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     define('BP_BUDDYSTREAM_DIR', dirname(__FILE__));
     define('BP_BUDDYSTREAM_URL', $bp->root_domain."/".str_replace(ABSPATH,"",dirname(__FILE__)));
@@ -58,7 +58,6 @@ function buddystream_init()
 
     //turn all syncing on
     buddyStreamInitSync();
-
 }
 
 /**

@@ -1,7 +1,7 @@
 /*
-	ColorBox Core Style
+	buddybox Core Style
 */
-#colorbox, #cboxOverlay, #cboxWrapper {
+#buddybox, #cboxOverlay, #cboxWrapper {
     position: absolute;
     top: 0;
     left: 0;

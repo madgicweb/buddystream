@@ -13,13 +13,14 @@ $buddyStreamExtensions->loadExtensions();
  *
  */
 if( ! is_admin()){
-    wp_register_script('buddystream-colorbox',
-        BP_BUDDYSTREAM_URL.'/extensions/default/colorbox/jquery.colorbox-min.js', array('jquery'), '1.3.18');
-    wp_enqueue_script('buddystream-colorbox');
+    wp_register_script('buddystream-buddybox',
+        BP_BUDDYSTREAM_URL.'/extensions/default/buddybox/jquery.buddybox.js', array('jquery'), '1.3.18');
+    wp_enqueue_script('buddystream-buddybox');
 
     wp_register_style('buddystream-colorbox',
-        BP_BUDDYSTREAM_URL.'/extensions/default/colorbox/colorbox.css', false, '1.3.18', 'screen');
+        BP_BUDDYSTREAM_URL.'/extensions/default/buddybox/buddybox.css', false, '1.3.18', 'screen');
     wp_enqueue_style('buddystream-colorbox');
+
 
     if( ! get_site_option('buddystream_nocss')) {
         wp_register_style('buddystream-default',
@@ -116,7 +117,7 @@ function buddyStreamAddToImportLog($user_id, $id, $component){
     global $wpdb;
 
     $item_id = $user_id."-".$id."-".$component;
-    $wpdb->query($wpdb->prepare("INSERT INTO ".$wpdb->base_prefix."buddystream_imports set item_id='".$item_id."'"));
+    $wpdb->query("INSERT INTO ".$wpdb->base_prefix."buddystream_imports set item_id='".$item_id."'");
 }
 
 function buddyStreamCheckImportLog($user_id, $id, $component){

@@ -8,11 +8,20 @@
 class BuddyStream_Connect_Widget extends WP_Widget
 {
 
+    /**
+     * Widget constructor
+     */
     public function __construct()
     {
         return $this->WP_Widget('buddyStream_connect_widget', 'BuddyStream Connect Widget');
     }
 
+
+    /**
+     * Widget form
+     * @param array $instance
+     * @return string|void
+     */
     public function form($instance)
     {
         $defaults = array();
@@ -59,6 +68,13 @@ class BuddyStream_Connect_Widget extends WP_Widget
     <?php
     }
 
+
+    /**
+     * Update widget
+     * @param array $new_instance
+     * @param array $old_instance
+     * @return array
+     */
     function update($new_instance, $old_instance)
     {
 
@@ -82,18 +98,21 @@ class BuddyStream_Connect_Widget extends WP_Widget
         return $instance;
     }
 
+
+    /**
+     * Display widget
+     * @param array $args
+     * @param array $instance
+     */
     function widget($args, $instance)
     {
+        global $bp;
 
         extract($args, EXTR_SKIP);
 
-        global $bp;
-
         // used when the sidebar calls in the widget
-
         echo $before_widget;
-
-      echo $before_title . $instance['widget_title']  . $after_title;
+        echo $before_title . $instance['widget_title']  . $after_title;
 
         echo '<p>' . nl2br($instance['widget_description']) . '</p>';
 
@@ -115,8 +134,6 @@ class BuddyStream_Connect_Widget extends WP_Widget
             }
         }
 
-
         echo $after_widget;
-
     }
 }

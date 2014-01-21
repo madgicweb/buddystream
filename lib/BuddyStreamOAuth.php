@@ -413,18 +413,6 @@ class BuddyStreamOAuth{
 
     public function oAuthRequestPostXml($url){
 
-        if($this->getParameters()){
-            $parameters = $this->getParameters();
-        }else{
-            $parameters = null;
-        }
-
-        $consumer    = $this->getConsumer();
-        $accessToken = $this->getConsumer($this->getAccessToken(), $this->getAccessTokenSecret(), $this->getCallbackUrl());
-
-        $req = BuddyStreamOAuthRequest::from_consumer_and_token($consumer, $accessToken, 'POST', $url, $this->getParameters());
-        $req->sign_request(new BuddyStreamOAuthSignatureMethod_HMAC_SHA1(), $consumer, $accessToken);
-
         $ci = curl_init();
         curl_setopt($ci, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($ci, CURLOPT_RETURNTRANSFER, TRUE);
@@ -432,13 +420,14 @@ class BuddyStreamOAuth{
         curl_setopt($ci, CURLOPT_URL, $url);
         curl_setopt($ci, CURLOPT_VERBOSE, FALSE);
 
-        $header = array($req->to_header('http://api.linkedin.com'));
         $header[] = 'Content-Type: text/xml; charset=UTF-8';
 
         curl_setopt($ci, CURLOPT_POSTFIELDS, $this->getPostData());
         curl_setopt($ci, CURLOPT_HTTPHEADER, $header);
         $response = curl_exec($ci);
         curl_close($ci);
+
+        return $response;
     }
 
 }
