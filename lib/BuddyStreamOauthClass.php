@@ -868,5 +868,3 @@ class BuddyStreamOAuthUtil {
     return implode('&', $pairs);
   }
 }
-
-?>

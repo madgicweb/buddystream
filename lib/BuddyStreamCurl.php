@@ -14,11 +14,12 @@ class BuddyStreamCurl {
     public function getJsonDecodedContent($url){
         return json_decode(BuddyStreamCurl::getContentFromUrl($url));
     }
-    
-    
+
+
     /**
      * Get the content form a url
-     * @param string $url 
+     * @param string $url
+     * @return mixed
      */
     
     public function getContentFromUrl($url){
@@ -40,6 +41,8 @@ class BuddyStreamCurl {
     /**
      * Get the content form a posted url
      * @param string $url
+     * @param $postdata
+     * @return mixed
      */
 
     public function getPostContentFromUrl($url,$postdata){

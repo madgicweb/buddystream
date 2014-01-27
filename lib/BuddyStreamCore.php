@@ -84,6 +84,8 @@ function buddystreamCreateActivity($params){
 
         if( ! buddyStreamCheckImportLog($params['user_id'],$params['item_id'],$params['extension']) && ! buddyStreamCheckExistingContent($content) && ! buddyStreamCheckExistingContent($originalText)){
 
+            buddyStreamAddToImportLog($params['user_id'],$params['item_id'],$params['extension']);
+
             remove_filter('bp_activity_action_before_save', 'bp_activity_filter_kses', 1);
 
             $activity = new BP_Activity_Activity();
@@ -103,7 +105,7 @@ function buddystreamCreateActivity($params){
 
                 $activity->save();
                 $buddyStreamFilters->updateDayLimitByOne($params['extension'], $params['user_id']);
-                buddyStreamAddToImportLog($params['user_id'],$params['item_id'],$params['extension']);
+
 
                 return true;
             }
@@ -137,7 +139,7 @@ function buddyStreamCheckExistingContent($content){
 
     global $wpdb, $bp;
 
-    if($wpdb->get_row("SELECT content FROM {$bp->activity->table_name} WHERE content LIKE '=" . $content . "")){
+    if($wpdb->get_row("SELECT content FROM {$bp->activity->table_name} WHERE content='" . $content . "'")){
         return true;
     }
 
@@ -468,10 +470,13 @@ if(defined(BP_BUDDYSTREAM_IS_PREMIUM)){
 }
 
 function buddystream_remove_update_nag($value) {
+
     if($value){
         unset($value->response[plugin_basename(__FILE__) ]);
         return $value;
     }
+
+    return $value;
 }
 
 /**

@@ -27,13 +27,14 @@ if (defined('ACHIEVEMENTS_IS_INSTALLED')) {
  * URL Shorting
  */
 
-add_action('wp', 'buddystream_resolveShortUrl',1);
+add_action('bp_init', 'buddystream_resolveShortUrl',4);
 function buddystream_getShortUrl($url)
 {
     global $bp;
 
     if ($url) {
 
+        $out = "";
         $url   = str_replace("#", "",$url);
         $input = date('dmyhis');
         $index = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -56,7 +57,7 @@ function buddystream_getShortUrl($url)
     }
 }
 
-add_action('wp', 'buddystream_resolveShortUrl',1);
+add_action('bp_init', 'buddystream_resolveShortUrl',4);
 function buddystream_resolveShortUrl($url)
 {
     global $wpdb;
@@ -191,7 +192,7 @@ if(get_bloginfo('version') > '3.2'){
                     align: 'top',
                     offset: 10
                 },
-                close: function() { },
+                close: function() { }
             }).pointer('open');
             <?php if ( $button2 ) { ?>
                 jQuery('#pointer-close').after('<a id="pointer-primary" class="button-primary">' + '<?php echo $button2; ?>' + '</a>');

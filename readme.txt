@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.8 BuddyPress 1.9.1
-Stable tag: 3.1
+Stable tag: 3.2
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -47,6 +47,12 @@ For support and other feature request, please contact me: blackphantom25@gmail.c
 == Screenshots ==
 
 == ChangeLog ==
+
+= 3.2 =
+* fixed countdown counter css issues
+* fixed plugin support errors
+* fixed import for installs where plugin directory is other then wp-content
+* fixed other import issues
 
 = 3.1 =
 * replaced colorbox with own version

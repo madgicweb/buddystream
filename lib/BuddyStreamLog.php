@@ -17,7 +17,7 @@ class BuddyStreamLog{
     function log($message = "", $type="info"){
         global $wpdb;
 
-        $results = $wpdb->get_results("SELECT count(id) as count FROM ".$wpdb->prefix."buddystream_log");
+        $results = $wpdb->get_results("SELECT count(*) as count FROM ".$wpdb->prefix."buddystream_log");
 
         if($results[0]->count >= 200){
             $wpdb->query("DELETE FROM ".$wpdb->prefix."buddystream_log ORDER BY id ASC LIMIT 1");            

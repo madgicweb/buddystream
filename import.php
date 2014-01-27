@@ -9,8 +9,14 @@ ini_set('max_execution_time', 900);
 //load the WordPress loader
 $currentPpath = getcwd();
 $seekingRoot  = pathinfo($currentPpath);
-$incPath      = str_replace('wp-content/plugins','',$seekingRoot['dirname']);
-$incPath      = str_replace("\wp-content\plugins", "", $incPath);
+
+$arrayRoot   = explode("/", $seekingRoot['dirname']);
+$arrayRoot   = array_reverse($arrayRoot);
+
+$incPath      = str_replace($arrayRoot[1].'/plugins','',$seekingRoot['dirname']);
+$incPath      = str_replace("\\".$arrayRoot[1]."\plugins", "", $incPath);
+$incPath      = str_replace($arrayRoot[1].'/plugins','',$seekingRoot['dirname']);
+$incPath      = str_replace("\\".$arrayRoot[1]."\plugins", "", $incPath);
 
 ini_set('include_path', $incPath);
 include('wp-load.php');

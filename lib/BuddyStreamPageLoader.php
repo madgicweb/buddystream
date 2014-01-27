@@ -94,7 +94,8 @@ function buddystreamAdmin() {
             }
         }
     }
-    
+
+    return true;
 }
 
 /**

@@ -183,5 +183,8 @@ class BuddyStreamFilters{
         }else{
             return false;
         }
+
+        return false;
     }
+
 }
