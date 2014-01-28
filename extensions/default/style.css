@@ -403,19 +403,19 @@ form#whats-new-form #whats-new-options select {
 }
 
 .linkedin_share_counter {
-    position: relative;
-    background: url('../default/counter_background.png');
-    letter-spacing: 11px;
-    width: 64px;
-    height: 26px;
+    background: url("../default/counter_background.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #515151;
     float: left;
     font-size: 22px;
+    font-weight: bold;
+    height: 26px;
+    letter-spacing: 11px;
+    line-height: 20px;
+    margin-top: 4px;
     padding-left: 7px;
     padding-top: 5px;
-    margin-top: 4px;
-    margin-right: 10px;
-    font-weight: bold;
-    color: #515151;
+    position: relative;
+    width: 71px;
 }
 
 .linkedin_share_counter_red {

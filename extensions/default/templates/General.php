@@ -4,7 +4,8 @@ $arraySwitches = array(
     'buddystream_social_albums',
     'buddystream_social_albums_profile_navigation',
     'buddystream_group_sharing',
-    'buddystream_nocss'
+    'buddystream_nocss',
+    'buddystream_nobuddybox'
 );
 
 //save the settings
@@ -71,6 +72,12 @@ if ($_POST['submit']) {
                     <td><?php _e('Disable all BuddyStream CSS includes.', 'buddystream_lang');?></td>
                     <td width="30"><input class="switch icons" type="checkbox" name="buddystream_nocss"
                                           id="buddystream_nocss"/></td>
+                </tr>
+
+                <tr>
+                    <td><?php _e('Disable BuddyStream buddybox (popup for images and video\'s).', 'buddystream_lang');?></td>
+                    <td width="30"><input class="switch icons" type="checkbox" name="buddystream_nobuddybox"
+                                          id="buddystream_nobuddybox"/></td>
                 </tr>
 
             </table>

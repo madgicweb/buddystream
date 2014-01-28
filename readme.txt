@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.8 BuddyPress 1.9.1
-Stable tag: 3.2
+Stable tag: 3.2.1
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -47,6 +47,13 @@ For support and other feature request, please contact me: blackphantom25@gmail.c
 == Screenshots ==
 
 == ChangeLog ==
+
+= 3.2.1 =
+* added images on Tweets also get imported and shown.
+* added setting in "general settings" to disable Buddybox (popup for images and video's)
+* fixed import for installs where plugin directory is other then wp-content (cronjob service)
+* fixed double remove settings button on Facebook settings
+* fixed countdown counter css issues for LinkedIn
 
 = 3.2 =
 * fixed countdown counter css issues

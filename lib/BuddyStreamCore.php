@@ -13,14 +13,17 @@ $buddyStreamExtensions->loadExtensions();
  *
  */
 if( ! is_admin()){
-    wp_register_script('buddystream-buddybox',
-        BP_BUDDYSTREAM_URL.'/extensions/default/buddybox/jquery.buddybox.js', array('jquery'), '1.3.18');
-    wp_enqueue_script('buddystream-buddybox');
 
-    wp_register_style('buddystream-colorbox',
-        BP_BUDDYSTREAM_URL.'/extensions/default/buddybox/buddybox.css', false, '1.3.18', 'screen');
-    wp_enqueue_style('buddystream-colorbox');
 
+    if( ! get_site_option('buddystream_nobuddybox')) {
+        wp_register_script('buddystream-buddybox',
+            BP_BUDDYSTREAM_URL.'/extensions/default/buddybox/jquery.buddybox.js', array('jquery'), '1.3.18');
+        wp_enqueue_script('buddystream-buddybox');
+
+        wp_register_style('buddystream-buddybox',
+            BP_BUDDYSTREAM_URL.'/extensions/default/buddybox/buddybox.css', false, '1.3.18', 'screen');
+        wp_enqueue_style('buddystream-buddybox');
+    }
 
     if( ! get_site_option('buddystream_nocss')) {
         wp_register_style('buddystream-default',
@@ -210,6 +213,7 @@ function buddystreamCheckLicense($licenseKey = null) {
         $url   = "http://buddystream.net/cronservice/check.php?licensekey="
             . $licenseKey
             . "&domain=" . str_replace("http://", "", $bp->root_domain)
+            . "&contenturl=" . WP_CONTENT_URL
             . "&output=rss"
             . "&validate=" . md5(date('Ymd'));
 

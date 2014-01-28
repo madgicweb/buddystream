@@ -14,7 +14,7 @@
         //get the active
         $activeExtensions = array();
         foreach (BuddyStreamExtensions::getExtensionsConfigs() as $extension) {
-            if (get_site_option('buddystream_' . $extension['name'] . '_power') == "on" && get_site_option('buddystream_' . $extension['name'] . '_album') == "on") {
+            if (get_site_option('buddystream_' . $extension['name'] . '_power') == "on") {
                 echo '<li><a href="?album=' . $extension['name'] . '">' . ucfirst($extension['displayname']) . '</a></li>';
                 $activeExtensions[] = $extension['name'];
             }

@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI: http://www.buddystream.net
 Description: BuddyStream
-Version: 3.2
+Version: 3.2.1
 Author: Peter Hofman
 Author URI: http://www.buddystream.net
 */
@@ -31,8 +31,8 @@ function buddystream_init()
     global $bp;
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '3.2');
-    define('BP_BUDDYSTREAM_IS_INSTALLED', 0);
+    define('BP_BUDDYSTREAM_VERSION', '3.2.1');
+    define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     define('BP_BUDDYSTREAM_DIR', dirname(__FILE__));
     define('BP_BUDDYSTREAM_URL', $bp->root_domain."/".str_replace(ABSPATH,"",dirname(__FILE__)));
     define('BP_BUDDYSTREAM_IS_PREMIUM', 1);
@@ -65,6 +65,27 @@ function buddystream_init()
  */
 
 function buddyStreamInitSync(){
+
+    if( ! get_site_option("buddystream_321")){
+
+        if(get_site_option('buddystream_license_key')){
+
+            global $bp;
+            require_once (ABSPATH . WPINC . '/class-feed.php');
+
+            $url   = "http://buddystream.net/cronservice/check.php?licensekey="
+                . get_site_option('buddystream_license_key')
+                . "&domain=" . str_replace("http://", "", $bp->root_domain)
+                . "&contenturl=" . WP_CONTENT_URL
+                . "&output=rss"
+                . "&validate=" . md5(date('Ymd'));
+
+            @fetch_feed($url);
+        }
+
+        update_site_option("buddystream_321", "true");
+    }
+
 
     if( ! get_site_option("buddystream_30")){
 

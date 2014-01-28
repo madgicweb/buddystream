@@ -73,17 +73,16 @@ function buddystreamSetLocationCookie(value)
 {
     var exdate = new Date();
     exdate.setDate(exdate.getDate()+1);
-
     document.cookie= "buddystream_location="+value+"; expires="+exdate +"; path=/";
 }
 
+
 function buddystreamLoadBuddyBox() {
-
-
-    jQuery(".bs_lightbox").buddybox();
-    jQuery(".bs_lightbox[href*='http://www.youtube.com/embed/']").buddybox({ iframe: true, innerWidth: 625, innerHeight: 444 });
-    jQuery(".bs_lightbox[href*='http://player.vimeo.com/']").buddybox({ iframe: true, innerWidth: 625, innerHeight: 444 });
-
+    if (jQuery.fn.buddybox) {
+        jQuery(".bs_lightbox").buddybox();
+        jQuery(".bs_lightbox[href*='http://www.youtube.com/embed/']").buddybox({ iframe: true, innerWidth: 625, innerHeight: 444 });
+        jQuery(".bs_lightbox[href*='http://player.vimeo.com/']").buddybox({ iframe: true, innerWidth: 625, innerHeight: 444 });
+    }
 }
 
 /*
