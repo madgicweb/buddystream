@@ -2,8 +2,8 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.8 BuddyPress 1.9.1
-Stable tag: 3.2.1
+Tested up to: WP 3.8.1 BuddyPress 1.9.1
+Stable tag: 3.2.2
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -11,8 +11,8 @@ http://www.opensource.org/licenses/gpl-license.php
 == Description ==
 
 !IMPORTANT!
-    We are in a massive update progress, users with problems will get a message from us soon.
-    Free versions of the premium version will be send out soon.
+    Replace your current cronjob for BuddyStream by the new one (see settings -> cronjob)
+    The old one is broken.
     Having problems mail me at: blackphantom25@gmail.com
 !IMPORTANT
 
@@ -23,12 +23,12 @@ Each Social Network has its own admin panel where you can see which users are us
 
 Networks that the plugin currently supports:
 
+- !NEW! Instagram !NEW!
 - Twitter
 - Flickr
 - Youtube
 - Last.fm
 - Location
-- !NEW! Instagram !NEW!
 
 Requirements.
 - PHP 5.2.1+
@@ -47,6 +47,11 @@ For support and other feature request, please contact me: blackphantom25@gmail.c
 == Screenshots ==
 
 == ChangeLog ==
+
+= 3.2.2 =
+* !IMPORTANT! replace your cronjob command by the new one, the old one is incorrect.
+* added Instagram to free version
+* fixed bootstrap loading issue
 
 = 3.2.1 =
 * added images on Tweets also get imported and shown.

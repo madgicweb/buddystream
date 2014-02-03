@@ -103,7 +103,7 @@ if ($_POST) {
                     <tr>
                         <td><?php _e('Cron command:', 'buddystream_twitter');?></td>
                         <td><input type="text" name="cronurl"
-                                   value="<?php echo "*/10 * * * * wget --spider http://" . plugins_url() . "/import.php --connect-timeout=600 --read-timeout=600 --tries=1 --recursive --level=1 -nd --delete-after";?>"
+                                   value="<?php echo "*/10 * * * * wget --spider " . BP_BUDDYSTREAM_URL . "import.php --connect-timeout=600 --read-timeout=600 --tries=1 --recursive --level=1 -nd --delete-after";?>"
                                    size="150"/></td>
                     </tr>
                 <?php endif; ?>

@@ -26,6 +26,7 @@ if (isset($_GET['code']) && isset($_GET['network']) && $_GET['network'] == "inst
 
     update_user_meta($bp->loggedin_user->id, 'buddystream_instagram_token', $accessToken->access_token);
     update_user_meta($bp->loggedin_user->id, 'buddystream_instagram_synctoac', 1);
+    update_user_meta($bp->loggedin_user->id, 'buddystream_instagram_id', $accessToken->user->id);
 
     //for other plugins
     do_action('buddystream_instagram_activated');

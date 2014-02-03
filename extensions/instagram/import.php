@@ -45,10 +45,8 @@ class BuddyStreamInstagramImport
 
                             //Handle the OAuth requests
                             $buddyStreamOAuth = new BuddyStreamOAuth();
-                            $items = $buddyStreamOAuth->executeRequest('https://api.instagram.com/v1/users/self/feed?&access_token='.get_user_meta($user_meta->user_id, 'buddystream_instagram_token', 1));
+                            $items = $buddyStreamOAuth->executeRequest('https://api.instagram.com/v1/users/'.get_user_meta($user_meta->user_id, 'buddystream_instagram_id', 1).'/media/recent/?&access_token='.get_user_meta($user_meta->user_id, 'buddystream_instagram_token', 1));
                             $items = json_decode($items);
-
-
                             $items = $items->data;
 
                             if ($items) {

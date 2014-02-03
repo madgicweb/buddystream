@@ -1,10 +1,10 @@
-<link href="<?php echo BP_BUDDYSTREAM_URL;?>/bootstrap/css/bootstrap.css" rel="stylesheet"
+<link href="<?php echo BP_BUDDYSTREAM_URL;?>bootstrap/css/bootstrap.css" rel="stylesheet"
       xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-<script src="<?php echo BP_BUDDYSTREAM_URL;?>/bootstrap/js/bootstrap.js"></script>
-<link href="<?php echo BP_BUDDYSTREAM_URL;?>/bootstrap/css/buddystream.css" rel="stylesheet">
+<script src="<?php echo BP_BUDDYSTREAM_URL;?>bootstrap/js/bootstrap.js"></script>
+<link href="<?php echo BP_BUDDYSTREAM_URL;?>bootstrap/css/buddystream.css" rel="stylesheet">
 
-<script src="<?php echo BP_BUDDYSTREAM_URL;?>/extensions/default/jquery.slickswitch.js"></script>
-<link href="<?php echo BP_BUDDYSTREAM_URL;?>/extensions/default/slickswitch.css" rel="stylesheet">
+<script src="<?php echo BP_BUDDYSTREAM_URL;?>extensions/default/jquery.slickswitch.js"></script>
+<link href="<?php echo BP_BUDDYSTREAM_URL;?>extensions/default/slickswitch.css" rel="stylesheet">
 
 <br><br>
 <div id="buddystream" class="container">
