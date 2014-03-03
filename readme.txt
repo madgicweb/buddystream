@@ -3,7 +3,7 @@ Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 3.8.1 BuddyPress 1.9.1
-Stable tag: 3.2.2
+Stable tag: 3.2.3
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -47,6 +47,14 @@ For support and other feature request, please contact me: blackphantom25@gmail.c
 == Screenshots ==
 
 == ChangeLog ==
+
+
+= 3.2.3 =
+* Fixed error on admin settings page of Twitter
+* Added setting to disable location feature. (settings -> general settings)
+* Fixed network settings bar to width.
+* New clean buttons in user interface in front-end
+* Fixed Goolge+ importing settings
 
 = 3.2.2 =
 * !IMPORTANT! replace your cronjob command by the new one, the old one is incorrect.

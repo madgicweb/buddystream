@@ -7,8 +7,6 @@
         }
     ?>
 
-    <div class="navbar navbar-static-top">
-        <div class="navbar-inner">
             <ul class="nav">
                 <?php
                     //get the active
@@ -21,8 +19,6 @@
                     }
                 ?>
             </ul>
-        </div>
-    </div>
 
     <br/>
 

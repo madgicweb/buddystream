@@ -19,8 +19,6 @@ class BuddyStreamInstagramImport
     //do the import
     public function doImport()
     {
-
-
         global $bp, $wpdb;
 
         $buddyStreamLog = new BuddyStreamLog();
@@ -30,13 +28,11 @@ class BuddyStreamInstagramImport
         $itemCounter = 0;
 
         if (get_site_option("buddystream_instagram_consumer_key")) {
-            if (get_site_option('buddystream_instagram_user_settings_syncbp') == 0) {
 
                 $user_metas = $wpdb->get_results("SELECT user_id FROM ".$wpdb->usermeta." WHERE meta_key='buddystream_instagram_token'");
 
                 if ($user_metas) {
                     foreach ($user_metas as $user_meta) {
-
 
                         //check for
                         $limitReached = $buddyStreamFilters->limitReached('instagram', $user_meta->user_id);
@@ -84,11 +80,10 @@ class BuddyStreamInstagramImport
                         }
                     }
                 }
-            }
-        }
+         }
 
         //add record to the log
-        $buddyStreamLog->log("Instagram imported " . $itemCounter . " checkins for " . count($user_metas) . " users.");
+        $buddyStreamLog->log("Instagram imported " . $itemCounter . " images for " . count($user_metas) . " users.");
 
         //return number of items imported
         return $itemCounter;

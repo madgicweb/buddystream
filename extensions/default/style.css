@@ -122,60 +122,47 @@ a.buddystream_authorize_button {
     color: #ffffff !important;
 }
 
-.buddystream_reset_button, .buddystream_reset_button:hover {
-
-    background-color: #EE432E !important;
-
-    background-image: linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
-    background-image: -o-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
-    background-image: -moz-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
-    background-image: -webkit-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
-    background-image: -ms-linear-gradient(bottom, #EE432E 30%, #C63929 65%) !important;
-    background-image: -moz-linear-gradient(center top, #EE432E, #C63929) !important;
-
-    border: 1px solid #cecece !important;
-
-    -webkit-border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
-    border-radius: 5px !important;
-
+.buddystream_reset_button{
+    background-color: #E0402D !important;
+    text-transform: uppercase;
+    border-radius: 2px;
+    min-width: 100px;
+    white-space: nowrap;
+    margin:3px;
     color: #FFFFFF !important;
-    font: bold 14px sans-serif !important;
-
+    font: bold 13px sans-serif !important;
     padding: 10px !important;
     text-align: center !important;
-    text-shadow: 0px !important;
+    text-shadow: 0 0 0 !important;
+    border:0!important;
+    text-decoration: none!important;
+}
+
+.buddystream_reset_button:hover{
+    background: #CE301E!important;
 }
 
 .buddystream_save_button {
     background: #7FBF4D !important;
-    background-color: #7FBF4D !important;
 }
 
-.buddystream_save_button, .buddystream_save_button:hover {
-
+.buddystream_save_button {
     background-color: #7FBF4D !important;
-
-    background-image: linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
-    background-image: -o-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
-    background-image: -moz-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
-    background-image: -webkit-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
-    background-image: -ms-linear-gradient(bottom, #7FBF4D 30%, #63A62F 65%) !important;
-    background-image: -moz-linear-gradient(center top, #7FBF4D, #63A62F) !important;
-
-    border: 1px solid #cecece !important;
-
-    -webkit-border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
-    border-radius: 5px !important;
-
+    text-transform: uppercase;
+    border-radius: 2px;
+    min-width: 100px;
+    white-space: nowrap;
+    margin:3px;
     color: #FFFFFF !important;
-    font: bold 14px sans-serif !important;
-
+    font: bold 13px sans-serif !important;
     padding: 10px !important;
     text-align: center !important;
+    text-shadow: 0 0 0 !important;
+    border:0!important;
+}
 
-    text-shadow: 0px 0px 0px !important;
+.buddystream_save_button:hover{
+    background: #63AD26!important;
 }
 
 /* ========= */
@@ -500,4 +487,30 @@ div.buddystream_location_button.cancel{
 
 div.buddystream_location_type{
     display: none;
+}
+
+#buddystream ul.nav{
+    display: inline-block;
+}
+
+#buddystream ul.nav li {
+    float: left;
+}
+
+#buddystream ul.nav li a{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #65C1E6;
+    color:#fff;
+    border-radius: 2px;
+    font-size: 12px;
+    min-width: 100px;
+    white-space: nowrap;
+    margin:3px;
+    padding:3px;
+}
+
+#buddystream ul.nav li a:hover{
+    background-color: #0F77BC;
 }

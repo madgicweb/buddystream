@@ -341,18 +341,20 @@ function buddystream_SocialIt($content, $shortLink = null)
     }
 
     //if use location is used add map image to content
-    if (preg_match("/#location/i", $originalText)) {
+    if( ! get_site_option("buddystream_nolocation")){
+        if (preg_match("/#location/i", $originalText)) {
 
-        if(isset($_COOKIE["buddystream_location"])){
+            if(isset($_COOKIE["buddystream_location"])){
 
-            $arrLocation  = explode("#",$_COOKIE["buddystream_location"]);
-            $mapIcon      = BP_BUDDYSTREAM_URL.'/images/marker.png';
-            $mapUrl       = 'http://maps.googleapis.com/maps/api/staticmap?center=' . $arrLocation[0] . ',' . $arrLocation[1] . '&zoom=13&size=540x150&sensor=false&markers=icon%3A' . $mapIcon . '%7C' . $arrLocation[0] . ',' . $arrLocation[1] . '&format=png32';
-            $originalText .= '<img class="buddystream_map_image" src="' . $mapUrl . '">';
+                $arrLocation  = explode("#",$_COOKIE["buddystream_location"]);
+                $mapIcon      = BP_BUDDYSTREAM_URL.'/images/marker.png';
+                $mapUrl       = 'http://maps.googleapis.com/maps/api/staticmap?center=' . $arrLocation[0] . ',' . $arrLocation[1] . '&zoom=13&size=540x150&sensor=false&markers=icon%3A' . $mapIcon . '%7C' . $arrLocation[0] . ',' . $arrLocation[1] . '&format=png32';
+                $originalText .= '<img class="buddystream_map_image" src="' . $mapUrl . '">';
+            }
         }
-    }
 
-    $originalText = str_replace("#location", "", $originalText);
+        $originalText = str_replace("#location", "", $originalText);
+    }
 
     return $originalText;
 }
@@ -388,7 +390,10 @@ function buddystreamAddSharing()
 
     echo '<div class="buddystream_hoverbox"></div>';
 
+
+    if( ! get_site_option("buddystream_nolocation")){
         echo'<span class="buddystream_share_button mylocation" id="' . __('Add my location', 'buddystream_location') . '"></span>';
+    }
 
         echo "<script>var buddystream_url = '" . BP_BUDDYSTREAM_URL . "';</script>";
 
