@@ -2,8 +2,8 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.8.1 BuddyPress 1.9.1
-Stable tag: 3.2.3
+Tested up to: WP 3.9 BuddyPress 2.0
+Stable tag: 3.2.4
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -48,6 +48,9 @@ For support and other feature request, please contact me: blackphantom25@gmail.c
 
 == ChangeLog ==
 
+= 3.2.4 =
+* Fixed directory separator for windows installs
+* Check compatibility for new WordPress and BuddyPress
 
 = 3.2.3 =
 * Fixed error on admin settings page of Twitter

@@ -135,8 +135,15 @@ function buddyStreamCheckImportLog($user_id, $id, $component){
         return true;
     }
 
+    $item_id = $id;
+
+    if( $wpdb->get_row("SELECT * FROM ".$wpdb->base_prefix."buddystream_imports WHERE item_id ='" . $item_id . "'")){
+        return true;
+    }
+
     return false;
 }
+
 
 function buddyStreamCheckExistingContent($content){
 

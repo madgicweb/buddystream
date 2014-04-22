@@ -10,7 +10,7 @@ ini_set('max_execution_time', 900);
 $currentPpath = getcwd();
 $seekingRoot  = pathinfo($currentPpath);
 
-$arrayRoot   = explode("/", $seekingRoot['dirname']);
+$arrayRoot   = explode(DIRECTORY_SEPARATOR, $seekingRoot['dirname']);
 $arrayRoot   = array_reverse($arrayRoot);
 
 $incPath      = str_replace($arrayRoot[1].'/plugins','',$seekingRoot['dirname']);
