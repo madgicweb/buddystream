@@ -118,6 +118,13 @@ function buddystreamCreateActivity($params){
     return false;
 }
 
+
+/**
+ * Add item to import log
+ * @param $user_id
+ * @param $id
+ * @param $component
+ */
 function buddyStreamAddToImportLog($user_id, $id, $component){
     global $wpdb;
 
@@ -125,6 +132,13 @@ function buddyStreamAddToImportLog($user_id, $id, $component){
     $wpdb->query("INSERT INTO ".$wpdb->base_prefix."buddystream_imports set item_id='".$item_id."'");
 }
 
+/**
+ * Check if item already exist in import log
+ * @param $user_id
+ * @param $id
+ * @param $component
+ * @return bool
+ */
 function buddyStreamCheckImportLog($user_id, $id, $component){
 
     global $wpdb;
@@ -144,7 +158,11 @@ function buddyStreamCheckImportLog($user_id, $id, $component){
     return false;
 }
 
-
+/**
+ * Check if item already exists as content
+ * @param $content
+ * @return bool
+ */
 function buddyStreamCheckExistingContent($content){
 
     global $wpdb, $bp;
