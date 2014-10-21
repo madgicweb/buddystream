@@ -2,8 +2,8 @@
 Contributors: Blackphantom
 Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 3.9.1 BuddyPress 2.0.1
-Stable tag: 3.2.6
+Tested up to: WP 4.0 BuddyPress 2.1.1
+Stable tag: 3.2.7
 
 == Released under the GPL license ==
 http://www.opensource.org/licenses/gpl-license.php
@@ -47,6 +47,12 @@ For support and other feature request, please contact me: blackphantom25@gmail.c
 == Screenshots ==
 
 == ChangeLog ==
+
+= 3.2.7 =
+* Upgraded cronjob service
+* Updated compatibility with WordPress 4.0
+* Updated compatibility with BuddyPress 2.1.1
+* Updates css of navbar in admin settings
 
 = 3.2.6 =
 * API updates

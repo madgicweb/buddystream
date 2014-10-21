@@ -206,6 +206,8 @@ add_action('admin_notices', 'buddystream_admin_notice');
  */
 function buddyStreamCheckUpdate(){
 
+    define('BP_BUDDYSTREAM_VERSION','3.2.5');
+
     $buddyStreamCurl = new BuddyStreamCurl();
 
     $versionInfo = $buddyStreamCurl->getJsonDecodedContent('http://buddystream.net/cronservice/version.php');
@@ -239,6 +241,7 @@ function buddystreamCheckLicense($licenseKey = null) {
             . $licenseKey
             . "&domain=" . str_replace("http://", "", $bp->root_domain)
             . "&contenturl=" . WP_CONTENT_URL
+            . "&importurl=" .BP_BUDDYSTREAM_URL."import.php"
             . "&output=rss"
             . "&validate=" . md5(date('Ymd'));
 

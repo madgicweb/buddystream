@@ -2293,15 +2293,15 @@
 #buddystream [class^="icon-"],
 #buddystream [class*=" icon-"] {
     display: inline-block;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     *margin-right: .3em;
     line-height: 14px;
     vertical-align: text-top;
-    background-image: url("../img/glyphicons-halflings.png");
+    background-image: url("../img/glyphicons-halflings-white.png");
     background-position: 14px 14px;
     background-repeat: no-repeat;
-    margin-top: 1px;
+    margin-top: 3px;
 }
 #buddystream .icon-white,
 #buddystream .nav-tabs > .active > a > [class^="icon-"],
@@ -5925,8 +5925,8 @@
 .brand img{
     width:50px;
     position: absolute;
-    top:28px;
-    left:12px;
+    margin-top:-15px;
+    left:19px;
 }
 
 .tab_manual{

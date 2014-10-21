@@ -1,4 +1,4 @@
-<div class="navbar navbar-static-top">
+<div class="navbar navbar-inverse navbar-static-top">
     <div class="navbar-inner">
         <a class="brand" href="#"><img src="<?php echo BP_BUDDYSTREAM_URL . '/images/buddystream.png';?>"
                                        width="20"/></a>
