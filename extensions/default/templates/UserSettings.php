@@ -1,4 +1,4 @@
-<div id="buddystream" class="container">
+<div id="buddystream" class="container-fluid">
 
     <?php
         if (!isset($_GET['network'])) {
