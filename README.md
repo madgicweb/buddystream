@@ -1,20 +1,20 @@
-=== BuddyStream ===
-Contributors: Blackphantom
-Tags: Buddypress, Twitter, Facebook, Flickr, Tweetstream, Facestream,Foursquare,Location, Google+, Soundcloud, Rss, Last.fm, Vimeo, LinkedIn, Buddystream, Apollo, Tumblr, Instagram
+# BuddyStream
+---
+Contributors: Madgicweb | Blackphantom
+
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
+
 Tested up to: WP 4.0 BuddyPress 2.1.1
-Stable tag: 3.2.7
 
-== Released under the GPL license ==
-http://www.opensource.org/licenses/gpl-license.php
+Stable tag: 3.2.8
 
+Released under the GPL license
+---
 == Description ==
 
-!IMPORTANT!
-    Replace your current cronjob for BuddyStream by the new one (see settings -> cronjob)
-    The old one is broken.
-    Having problems mail me at: blackphantom25@gmail.com
-!IMPORTANT
+> !IMPORTANT!
+>    Replace your current cronjob for BuddyStream by the new one (see settings -> cronjob)
+> !IMPORTANT!
 
 BuddyStream is a BuddyPress plugin that will synchronize all of your favorite Social Networks to the BuddyPress activity stream.
 
@@ -23,30 +23,28 @@ Each Social Network has its own admin panel where you can see which users are us
 
 Networks that the plugin currently supports:
 
-- !NEW! Instagram !NEW!
+- Instagram
 - Twitter
 - Flickr
 - Youtube
 - Last.fm
 - Location
+---
 
-Requirements.
-- PHP 5.2.1+
-- CURL
-- JSON
-- CRONJOB access
-
-For support and other feature request, please contact me: blackphantom25@gmail.com
-
-== Installation ==
-1. Upload this plugin to your `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Setup the BuddyStream plugin in the admin sidebar.
-4. Done!
-
-== Screenshots ==
+== Requirements ==
+* PHP 5.2.1+
+* CURL
+* JSON
+* CRONJOB access
+---
 
 == ChangeLog ==
+
+= 3.2.8 =
+
+* Bug fix : Graphical design on default/template/usersetting
+* Updated buddystream.php to reflect new ownership
+* Added Composer support
 
 = 3.2.7 =
 * Upgraded cronjob service

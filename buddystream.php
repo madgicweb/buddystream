@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: BuddyStream
-Plugin URI: http://www.buddystream.net
-Description: BuddyStream
-Version: 3.2.7
-Author: Peter Hofman
-Author URI: http://www.buddystream.net
+Plugin URI: https://github.com/madgicweb/buddystream
+Description: Synchronizes your favorite Social Networks to the BuddyPress activity stream
+Version: 3.2.8
+Author: Madgicweb | blackphantom
+Author URI: https://github.com/madgicweb
 */
 
 // Copyright (c) 2010/2011/2012/2013/2014 Buddystream.net All rights reserved.
@@ -31,7 +31,7 @@ function buddystream_init()
     global $bp;
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '3.2.7');
+    define('BP_BUDDYSTREAM_VERSION', '3.2.8');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     define('BP_BUDDYSTREAM_DIR', dirname(__FILE__));
     define('BP_BUDDYSTREAM_URL', plugin_dir_url(__FILE__));

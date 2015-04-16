@@ -1,0 +1,8 @@
+{
+    "name"                    : "madgicweb/buddystream",
+    "version"                 : "3.2.8",
+    "require": {
+        "composer/installers" : "~1.0"
+    },
+    "type"                    : "wordpress-plugin"
+}
