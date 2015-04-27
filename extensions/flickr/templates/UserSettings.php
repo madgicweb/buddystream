@@ -2,6 +2,8 @@
 
 if (isset($_GET['reset'])) {
     delete_user_meta($bp->loggedin_user->id, 'bs_flickr_username');
+    //for other plugins
+    do_action('buddystream_flickr_deleted');
 }
 
 if ($_POST) {

@@ -1,0 +1,355 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Buddystream\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-01 14:14+0100\n"
+"PO-Revision-Date: 2014-11-18 15:59+0100\n"
+"Last-Translator: Gleeber <contact@gleeber.com>\n"
+"Language-Team: gleeber <contact@gleeber.info>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:97
+msgid "posted&nbsp;a"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:155
+msgid "is not yet configured."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:184
+msgid ""
+"There is a new version of BuddyStream available login and download it on the "
+"BuddyStream website."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:185
+msgid "Currently installed:"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:185
+msgid "Available: "
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:265
+msgid "Just created a new topic:"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:270
+msgid "Just responded to:"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:387
+msgid "Add my location"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:394
+msgid "Use this location"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:395
+msgid "Cancel"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamCore.php:431
+msgid "Show "
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:14
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:39
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/UserSettings.php:5
+msgid "Social networks"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:67
+msgid "Info"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:68
+msgid "BuddyStream"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:112
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:123
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:142
+msgid "Social albums"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamPageLoader.php:165
+msgid "Facebook"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamSupport.php:11
+msgid "I just unlocked the"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamSupport.php:11
+msgid "achievement!"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamSupport.php:166
+msgid "Close"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamWidgets.php:23
+msgid "Show networks:"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamWidgets.php:47
+msgid "Widget title:"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamWidgets.php:53
+msgid "Widget description:"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamWidgets.php:113
+msgid "Connect your"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/lib/BuddyStreamWidgets.php:113
+msgid "account "
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminMenu.php:10
+msgid "Dashboard"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminMenu.php:17
+msgid "Powercentral"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminMenu.php:24
+msgid "Sync central"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminMenu.php:35
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:47
+msgid "General settings"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminMenu.php:41
+msgid "Cronjob settings"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminMenu.php:50
+msgid "Logs "
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminUsers.php:25
+msgid ""
+"User integration has been reset. Note: User will have to reconnect their "
+"integration if desired."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminUsers.php:29
+msgid "Are you sure ?"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminUsers.php:38
+msgid "users description"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminUsers.php:53
+msgid "Items imported"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminUsers.php:54
+msgid "Reset user"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/AdminUsers.php:77
+msgid "Turned off by user"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Cronjob.php:55
+msgid "Cronservice sucessfully configured."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Cronjob.php:79
+msgid "cronjob description"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Cronjob.php:98
+msgid "Own cronjob"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Cronjob.php:103
+msgid "Cron command:"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Cronjob.php:113
+msgid "BuddyStream Cronservice"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Cronjob.php:118
+msgid "License key"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Cronjob.php:125
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:79
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Powercentral.php:106
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Synccentral.php:116
+msgid "Save Changes"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Dashboard.php:11
+msgid "dashboard description"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Dashboard.php:20
+msgid "Latest news"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:16
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Powercentral.php:21
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Synccentral.php:8
+msgid "Settings saved."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:30
+msgid "general settings description"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:52
+msgid "Enable social abums feature."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:58
+msgid "Move social albums under profile navigation."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:65
+msgid "Enable sharing on groups and forums."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:71
+msgid "Disable all BuddyStream CSS includes."
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:81
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Powercentral.php:108
+msgid "Turn all on"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/General.php:83
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Powercentral.php:110
+msgid "Turn all off"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Log.php:11
+msgid "buddystream log description"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Log.php:17
+msgid "Date"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Log.php:18
+msgid "Message"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Log.php:19
+msgid "Type"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Powercentral.php:34
+msgid "powercentral description"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/SocialAlbum.php:3
+msgid "albums"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/SocialAlbum.php:5
+msgid "Social Albums"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/SocialAlbum.php:102
+msgid "Nothing found (yet)"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/Synccentral.php:21
+msgid "synccentral description"
+msgstr ""
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev//extensions/default/templates/UserSettings.php:6
+msgid "Social networks setup description"
+msgstr ""
+"Synchronisez vos réseaux sociaux preférés pour que tous <br> les flux "
+"connectés apparaisent dans votre <b>fil d'activité</b> Gleeber ! "
+"<br><br>Séléctionnez le réseau social que vous souhaitez synchroniser !"
+
+msgid "Quick stats (activity items)"
+msgstr "Quick stats (activity items)"
+
+msgid "Support"
+msgstr "Support"
+
+msgid "Enable ShareBox feature."
+msgstr "Enable ShareBox feature."
+
+msgid "Imported items vs user generated items current year"
+msgstr "Imported items vs user generated items current year"
+
+msgid "Imported items vs user generated items last year"
+msgstr "Imported items vs user generated items last year"
+
+msgid "Sharebox"
+msgstr "Sharebox"
+
+msgid "Did you know?"
+msgstr "Did you know?"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Donate"
+msgstr "Donate"
+
+msgid "More freedom with BuddyStream version 2"
+msgstr "More freedom with BuddyStream version 2"
+
+msgid "freedom description"
+msgstr ""
+"We created more options, better flows and interfaces to give you and your "
+"users more freedom."
+
+msgid "Extend it with ease"
+msgstr "Extend it with ease"
+
+msgid "Faster, more stable and a cleaner interface."
+msgstr "Faster, more stable and a cleaner interface."
+
+msgid "faster stable cleaner description"
+msgstr ""
+"We cleaned our code to perform better then before, all known previous known "
+"bugs are solved and with a completely new core we can keep it stable."
+"<br>With the improved interface where the pages not only look cleaner, but "
+"also got a better flow."
+
+msgid "Go premium and get more networks an the best support there is."
+msgstr "Go premium and get more networks an the best support there is."
+
+msgid "go premium description"
+msgstr ""
+"If you go premium you get even more! Besides Twitter, Youtube, Last.fm and "
+"Flickr you also get: Facebook, Soundcloud and Rss integration!<br>But that "
+"is not all! You also get the best support, free cron service and all updates."
+
+msgid "Filters"
+msgstr "Filters"
+
+msgid "Users"
+msgstr "Users"
+
+msgid "Statitics"
+msgstr "Statitics"
+
+msgid "Advertisement"
+msgstr "Advertisement"

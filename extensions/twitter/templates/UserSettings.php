@@ -11,6 +11,8 @@ if ($_GET['reset'] == 'true') {
     delete_user_meta($bp->loggedin_user->id, 'tweetstream_synctoac');
     delete_user_meta($bp->loggedin_user->id, 'tweetstream_synctoac');
     delete_user_meta($bp->loggedin_user->id, 'tweetstream_filtermentions');
+    //for other plugins
+    do_action('buddystream_twitter_deleted');
 }
 
 if (isset($_GET['oauth_token'])) {

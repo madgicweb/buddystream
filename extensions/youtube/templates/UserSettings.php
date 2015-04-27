@@ -3,6 +3,8 @@
 
 if (isset($_GET['reset'])) {
     delete_user_meta($bp->loggedin_user->id, 'bs_youtube_username');
+    //for other plugins
+    do_action('buddystream_youtube_deleted');
 }
 
 if ($_POST) {

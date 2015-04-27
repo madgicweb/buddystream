@@ -8,6 +8,8 @@ if ($_GET['reset'] == 'true') {
     delete_user_meta($bp->loggedin_user->id, 'buddystream_instagram_tokensecret_temp');
     delete_user_meta($bp->loggedin_user->id, 'buddystream_instagram_token_temp');
     delete_user_meta($bp->loggedin_user->id, 'buddystream_instagram_synctoac');
+    //for other plugins
+    do_action('buddystream_instagram_deleted');
 }
 
 
