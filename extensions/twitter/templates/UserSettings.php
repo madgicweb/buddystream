@@ -123,11 +123,11 @@ if (get_user_meta($bp->loggedin_user->id, 'tweetstream_token', 1) && ! get_user_
                         <input type="radio" name="tweetstream_achievements" id="tweetstream_achievements"
                                value="1" <?php if ($tweetstream_achievements == 1) {
                             echo'checked';
-                        }?>> <?php echo __('Yes', 'buddsytream_lang'); ?>
+                        }?>> <?php echo __('Yes', 'buddystream_twitter'); ?>
                         <input type="radio" name="tweetstream_achievements" id="tweetstream_achievements"
                                value="0" <?php if ($tweetstream_achievements == 0) {
                             echo'checked';
-                        }?>> <?php echo __('No', 'buddsytream_lang'); ?>
+                        }?>> <?php echo __('No', 'buddystream_twitter'); ?>
                     </td>
                 </tr>
                 </tbody>
@@ -139,20 +139,18 @@ if (get_user_meta($bp->loggedin_user->id, 'tweetstream_token', 1) && ! get_user_
 
     <br/><br/>
 
-    <input type="submit" class="buddystream_save_button" value="<?php echo __('Save settings', 'buddystream_lang');?>">
+    <input type="submit" class="buddystream_save_button" value="<?php echo __('Save settings', 'buddystream_twitter');?>">
 
     <?php if (get_user_meta($bp->loggedin_user->id, 'tweetstream_token', 1)): ?>
         <a href="?network=twitter&reset=true"
-           class="buddystream_reset_button"><?php echo __('Remove Twitter synchronization.', 'buddystream_facebook');?></a>
+           class="buddystream_reset_button"><?php echo __('Remove Twitter synchronization', 'buddystream_twitter');?></a>
     <?php endif; ?>
     </form>
 
 <?php
 } else {
 
-    echo '<h3>' . __('Twitter setup</h3>
-                 You may setup you twitter intergration over here.<br/>
-                 Before you can begin using Twitter with this site you must authorize on Twitter by clicking the link below.', 'buddystream_twitter') . '<br/><br/>';
+    echo __('<h3>Twitter setup</h3>You may setup you twitter intergration over here.<br/>Before you can begin using Twitter with this site you must authorize on Twitter by clicking the link below.', 'buddystream_twitter') . '<br/><br/>';
 
     //oauth
     $buddystreamOAuth = new BuddyStreamOAuth();

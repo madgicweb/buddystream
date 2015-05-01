@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BuddyStream Instagram\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-20 22:40+0100\n"
+"POT-Creation-Date: 2015-04-27 13:44+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Gleeber <contact@gleeber.com>\n"
 "Language-Team: \n"
@@ -12,15 +12,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.6.5\n"
-"X-Poedit-SearchPath-0: /Users/peterhofman/projects/buddystream.net/wp-"
-"content/plugins/buddystream-premium/extensions/instagram\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SearchPath-0: ../.\n"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:32
+#: .././templates/AdminSettings.php:32
 msgid "Settings saved."
 msgstr "Modifications enregistrées"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:38
+#: .././templates/AdminSettings.php:38
 msgid "instagram settings description"
 msgstr ""
 "For BuddyStream to work you will need to get an Client id and a Client "
@@ -31,23 +30,23 @@ msgstr ""
 "network=instagram</b><br>3. Save the app and copy the <strong>\"Client id\" "
 "</strong>and <strong>\"Client secret\"</strong> into the fields below.<br> "
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:52
+#: .././templates/AdminSettings.php:52
 msgid "Instagram API"
 msgstr "Instagram API"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:58
+#: .././templates/AdminSettings.php:58
 msgid "Client key:"
 msgstr "Client key:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:64
+#: .././templates/AdminSettings.php:64
 msgid "Client secret:"
 msgstr "Client secret:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:76
+#: .././templates/AdminSettings.php:76
 msgid "User options"
 msgstr "User options"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:83
+#: .././templates/AdminSettings.php:83
 msgid ""
 "Maximum Instagram images to be imported per user, per day (empty = unlimited "
 "tweets import):"
@@ -55,119 +54,124 @@ msgstr ""
 "Maximum Instagram media to be imported per user, per day (empty = unlimited "
 "tweets import):"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminSettings.php:95
+#: .././templates/AdminSettings.php:95
 msgid "Save Changes"
 msgstr "Save Changes"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:22
+#: .././templates/AdminStatitics.php:22
 msgid "instagram statitics description"
 msgstr "Instagram statitics description"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:29
+#: .././templates/AdminStatitics.php:29
 msgid "Statistics"
 msgstr "Statistics"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:50
+#: .././templates/AdminStatitics.php:50
 msgid "Amount of users:"
 msgstr "Amount of users:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:54
+#: .././templates/AdminStatitics.php:54
 msgid "Amount of user Instagram intergration:"
 msgstr "Amount of user Instagram intergration:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:58
+#: .././templates/AdminStatitics.php:58
 msgid "Percentage of users using intergration:"
 msgstr "Percentage of users using intergration:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:62
+#: .././templates/AdminStatitics.php:62
 msgid "Amount of activity updates:"
 msgstr "Amount of activity updates:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:66
+#: .././templates/AdminStatitics.php:66
 msgid "Amount of items updates:"
 msgstr "Amount of items updates:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:70
+#: .././templates/AdminStatitics.php:70
 msgid "Percentage of items in activity updates:"
 msgstr "Percentage of items in activity updates:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:74
+#: .././templates/AdminStatitics.php:74
 msgid "Average items import per day:"
 msgstr "Average items import per day:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:78
+#: .././templates/AdminStatitics.php:78
 msgid "Average items import per week:"
 msgstr "Average items import per week:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:82
+#: .././templates/AdminStatitics.php:82
 msgid "Average items import per month:"
 msgstr "Average items import per month:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/AdminStatitics.php:86
+#: .././templates/AdminStatitics.php:86
 msgid "Average items import per year:"
 msgstr "Average items import per year:"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:20
+#: .././templates/UserSettings.php:22
 msgid "Settings saved"
 msgstr "Modifications enregitrées"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:31
+#: .././templates/UserSettings.php:33
 msgid "Instagram Settings"
-msgstr "Instagram Settings"
+msgstr "Instagram"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:39
+#: .././templates/UserSettings.php:41
 msgid "There are no settings available.</br></br>"
 msgstr "There are no settings available.</br></br>"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:46
+#: .././templates/UserSettings.php:48
 msgid "Synchronize Instagram to my activity stream?"
 msgstr ""
 "Synchroniser Instagram avec mon fil d'activité Gleeber (Lecture Seule) ?"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:56
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:81
+#: .././templates/UserSettings.php:58 .././templates/UserSettings.php:83
 msgid "Yes"
 msgstr "Oui"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:62
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:85
+#: .././templates/UserSettings.php:64 .././templates/UserSettings.php:87
 msgid "No"
 msgstr "Non"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:72
+#: .././templates/UserSettings.php:74
 msgid "Send achievements unlock to my instagram"
 msgstr "Send achievements unlock to my Instagram"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:96
+#: .././templates/UserSettings.php:98
 msgid "Save settings"
-msgstr "Sauver les modifications"
+msgstr "Enregistrer"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:100
+#: .././templates/UserSettings.php:102
 msgid "Remove Instagram synchronization."
-msgstr "Supprimer la synchronisation"
+msgstr "Supprimer la synchronisation avec Instagram"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:107
+#: .././templates/UserSettings.php:109
 msgid ""
-"Instagram setup</h3>\n"
-"                 You may setup you Instagram intergration over here.<br/>\n"
-"                 Before you can begin using Instagram with this site you "
-"must authorize on Instagram by clicking the link below."
+"<h3>Instagram setup</h3>You may setup you Instagram intergration over here."
+"<br/>Before you can begin using Instagram with this site you must authorize "
+"on Instagram by clicking the link below."
 msgstr ""
-"Instagram synchonisation</h3>\n"
-"Vos posts Instagram apparaissent sur votre fil d'activité Gleeber.<br> \n"
-"Vous devez autoriser Gleeber à lire vos posts Instagram (Lecture Seule). "
+"<h3>Instagram</h3>Cliquez sur le bouton \"Autoriser\" pour démarrer la "
+"synchronisation ! "
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:115
+#: .././templates/UserSettings.php:115
 msgid "Click here to start authorization"
-msgstr "Cliquez ici pour authoriser !"
+msgstr "Autoriser"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-premium/extensions/instagram/templates/UserSettings.php:117
+#: .././templates/UserSettings.php:117
 msgid ""
 "There is a problem with the authentication service at this moment please "
 "come back in a while."
 msgstr ""
-"There is a problem with the authentication service at this moment please "
-"come back in a while."
+"Un problème est survenu avec le système d'authentification. Veuillez "
+"réessayer ultérieurement !"
+
+#~ msgid ""
+#~ "Instagram setup</h3>\n"
+#~ "                 You may setup you Instagram intergration over here.<br/"
+#~ ">\n"
+#~ "                 Before you can begin using Instagram with this site you "
+#~ "must authorize on Instagram by clicking the link below."
+#~ msgstr ""
+#~ "Cliquez sur le bouton \"Autoriser\" pour démarrer la synchronisation ! "
 
 #~ msgid "Also checkin on Foursquare."
 #~ msgstr "Also checkin on Foursquare."

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Buddystream\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-27 11:33+0100\n"
-"PO-Revision-Date: 2015-04-27 11:39+0100\n"
+"PO-Revision-Date: 2015-04-27 11:43+0100\n"
 "Last-Translator: Gleeber <contact@gleeber.com>\n"
 "Language-Team: gleeber <contact@gleeber.info>\n"
 "Language: fr_FR\n"
@@ -244,12 +244,12 @@ msgstr ""
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:14
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:39
 msgid "Social networks"
-msgstr ""
+msgstr "&nbsp;"
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/UserSettings.php:6
 msgid "Social networks setup description"
-msgstr ""
+msgstr "Sélectionnez le réseau social à synchroniser ! "
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminSettings.php:41

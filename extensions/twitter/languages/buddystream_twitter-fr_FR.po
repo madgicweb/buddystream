@@ -2,263 +2,281 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BuddyStream Twitter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-28 23:57+0100\n"
+"POT-Creation-Date: 2015-04-27 13:38+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Gleeber <contact@gleeber.com>\n"
 "Language-Team: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.7.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: fr_FR\n"
-"X-Poedit-SearchPath-0: /Users/peterhofman/projects/buddystream.net/wp-"
-"content/plugins/buddystream-dev/extensions/twitter\n"
+"X-Poedit-SearchPath-0: ../.\n"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/core.php:11
+#: .././core.php:14
+msgid "You need to re-authenticate on Facebook."
+msgstr ""
+
+#: .././core.php:16
 msgid "Also post this to my Twitter account."
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/core.php:13
+#: .././core.php:19
 msgid ""
 "You\\'ve reached the max. amount of characters for a Tweet.  The Message "
 "will appear truncated on Twitter."
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminFilters.php:21
+#: .././templates/AdminFilters.php:21
 msgid "Filters saved."
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminFilters.php:27
+#: .././templates/AdminFilters.php:27
 msgid "twitter filters description"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminFilters.php:36
+#: .././templates/AdminFilters.php:36
 msgid "Twitter filters (optional)"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminFilters.php:44
+#: .././templates/AdminFilters.php:44
 msgid "Filters (comma seperated)"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminFilters.php:50
+#: .././templates/AdminFilters.php:50
 msgid "Explicit words (comma seperated)"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminFilters.php:57
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:95
+#: .././templates/AdminFilters.php:57 .././templates/AdminSettings.php:95
 msgid "Save Changes"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:32
+#: .././templates/AdminSettings.php:32
 msgid "Settings saved."
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:38
+#: .././templates/AdminSettings.php:38
 msgid "twitter settings description"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:52
+#: .././templates/AdminSettings.php:52
 msgid "Twitter API"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:58
+#: .././templates/AdminSettings.php:58
 msgid "Consumer key:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:64
+#: .././templates/AdminSettings.php:64
 msgid "Consumer secret key:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:76
+#: .././templates/AdminSettings.php:76
 msgid "User options"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminSettings.php:83
+#: .././templates/AdminSettings.php:83
 msgid ""
 "Maximum Tweets to be imported per user, per day (empty = unlimited tweets "
 "import):"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:27
+#: .././templates/AdminStatitics.php:23
 msgid "twitter statitics description"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:34
+#: .././templates/AdminStatitics.php:30
 msgid "Statistics"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:55
+#: .././templates/AdminStatitics.php:51
 msgid "Amount of users:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:59
+#: .././templates/AdminStatitics.php:55
 msgid "Amount of user Twitter intergration:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:63
+#: .././templates/AdminStatitics.php:59
 msgid "Percentage of users using intergration:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:67
+#: .././templates/AdminStatitics.php:63
 msgid "Amount of activity updates:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:71
+#: .././templates/AdminStatitics.php:67
 msgid "Amount of tweets updates:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:75
+#: .././templates/AdminStatitics.php:71
 msgid "Percentage of tweets in activity updates:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:79
+#: .././templates/AdminStatitics.php:75
 msgid "Average tweets import per day:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:83
+#: .././templates/AdminStatitics.php:79
 msgid "Average tweets import per week:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:87
+#: .././templates/AdminStatitics.php:83
 msgid "Average tweets import per month:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/AdminStatitics.php:91
+#: .././templates/AdminStatitics.php:87
 msgid "Average tweets import per year:"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:58
+#: .././templates/UserSettings.php:62
 msgid "Settings saved"
 msgstr "Modifications enregistrées"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:70
+#: .././templates/UserSettings.php:74
 msgid "Twitter Settings"
-msgstr ""
+msgstr "Twitter"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:78
+#: .././templates/UserSettings.php:82
 msgid "There are no settings available.</br></br>"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:86
+#: .././templates/UserSettings.php:90
 msgid "Synchronize Tweets to my activity stream?"
 msgstr "Synchroniser mes tweets avec mon fil d'activité Gleeber ?"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:96
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:122
+#: .././templates/UserSettings.php:100 .././templates/UserSettings.php:126
 msgid "Yes"
 msgstr "Oui"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:102
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:126
+#: .././templates/UserSettings.php:106 .././templates/UserSettings.php:130
 msgid "No"
 msgstr "Non"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:113
+#: .././templates/UserSettings.php:117
 msgid "Send achievements unlock to my twitter"
 msgstr ""
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:138
+#: .././templates/UserSettings.php:142
 msgid "Save settings"
-msgstr "Enregistrer les modifications"
+msgstr "Enregistrer"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:142
-msgid "Remove Twitter synchronization."
-msgstr "Supprimer la synchronisation"
+#: .././templates/UserSettings.php:146
+msgid "Remove Twitter synchronization"
+msgstr "Supprimer la synchronisation avec Twitter"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:149
+#: .././templates/UserSettings.php:153
 msgid ""
-"Twitter setup</h3>\n"
-"                 You may setup you twitter intergration over here.<br/>\n"
-"                 Before you can begin using Twitter with this site you must "
-"authorize on Twitter by clicking the link below."
+"<h3>Twitter setup</h3>You may setup you twitter intergration over here.<br/"
+">Before you can begin using Twitter with this site you must authorize on "
+"Twitter by clicking the link below."
 msgstr ""
-"Twitter synchronisation</h3>\n"
-"Vos tweets apparaissent sur votre fil d'activité Gleeber.<br/>\n"
-"Vous devez autoriser Gleeber à lire vos tweets (Lecture Seule). "
+"<h3>Twitter</h3>Cliquez sur le bouton \"Autoriser\" pour démarrer la "
+"synchronisation ! "
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:174
+#: .././templates/UserSettings.php:176
 msgid "Click here to start authorization"
-msgstr "Cliquez ici pour autoriser ! "
+msgstr "Autoriser"
 
-#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/twitter/templates/UserSettings.php:176
+#: .././templates/UserSettings.php:178
 msgid ""
 "There is a problem with the authentication service at this moment please "
 "come back in a while."
 msgstr ""
 
-msgid "Twitter API server offline at the moment."
-msgstr "Twitter API server offline at the moment."
+#~ msgid ""
+#~ "Twitter setup</h3>You may setup you twitter intergration over here.<br/"
+#~ ">Before you can begin using Twitter with this site you must authorize on "
+#~ "Twitter by clicking the link below."
+#~ msgstr ""
+#~ "Cliquez sur le bouton \"Autoriser\" pour démarrer la synchronisation ! "
 
-msgid "to twitter"
-msgstr "to Twitter"
+#~ msgid "Remove Twitter synchronization."
+#~ msgstr "Supprimer la synchronisation"
 
-msgid "Twitter"
-msgstr "Twitter"
+#~ msgid ""
+#~ "Twitter setup</h3>\n"
+#~ "                 You may setup you twitter intergration over here.<br/>\n"
+#~ "                 Before you can begin using Twitter with this site you "
+#~ "must authorize on Twitter by clicking the link below."
+#~ msgstr ""
+#~ "Twitter synchronisation</h3>\n"
+#~ "Vos tweets apparaissent sur votre fil d'activité Gleeber.<br/>\n"
+#~ "Vous devez autoriser Gleeber à lire vos tweets (Lecture Seule). "
 
-msgid ""
-"\"User integration has been reset. Note: User will have to reconnect their "
-"integration if desired.\""
-msgstr ""
-"\"User integration has been reset. Note: User will have to reconnect their "
-"integration if desired.\""
+#~ msgid "Twitter API server offline at the moment."
+#~ msgstr "Twitter API server offline at the moment."
 
-msgid "Are you sure ?"
-msgstr "Etes-vous sûr ?"
+#~ msgid "to twitter"
+#~ msgstr "to Twitter"
 
-msgid "twitter users description"
-msgstr ""
-"Below is a list of all users whom are using Twitter. You may reset there "
-"Twitter settings here. <br><b>Note:</b> When you reset a user they need to "
-"re-authenticate with Twitter.Tweets already imported <b>WILL NOT</b> be "
-"deleted!"
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
 
-msgid "Username"
-msgstr "Username"
+#~ msgid ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+#~ msgstr ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
 
-msgid "Email"
-msgstr "Email"
+#~ msgid "Are you sure ?"
+#~ msgstr "Etes-vous sûr ?"
 
-msgid "Tweets imported"
-msgstr "Tweets imported"
+#~ msgid "twitter users description"
+#~ msgstr ""
+#~ "Below is a list of all users whom are using Twitter. You may reset there "
+#~ "Twitter settings here. <br><b>Note:</b> When you reset a user they need "
+#~ "to re-authenticate with Twitter.Tweets already imported <b>WILL NOT</b> "
+#~ "be deleted!"
 
-msgid "Reset user"
-msgstr "Reset user"
+#~ msgid "Username"
+#~ msgstr "Username"
 
-msgid "Filters"
-msgstr "Filters"
+#~ msgid "Email"
+#~ msgstr "Email"
 
-msgid "user settings"
-msgstr ""
-"By using filters, you may decide which Tweets will be imported or excluded."
-"<br/>\n"
-"        <b>Note:</b> Each site also has a \"Global\" list of filters and its "
-"settings will override these settings. <br/>\n"
-"        <b>Note:</b> Keywords listed in the \"Good\" Filter must be present "
-"in the update itself to be included in the site import. Likewise, keywords "
-"listed in the \"Explicit Filter\" will cause that particular update NOT to "
-"be imported.\n"
-"        "
+#~ msgid "Tweets imported"
+#~ msgstr "Tweets imported"
 
-msgid "Good Filter (separate words with commas)"
-msgstr "Good Filter (separate words with commas)"
+#~ msgid "Reset user"
+#~ msgstr "Reset user"
 
-msgid "Bad Filter (separate words with commas)"
-msgstr "Bad Filter (separate words with commas)"
+#~ msgid "Filters"
+#~ msgstr "Filters"
 
-msgid "Hide tweets on the sidewide activity stream?"
-msgstr "Hide tweets on the sidewide activity stream?"
+#~ msgid "user settings"
+#~ msgstr ""
+#~ "By using filters, you may decide which Tweets will be imported or "
+#~ "excluded.<br/>\n"
+#~ "        <b>Note:</b> Each site also has a \"Global\" list of filters and "
+#~ "its settings will override these settings. <br/>\n"
+#~ "        <b>Note:</b> Keywords listed in the \"Good\" Filter must be "
+#~ "present in the update itself to be included in the site import. Likewise, "
+#~ "keywords listed in the \"Explicit Filter\" will cause that particular "
+#~ "update NOT to be imported.\n"
+#~ "        "
 
-msgid "Allow users to sync Twitter to you website?"
-msgstr "Allow users to sync Twitter to you website?"
+#~ msgid "Good Filter (separate words with commas)"
+#~ msgstr "Good Filter (separate words with commas)"
 
-msgid "Extra options"
-msgstr "Extra options"
+#~ msgid "Bad Filter (separate words with commas)"
+#~ msgstr "Bad Filter (separate words with commas)"
 
-msgid "Show Twitter share button?"
-msgstr "Show Twitter share button?"
+#~ msgid "Hide tweets on the sidewide activity stream?"
+#~ msgstr "Hide tweets on the sidewide activity stream?"
 
-msgid "Show counter?"
-msgstr "Show counter?"
+#~ msgid "Allow users to sync Twitter to you website?"
+#~ msgstr "Allow users to sync Twitter to you website?"
+
+#~ msgid "Extra options"
+#~ msgstr "Extra options"
+
+#~ msgid "Show Twitter share button?"
+#~ msgstr "Show Twitter share button?"
+
+#~ msgid "Show counter?"
+#~ msgstr "Show counter?"

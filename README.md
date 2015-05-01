@@ -41,7 +41,7 @@ Networks that the plugin currently supports:
 == ChangeLog ==
 
 = 3.2.8 =
-
+* Bug Fix : Tag to find good translation file for each extension 
 * Add Hook when account is deleted
 * Bug fix : Graphical design on default/template/usersetting
 * Updated buddystream.php to reflect new ownership

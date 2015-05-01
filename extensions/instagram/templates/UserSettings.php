@@ -80,11 +80,11 @@ if (get_user_meta($bp->loggedin_user->id, 'buddystream_instagram_token', 1)) {
                         <input type="radio" name="buddystream_instagram_achievements" id="buddystream_instagram_achievements"
                                value="1" <?php if ($buddystream_instagram_achievements == 1) {
                             echo'checked';
-                        }?>> <?php echo __('Yes', 'buddsytream_lang'); ?>
+                        }?>> <?php echo __('Yes', 'buddystream_instagram'); ?>
                         <input type="radio" name="buddystream_instagram_achievements" id="buddystream_instagram_achievements"
                                value="0" <?php if ($buddystream_instagram_achievements == 0) {
                             echo'checked';
-                        }?>> <?php echo __('No', 'buddsytream_lang'); ?>
+                        }?>> <?php echo __('No', 'buddystream_instagram'); ?>
                     </td>
                 </tr>
                 </tbody>
@@ -95,20 +95,18 @@ if (get_user_meta($bp->loggedin_user->id, 'buddystream_instagram_token', 1)) {
 
     <br/><br/>
 
-    <input type="submit" class="buddystream_save_button" value="<?php echo __('Save settings', 'buddystream_lang');?>">
+    <input type="submit" class="buddystream_save_button" value="<?php echo __('Save settings', 'buddystream_instagram');?>">
 
     <?php if (get_user_meta($bp->loggedin_user->id, 'buddystream_instagram_token', 1)): ?>
         <a href="?network=instagram&reset=true"
-           class="buddystream_reset_button"><?php echo __('Remove Instagram synchronization.', 'buddystream_facebook');?></a>
+           class="buddystream_reset_button"><?php echo __('Remove Instagram synchronization.', 'buddystream_instagram');?></a>
     <?php endif; ?>
     </form>
 
 <?php
 } else {
 
-    echo '<h3>' . __('Instagram setup</h3>
-                 You may setup you Instagram intergration over here.<br/>
-                 Before you can begin using Instagram with this site you must authorize on Instagram by clicking the link below.', 'buddystream_instagram') . '<br/><br/>';
+    echo __('<h3>Instagram setup</h3>You may setup you Instagram intergration over here.<br/>Before you can begin using Instagram with this site you must authorize on Instagram by clicking the link below.', 'buddystream_instagram') . '<br/><br/>';
 
     //get the redirect url for the user
     $redirectUrl = "https://api.instagram.com/oauth/authorize/?client_id=".get_site_option("buddystream_instagram_consumer_key")."&response_type=code&redirect_uri=".site_url()."/?network=instagram";
