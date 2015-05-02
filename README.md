@@ -3,10 +3,9 @@
 Contributors: Madgicweb | Blackphantom
 
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-
 Tested up to: WP 4.0 BuddyPress 2.1.1
 
-Stable tag: 3.2.8
+Stable tag: 3.2.7
 
 Released under the GPL license
 ---
@@ -28,24 +27,27 @@ Networks that the plugin currently supports:
 - Flickr
 - Youtube
 - Last.fm
-- Location
----
+- Twitter Location
 
+Requirements
+---
 == Requirements ==
 * PHP 5.2.1+
 * CURL
 * JSON
 * CRONJOB access
----
 
+Releasew
+---
 == ChangeLog ==
 
 = 3.2.8 =
-* Bug Fix : Tag to find good translation file for each extension 
-* Add Hook when account is deleted
+* Bug Fix : Update "Tags" to define good translation file for each extension 
+* Add Hook when syncrhonisation with social network is deleted
 * Bug fix : Graphical design on default/template/usersetting
 * Updated buddystream.php to reflect new ownership
 * Added Composer support
+* Extract Buddystream 3.2.7 by Blackphantom [http://buddystream.net/]
 
 = 3.2.7 =
 * Upgraded cronjob service
