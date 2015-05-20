@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Buddystream\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-27 11:33+0100\n"
-"PO-Revision-Date: 2015-04-27 11:43+0100\n"
+"POT-Creation-Date: 2015-05-19 23:51+0100\n"
+"PO-Revision-Date: 2015-05-19 23:52+0100\n"
 "Last-Translator: Gleeber <contact@gleeber.com>\n"
 "Language-Team: gleeber <contact@gleeber.info>\n"
 "Language: fr_FR\n"
@@ -504,21 +504,20 @@ msgstr ""
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:109
 msgid ""
-"Instagram setup</h3>\n"
-"                 You may setup you Instagram intergration over here.<br/>\n"
-"                 Before you can begin using Instagram with this site you "
-"must authorize on Instagram by clicking the link below."
+"<h3>Instagram setup</h3>You may setup you Instagram intergration over here."
+"<br/>Before you can begin using Instagram with this site you must authorize "
+"on Instagram by clicking the link below."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:115
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:176
+msgid "Click here to start authorization"
 msgstr ""
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:117
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:178
-msgid "Click here to start authorization"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:119
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:180
 msgid ""
 "There is a problem with the authentication service at this moment please "
 "come back in a while."
@@ -721,16 +720,15 @@ msgstr ""
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:146
-msgid "Remove Twitter synchronization."
+msgid "Remove Twitter synchronization"
 msgstr ""
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:153
 msgid ""
-"Twitter setup</h3>\n"
-"                 You may setup you twitter intergration over here.<br/>\n"
-"                 Before you can begin using Twitter with this site you must "
-"authorize on Twitter by clicking the link below."
+"<h3>Twitter setup</h3>You may setup you twitter intergration over here.<br/"
+">Before you can begin using Twitter with this site you must authorize on "
+"Twitter by clicking the link below."
 msgstr ""
 
 #: C:\Program Files
@@ -820,59 +818,59 @@ msgid "Remove Youtube synchronization."
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:103
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:104
 msgid "posted&nbsp;a"
-msgstr ""
+msgstr "a&nbsp;posté(e)&nbsp;un "
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:186
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:187
 msgid "is not yet configured."
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:217
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:218
 msgid ""
 "There is a new version of BuddyStream available login and download it on the "
 "BuddyStream website."
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:218
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:219
 msgid "Currently installed:"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:218
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:219
 msgid "Available: "
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:300
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:301
 msgid "Just created a new topic:"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:305
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:306
 msgid "Just responded to:"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:423
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:424
 msgid "Add my location"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:431
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:432
 msgid "Use this location"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:432
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:433
 msgid "Cancel"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:465
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:466
 msgid "Show "
 msgstr ""
 
