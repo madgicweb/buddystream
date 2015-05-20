@@ -110,3 +110,5 @@ if (file_exists(BP_BUDDYSTREAM_DIR."/extensions/" . $importer . "/import.php")) 
         }
     }
 }
+
+do_action('buddystream_after_global_import');

@@ -58,7 +58,7 @@ class BuddyStreamInstagramImport
 
                                         $returnCreate = false;
 
-                                        $content = '<a href="' . $item->images->standard_resolution->url . '" class="bs_lightbox" id="' . $item->id . '"><img src="' . $item->images->thumbnail->url . '"></a> '. $item->caption->text;
+                                        $content = '<a href="' . $item->images->standard_resolution->url . '" class="bs_lightbox" id="' . $item->id . '"><img src="' . $item->images->low_resolution->url . '"></a> '. $item->caption->text;
 
                                         $returnCreate = buddystreamCreateActivity(array(
                                                 'user_id' => $user_meta->user_id,
