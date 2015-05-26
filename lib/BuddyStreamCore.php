@@ -549,12 +549,7 @@ function buddystreamGetTweetId($num) {
     $nb = count($tableau);
     for ($j=0; $j < $nb; $j++)
     {
-<<<<<<< HEAD
-        $resultat=$resultat.intval($tableau[$j]);
-=======
-        //$resultat=$resultat.intval($tableau[$j]);
         $resultat=$resultat.$tableau[$j];
->>>>>>> 703aab6... modify function buddystreamGetTweetId() in BuddyStreamCore to get Tweet-Id
     }
     return $resultat;
 }
