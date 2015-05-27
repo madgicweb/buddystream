@@ -104,6 +104,7 @@ function buddystreamCreateActivity($params){
             $activity->action .= ' ' . __('posted&nbsp;a', 'buddystream_lang').' ';
             $activity->action .= '<a href="' . $params['actionlink'] . '" target="_blank" rel="external"> '.__($params['type'], 'buddystream_'.$extension['name']);
             $activity->action .= '</a>: ';
+            $activity->primary_link        = $params['actionlink'];
 
             if ( ! preg_match("/" . $params['item_id'] . "/i", get_user_meta($params['user_id'], 'buddystream_blacklist_ids', 1))) {
 
