@@ -42,6 +42,7 @@ Releases
 == ChangeLog ==
 
 = 3.2.8 =
+* Add option $activity->primary_link = $params['actionlink'] to save link
 * add function buddystreamGetTweetId() in BuddyStreamCore to get Tweet-Id
 * Bug Fix : Twitter/import define screenName from Twitter api account/settings.json
 * Bug Fix : Update "Tags" to define good translation file for each extension 
