@@ -119,19 +119,20 @@ function buddystream_profile_navigation(){
                     ) 
             );
         }else{
-            bp_core_new_nav_item( 
-                    array(
-                        'name' => __( 'Social albums', 'buddystream_lang' ),
-                        'slug' => 'social-album',
-                        'position' => 80,
-                        'screen_function' => 'buddystream_default_album'
-                    )
-            );   
+            bp_core_new_nav_item(
+					array(
+						'name' => __( 'Social albums', 'buddystream_lang' ),
+						'slug' => 'social-album', 
+						'position' => 12,
+						'default_subnav_slug' => 'albums', // We add this submenu item below 
+						'screen_function' => 'buddystream_default_album'
+					)
+			);
         }
      }
 }
 
-buddystream_profile_navigation();
+add_action('bp_setup_nav', 'buddystream_profile_navigation', 301 );
 
 function buddystream_default_album(){
     $buddyStreamExtensions = new BuddyStreamExtensions();
