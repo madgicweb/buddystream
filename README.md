@@ -1,57 +1,70 @@
 # BuddyStream
 ---
-Contributors: Madgicweb | Blackphantom
+Contributors: Madgicweb [http://madgicweb.com/] | Blackphantom [http://buddystream.net/]
 
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 4.0 BuddyPress 2.1.1
+Tested up to: WP 4.2 BuddyPress 2.3.2
 
-Stable tag: 3.2.7
+Stable tag: 3.2.8
 
 Released under the GPL license
 ---
 == Description ==
 
-> !IMPORTANT!
->    Replace your current cronjob for BuddyStream by the new one (see settings -> cronjob)
-> !IMPORTANT!
-
 BuddyStream is a BuddyPress plugin that will synchronize all of your favorite Social Networks to the BuddyPress activity stream.
 
-The plugin setup can be hard but tried to keep it easy, operate, and for your members to use.
-Each Social Network has its own admin panel where you can see which users are using the network, view cool statistics, and manage the advanced filtering settings.
+The plugin setup is easy to operate, and for your members easy to use.
+Each Social Network has its own admin panel where you can see which users are using the network, view cool statistics, and manage the advanced filtering settings
 
 Networks that the plugin currently supports:
 
 - Instagram
 - Twitter
+- Twitter Location
 - Flickr
 - Youtube
 - Last.fm
-- Twitter Location
+- Facebook [Prenium]
+- SoundCloud [Prenium]
+
+
+== Demo ==
+http://gleeber.info 
+
 
 Requirements
 ---
-== Requirements ==
+
 * PHP 5.2.1+
 * CURL
 * JSON
-* CRONJOB access
+* CRONJOB access -> Blackphantom [http://buddystream.net/] propose to support your cronjobs !
+
 
 Releases
 ---
 == ChangeLog ==
+> == Only available on the Madgicweb's GitHub ==
 
-= 3.2.8 =
-* Add option $activity->primary_link = $params['actionlink'] to save link
-* add function buddystreamGetTweetId() in BuddyStreamCore to get Tweet-Id
-* Bug Fix : Twitter/import define screenName from Twitter api account/settings.json
-* Bug Fix : Update "Tags" to define good translation file for each extension 
-* Add Hook when syncrhonisation with social network is deleted
-* Bug fix : Graphical design on default/template/usersetting
+= 3.3.0 = *[Not commit]*
+* Facebook : [Improvement] Delete depreciate authorization request
+* Facebook : [Bug fixed] Keep checked pages selected
+* SoundCloud : [Bug fixed] Modify ssl configuration during get access Token
+
+
+= 3.2.8 = *[Tag on github]*
+* Core : [Bug fixed] Add option $activity->primary_link = $params['actionlink'] to save link
+* Core : [Bug fixed] Add function buddystreamGetTweetId() in BuddyStreamCore to get correct Tweet-Id
+* Twitter : [Bug Fixed] Twitter/import define screenName from Twitter api account/settings.json
+* Core / twitter / Instagram [Bug Fixed] Update "Tags" to define good translation file for each extension 
+* Core : [Improvement] Add Hook when syncrhonisation with social network is deleted
+* Core : [Bug fixed] Fix graphical design on default/template/usersetting
 * Updated buddystream.php to reflect new ownership
 * Added Composer support
 * Extract Buddystream 3.2.7 by Blackphantom [http://buddystream.net/]
 
+
+> == Available on the wordpress plugin website ==
 = 3.2.7 =
 * Upgraded cronjob service
 * Updated compatibility with WordPress 4.0
