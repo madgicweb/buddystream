@@ -29,6 +29,7 @@ Networks that the plugin currently supports:
 
 
 == Demo ==
+
 http://gleeber.info 
 
 
@@ -44,7 +45,7 @@ Requirements
 Releases
 ---
 == ChangeLog ==
-> == Only available on the Madgicweb's GitHub ==
+> Only available on the Madgicweb's GitHub
 
 = 3.3.0 = *[Not commit]*
 * Facebook : [Improvement] Delete depreciate authorization request
@@ -52,7 +53,7 @@ Releases
 * SoundCloud : [Bug fixed] Modify ssl configuration during get access Token
 
 
-= 3.2.8 = *[Tag on github]*
+= 3.2.8 = *[Tag on github : 2015 08 04]*
 * Core : [Bug fixed] Add option $activity->primary_link = $params['actionlink'] to save link
 * Core : [Bug fixed] Add function buddystreamGetTweetId() in BuddyStreamCore to get correct Tweet-Id
 * Twitter : [Bug Fixed] Twitter/import define screenName from Twitter api account/settings.json
@@ -64,7 +65,8 @@ Releases
 * Extract Buddystream 3.2.7 by Blackphantom [http://buddystream.net/]
 
 
-> == Available on the wordpress plugin website ==
+> Version below available on the wordpress plugin website
+
 = 3.2.7 =
 * Upgraded cronjob service
 * Updated compatibility with WordPress 4.0
