@@ -26,6 +26,7 @@ Networks that the plugin currently supports:
 - Last.fm
 - Facebook [Prenium]
 - SoundCloud [Prenium]
+- RSS / MyWebSites [Prenium]
 
 
 == Demo ==
@@ -45,15 +46,19 @@ Requirements
 Releases
 ---
 == ChangeLog ==
-> Only available on the Madgicweb's GitHub
+> Version below only available on the Madgicweb's GitHub [http://git.madgicweb.com/]
 
-= 3.3.0 = *[Not commit]*
+= 3.3.0 = *[Not commited yet]*
 * Facebook : [Improvement] Delete depreciate authorization request
 * Facebook : [Bug fixed] Keep checked pages selected
 * SoundCloud : [Bug fixed] Modify ssl configuration during get access Token
 
+= 3.2.9 =
+Core : [Bug Fixed] display the displayName on the social network selection list
+Core : [Improvement] Suppression of waiting list to run all imports
+Core : [Improvement] Add hook "buddystream_after_global_import"
 
-= 3.2.8 = *[Tag on github : 2015 08 04]*
+= 3.2.8 = *[Tags on github August 04, 2015]*
 * Core : [Bug fixed] Add option $activity->primary_link = $params['actionlink'] to save link
 * Core : [Bug fixed] Add function buddystreamGetTweetId() in BuddyStreamCore to get correct Tweet-Id
 * Twitter : [Bug Fixed] Twitter/import define screenName from Twitter api account/settings.json
