@@ -38,7 +38,8 @@ if (isset($_GET['uniqueKey'])) {
 
 //if network set skip auto loading network import and run the set network
 if( $_GET['network'] ){
-    $importer = $_GET['network'];
+    $importers = array();
+    $importers[] = $_GET['network'];
 }
 
 if( ! $_GET['network'] ){
@@ -70,6 +71,7 @@ if( ! $_GET['network'] ){
             $importQueue[] = $extension;
         }
     }
+    
 
     //check if there is a import queue, if empty reset
     if (get_site_option("buddystream_importers_queue") == "") {
@@ -79,36 +81,62 @@ if( ! $_GET['network'] ){
     //start the import (one per time)
     $importers = get_site_option("buddystream_importers_queue");
     $importers = explode(",", $importers);
-    $importer  = current($importers);
-
+    //$importer  = current($importers);
+    
+     //===debug===
+     //echo '<br>impoters : ';
+     //print_r ($importers);
+     //echo '<br><br>';
+     
     //remove importer from queue before starting real import
-    unset($importers[0]);
-    update_site_option("buddystream_importers_queue", implode(",", $importers));
+    //unset($importers[0]);
+    //update_site_option("buddystream_importers_queue", implode(",", $importers));
 }
 
 
 //start the importer for real 
-if (file_exists(BP_BUDDYSTREAM_DIR."/extensions/" . $importer . "/import.php")) {
+$i=0; //set counter
+$globalInfoArray = array(); //set global info
+foreach($importers as $importer){
+    
+    if (file_exists(BP_BUDDYSTREAM_DIR."/extensions/" . $importer . "/import.php")) {
 
-    if (get_site_option("buddystream_" . $importer . "_power") && get_site_option("buddystream_" . $importer . "_import")) {
+        if (get_site_option("buddystream_" . $importer . "_power") && get_site_option("buddystream_" . $importer . "_import")) {
 
-        include_once(BP_BUDDYSTREAM_DIR."/extensions/" . $importer . "/import.php");
+            include_once(BP_BUDDYSTREAM_DIR."/extensions/" . $importer . "/import.php");
 
-        if (function_exists("Buddystream" . ucfirst($importer) . "ImportStart")) {
+            if (function_exists("Buddystream" . ucfirst($importer) . "ImportStart")) {
 
-            $numberOfItems = call_user_func("Buddystream" . ucfirst($importer) . "ImportStart");
+                $numberOfItems = call_user_func("Buddystream" . ucfirst($importer) . "ImportStart");
 
-            //create return array
-            $infoArray = array(
-                'executed' => true,
-                'date' => date('d-m-y H:i'),
-                'network' => $importer,
-                'items' => $numberOfItems
-            );
+                //create return array
+                $infoArray = array(
+                    'executed' => true,
+                    'date' => date('d-m-y H:i'),
+                    'network' => $importer,
+                    'items' => $numberOfItems
+                );
 
-            echo json_encode($infoArray);
+                //echo json_encode($infoArray);
+
+                //create Json 
+                $globalInfoArray[] = $infoArray;
+
+
+                unset($importers[$i]);
+                $i++;
+                update_site_option("buddystream_importers_queue", implode(",", $importers));
+
+                //===debug===
+                //echo '<br>impoters after unset : ';
+                //print_r ($importers);
+                //echo '<br><br>';
+
+
+            }
         }
     }
 }
+echo json_encode($globalInfoArray);
 
 do_action('buddystream_after_global_import');
