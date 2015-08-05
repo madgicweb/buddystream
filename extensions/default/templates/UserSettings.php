@@ -13,7 +13,7 @@
                     $buddyStreamExtension = new BuddyStreamExtensions();
                     foreach ($buddyStreamExtension->getExtensionsConfigs() as $extension) {
                         if (get_site_option('buddystream_' . $extension['name'] . '_power') == "on" && get_site_option('buddystream_' . $extension['name'] . '_setup') && !$extension['parent']) {
-                            echo '<li><a href="?network=' . $extension['name'] . '" id="' . ucfirst($extension['displayname']) . '">' . ucfirst($extension['name']) . '</a></li>';
+                            echo '<li><a href="?network=' . $extension['name'] . '" id="' . ucfirst($extension['displayname']) . '">' . ucfirst($extension['displayname']) . '</a></li>';
                             $activeExtensions[] = $extension['name'];
                         }
                     }
