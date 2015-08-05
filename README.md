@@ -46,7 +46,7 @@ Requirements
 Releases
 ---
 == ChangeLog ==
-> Version below only available on the Madgicweb's GitHub [http://git.madgicweb.com/]
+> Version below only available on the Madgicweb's GitHub
 
 = 3.3.0 = *[Not commited yet]*
 * Facebook : [Improvement] Delete depreciate authorization request
