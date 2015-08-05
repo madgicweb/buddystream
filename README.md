@@ -48,15 +48,15 @@ Releases
 == ChangeLog ==
 > Version below only available on the Madgicweb's GitHub
 
-= 3.3.0 = *[Not commited yet]*
+= 3.3.0 = *[Not commited yet. Will be available only on the private git of Madgicweb]*
 * Facebook : [Improvement] Delete depreciate authorization request
 * Facebook : [Bug fixed] Keep checked pages selected
 * SoundCloud : [Bug fixed] Modify ssl configuration during get access Token
 
 = 3.2.9 =
-Core : [Bug Fixed] display the displayName on the social network selection list
-Core : [Improvement] Suppression of waiting list to run all imports
-Core : [Improvement] Add hook "buddystream_after_global_import"
+* Core : [Bug Fixed] display the displayName on the social network selection list
+* Core : [Improvement] Suppression of waiting list to run all imports
+* Core : [Improvement] Add hook "buddystream_after_global_import"
 
 = 3.2.8 = *[Tags on github August 04, 2015]*
 * Core : [Bug fixed] Add option $activity->primary_link = $params['actionlink'] to save link
