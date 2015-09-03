@@ -31,11 +31,11 @@ function buddystream_init()
     global $bp;
 
     //define plugin version and installed value
-    define('BP_BUDDYSTREAM_VERSION', '3.2.8');
+    define('BP_BUDDYSTREAM_VERSION', '3.3.0');
     define('BP_BUDDYSTREAM_IS_INSTALLED', 1);
     define('BP_BUDDYSTREAM_DIR', dirname(__FILE__));
     define('BP_BUDDYSTREAM_URL', plugin_dir_url(__FILE__));
-    define('BP_BUDDYSTREAM_IS_PREMIUM', 0);
+    define('BP_BUDDYSTREAM_IS_PREMIUM', 1);
 
     //first load translations
     buddyStreamLoadTranslations();

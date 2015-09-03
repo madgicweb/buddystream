@@ -5,7 +5,7 @@ Contributors: Madgicweb [http://madgicweb.com/] | Blackphantom [http://buddystre
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
 Tested up to: WP 4.2 BuddyPress 2.3.2
 
-Stable tag: 3.2.8
+Stable tag: 3.3.0
 
 Released under the GPL license
 ---
@@ -34,6 +34,11 @@ Networks that the plugin currently supports:
 http://gleeber.info 
 
 
+== Prenium Version ==
+
+Prenium Version is on my private Git. [http://madgicweb.com/buddystream-3-3-0-by-madgicweb/]
+Contact : contact@madgicweb.com
+
 Requirements
 ---
 
@@ -48,10 +53,12 @@ Releases
 == ChangeLog ==
 > Version below only available on the Madgicweb's GitHub
 
-= 3.3.0 = *[Not commited yet. Will be available only on the private git of Madgicweb]*
+= 3.3.0 = 
 * Facebook : [Improvement] Delete depreciate authorization request
 * Facebook : [Bug fixed] Keep checked pages selected
-* SoundCloud : [Bug fixed] Modify ssl configuration during get access Token
+* SoundCloud : [Bug fixed][Core] Modify ssl configuration during get access Token
+* SoundCloud : [Bug fixed][Import] Modify ssl configuration during get soundcloud API
+* Twitter / Instagram : [Improvement] Add hook to get user information
 
 = 3.2.9 =
 * Core : [Bug Fixed] display the displayName on the social network selection list
