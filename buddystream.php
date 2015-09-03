@@ -3,7 +3,7 @@
 Plugin Name: BuddyStream
 Plugin URI: https://github.com/madgicweb/buddystream
 Description: Synchronizes your favorite Social Networks to the BuddyPress activity stream
-Version: 3.2.8
+Version: 3.3.0
 Author: Madgicweb | blackphantom
 Author URI: https://github.com/madgicweb
 */
