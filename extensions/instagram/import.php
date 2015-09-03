@@ -44,6 +44,15 @@ class BuddyStreamInstagramImport
                             $items = $buddyStreamOAuth->executeRequest('https://api.instagram.com/v1/users/'.get_user_meta($user_meta->user_id, 'buddystream_instagram_id', 1).'/media/recent/?&access_token='.get_user_meta($user_meta->user_id, 'buddystream_instagram_token', 1));
                             $items = json_decode($items);
                             $items = $items->data;
+                            
+                            //Info about user
+                            $instagram_account = $buddyStreamOAuth->executeRequest('https://api.instagram.com/v1/users/'.get_user_meta($user_meta->user_id, 'buddystream_instagram_id', 1).'/?&access_token='.get_user_meta($user_meta->user_id, 'buddystream_instagram_token', 1));
+                            $instagram_account = json_decode($instagram_account);                        
+                            update_user_meta($user_meta->user_id, 'gl_instagram_followers', $instagram_account->data->counts->followed_by);
+                            update_user_meta($user_meta->user_id, 'gl_instagram_following', $instagram_account->data->counts->follows);
+                            
+                            //Hook to do something on user during import process
+                            do_action( 'buddystream_import_instagram_user', $user_meta->user_id );
 
                             if ($items) {
 
@@ -58,7 +67,7 @@ class BuddyStreamInstagramImport
 
                                         $returnCreate = false;
 
-                                        $content = '<a href="' . $item->images->standard_resolution->url . '" class="bs_lightbox" id="' . $item->id . '"><img src="' . $item->images->low_resolution->url . '"></a> '. $item->caption->text;
+                                        $content = '<a href="' . $item->images->standard_resolution->url . '" rel="lightbox" class="bs_lightbox" id="' . $item->id . '"><img src="' . $item->images->low_resolution->url . '"></a> '. $item->caption->text;
 
                                         $returnCreate = buddystreamCreateActivity(array(
                                                 'user_id' => $user_meta->user_id,
