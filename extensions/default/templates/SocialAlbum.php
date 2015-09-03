@@ -85,7 +85,7 @@ if ($album == 'facebook') {
                     $arrImages[] = $image->nodeValue;
                 }
 
-                 echo '<a href="'.$arrLinks[0].'" class="bs_lightbox"><div class="buddystream_album_thumb" style="background:url('.$arrImages[0].');"></div>';
+                 echo '<a href="'.$arrLinks[0].'" rel="lightbox" class="bs_lightbox"><div class="buddystream_album_thumb" style="background:url('.$arrImages[0].');"></div>';
 
             }
         }
