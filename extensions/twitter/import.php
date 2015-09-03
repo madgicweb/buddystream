@@ -50,7 +50,24 @@
                                 $buddyStreamOAuth->setConsumerSecret(get_site_option("tweetstream_consumer_secret"));
                                 $buddyStreamOAuth->setAccessToken(get_user_meta($user_meta->user_id, 'tweetstream_token', 1));
                                 $buddyStreamOAuth->setAccessTokenSecret(get_user_meta($user_meta->user_id, 'tweetstream_tokensecret', 1));
+                                
+                                
+                                //update the user Info
+                                $twitter_settings = $buddyStreamOAuth->oAuthRequest('https://api.twitter.com/1.1/account/settings.json');
+                                $twitter_settings = json_decode($twitter_settings);
+                                $screenName = $twitter_settings->screen_name;
+                                update_user_meta($user_meta->user_id, 'tweetstream_screenname', $screenName);
 
+                                $twitter_account = $buddyStreamOAuth->oAuthRequest('https://api.twitter.com/1.1/users/show.json?screen_name='.$screenName);
+                                $twitter_account = json_decode($twitter_account);
+                                update_user_meta($user_meta->user_id, 'gl_twitter_followers', $twitter_account->followers_count);
+                                update_user_meta($user_meta->user_id, 'gl_twitter_following', $twitter_account->friends_count);
+                                //update_user_meta($user_meta->user_id, 'description', $twitter_account->description);
+                                
+                                //Hook to do something on user during import process
+                                do_action( 'buddystream_import_twitter_user', $user_meta->user_id );
+
+                                //get timeline
                                 $items = $buddyStreamOAuth->oAuthRequest('https://api.twitter.com/1.1/statuses/user_timeline.json');
                                 $items = json_decode($items);
 
@@ -59,14 +76,7 @@
                                 }
 
                                 if ($items && !$items->error) {
-
-                                    //update the user screen_name
-                                    //$screenName = $items->status->user->screen_name[0];
-                                    $twitter_settings = $buddyStreamOAuth->oAuthRequest('https://api.twitter.com/1.1/account/settings.json');
-                                    $twitter_settings = json_decode($twitter_settings);
-                                    $screenName = $twitter_settings->screen_name;
-                                    update_user_meta($user_meta->user_id, 'tweetstream_screenname', $screenName);
-
+                                    
                                     //go through tweets
                                     foreach ($items as $tweet) {
 
@@ -97,7 +107,7 @@
                                             $content  = '';
                                             if(isset($tweet->entities->media)){
                                                 foreach($tweet->entities->media as $media){
-                                                    $content .= '<a href="' . urldecode($media->media_url) . '" class="bs_lightbox"><img src="' . $media->media_url . '"></a>';
+                                                    $content .= '<a href="' . urldecode($media->media_url) . '" rel="lightbox" class="bs_lightbox"><img src="' . $media->media_url . '"></a>';
                                                 }
                                             }
 
