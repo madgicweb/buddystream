@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Buddystream\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-19 23:51+0100\n"
-"PO-Revision-Date: 2015-05-19 23:52+0100\n"
+"POT-Creation-Date: 2015-09-03 16:28+0100\n"
+"PO-Revision-Date: 2015-09-03 16:41+0100\n"
 "Last-Translator: Gleeber <contact@gleeber.com>\n"
 "Language-Team: gleeber <contact@gleeber.info>\n"
 "Language: fr_FR\n"
@@ -116,11 +116,27 @@ msgstr ""
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/General.php:93
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/Powercentral.php:107
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/Synccentral.php:117
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminFilters.php:60
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:113
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookAlbums/templates/AdminFacebook_albums.php:64
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookPages/templates/AdminFacebook_pages.php:61
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookWall/templates/AdminFacebook_wall.php:81
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminSettings.php:97
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:126
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminFilters.php:57
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:121
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:95
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminSettings.php:59
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminFilters.php:62
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:102
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminFilters.php:66
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminSettings.php:62
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:108
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminFilters.php:61
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:91
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:57
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:95
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminSettings.php:70
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:74
 msgid "Save Changes"
 msgstr ""
@@ -139,10 +155,21 @@ msgstr ""
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/General.php:19
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/Powercentral.php:22
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/Synccentral.php:9
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:39
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookAlbums/templates/AdminFacebook_albums.php:30
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookPages/templates/AdminFacebook_pages.php:29
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookWall/templates/AdminFacebook_wall.php:33
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminSettings.php:36
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:32
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:36
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:32
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminSettings.php:26
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:32
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminSettings.php:27
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:31
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:28
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:32
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminSettings.php:31
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:29
 msgid "Settings saved."
 msgstr ""
@@ -244,12 +271,397 @@ msgstr ""
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:14
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:39
 msgid "Social networks"
-msgstr "&nbsp;"
+msgstr ""
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/default/templates/UserSettings.php:6
 msgid "Social networks setup description"
 msgstr "Sélectionnez le réseau social à synchroniser ! "
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/core.php:16
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/core.php:30
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/core.php:14
+msgid "You need to re-authenticate on Facebook."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/core.php:18
+msgid "Also post this to my Facebook wall."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/core.php:32
+msgid "Also post this to my Facebook page."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminFilters.php:26
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminFilters.php:23
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminFilters.php:21
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminFilters.php:21
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminFilters.php:24
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:21
+msgid "Filters saved."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminFilters.php:31
+msgid "facebook filters description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminFilters.php:39
+msgid "Facebook filters (optional)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminFilters.php:45
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminFilters.php:44
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminFilters.php:48
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminFilters.php:49
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminFilters.php:49
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:44
+msgid "Filters (comma seperated)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminFilters.php:53
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminFilters.php:57
+msgid "Explicit words filters (comma seperated)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:44
+msgid "facebook settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:56
+msgid "Facebook API"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:64
+msgid "Application ID:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:74
+msgid "Application secret:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:86
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminSettings.php:74
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:76
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:85
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:76
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminSettings.php:43
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:81
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminSettings.php:47
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:82
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:72
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:76
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminSettings.php:50
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:54
+msgid "User options"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:92
+msgid ""
+"Maximum amount of Facebook items (total) to be imported per user, per day "
+"(empty = unlimited):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminSettings.php:103
+msgid "Import also items that are rated \"friends only\" by default"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:28
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:28
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:29
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:33
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:29
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminStatitics.php:34
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:37
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:35
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:31
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:27
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:30
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:32
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminStatitics.php:29
+msgid "Statistics"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:46
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:46
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:50
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:51
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:50
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminStatitics.php:53
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:56
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:56
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:52
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:48
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:51
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:51
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminStatitics.php:46
+msgid "Amount of users:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:50
+msgid "Amount of user using Facebook integration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:54
+msgid "Percentage of users using Facebook integration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:58
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:58
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:62
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:63
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:62
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminStatitics.php:65
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:68
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:68
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:64
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:60
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:63
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:63
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminStatitics.php:58
+msgid "Amount of activity updates:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:62
+msgid "Amount of Facebook items:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:66
+msgid "Percentage of Facebook items:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:70
+msgid "Average number of Facebook items imported per day:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:74
+msgid "Average number of Facebook items imported per week:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:78
+msgid "Average number Facebook items imported per month:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/AdminStatitics.php:82
+msgid "Average number Facebook items imported per year"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:132
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:64
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:41
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:60
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:70
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:82
+msgid "There are no settings available.</br></br>"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:137
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:371
+msgid "Remove Facebook synchronization."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:151
+msgid "Facebook Wall"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:156
+msgid "Synchronize my Facebook wall to my activity stream:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:163
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:182
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:210
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:289
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:354
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:81
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:106
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:82
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:58
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:83
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:78
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:105
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:103
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:174
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:100
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:126
+msgid "Yes"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:166
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:185
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:216
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:295
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:358
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:87
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:110
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:88
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:64
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:87
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:84
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:109
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:109
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:178
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:106
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:130
+msgid "No"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:175
+msgid "Import also items with privacy settings \"Friends only\":"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:196
+msgid "Facebook page(s)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:200
+msgid "Synchronize my Facebook Page(s) to my activity stream:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:221
+msgid "facebook pages description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:274
+msgid "Facebook Album(s) Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:279
+msgid "Synchronize my Facebook albums photos to my activity stream:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:301
+msgid "facebook albums description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:345
+msgid "Send achievements unlock to my facebook"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:367
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/UserSettings.php:46
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:121
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:97
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:98
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/UserSettings.php:42
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:119
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/UserSettings.php:39
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:190
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:142
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/UserSettings.php:43
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/UserSettings.php:46
+msgid "Save settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:384
+msgid "Facebook setup"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:385
+msgid "facebook user persmission description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebook/templates/UserSettings.php:389
+msgid "Authorize with Facebook"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookAlbums/templates/AdminFacebook_albums.php:35
+msgid "facebook albums settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookAlbums/templates/AdminFacebook_albums.php:50
+msgid "Facebook albums options"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookAlbums/templates/AdminFacebook_albums.php:56
+msgid "Show  Facebook album on user profile page?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookPages/templates/AdminFacebook_pages.php:34
+msgid "facebook pages settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookPages/templates/AdminFacebook_pages.php:49
+msgid "Facebook pages options"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookPages/templates/AdminFacebook_pages.php:54
+msgid "Allow users to sync pages to BuddyPress?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookWall/templates/AdminFacebook_wall.php:39
+msgid "facebook wall settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookWall/templates/AdminFacebook_wall.php:55
+msgid "Wall options"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookWall/templates/AdminFacebook_wall.php:61
+msgid "Allow users to sync wall links to activity?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookWall/templates/AdminFacebook_wall.php:67
+msgid "Allow users to sync wall photos to activity?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/facebookWall/templates/AdminFacebook_wall.php:73
+msgid "Allow users to sync wall videos to activity?"
+msgstr ""
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminSettings.php:41
@@ -263,16 +675,9 @@ msgstr ""
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminSettings.php:62
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:59
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:53
 msgid "API key:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminSettings.php:74
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:76
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminSettings.php:43
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:76
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:54
-msgid "User options"
 msgstr ""
 
 #: C:\Program Files
@@ -287,24 +692,6 @@ msgid ""
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:28
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:29
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminStatitics.php:34
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:30
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminStatitics.php:29
-msgid "Statistics"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:46
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:50
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminStatitics.php:53
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:51
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminStatitics.php:46
-msgid "Amount of users:"
-msgstr ""
-
-#: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:50
 msgid "Amount of user using Flickr integration:"
 msgstr ""
@@ -312,15 +699,6 @@ msgstr ""
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:54
 msgid "Percentage of users using Flickr integration:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/AdminStatitics.php:58
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:62
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/AdminStatitics.php:65
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:63
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminStatitics.php:58
-msgid "Amount of activity updates:"
 msgstr ""
 
 #: C:\Program Files
@@ -355,9 +733,15 @@ msgstr ""
 
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/UserSettings.php:11
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:44
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:47
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:22
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/UserSettings.php:9
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:40
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/UserSettings.php:5
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:53
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:62
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/UserSettings.php:9
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/UserSettings.php:12
 msgid "Settings saved"
 msgstr ""
@@ -373,17 +757,291 @@ msgid "Flickr username"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/UserSettings.php:46
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:98
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/lastfm/templates/UserSettings.php:42
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:142
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/UserSettings.php:46
-msgid "Save settings"
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/UserSettings.php:50
+msgid "Remove Flickr synchronization."
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/flickr/templates/UserSettings.php:50
-msgid "Remove Flickr synchronization."
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/core.php:11
+msgid "Also checkin on Foursquare."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:38
+msgid "foursquare settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:52
+msgid "Foursquare API"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:58
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:58
+msgid "Client key:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:64
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:64
+msgid "Client secret:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:83
+msgid ""
+"Maximum checkins to be imported per user, per day (empty = unlimited tweets "
+"import):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:94
+msgid "Map options (optional)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:101
+msgid "Map zoom"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:107
+msgid "Map width"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminSettings.php:113
+msgid "Map height"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:22
+msgid "foursquare statitics description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:54
+msgid "Amount of user Foursquare intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:58
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:58
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:56
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:59
+msgid "Percentage of users using intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:66
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:66
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:72
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:64
+msgid "Amount of items updates:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:70
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:71
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:70
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:76
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:68
+msgid "Percentage of items in activity updates:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:74
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:75
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:74
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:80
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:72
+msgid "Average items import per day:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:78
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:79
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:78
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:84
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:76
+msgid "Average items import per week:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:82
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:83
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:82
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:88
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:80
+msgid "Average items import per month:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/AdminStatitics.php:86
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:87
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:86
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:92
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:84
+msgid "Average items import per year:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:56
+msgid "Foursquare Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:71
+msgid "Synchronize checkins to my activity stream?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:97
+msgid "Send achievements unlock to my foursquare"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:125
+msgid "Remove Foursquare synchronization."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:132
+msgid ""
+"Foursquare setup</h3>\n"
+"                 You may setup you foursquare intergration over here.<br/>\n"
+"                 Before you can begin using Foursquare with this site you "
+"must authorize on Foursquare by clicking the link below."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:140
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:134
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:115
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:157
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/UserSettings.php:16
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:229
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:176
+msgid "Click here to start authorization"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/foursquare/templates/UserSettings.php:142
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:136
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:117
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:159
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:231
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:178
+msgid ""
+"There is a problem with the authentication service at this moment please "
+"come back in a while."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/import.php:79
+msgid "visit link"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminFilters.php:28
+msgid "googleplus filters description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminFilters.php:40
+msgid "Google+ filters (optional)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminFilters.php:50
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminFilters.php:54
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminFilters.php:55
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:50
+msgid "Explicit words (comma seperated)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:41
+msgid "googleplus settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:54
+msgid "Google+ API"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:62
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:58
+msgid "Consumer key:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:69
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:64
+msgid "Consumer secret key:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:93
+msgid "Show Google+ album on user profile page?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:99
+msgid "Allow users to sync Google+ to you website?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminSettings.php:106
+msgid ""
+"Maximum items to be imported per user, per day (empty = unlimited items "
+"import):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:28
+msgid "googleplus statitics description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:55
+msgid "Amount of user Google+ intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:59
+msgid "Percentage of users Google+ using intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/AdminStatitics.php:67
+msgid "Amount of updates:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:59
+msgid "Google+ Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:72
+msgid "Synchronize items to my activity stream?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:101
+msgid "Remove Google+ synchronization."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/googleplus/templates/UserSettings.php:109
+msgid ""
+"Google+ setup</h3>\n"
+"                 You may setup you Google+ intergration over here.<br/>\n"
+"                 Before you can begin using Google+ with this site you must "
+"authorize on Google+ by clicking the link below."
 msgstr ""
 
 #: C:\Program Files
@@ -394,16 +1052,6 @@ msgstr ""
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:52
 msgid "Instagram API"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:58
-msgid "Client key:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminSettings.php:64
-msgid "Client secret:"
 msgstr ""
 
 #: C:\Program Files
@@ -424,71 +1072,13 @@ msgid "Amount of user Instagram intergration:"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:58
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminStatitics.php:59
-msgid "Percentage of users using intergration:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:66
-msgid "Amount of items updates:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:70
-msgid "Percentage of items in activity updates:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:74
-msgid "Average items import per day:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:78
-msgid "Average items import per week:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:82
-msgid "Average items import per month:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/AdminStatitics.php:86
-msgid "Average items import per year:"
-msgstr ""
-
-#: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:33
 msgid "Instagram Settings"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:41
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:82
-msgid "There are no settings available.</br></br>"
-msgstr ""
-
-#: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:48
 msgid "Synchronize Instagram to my activity stream?"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:58
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:83
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:100
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:126
-msgid "Yes"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:64
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:87
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:106
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:130
-msgid "No"
 msgstr ""
 
 #: C:\Program Files
@@ -507,20 +1097,6 @@ msgid ""
 "<h3>Instagram setup</h3>You may setup you Instagram intergration over here."
 "<br/>Before you can begin using Instagram with this site you must authorize "
 "on Instagram by clicking the link below."
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:115
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:176
-msgid "Click here to start authorization"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/instagram/templates/UserSettings.php:117
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/UserSettings.php:178
-msgid ""
-"There is a problem with the authentication service at this moment please "
-"come back in a while."
 msgstr ""
 
 #: C:\Program Files
@@ -595,8 +1171,348 @@ msgid "Remove Last.fm synchronization."
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/core.php:14
-msgid "You need to re-authenticate on Facebook."
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/core.php:14
+msgid "You need to re-authenticate on LinkedIn."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/core.php:16
+msgid "Also post this to my Linkedin account."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminFilters.php:26
+msgid "linkedin filters description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminFilters.php:40
+msgid "LinkedIn filters (optional)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:38
+msgid "linkedin settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:52
+msgid "Linkedin API"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:66
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:59
+msgid "Api secret:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminSettings.php:89
+msgid ""
+"Maximum LinkedIn updates to be imported per user, per day (empty = unlimited "
+"tweets import):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:26
+msgid "linkedin statitics description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:60
+msgid "Amount of user LinkedIn intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/AdminStatitics.php:64
+msgid "Percentage of users LinkedIn using intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:51
+msgid "LinkedIn Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:68
+msgid "Synchronize LinkedIn updates to my activity stream?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:96
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:165
+msgid "Send achievements unlock to my LinkedIn"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:123
+msgid "Remove LinkedIn synchronization."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/linkedin/templates/UserSettings.php:131
+msgid ""
+"LinkedIn setup</h3>\n"
+"                 You may setup you linkedIn intergration over here.<br/>\n"
+"                 Before you can begin using LinkedIn with this site you must "
+"authorize on LinkedIn by clicking the link below."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminFilters.php:27
+msgid "rss filters description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminFilters.php:42
+msgid "Rss filters (optional)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminSettings.php:33
+msgid "rss settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminSettings.php:54
+msgid ""
+"Maximum number of items to import per user, per day (empty - unlimited):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:18
+msgid "rss statitics description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:60
+msgid "Amount of user using rss:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:64
+msgid "Percentage of users using rss:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:72
+msgid "Amount of rss items:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:76
+msgid "Percentage of rss items:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:80
+msgid "Average number of rss items imported per day:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:84
+msgid "Average number of rss items imported per week:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:88
+msgid "Average number of rss items imported per month:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/AdminStatitics.php:92
+msgid "Average number of rss items imported per year:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/UserSettings.php:18
+msgid "Rss Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/rss/templates/UserSettings.php:27
+msgid "Feeds (new line per feed)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:37
+msgid "soundcloud settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:51
+msgid "Soundcloud API"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:61
+msgid "Client ID:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:69
+msgid "Client secret key:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:89
+msgid "Show  Soundcloud tracks (album) on user profile page?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminSettings.php:95
+msgid ""
+"Maximum tracks to be imported per user, per day (empty = unlimited tracks "
+"import):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:23
+msgid "soundcloud statitics description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:56
+msgid "Amount of user Soundcloud intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:60
+msgid "Percentage of users Soundcloud using intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:68
+msgid "Amount of tracks updates:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:72
+msgid "Percentage of tracks in activity updates:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:76
+msgid "Average tracks import per day:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:80
+msgid "Average tracks import per week:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:84
+msgid "Average tracks import per month:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/AdminStatitics.php:88
+msgid "Average tracks import per year:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/UserSettings.php:11
+msgid ""
+"Soundcloud setup</h3>\n"
+"             You may setup you Soundcloud intergration over here.<br>\n"
+"             Before you can begin using Soundcloud with this site you must "
+"authorize on Soundcloud by clicking the link below."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/UserSettings.php:20
+msgid "Soundcloud setup"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/UserSettings.php:21
+msgid "You are succefully connected to Soundcloud!"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/soundcloud/templates/UserSettings.php:24
+msgid "Remove Soundcloud synchronization."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/core.php:11
+msgid "Also post this to my Tumblr blog(s)."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminFilters.php:29
+msgid "tumblr filters description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminFilters.php:43
+msgid "Tumblr filters (optional)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:33
+msgid "tumblr settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:46
+msgid "Tumblr API"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminSettings.php:80
+msgid ""
+"Maximum Tumblr updates to be imported per user, per day (empty = unlimited "
+"tweets import):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:20
+msgid "tumblr statitics description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/AdminStatitics.php:52
+msgid "Amount of user Tumblr intergration:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:65
+msgid "Tumblr Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:93
+msgid "Synchronize Tumblr updates to my activity stream?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:115
+msgid "When i share to tumblr, share to these blogs"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:137
+msgid "Import blog items from these blogs"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:194
+msgid "Remove Tumblr synchronization."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:202
+msgid "Tumblr setup"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/tumblr/templates/UserSettings.php:204
+msgid ""
+"You may setup you Tumblr intergration over here.<br/>\n"
+"                 Before you can begin using Tumblr with this site you must "
+"authorize on Tumblr by clicking the link below."
 msgstr ""
 
 #: C:\Program Files
@@ -612,11 +1528,6 @@ msgid ""
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:21
-msgid "Filters saved."
-msgstr ""
-
-#: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:27
 msgid "twitter filters description"
 msgstr ""
@@ -627,16 +1538,6 @@ msgid "Twitter filters (optional)"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:44
-msgid "Filters (comma seperated)"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminFilters.php:50
-msgid "Explicit words (comma seperated)"
-msgstr ""
-
-#: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:38
 msgid "twitter settings description"
 msgstr ""
@@ -644,16 +1545,6 @@ msgstr ""
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:52
 msgid "Twitter API"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:58
-msgid "Consumer key:"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/twitter/templates/AdminSettings.php:64
-msgid "Consumer secret key:"
 msgstr ""
 
 #: C:\Program Files
@@ -732,6 +1623,83 @@ msgid ""
 msgstr ""
 
 #: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminSettings.php:37
+msgid "vimeo settings description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminSettings.php:57
+msgid "Show Vimeo album on user profile page?"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminSettings.php:63
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:66
+msgid ""
+"Maximum number of videos to import per user, per day (empty - unlimited):"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:25
+msgid "vimeo statitics description"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:55
+msgid "Amount of user using Vimeo:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:59
+msgid "Percentage of users using Vimeo:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:67
+msgid "Amount of Vimeo videos:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:71
+msgid "Percentage of Vimeo videos:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:75
+msgid "Average number of Vimeo videos imported per day:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:79
+msgid "Average number of Vimeo videos imported per week:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:83
+msgid "Average number of Vimeo videos imported per month:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/AdminStatitics.php:87
+msgid "Average number of Vimeo videos imported per year:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/UserSettings.php:22
+msgid "Vimeo Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/UserSettings.php:31
+msgid "Vimeo username"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/vimeo/templates/UserSettings.php:47
+msgid "Remove Vimeo synchronization."
+msgstr ""
+
+#: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:36
 msgid "youtube settings description"
 msgstr ""
@@ -739,12 +1707,6 @@ msgstr ""
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:60
 msgid "Show YouTube album on user profile page?"
-msgstr ""
-
-#: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/extensions/youtube/templates/AdminSettings.php:66
-msgid ""
-"Maximum number of videos to import per user, per day (empty - unlimited):"
 msgstr ""
 
 #: C:\Program Files
@@ -823,54 +1785,54 @@ msgid "posted&nbsp;a"
 msgstr "a&nbsp;posté(e)&nbsp;un "
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:187
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:188
 msgid "is not yet configured."
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:218
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:219
 msgid ""
 "There is a new version of BuddyStream available login and download it on the "
 "BuddyStream website."
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:219
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:220
 msgid "Currently installed:"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:219
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:220
 msgid "Available: "
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:301
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:302
 msgid "Just created a new topic:"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:306
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:307
 msgid "Just responded to:"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:424
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:425
 msgid "Add my location"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:432
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:433
 msgid "Use this location"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:433
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:434
 msgid "Cancel"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:466
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamCore.php:467
 msgid "Show "
 msgstr ""
 
@@ -887,12 +1849,12 @@ msgstr ""
 #: C:\Program Files
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:113
 #: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:124
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:143
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:144
 msgid "Social albums"
 msgstr ""
 
 #: C:\Program Files
-#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:166
+#: (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\wordpress4\wp-content\plugins\buddystream/lib/BuddyStreamPageLoader.php:167
 msgid "Facebook"
 msgstr ""
 
