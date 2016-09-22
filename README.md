@@ -3,9 +3,19 @@
 Contributors: Madgicweb [http://madgicweb.com/] | Blackphantom [http://buddystream.net/]
 
 Requires at least: WP 2.9.1, BuddyPress 1.2.3
-Tested up to: WP 4.2 BuddyPress 2.3.2
+Tested up to: WP 4.6 BuddyPress 2.6.2
 
-Stable tag: 3.3.0
+Stable tag: 3.3.1
+
+Contribution
+---
+I'm looking for developper to create new feature :
+- Instagram : Add activities based Tags for **user** activity
+- Instagram : Add activities based Tags for **group** activity
+- Tweeter : Add activities based Tags for **user** activity
+- Tweeter : Add activities based Tags for **group** activity
+- Youtube : Redesign to 
+Please contact me: contact@madgicweb.com
 
 Released under the GPL license
 ---
@@ -22,11 +32,16 @@ Networks that the plugin currently supports:
 - Twitter
 - Twitter Location
 - Flickr
-- Youtube
+- Youtube (Deprecated)
 - Last.fm
-- Facebook [Prenium]
-- SoundCloud [Prenium]
+- Facebook (Deprecated)
+- SoundCloud (Deprecated)
 - RSS / MyWebSites [Prenium]
+- LinkedIn [Prenium]
+- Foursquare [Prenium]
+- Trumblr [Prenium]
+- GooglePlus [Prenium]
+- Vimeo [Prenium]
 
 
 == Demo ==
@@ -52,6 +67,13 @@ Releases
 ---
 == ChangeLog ==
 > Version below only available on the Madgicweb's GitHub
+
+= 3.3.1 = 
+* Facebook : [Improvement] Delete depreciate authorization request
+* Core : [Bug Fixed] Create activity 
+* !IMPORTANT! Facebook becomes open-source because it is depreciated (Bug: Image link) - Open to contribute
+* !IMPORTANT! Soundcloud becomes open-source because it is depreciated (But: Can't read sound on the activities stream) - Open to contribute
+* !IMPORTANT! Youtube is depreciated (Bug: Must be redesign it with Oauth ) - Open to contribute
 
 = 3.3.0 = 
 * Facebook : [Improvement] Delete depreciate authorization request

@@ -1,0 +1,431 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-01 00:18+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman <info@buddystream.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: /Users/peterhofman/projects/buddystream.net/wp-"
+"content/plugins/buddystream-dev/extensions/facebook\n"
+"X-Poedit-SearchPath-1: /Users/peterhofman/projects/buddystream.net/wp-"
+"content/plugins/buddystream-dev/extensions/facebookWall\n"
+"X-Poedit-SearchPath-2: /Users/peterhofman/projects/buddystream.net/wp-"
+"content/plugins/buddystream-dev/extensions/facebookPages\n"
+"X-Poedit-SearchPath-3: /Users/peterhofman/projects/buddystream.net/wp-"
+"content/plugins/buddystream-dev/extensions/facebookAlbums\n"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/core.php:14
+msgid "Also post this to my Facebook wall."
+msgstr "Also post this to my Facebook wall."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/core.php:22
+msgid "Also post this to my Facebook page."
+msgstr "Also post this to my Facebook page(s)."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminFilters.php:26
+msgid "Filters saved."
+msgstr "Filters saved."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminFilters.php:31
+msgid "facebook filters description"
+msgstr ""
+"Using Facebook filters will prevent overcrowded and \"messy\" activity "
+"streams.<br>Example: You may have a network what focuses on soccer. <br>To "
+"keep things \"clean\" you will only want items that pertain to soccer to be "
+"imported.<br>By adding the word \"soccer\" to the filter below, only items "
+"with the word \"soccer\" will be imported and shown in the users activity "
+"stream.<br><br>By using commas as a delimiter  you may set-up multiple "
+"filters (No filter = all Facebook items.)<br>In addition, the \"Explicit "
+"words\" filter, will block any item that contains them regardless of the "
+"other filter.<br><b>Note:</b> Keywords listed in the \"Good\" Filter must be "
+"present in the update itself to be included in the site import. Likewise, "
+"keywords listed in the \"Explicit Filter\" will cause that particular update "
+"NOT to be imported."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminFilters.php:39
+msgid "Facebook filters (optional)"
+msgstr "Facebook filters (optional)"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminFilters.php:45
+msgid "Filters (comma seperated)"
+msgstr "Filters (comma seperated)"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminFilters.php:53
+msgid "Explicit words filters (comma seperated)"
+msgstr "Explicit words filters (comma seperated)"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminFilters.php:60
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:113
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookWall/templates/AdminFacebook_wall.php:81
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookAlbums/templates/AdminFacebook_albums.php:64
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:39
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookWall/templates/AdminFacebook_wall.php:33
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookAlbums/templates/AdminFacebook_albums.php:30
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:44
+msgid "facebook settings description"
+msgstr ""
+"For the Facebook intergration to work with BuddyStream you will need to get "
+"an \"<strong>App ID\"</strong> and <strong>\"App Secret\"</strong> from "
+"Facebook.<br> <br>1. Go to <strong><a href=\"https://developers.facebook.com/"
+"apps/?action=create\" target=\"_blanc\">https://developers.facebook.com/"
+"apps/?action=create</a></strong> and fill in the form,<br>2. Fill in the "
+"capthca to proceed to the next step.<br>3. Fill in your website url on "
+"<strong>\"App Domain\"</strong> then click on <strong>\"Website\"</strong> "
+"beneath <strong>\"Select how your app integrates with Facebook\"</strong> "
+"and fill in your website url.<br>4. Click on <strong>\"Save changes\"</"
+"strong><br>5. In the left menu go to <strong>\"Advanced\"</strong><br>6. On "
+"the <strong>\"Authentication\"</strong> part choose the <strong>\"App Type\" "
+"\"Web\"</strong><br>7. On the  <strong>\"Contact Info\"</strong> part fill "
+"in the urls asked for policy and terms of use.<br>8. Click on <strong>\"Save "
+"changes\"</strong><br>9. In the left menu go to <strong>\"Basic\"</strong> "
+"and copy the <strong>\"App ID\"</strong> and <strong>\"App Secret\"</strong> "
+"fill them in below.<br>"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:56
+msgid "Facebook API"
+msgstr "Facebook API"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:64
+msgid "Application ID:"
+msgstr "App ID:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:74
+msgid "Application secret:"
+msgstr "App Secret:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:86
+msgid "User options"
+msgstr "User options"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:92
+msgid ""
+"Maximum amount of Facebook items (total) to be imported per user, per day "
+"(empty = unlimited):"
+msgstr ""
+"Maximum amount of Facebook items (total) to be imported per user, per day "
+"(empty = unlimited):"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminSettings.php:103
+#, fuzzy
+msgid "Import also items that are rated \"friends only\" by default"
+msgstr "Import also items that are rated \"friends only\" by default"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:33
+msgid "Statistics"
+msgstr "Statistics"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:51
+msgid "Amount of users:"
+msgstr "Amount of users:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:55
+msgid "Amount of user using Facebook integration:"
+msgstr "Amount of user using Facebook integration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:59
+msgid "Percentage of users using Facebook integration:"
+msgstr "Percentage of users using Facebook integration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:63
+msgid "Amount of activity updates:"
+msgstr "Amount of activity updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:67
+msgid "Amount of Facebook items:"
+msgstr "Amount of Facebook items:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:71
+msgid "Percentage of Facebook items:"
+msgstr "Percentage of Facebook items:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:75
+msgid "Average number of Facebook items imported per day:"
+msgstr "Average number of Facebook items imported per day:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:79
+msgid "Average number of Facebook items imported per week:"
+msgstr "Average number of Facebook items imported per week:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:83
+msgid "Average number Facebook items imported per month:"
+msgstr "Average number Facebook items imported per month:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/AdminStatitics.php:87
+msgid "Average number Facebook items imported per year"
+msgstr "Average number Facebook items imported per year"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:92
+msgid "There are no settings available.</br></br>"
+msgstr "There are no settings available.</br></br>"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:97
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:323
+msgid "Remove Facebook synchronization."
+msgstr "Remove Facebook synchronization."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:111
+msgid "Facebook Wall"
+msgstr "Facebook Wall"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:116
+msgid "Synchronize my Facebook wall to my activity stream:"
+msgstr "Synchronize my Facebook wall to my activity stream:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:123
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:142
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:170
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:242
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:305
+msgid "Yes"
+msgstr "Yes"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:126
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:145
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:176
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:248
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:309
+msgid "No"
+msgstr "No"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:135
+msgid "Import also items with privacy settings \"Friends only\":"
+msgstr "Import also items with privacy settings \"Friends only\":"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:156
+msgid "Facebook page(s)"
+msgstr "Facebook page(s)"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:160
+msgid "Synchronize my Facebook Page(s) to my activity stream:"
+msgstr "Synchronize my Facebook Page(s) to my activity stream:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:181
+msgid "facebook pages description"
+msgstr ""
+"Below is a list of your Facebook pages, select which pages you would like to "
+"be synchronized.<br/> Only items that are published \"public\" will be "
+"imported."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:227
+msgid "Facebook Album(s) Settings"
+msgstr "Facebook Album(s)"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:232
+msgid "Synchronize my Facebook albums photos to my activity stream:"
+msgstr "Synchronize my Facebook albums photos to my activity stream:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:254
+msgid "facebook albums description"
+msgstr ""
+"Below is a list of your Facebook albums, select which albums you would like "
+"to be synchronized.<br/> Only items that are published \"public\" will be "
+"imported."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:296
+msgid "Send achievements unlock to my facebook"
+msgstr "Send achievements unlock to my facebook"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:319
+msgid "Save settings"
+msgstr "Save settings"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:332
+msgid "Facebook setup"
+msgstr "Facebook"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:333
+msgid "facebook user persmission description"
+msgstr ""
+"You can setup facebook over here.You may setup your BuddyStream Facebook "
+"integration here.Before you can begin using Facebook with this site, you "
+"must first authorize Facebook by using Facebook Authentication Service.  "
+"Click the link below to begin this process:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebook/templates/UserSettings.php:337
+msgid "Authorize with Facebook"
+msgstr "Authorize with Facebook"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookWall/templates/AdminFacebook_wall.php:39
+msgid "facebook wall settings description"
+msgstr "These are the settings for the Facebook Wall."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookWall/templates/AdminFacebook_wall.php:55
+msgid "Wall options"
+msgstr "Wall options"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookWall/templates/AdminFacebook_wall.php:61
+msgid "Allow users to sync wall links to activity?"
+msgstr "Allow users to sync wall links to activity?"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookWall/templates/AdminFacebook_wall.php:67
+msgid "Allow users to sync wall photos to activity?"
+msgstr "Allow users to sync wall photos to activity?"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookWall/templates/AdminFacebook_wall.php:73
+msgid "Allow users to sync wall videos to activity?"
+msgstr "Allow users to sync wall videos to activity?"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookPages/templates/AdminFacebook_pages.php:18
+msgid "facebook pages settings description"
+msgstr "These are the settings for the Facebook Pages."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookAlbums/templates/AdminFacebook_albums.php:35
+msgid "facebook albums settings description"
+msgstr "These are the settings for the Facebook Albums."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookAlbums/templates/AdminFacebook_albums.php:50
+msgid "Facebook albums options"
+msgstr "Facebook albums options"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/facebookAlbums/templates/AdminFacebook_albums.php:56
+msgid "Show  Facebook album on user profile page?"
+msgstr "Show  Facebook album on user profile page?"
+
+#~ msgid "Hide Facebook items on the sidewide activity stream?"
+#~ msgstr "Hide Facebook items on the sidewide activity stream?"
+
+#~ msgid "Allow users to sync to BuddyPress?"
+#~ msgstr "Allow users to sync to BuddyPress?"
+
+#~ msgid "Extra options"
+#~ msgstr "Extra options"
+
+#~ msgid "Enable like buttons on the activity stream?"
+#~ msgstr "Enable like buttons on the activity stream?"
+
+#~ msgid "facebook statitics descriptiption"
+#~ msgstr ""
+#~ "Below you see a table with some nice to know statistics, i may help you "
+#~ "to monitor you members social interaction."
+
+#~ msgid ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+#~ msgstr ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+
+#~ msgid "Are you sure ?"
+#~ msgstr "Are you sure ?"
+
+#~ msgid "facebook users description"
+#~ msgstr ""
+#~ "Below is a list of users whom are using Facebook. You may reset their "
+#~ "Facebook settings here.<br><b>Note:</b> When you reset a user, they will "
+#~ "need to re-authenticate with Facebook. Any Facebook items that have "
+#~ "already been imported <b>WILL NOT</b> be deleted."
+
+#~ msgid "Items imported"
+#~ msgstr "Items imported"
+
+#~ msgid "Reset user"
+#~ msgstr "Reset user"
+
+#~ msgid "Import turned off by user"
+#~ msgstr "Import turned off by user"
+
+#~ msgid "Settings saved"
+#~ msgstr "Settings saved"
+
+#~ msgid "Facebook Settings"
+#~ msgstr "Facebook Settings"
+
+#~ msgid "Authorize with facebook"
+#~ msgstr "Authorize with facebook"
+
+#~ msgid "Filters"
+#~ msgstr "Filters"
+
+#~ msgid "facebook user filters description"
+#~ msgstr ""
+#~ "By using filters, you may decide which items will be imported or excluded."
+#~ "<br><b>Note:</b> Each site also has a \"Global\" list of filters and its "
+#~ "settings will override these settings. <br><b>Note:</b> Keywords listed "
+#~ "in the \"Good\" Filter must be present in the update itself to be "
+#~ "included in the site import. Likewise, keywords listed in the \"Explicit "
+#~ "Filter\" will cause that particular update NOT to be imported."
+
+#~ msgid "Good Filter (separate words with commas)"
+#~ msgstr "Good Filter (separate words with commas)"
+
+#~ msgid "Bad Filter (separate words with commas)"
+#~ msgstr "Bad Filter (separate words with commas)"
+
+#~ msgid "Allow users to sync wall updates to BuddyPress?"
+#~ msgstr "Allow users to sync wall updates to BuddyPress?"
+
+#~ msgid "Facebook pages options"
+#~ msgstr "Facebook pages options"
+
+#~ msgid "Allow users to sync pages to BuddyPress?"
+#~ msgstr "Allow users to sync pages to BuddyPress?"
+
+#~ msgid "Allow users to sync albums to BuddyPress?"
+#~ msgstr "Allow users to sync albums to BuddyPress?"
+
+#~ msgid "to facebook"
+#~ msgstr "to Facebook"
+
+#~ msgid "Facebook API server offline at the moment."
+#~ msgstr "Facebook API server offline at the moment."
+
+#~ msgid "Facebook Album"
+#~ msgstr "Facebook Album"
+
+#~ msgid "User has no photo's (yet)"
+#~ msgstr "User has no photo's (yet)"
+
+#~ msgid "Show faces?"
+#~ msgstr "Show faces?"
+
+#~ msgid "Type:"
+#~ msgstr "Type:"
+
+#~ msgid "standard"
+#~ msgstr "standard"
+
+#~ msgid "button count"
+#~ msgstr "button count"
+
+#~ msgid "box count"
+#~ msgstr "box count"
+
+#~ msgid "Color scheme:"
+#~ msgstr "Color scheme:"
+
+#~ msgid "light"
+#~ msgstr "light"
+
+#~ msgid "dark"
+#~ msgstr "dark"
+
+#~ msgid "Permission"
+#~ msgstr "Permission"
+
+#~ msgid "Facebook is currently offline please come back in a while."
+#~ msgstr "Facebook is currently offline please come back in a while."
+
+#~ msgid "Synchronize updates to my activity"
+#~ msgstr "Synchronize updates to my activity"
+
+#~ msgid "Synchronize links to my activity"
+#~ msgstr "Synchronize links to my activity"
+
+#~ msgid "Synchronize photos to my activity"
+#~ msgstr "Synchronize photos to my activity"
+
+#~ msgid "Synchronize videos to my activity"
+#~ msgstr "Synchronize videos to my activity"
