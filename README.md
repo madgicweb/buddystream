@@ -15,6 +15,7 @@ I'm looking for developper to create new feature :
 - Tweeter : Add activities based Tags for **user** activity
 - Tweeter : Add activities based Tags for **group** activity
 - Youtube : Redesign
+
 Please contact me: contact@madgicweb.com
 
 Released under the GPL license
