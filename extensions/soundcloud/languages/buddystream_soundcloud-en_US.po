@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyStream Soudncloud\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-28 23:56+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Peter Hofman <info@buddystream.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: /Users/peterhofman/projects/buddystream.net/wp-"
+"content/plugins/buddystream-dev/extensions/soundcloud\n"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:31
+msgid "Settings saved."
+msgstr "Settings saved."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:37
+msgid "soundcloud settings description"
+msgstr ""
+"For BuddyStream to work you will need to get an API key from Soundcloud."
+"<br><br>To get a API key, follow these steps:<br>1. Go to <a href=\"http://"
+"soundcloud.com/you/apps/new\" target=\"_blank\">http://soundcloud.com/you/"
+"apps/new</a> and login with your Soundcloud account.<br>2. Create a new app "
+"and set the redirect URI: <b>#ROOTDOMAIN</b><br>3. Fill in the client id and "
+"client secret below."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:51
+msgid "Soundcloud API"
+msgstr "Soundcloud API"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:61
+msgid "Client ID:"
+msgstr "Client ID:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:69
+msgid "Client secret key:"
+msgstr "Client secret key:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:82
+msgid "User options"
+msgstr "User options"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:89
+msgid "Show  Soundcloud tracks (album) on user profile page?"
+msgstr "Facebook"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:95
+msgid ""
+"Maximum tracks to be imported per user, per day (empty = unlimited tracks "
+"import):"
+msgstr ""
+"Maximum tracks to be imported per user, per day (empty = unlimited tracks "
+"import):"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminSettings.php:108
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:27
+msgid "soundcloud statitics description"
+msgstr ""
+"Below you see a table with some nice to know statistics, i may help you to "
+"monitor you members social interaction."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:35
+msgid "Statistics"
+msgstr "Statistics"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:56
+msgid "Amount of users:"
+msgstr "Amount of users:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:60
+msgid "Amount of user Soundcloud intergration:"
+msgstr "Amount of user Soundcloud intergration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:64
+msgid "Percentage of users Soundcloud using intergration:"
+msgstr "Percentage of users Soundcloud using intergration:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:68
+msgid "Amount of activity updates:"
+msgstr "Amount of activity updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:72
+msgid "Amount of tracks updates:"
+msgstr "Amount of tracks updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:76
+msgid "Percentage of tracks in activity updates:"
+msgstr "Percentage of tracks in activity updates:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:80
+msgid "Average tracks import per day:"
+msgstr "Average tracks import per day:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:84
+msgid "Average tracks import per week:"
+msgstr "Average tracks import per week:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:88
+msgid "Average tracks import per month:"
+msgstr "Average tracks import per month:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/AdminStatitics.php:92
+msgid "Average tracks import per year:"
+msgstr "Average tracks import per year:"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/UserSettings.php:11
+msgid ""
+"Soundcloud setup</h3>\n"
+"             You may setup you Soundcloud intergration over here.<br>\n"
+"             Before you can begin using Soundcloud with this site you must "
+"authorize on Soundcloud by clicking the link below."
+msgstr ""
+"Soundcloud setup</h3>\n"
+"             You may setup you Soundcloud intergration over here.<br>\n"
+"             Before you can begin using Soundcloud with this site you must "
+"authorize on Soundcloud by clicking the link below."
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/UserSettings.php:16
+msgid "Click here to start authorization"
+msgstr "Click here to start authorization"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/UserSettings.php:20
+msgid "Soundcloud setup"
+msgstr "Soundcloud setup"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/UserSettings.php:21
+msgid "You are succefully connected to Soundcloud!"
+msgstr "You are succefully connected to Soundcloud!"
+
+#: /Users/peterhofman/projects/buddystream.net/wp-content/plugins/buddystream-dev/extensions/soundcloud/templates/UserSettings.php:24
+msgid "Remove Soundcloud synchronization."
+msgstr "Remove Soundcloud synchronization."
+
+#~ msgid "Soundcloud tracks"
+#~ msgstr "Soundcloud tracks"
+
+#~ msgid "Soundcloud API server offline at the moment."
+#~ msgstr "Soundcloud API server offline at the moment."
+
+#~ msgid "Hide soundcloud on the sidewide activity stream?"
+#~ msgstr "Hide soundcloud on the sidewide activity stream?"
+
+#~ msgid "Soundcloud is currently offline please come back in a while."
+#~ msgstr "Soundcloud is currently offline please come back in a while."
+
+#~ msgid ""
+#~ "Soundcloud setup</h3>You are succefully connected to Soundcloud!<br/><br/"
+#~ ">\n"
+#~ "               <br/><strong><a href=\"?reset=true\">"
+#~ msgstr ""
+#~ "Soundcloud setup</h3>You are succefully connected to Soundcloud!<br/><br/"
+#~ ">\n"
+#~ "               <br/><strong><a href=\"?reset=true\">"
+
+#~ msgid ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+#~ msgstr ""
+#~ "\"User integration has been reset. Note: User will have to reconnect "
+#~ "their integration if desired.\""
+
+#~ msgid "Are you sure ?"
+#~ msgstr "Are you sure ?"
+
+#~ msgid "soundcloud users description"
+#~ msgstr ""
+#~ "Below is a list of all users whom are using Soundcloud. You may reset "
+#~ "there Soundcloud settings here. <br> <b>Note:</b> When you reset a user "
+#~ "they need to re-authenticate with Soundcloud. Tracks already imported "
+#~ "<b>WILL NOT</b> be deleted!"
+
+#~ msgid "Username"
+#~ msgstr "Username"
+
+#~ msgid "E-mail"
+#~ msgstr "E-mail"
+
+#~ msgid "Tracks imported"
+#~ msgstr "Tracks imported"
+
+#~ msgid "Reset user"
+#~ msgstr "Reset user"
+
+#~ msgid "Soundcloud Tracks"
+#~ msgstr "Soundcloud Tracks"
+
+#~ msgid "User has no tracks (yet)"
+#~ msgstr "User has no tracks (yet)"
