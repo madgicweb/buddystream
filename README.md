@@ -14,7 +14,7 @@ I'm looking for developper to create new feature :
 - Instagram : Add activities based Tags for **group** activity
 - Tweeter : Add activities based Tags for **user** activity
 - Tweeter : Add activities based Tags for **group** activity
-- Youtube : Redesign 
+- Youtube : Redesign
 Please contact me: contact@madgicweb.com
 
 Released under the GPL license
